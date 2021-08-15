@@ -1,0 +1,28 @@
+{
+  "name": "offer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RayJune/offer.git"
+  },
+  "author": "rayjune",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RayJune/offer/issues"
+  },
+  "homepage": "https://github.com/RayJune/offer#readme",
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
+    "jest": "^27.0.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
