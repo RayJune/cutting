@@ -5,28 +5,28 @@
  *
  *
  * Example 1:
- * Input: numsArr = [1, 2, 3]
+ * Input: nums = [1, 2, 3]
  * Output: [1, 3, 2]
  *
  * Example 2:
- * Input: numsArr = [3, 2, 1]
+ * Input: nums = [3, 2, 1]
  * Output: [1, 2, 3]
  *
  * Example 3:
- * Input: numsArr = [1, 1, 5]
+ * Input: nums = [1, 1, 5]
  * Output: [1, 5, 1]
  *
  * Example 4:
- * Input: numsArr = [1]
+ * Input: nums = [1]
  * Output: [1]
  *
  * Example 5:
- * Input: numsArr = [1, 3, 4, 2]
+ * Input: nums = [1, 3, 4, 2]
  * Output: [1, 4, 2, 3]
  *
  * Constraints:
- * 1 <= numsArr.length <= 100
- * 0 <= numsArr[i] <= 100
+ * 1 <= nums.length <= 100
+ * 0 <= nums[i] <= 100
  *
  * https://leetcode-cn.com/problems/next-permutation/
  *
@@ -44,27 +44,26 @@
  *
  * O(n) time | O(1) space
  *
- * @param {number[]} numsArr
+ * @param {number[]} nums
  */
-function nextPermutation(numsArr) {
-    const len = numsArr.length;
+function nextPermutation(nums) {
+    const len = nums.length;
     let smallerIndex = len - 2;
 
-    while (smallerIndex >= 0 && numsArr[smallerIndex] >= numsArr[smallerIndex + 1]) {
-        // 找到较小值的 index
+    while (smallerIndex >= 0 && nums[smallerIndex] >= nums[smallerIndex + 1]) {
         smallerIndex -= 1;
     }
     if (smallerIndex >= 0) {
         let biggerIndex = len - 1;
 
-        while (biggerIndex >= 0 && numsArr[smallerIndex] >= numsArr[biggerIndex]) {
+        while (biggerIndex >= 0 && nums[smallerIndex] >= nums[biggerIndex]) {
             biggerIndex -= 1;
         }
-        swap(numsArr, smallerIndex, biggerIndex);
+        swap(nums, smallerIndex, biggerIndex);
     }
-    reverse(numsArr, smallerIndex + 1);
+    reverse(nums, smallerIndex + 1);
 
-    return numsArr;
+    return nums;
 }
 
 /**
@@ -78,16 +77,16 @@ function swap(arr, i, j) {
 }
 
 /**
- * 输入 numsArr 和 leftIndex，反转 leftIndex 到数组末尾区间所有元素的位置
+ * 输入 nums 和 leftIndex，反转 leftIndex 到数组末尾区间所有元素的位置
  *
- * @param {number[]} numsArr
+ * @param {number[]} nums
  * @param {number} startIndex
  */
-function reverse(numsArr, startIndex) {
-    let endIndex = numsArr.length - 1;
+function reverse(nums, startIndex) {
+    let endIndex = nums.length - 1;
 
     while (startIndex < endIndex) {
-        swap(numsArr, startIndex, endIndex);
+        swap(nums, startIndex, endIndex);
         startIndex += 1;
         endIndex -= 1;
     }

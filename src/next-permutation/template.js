@@ -5,28 +5,28 @@
  *
  *
  * Example 1:
- * Input: numsArr = [1, 2, 3]
+ * Input: nums = [1, 2, 3]
  * Output: [1, 3, 2]
  *
  * Example 2:
- * Input: numsArr = [3, 2, 1]
+ * Input: nums = [3, 2, 1]
  * Output: [1, 2, 3]
  *
  * Example 3:
- * Input: numsArr = [1, 1, 5]
+ * Input: nums = [1, 1, 5]
  * Output: [1, 5, 1]
  *
  * Example 4:
- * Input: numsArr = [1]
+ * Input: nums = [1]
  * Output: [1]
  *
  * Example 5:
- * Input: numsArr = [1, 3, 4, 2]
+ * Input: nums = [1, 3, 4, 2]
  * Output: [1, 4, 2, 3]
  *
  * Constraints:
- * 1 <= numsArr.length <= 100
- * 0 <= numsArr[i] <= 100
+ * 1 <= nums.length <= 100
+ * 0 <= nums[i] <= 100
  *
  * https://leetcode-cn.com/problems/next-permutation/
  *
