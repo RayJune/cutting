@@ -1,4 +1,5 @@
-const permute = require('./index');
+// const permute = require('./index');
+const permute = require('./optimize');
 
 test('define permute function', () => {
     expect(typeof permute).toBe('function');

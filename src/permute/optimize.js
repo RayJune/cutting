@@ -24,9 +24,9 @@
 */
 
 /**
- * DFS
+ * Backtracking
  *
- * O(n^2*n!) time | O(n*n!) space
+ * O(n*n!) time | O(n*n!) space, n 代表输入参数 nums 数组的长度
  *
  * @param {number[]} nums
  * @return {number[][]} permutations
@@ -34,7 +34,7 @@
 function permute(nums) {
     const permutations = [];
 
-    permutationsHelper(nums, [], permutations);
+    backtracking(nums, 0, permutations);
 
     return permutations;
 }
@@ -42,21 +42,31 @@ function permute(nums) {
 /**
  *
  * @param {number[]} nums
- * @param {number[]} currentPermutation
+ * @param {number} depth
  * @param {number[][]} permutations
  */
-function permutationsHelper(nums, currentPermutation, permutations) {
-    if (nums.length) {
-        for (let i = 0; i < nums.length; i++) {
-            const modifiedArr = nums.slice(0, i).concat(nums.slice(i + 1));
-            const newPermutation = currentPermutation.concat(nums[i]);
+function backtracking(nums, depth, permutations) {
+    const len = nums.length;
 
-            permutationsHelper(modifiedArr, newPermutation, permutations);
-        }
+    if (depth === len - 1) {
+        permutations.push(nums.slice());
     } else {
-        permutations.push(currentPermutation);
+        for (let i = depth; i < len; i++) {
+            swap(nums, i, depth);
+            backtracking(nums, depth + 1, permutations);
+            swap(nums, depth, i);
+        }
     }
 }
 
+/**
+ *
+ * @param {Array} arr
+ * @param {number} i
+ * @param {number} j
+ */
+function swap(arr, i, j) {
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+}
 
 module.exports = permute;

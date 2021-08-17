@@ -1,4 +1,5 @@
-const getPermutations = require('./index');
+// const getPermutations = require('./index');
+const getPermutations = require('./optimize');
 
 test('define getPermutations function', () => {
     expect(typeof getPermutations).toEqual('function');
@@ -33,7 +34,22 @@ test('3! array', () => {
         [3, 1, 2],
         [3, 2, 1]
     ]));
-})
+});
+
+test('3! array', () => {
+    const inputArr = [1, 2, 3];
+    const permutations = getPermutations(inputArr);
+
+    expect(permutations).toHaveLength(6);
+    expect(permutations).toEqual(expect.arrayContaining([
+        [2, 1, 3],
+        [2, 3, 1],
+        [3, 1, 2],
+        [3, 2, 1],
+        [1, 2, 3],
+        [1, 3, 2]
+    ]));
+});
 
 test('4! array', () => {
     const inputArr = [1, 2, 3, 4];
@@ -66,4 +82,4 @@ test('4! array', () => {
         [4, 1, 3, 2],
         [4, 1, 2, 3]
     ]));
-})
+});

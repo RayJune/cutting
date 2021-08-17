@@ -9,12 +9,14 @@
 */
 
 /**
+ * DFS
+ *
  * O(n^2*n!) time | O(n*n!) space, 其中 n 代表输入参数 arr 的数组长度
  *
  * @param {number[]} arr
  * @return {number[][]} permutations
  */
-function getPermutations1(arr) {
+function getPermutations(arr) {
     const permutations = [];
 
     permutationsHelper(arr, [], permutations);
@@ -29,7 +31,7 @@ function getPermutations1(arr) {
  * @param {number[]} currentPermutation
  * @param {number[][]} permutations
  */
-function permutationsHelper1(arr, currentPermutation, permutations) {
+function permutationsHelper(arr, currentPermutation, permutations) {
     if (arr.length || currentPermutation.length === 0) {
         for (let i = 0; i < arr.length; i++) {
             const modifiedArr = arr.slice(0, i).concat(arr.slice(i + 1));
@@ -40,53 +42,6 @@ function permutationsHelper1(arr, currentPermutation, permutations) {
     } else {
         permutations.push(currentPermutation);
     }
-}
-
-/************************************************************************************************ */
-
-/**
- * 时间复杂度优化版
- * O(n*n!) time | O(n*n!) space, n 代表输入参数 arr 的数组长度
- *
- * @param {number[]} arr
- * @return {number[][]} permutations
- */
-function getPermutations(arr) {
-    const permutations = [];
-
-    permutationsHelper(arr, 0, permutations);
-
-    return permutations;
-}
-
-/**
- *
- * @param {number[]} arr
- * @param {number} targetIndex
- * @param {number[][]} permutations
- */
-function permutationsHelper(arr, targetIndex, permutations) {
-    const len = arr.length;
-
-    if (targetIndex === len - 1) {
-        permutations.push(arr.slice());
-    } else {
-        for (let i = targetIndex; i < len; i++) {
-            swap(arr, i, targetIndex);
-            permutationsHelper(arr, targetIndex + 1, permutations);
-            swap(arr, targetIndex, i);
-        }
-    }
-}
-
-/**
- *
- * @param {number[]} arr
- * @param {number} i
- * @param {number} j
- */
-function swap(arr, i, j) {
-    [arr[i], arr[j]] = [arr[j], arr[i]];
 }
 
 module.exports = getPermutations;
