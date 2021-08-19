@@ -69,4 +69,6 @@ function swap(arr, i, j) {
     [arr[i], arr[j]] = [arr[j], arr[i]];
 }
 
+permute([1, 2, 3]); // for debug
+
 module.exports = permute;
