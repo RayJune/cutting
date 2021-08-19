@@ -1,4 +1,5 @@
-const permuteUnique = require('./index');
+// const permuteUnique = require('./index');
+const permuteUnique = require('./optimize');
 
 test('define permuteUnique function', () => {
     expect(typeof permuteUnique).toBe('function');
@@ -70,5 +71,34 @@ test('nums = [1, 1, 2, 2]', () => {
         [2, 1 ,1, 2],
         [2, 1, 2, 1],
         [2, 2, 1, 1]
+    ]));
+});
+
+test('nums = [0, 1, 0, 0, 9]', () => {
+    const nums = [0, 1, 0, 0, 9];
+    const permutations = permuteUnique(nums);
+
+    expect(permutations).toHaveLength(20);
+    expect(permutations).toEqual(expect.arrayContaining([
+        [0,0,0,1,9],
+        [0,0,0,9,1],
+        [0,0,1,0,9],
+        [0,0,1,9,0],
+        [0,0,9,0,1],
+        [0,0,9,1,0],
+        [0,1,0,0,9],
+        [0,1,0,9,0],
+        [0,1,9,0,0],
+        [0,9,0,0,1],
+        [0,9,0,1,0],
+        [0,9,1,0,0],
+        [1,0,0,0,9],
+        [1,0,0,9,0],
+        [1,0,9,0,0],
+        [1,9,0,0,0],
+        [9,0,0,0,1],
+        [9,0,0,1,0],
+        [9,0,1,0,0],
+        [9,1,0,0,0]
     ]));
 });
