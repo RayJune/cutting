@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1629335467830" clover="3.2.0">
+  <project timestamp="1629335467830" name="All files">
+    <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3" elements="17" coveredelements="17" complexity="0" loc="12" ncloc="12" packages="1" files="1" classes="1"/>
+    <file name="optimize.js" path="/Users/rayjune/Documents/GitHub/offer/src/permutations/optimize.js">
+      <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <line num="20" count="6" type="stmt"/>
+      <line num="22" count="6" type="stmt"/>
+      <line num="24" count="6" type="stmt"/>
+      <line num="34" count="66" type="stmt"/>
+      <line num="36" count="66" type="cond" truecount="2" falsecount="0"/>
+      <line num="37" count="39" type="stmt"/>
+      <line num="39" count="27" type="stmt"/>
+      <line num="40" count="60" type="stmt"/>
+      <line num="41" count="60" type="stmt"/>
+      <line num="42" count="60" type="stmt"/>
+      <line num="54" count="120" type="stmt"/>
+      <line num="57" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
