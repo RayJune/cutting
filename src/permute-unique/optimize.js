@@ -27,37 +27,29 @@
  */
 function permuteUnique(nums) {
     const permutations = [];
-    const signs = new Array(nums.length);
+    const len = nums.length;
+    const signs = new Array(len);
+    const backtrack = (currentPermutation = []) => {
+        if (currentPermutation.length === len) {
+            permutations.push(currentPermutation.slice());
+        } else {
+            for (let i = 0; i < len; i++) {
+                if (signs[i] || (i > 0 && nums[i] === nums[i - 1] && !signs[i - 1])) {
+                    continue;
+                }
+                signs[i] = true;
+                currentPermutation.push(nums[i]);
+                backtrack(currentPermutation);
+                signs[i] = false;
+                currentPermutation.pop();
+            }
+        }
+    };
 
-    backtrack(nums.sort(), [], permutations, signs);
+    nums.sort();
+    backtrack();
 
     return permutations;
-}
-
-/**
- *
- * @param {number[]} nums
- * @param {number[]} currentPermutation
- * @param {number[][]} permutations
- * @param {Array} signs
- */
-function backtrack(nums, currentPermutation, permutations, signs) {
-    const len = nums.length;
-
-    if (currentPermutation.length === len) {
-        permutations.push(currentPermutation.slice());
-    } else {
-        for (let i = 0; i < len; i++) {
-            if (signs[i] || (i > 0 && nums[i] === nums[i - 1] && !signs[i - 1])) {
-                continue;
-            }
-            currentPermutation.push(nums[i]);
-            signs[i] = true;
-            backtrack(nums, currentPermutation, permutations, signs);
-            signs[i] = false;
-            currentPermutation.pop();
-        }
-    }
 }
 
 module.exports = permuteUnique;

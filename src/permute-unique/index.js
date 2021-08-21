@@ -28,35 +28,26 @@
  */
 function permuteUnique(nums) {
     const permutations = [];
+    const len = nums.length;
     const map = {};
-
-    backtrack(nums, 0, permutations, map);
-
-    return permutations;
-}
-
-/**
- *
- * @param {number[]} arr
- * @param {number} depth
- * @param {number[][]} permutations
- * @param {Object} map
- */
-function backtrack(arr, depth, permutations, map) {
-    const len = arr.length;
-
-    if (depth === len - 1) {
-        if (map[arr] === undefined) {
-            permutations.push(arr.slice());
-            map[arr] = 1;
-        }
-    } else {
-        for (let i = depth; i < len; i++) {
-            swap(arr, depth, i);
-            backtrack(arr, depth + 1, permutations, map);
-            swap(arr, i, depth);
+    const backtrack = (depth = 0) => {
+        if (depth === len - 1) {
+            if (map[nums] === undefined) {
+                permutations.push(nums.slice());
+                map[nums] = true;
+            }
+        } else {
+            for (let i = depth; i < len; i++) {
+                swap(nums, i, depth);
+                backtrack(depth + 1);
+                swap(nums, depth, i);
+            }
         }
     }
+
+    backtrack();
+
+    return permutations;
 }
 
 /**

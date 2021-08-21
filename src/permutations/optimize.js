@@ -18,30 +18,22 @@
 
 function getPermutations(arr) {
     const permutations = [];
+    const len = arr.length;
+    const backtrack = (depth = 0) => {
+        if (depth === len - 1) {
+            permutations.push(arr.slice());
+        } else {
+            for (let i = depth; i < len; i++) {
+                swap(arr, i, depth);
+                backtrack(depth + 1);
+                swap(arr, depth, i);
+            }
+        }
+    };
 
-    backtracking(arr, 0, permutations);
+    backtrack();
 
     return permutations;
-}
-
-/**
- *
- * @param {number[]} arr
- * @param {number} depth
- * @param {number[][]} permutations
- */
-function backtracking(arr, depth, permutations) {
-    const len = arr.length;
-
-    if (depth === len - 1) {
-        permutations.push(arr.slice());
-    } else {
-        for (let i = depth; i < len; i++) {
-            swap(arr, i, depth);
-            backtracking(arr, depth + 1, permutations);
-            swap(arr, depth, i);
-        }
-    }
 }
 
 /**

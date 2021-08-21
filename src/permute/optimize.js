@@ -33,30 +33,22 @@
  */
 function permute(nums) {
     const permutations = [];
+    const len = nums.length;
+    const backtrack = (depth = 0) => {
+        if (depth === len - 1) {
+            permutations.push(nums.slice());
+        } else {
+            for (let i = depth; i < len; i++) {
+                swap(nums, i, depth);
+                backtrack(depth + 1);
+                swap(nums, depth, i);
+            }
+        }
+    };
 
-    backtrack(nums, 0, permutations);
+    backtrack();
 
     return permutations;
-}
-
-/**
- *
- * @param {number[]} nums
- * @param {number} depth
- * @param {number[][]} permutations
- */
-function backtrack(nums, depth, permutations) {
-    const len = nums.length;
-
-    if (depth === len - 1) {
-        permutations.push(nums.slice());
-    } else {
-        for (let i = depth; i < len; i++) {
-            swap(nums, i, depth);
-            backtrack(nums, depth + 1, permutations);
-            swap(nums, depth, i);
-        }
-    }
 }
 
 /**

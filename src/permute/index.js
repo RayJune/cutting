@@ -24,39 +24,34 @@
 */
 
 /**
- * DFS
+ * Backtracking
  *
- * O(n^2*n!) time | O(n*n!) space
+ * O(n^2*n!) time | O(n*n!) space, 其中 n 代表输入参数 arr 的数组长度
  *
  * @param {number[]} nums
  * @return {number[][]} permutations
  */
 function permute(nums) {
     const permutations = [];
+    const backtrack = (candidates, currentPermutation = []) => {
+        const len = candidates.length;
 
-    permutationsHelper(nums, [], permutations);
+        if (len === 0) {
+            permutations.push(currentPermutation.slice());
+        } else {
+            for (let i = 0; i < len; i++) {
+                const remainingCandidates = candidates.slice(0, i).concat(candidates.slice(i + 1));
+
+                currentPermutation.push(candidates[i]);
+                backtrack(remainingCandidates, currentPermutation);
+                currentPermutation.pop();
+            }
+        }
+    };
+
+    backtrack(nums);
 
     return permutations;
 }
-
-/**
- *
- * @param {number[]} nums
- * @param {number[]} currentPermutation
- * @param {number[][]} permutations
- */
-function permutationsHelper(nums, currentPermutation, permutations) {
-    if (nums.length) {
-        for (let i = 0; i < nums.length; i++) {
-            const modifiedArr = nums.slice(0, i).concat(nums.slice(i + 1));
-            const newPermutation = currentPermutation.concat(nums[i]);
-
-            permutationsHelper(modifiedArr, newPermutation, permutations);
-        }
-    } else {
-        permutations.push(currentPermutation);
-    }
-}
-
 
 module.exports = permute;
