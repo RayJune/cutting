@@ -41,35 +41,38 @@
 */
 
 /**
- * Backtracking
+ * Backtracking + 排序剪枝
  *
- * O(s) time | O(s) time，s 为所有可行解的长度之和，即搜索树所有叶子节点的深度之和
+ * O(s) time | O(s) space, s 代表所有可行解的长度之和
  *
  * @param {number[]} candidates
  * @param {number} target
+ * @returns {number[][]} combinations
  */
 function combinationSum(candidates, target) {
     const combinations = [];
     const len = candidates.length;
-    const backtrack = (currentTarget, i, currentCombination = []) => {
+    const backtrack = (currentTarget, currentCombination = [], i = 0) => {
         if (i === len) {
             return;
         }
-        if (currentTarget === 0) {
-            combinations.push(currentCombination.slice());
-        } else {
-            const remainingTarget = currentTarget - candidates[i];
 
-            if (remainingTarget >= 0) {
-                currentCombination.push(candidates[i]);
-                backtrack(remainingTarget, i, currentCombination);
-                currentCombination.pop()
-            }
-            backtrack(currentTarget, i + 1, currentCombination);
+        const remainingTarget = currentTarget - candidates[i];
+
+        if (remainingTarget > 0) {
+            currentCombination.push(candidates[i]);
+            backtrack(remainingTarget, currentCombination, i);
+            currentCombination.pop();
+            backtrack(currentTarget, currentCombination, i + 1);
+        } else if (remainingTarget === 0) {
+            currentCombination.push(candidates[i]);
+            combinations.push(currentCombination.slice());
+            currentCombination.pop();
         }
     };
 
-    backtrack(target, 0);
+    candidates.sort((a, b) => a - b);
+    backtrack(target);
 
     return combinations;
 }

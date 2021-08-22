@@ -1,5 +1,4 @@
-// const combinationSum = require('./index');
-const combinationSum = require('./optimize');
+const combinationSum = require('./index');
 
 test('define combinationSum function', () => {
     expect(typeof combinationSum).toBe('function');
