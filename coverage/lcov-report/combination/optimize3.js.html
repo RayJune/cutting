@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for permute/optimize.js</title>
+    <title>Code coverage report for combination/optimize3.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">permute</a> optimize.js</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">combination</a> optimize3.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>14/14</span>
+                <span class='fraction'>17/17</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>13/13</span>
+                <span class='fraction'>16/16</span>
             </div>
         
             
@@ -112,21 +112,7 @@
 <a name='L53'></a><a href='#L53'>53</a>
 <a name='L54'></a><a href='#L54'>54</a>
 <a name='L55'></a><a href='#L55'>55</a>
-<a name='L56'></a><a href='#L56'>56</a>
-<a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a>
-<a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a>
-<a name='L63'></a><a href='#L63'>63</a>
-<a name='L64'></a><a href='#L64'>64</a>
-<a name='L65'></a><a href='#L65'>65</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L56'></a><a href='#L56'>56</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -157,98 +143,85 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">17x</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">27x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
- * Given an array nums of distinct integers, return all the possible permutations.
- * You can return the answer in any order.
+ * Given two integers `n` and `k`, return all possible combinations of k numbers out of the range [1, n].
+ *
+ * You may return the answer in any order.
  *
  * Example 1:
- * Input: nums = [1, 2, 3]
- * Output: [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]
+ * Input: n = 4, k = 2
+ * Output: [[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]];
  *
  * Example 2:
- * Input: nums = [0, 1]
- * Output: [[0, 1]]
- *
- * Example 3:
- * Input: nums = [1]
+ * Input: n = 1, k = 1
  * Output: [[1]]
  *
  * Constraints:
- * 1 &lt;= nums.length &lt;= 6
- * -10 &lt;= nums[i] &lt;= 10
- * All the integers of nums are unique
- *
- * https://leetcode-cn.com/problems/permutations/
+ * 1 &lt;= n &lt;= 20
+ * 1 &lt;= k &lt;= n
+ * https://leetcode-cn.com/problems/combinations/
  *
 */
 &nbsp;
 /**
- * Backtracking
+ * Binary Sorted
+ * Complexity Analyzation -&gt; optimize3.md
  *
- * O(n*n!) time | O(n*n!) space, n 代表输入参数 nums 数组的长度
- *
- * @param {number[]} nums
- * @return {number[][]} permutations
+ * @param {number} n
+ * @param {number} k
+ * @returns combinations
  */
-function permute(nums) {
-    const permutations = [];
-    const len = nums.length;
-    const backtrack = (depth = 0) =&gt; {
-        if (depth === len - 1) {
-            permutations.push(nums.slice());
-        } else {
-            for (let i = depth; i &lt; len; i++) {
-                swap(nums, i, depth);
-                backtrack(depth + 1);
-                swap(nums, depth, i);
-            }
+function combine(n, k) {
+    const combinations = [];
+    const currentCombination = [];
+&nbsp;
+    for (let i = 1; i &lt;= k; i++) {
+        currentCombination.push(i);
+    }
+    currentCombination.push(n + 1);
+&nbsp;
+    let i = 0;
+    while (i &lt; k) {
+        combinations.push(currentCombination.slice(0, k));
+        i = 0;
+        while (currentCombination[i] + 1 === currentCombination[i + 1]) {
+            currentCombination[i] = i + 1;
+            i += 1;
         }
-    };
+        currentCombination[i] += 1;
+    }
 &nbsp;
-    backtrack();
-&nbsp;
-    return permutations;
+    return combinations;
 }
 &nbsp;
-/**
- *
- * @param {Array} arr
- * @param {number} i
- * @param {number} j
- */
-function swap(arr, i, j) {
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-}
+combine(5, 3);
 &nbsp;
-module.exports = permute;
+&nbsp;
+module.exports = combine;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
