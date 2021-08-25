@@ -14,36 +14,42 @@
  * Constraints:
  * 1 <= n <= 20
  * 1 <= k <= n
- *
  * https://leetcode-cn.com/problems/combinations/
  *
 */
+
 /**
- * Complexity Analyzation -> index.md
+ * Binary Sorted
+ * Complexity Analyzation -> optimize3.md
  *
  * @param {number} n
  * @param {number} k
- * @returns {number[][]} combinations
+ * @returns combinations
  */
 function combine(n, k) {
     const combinations = [];
-    const backtrack = (i = 1, currentCombination = []) => {
-        if (i === n + 1) {
-            return;
-        }
-        for (let j = i; j <= n; j++) {
-            currentCombination.push(j);
-            if (currentCombination.length === k) {
-                combinations.push(currentCombination.slice());
-            }
-            backtrack(j + 1, currentCombination);
-            currentCombination.pop();
-        }
-    };
+    const currentCombination = [];
 
-    backtrack();
+    for (let i = 1; i <= k; i++) {
+        currentCombination.push(i);
+    }
+    currentCombination.push(n + 1);
+
+    let i = 0;
+    while (i < k) {
+        combinations.push(currentCombination.slice(0, k));
+        i = 0;
+        while (currentCombination[i] + 1 === currentCombination[i + 1]) {
+            currentCombination[i] = i + 1;
+            i += 1;
+        }
+        currentCombination[i] += 1;
+    }
 
     return combinations;
 }
+
+combine(5, 3);
+
 
 module.exports = combine;

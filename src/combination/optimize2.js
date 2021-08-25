@@ -22,7 +22,7 @@
 /**
  * 剪枝
  *
- * time complexity & space complexity -> index.md
+ * Complexity Analyzation -> index.md
  *
  * @param {number} n
  * @param {number} k
