@@ -1,5 +1,6 @@
 // const getPermutations = require('./index');
 const getPermutations = require('./optimize');
+// const getPermutations = require('./template');
 
 test('define getPermutations function', () => {
     expect(typeof getPermutations).toEqual('function');
