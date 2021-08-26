@@ -26,7 +26,10 @@
 /**
  * Backtracking
  *
- * O(n*n!) time | O(n*n!) space, n 代表输入参数 nums 数组的长度
+ * Time Complexity: O(n*n!) = for 循环次数 O(n) * backtrack 执行次数 O(n!)
+ * Space complexity:  O(n*n!) = 排列长度 O(n) * 排列个数 O(n!)
+ * Auxiliary complexity: O(n) = backtrack 函数调用栈深度
+ * (n 代表输入参数 arr 数组的长度)
  *
  * @param {number[]} nums
  * @return {number[][]} permutations
