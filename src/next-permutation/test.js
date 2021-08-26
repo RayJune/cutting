@@ -1,4 +1,5 @@
 const nextPermutation = require('./index');
+// const nextPermutation = require('./template');
 
 test('define permute function', () => {
     expect(typeof nextPermutation).toBe('function');

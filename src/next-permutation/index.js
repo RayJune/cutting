@@ -33,16 +33,10 @@
 */
 
 /**
- * 思路：
- * 1. 从右向左找到较小数
- * 2. 从右向左找到较大数
- * 3. 将较大数和较小数交换位置
- * 4. 把较大数右边的元素做 reverse 处理，使之成为升序数组
  *
- * 1. 将一个左边的较小数和右边的较大数位置交换，其中较小数要尽量靠右，较大数尽量靠左
- * 2. 交换完成后，较大数右边的数需要按照升序重新排列
- *
- * O(n) time | O(1) space, n 代表参数 nums 的数组长度
+ * Time Complexity: O(n) = while loop + while loop + reverse
+ * Space complexity:  O(1)
+ * Auxiliary complexity:  O(1)
  *
  * @param {number[]} nums
  */
@@ -56,7 +50,7 @@ function nextPermutation(nums) {
     if (smallerIndex >= 0) {
         let biggerIndex = len - 1;
 
-        while (biggerIndex >= 0 && nums[smallerIndex] >= nums[biggerIndex]) {
+        while (nums[smallerIndex] >= nums[biggerIndex]) {
             biggerIndex -= 1;
         }
         swap(nums, smallerIndex, biggerIndex);
@@ -77,16 +71,15 @@ function swap(arr, i, j) {
 }
 
 /**
- * 输入 nums 和 leftIndex，反转 leftIndex 到数组末尾区间所有元素的位置
  *
- * @param {number[]} nums
+ * @param {Array} arr
  * @param {number} startIndex
  */
-function reverse(nums, startIndex) {
-    let endIndex = nums.length - 1;
+function reverse(arr, startIndex) {
+    let endIndex = arr.length - 1;
 
     while (startIndex < endIndex) {
-        swap(nums, startIndex, endIndex);
+        swap(arr, startIndex, endIndex);
         startIndex += 1;
         endIndex -= 1;
     }
