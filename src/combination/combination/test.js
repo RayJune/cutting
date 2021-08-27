@@ -1,7 +1,6 @@
 // const combine = require('./index');
-// const combine = require('./optimize');
-// const combine = require('./optimize2');
-const combine = require('./optimize3');
+const combine = require('./optimize');
+// const combine = require('./template');
 
 
 test('define combinationSum function', () => {

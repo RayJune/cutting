@@ -20,6 +20,7 @@
 */
 
 /**
+ * Backtracking + 剪枝
  *
  * Complexity Analyzation -> index.md
  *
@@ -28,30 +29,27 @@
  * @returns {number[][]} combinations
  */
 function combine(n, k) {
-    const candidates = [];
     const combinations = [];
-    const backtrack = (i = 0, currentCombination = []) => {
-        if (i === n) {
-            return;
-        }
-        for (let j = i; j < n; j++) {
-            currentCombination.push(candidates[[j]]);
-            if (currentCombination.length === k) {
-                combinations.push(currentCombination.slice());
+    const backtrack = (i = 1, currentCombination = []) => {
+        const len = currentCombination.length;
+
+        if (len === k) {
+            combinations.push(currentCombination.slice());
+        } else {
+            for (let j = i; j <= n; j++) {
+                if (len + n - j + 1 < k) {
+                    break;
+                }
+                currentCombination.push(j);
+                backtrack(j + 1, currentCombination);
+                currentCombination.pop();
             }
-            backtrack(j + 1, currentCombination);
-            currentCombination.pop();
         }
     };
 
-    for (let i = 1; i <= n; i++) {
-        candidates.push(i);
-    }
     backtrack();
 
     return combinations;
 }
-
-combine(4, 2);
 
 module.exports = combine;
