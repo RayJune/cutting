@@ -21,37 +21,29 @@
 */
 
 /**
- * Backtracking + 剪枝 + while loop
+ * Bitwise operators
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators
  *
  * Time Complexity: O(n*2^n) = push 构造单个 subset 的时间 O(n) * subset 个数 O(2^n)
  * Space complexity:  O(n*2^n) = 单个 subset 的长度 O(n) * subset 个数 O(2^n)
- * Auxiliary complexity:  O(n) = currentSubset 长度 O(n) + backtrack 函数栈空间 O(n)
+ * Auxiliary complexity:  O(n) = currentSubset 长度 O(n)
  *
  * @param {number[]} nums
  * @returns {number[][]} subsets
  */
 function subsets(nums) {
-    let subsetLength = 1;
-    const subsets = [[]];
+    const subsets = [];
     const len = nums.length;
-    const backtrack = (i = 0, currentSubset = []) => {
-        if (currentSubset.length === subsetLength) {
-            subsets.push(currentSubset.slice());
-        } else {
-            for (let j = i; j < len; j++) {
-                if (len - j + currentSubset.length < subsetLength) {
-                    break;
-                }
+
+    for (let i = 0; i < (1 << len); i++) {
+        const currentSubset = [];
+
+        for (let j = 0; j < len; j++) {
+            if (i & (1 << j)) {
                 currentSubset.push(nums[j]);
-                backtrack(j + 1, currentSubset);
-                currentSubset.pop();
             }
         }
-    };
-
-    while (subsetLength <= len) {
-        backtrack();
-        subsetLength += 1;
+        subsets.push(currentSubset);
     }
 
     return subsets;

@@ -21,7 +21,7 @@
 */
 
 /**
- * Backtracking + 剪枝 + while loop
+ * Backtracking
  *
  * Time Complexity: O(n*2^n) = push 构造单个 subset 的时间 O(n) * subset 个数 O(2^n)
  * Space complexity:  O(n*2^n) = 单个 subset 的长度 O(n) * subset 个数 O(2^n)
@@ -31,30 +31,24 @@
  * @returns {number[][]} subsets
  */
 function subsets(nums) {
-    let subsetLength = 1;
-    const subsets = [[]];
+    const subsets = [];
     const len = nums.length;
     const backtrack = (i = 0, currentSubset = []) => {
-        if (currentSubset.length === subsetLength) {
+        if (i === len) {
             subsets.push(currentSubset.slice());
         } else {
-            for (let j = i; j < len; j++) {
-                if (len - j + currentSubset.length < subsetLength) {
-                    break;
-                }
-                currentSubset.push(nums[j]);
-                backtrack(j + 1, currentSubset);
-                currentSubset.pop();
-            }
+            currentSubset.push(nums[i]);
+            backtrack(i + 1, currentSubset);
+            currentSubset.pop();
+            backtrack(i + 1, currentSubset);
         }
-    };
-
-    while (subsetLength <= len) {
-        backtrack();
-        subsetLength += 1;
     }
+
+    backtrack();
 
     return subsets;
 }
+
+subsets([1, 2, 3]);
 
 module.exports = subsets;
