@@ -22,8 +22,8 @@
  * Backtracking + array unique
  *
  * Time Complexity: O(n * n!) = for 循环次数 O(n) * backtrack 函数执行次数 O(n!)
- * Space complexity:  O(n * n!) = (排列长度 O(n) * 排列个数 O(n!)) + map 长度 O(n) + 函数调用栈深度 O(n)
- * Auxiliary complexity:  O(n) = map 长度 O(n) + 函数调用栈深度 O(n)
+ * Space complexity:  O(n * n!) = (排列长度 O(n) * 排列个数 O(n!)) + map 长度 O(n!) + 函数调用栈深度 O(n)
+ * Auxiliary complexity:  O(n!) = map 长度 O(n!) + 函数调用栈深度 O(n)
  * (n 代表输入参数 nums 的数组长度)
  *
  * @param {number[]} nums
