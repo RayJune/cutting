@@ -34,9 +34,9 @@ function subsets(nums) {
     const subsets = [[]];
 
     for (let i = 0; i < nums.length; i++) {
-        const currentLen = subsets.length;
+        const subsetsLength = subsets.length;
 
-        for (let j = 0; j < currentLen; j++) {
+        for (let j = 0; j < subsetsLength; j++) {
             const newSubset = subsets[j].slice();
 
             newSubset.push(nums[i]);
