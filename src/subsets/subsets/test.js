@@ -1,5 +1,6 @@
 // const subsets = require('./index');
-const subsets = require('./optimize');
+// const subsets = require('./optimize');
+const subsets = require('./optimize2');
 // const subsets = require('./operator');
 // const subsets = require('./template');
 // const subsets = require('./template-zh');
