@@ -23,8 +23,8 @@
  * Backtracking + map 去重
  *
  * Time Complexity: O(n*2^n) = 单个 subset push 次数 O(n) * backtrack 执行次数 O(2^n) + 排序 O(n*log(n))
- * Space complexity: O(n*2^n) = 单个 subset 长度 O(n) * subset 的个数 O(2^n) + O(n) backtrack 函数调用栈深度 + map 长度 O(2^n) + currentLength 长度 O(n)
- * Auxiliary complexity: O(2^n) = currentLength 长度 O(n) + backtrack 函数调用栈深度 O(n) + map 长度 O(2^n)
+ * Space complexity: O(n*2^n) = 单个 subset 长度 O(n) * subset 的个数 O(2^n) + O(n) backtrack 函数调用栈深度 + map 长度 O(2^n) + currentLength 长度 O(n) + 排序 O(log(n))
+ * Auxiliary complexity: O(2^n) = currentLength 长度 O(n) + backtrack 函数调用栈深度 O(n) + map 长度 O(2^n) + 排序 O(log(n))
  *
  * @param {number[]} nums
  * @returns {number[][]} subsets

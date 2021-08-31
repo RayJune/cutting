@@ -22,9 +22,9 @@
 /**
  * Cascading
  *
- * Time Complexity: O(n*2^n) = slice 方法 O(n) * 遍历次数 O(n^2)
- * Space complexity: O(n*2^n) = 单个 subset 长度 O(n) * subset 个数 O(n^2)
- * Auxiliary complexity: O(log(n)) = array.sort() 所使用的空间
+ * Time Complexity: O(n*2^n) = slice 方法 O(n) * 遍历次数 O(n^2) + 排序 O(n*log(n))
+ * Space complexity: O(n*2^n) = 单个 subset 长度 O(n) * subset 个数 O(n^2) + 排序 O(log(n))
+ * Auxiliary complexity: O(log(n)) = 排序 O(log(n))
  *
  * @param {number[]} nums
  * @returns {number[][]} subsets
