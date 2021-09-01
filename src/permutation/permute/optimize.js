@@ -24,7 +24,7 @@
 */
 
 /**
- * 回溯法，用 swap 来代替 slice 和 concat 操作，优化时间复杂度
+ * 回溯法，用 swap 来代替 slice 和 concat 方法，以及进行合适的剪枝操作（depth === len - 1），优化时间复杂度
  *
  * Time Complexity: O(n*n!) = for 循环 O(n) * backtrack 执行次数 O(n!)
  * Space complexity:  O(n*n!) = 单个排列的长度 O(n) * 排列个数 O(n!)
