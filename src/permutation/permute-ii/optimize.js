@@ -14,16 +14,16 @@
  * 1 <= nums.length <= 8
  * -10 <= nums[i] <= 10
  *
- * https://leetcode-cn.com/problems/permutations-ii/
+ * https://leetcode.com/problems/permutations-ii/
  *
 */
 
 /**
  * Backtracking + signs
  *
- * Time Complexity: O(n*n!): backtrack 的调用次数 O(n!) * for 循环 O(n)
- * Space complexity:  O(n*n!): output 里的排列个数 O(n!) * 单个排列的长度 O(n) + signs 的长度 O(n)
- * Auxiliary complexity: O(n): 函数调用栈的深度 O(n) + signs 的长度 O(n)
+ * Time Complexity: O(n*n!): backtrack 的调用次数 O(n!) * for 循环 O(n) + 排序 O(n*log(n))
+ * Space complexity:  O(n*n!): output 里的排列个数 O(n!) * 单个排列的长度 O(n) + signs 的长度 O(n) + 排序 O(log(n))
+ * Auxiliary complexity: O(n): 函数调用栈的深度 O(n) + signs 的长度 O(n) + 排序 O(log(n))
  * 其中 n 代表输入参数 arr 的数组长度
  *
  * @param {number} nums

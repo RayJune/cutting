@@ -14,7 +14,7 @@
  * 1 <= nums.length <= 8
  * -10 <= nums[i] <= 10
  *
- * https://leetcode-cn.com/problems/permutations-ii/
+ * https://leetcode.com/problems/permutations-ii/
  *
 */
 
