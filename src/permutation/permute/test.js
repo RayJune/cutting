@@ -1,5 +1,8 @@
 // const permute = require('./index');
 const permute = require('./optimize');
+// const permute = require('./template');
+// const permute = require('./template-zh');
+
 
 test('define permute function', () => {
     expect(typeof permute).toBe('function');
@@ -10,19 +13,17 @@ test('input value is [1]', () => {
 });
 
 test('input value is [1, 2]', () => {
-    const inputArr = [1, 2];
-    const permutations = permute(inputArr);
+    const permutations = permute([1, 2]);
 
     expect(permutations).toHaveLength(2);
-    expect(permute(inputArr)).toEqual(expect.arrayContaining([
+    expect(permutations).toEqual(expect.arrayContaining([
         [1, 2],
         [2, 1]
     ]));
 });
 
 test('input value is [1, 2, 3]', () => {
-    const inputArr = [1, 2, 3];
-    const permutations = permute(inputArr);
+    const permutations = permute([1, 2, 3]);
 
     expect(permutations).toHaveLength(6);
     expect(permutations).toEqual(expect.arrayContaining([

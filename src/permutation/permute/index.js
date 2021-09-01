@@ -19,17 +19,17 @@
  * -10 <= nums[i] <= 10
  * All the integers of nums are unique
  *
- * https://leetcode-cn.com/problems/permutations/
+ * https://leetcode.com/problems/permutations/
  *
 */
 
 /**
- * Backtracking
+ * 回溯法：探索所有可能得候选解来找出结果，每次找到候选解后返回到上一个状态再继续找
  *
  * Time Complexity: O(n^2*n!) = for 循环 O(n) * concat 方法 O(n) * backtrack 的调用次数 O(n!)
  * Space complexity: O(n*n!) = 单个排列的长度 O(n) * 排列个数 O(n!)
  * Auxiliary complexity: O(n) = backtrack 函数调用栈的深度 O(n) + currentPermutation 的长度 O(n)
- * (其中 n 代表输入参数 arr 的数组长度)
+ * (n 代表输入参数 nums 数组的长度)
  *
  * @param {number[]} nums
  * @return {number[][]} permutations

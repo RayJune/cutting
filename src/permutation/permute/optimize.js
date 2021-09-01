@@ -19,15 +19,15 @@
  * -10 <= nums[i] <= 10
  * All the integers of nums are unique
  *
- * https://leetcode-cn.com/problems/permutations/
+ * https://leetcode.com/problems/permutations/
  *
 */
 
 /**
- * Backtracking
+ * 回溯法，用 swap 来代替 slice 和 concat 操作，优化时间复杂度
  *
- * Time Complexity: O(n*n!) = for 循环次数 O(n) * backtrack 执行次数 O(n!)
- * Space complexity:  O(n*n!) = 排列长度 O(n) * 排列个数 O(n!)
+ * Time Complexity: O(n*n!) = for 循环 O(n) * backtrack 执行次数 O(n!)
+ * Space complexity:  O(n*n!) = 单个排列的长度 O(n) * 排列个数 O(n!)
  * Auxiliary complexity: O(n) = backtrack 函数调用栈深度
  * (n 代表输入参数 arr 数组的长度)
  *

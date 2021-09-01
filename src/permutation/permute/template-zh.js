@@ -1,6 +1,5 @@
 /*
- * Given an array nums of distinct integers, return all the possible permutations.
- * You can return the answer in any order.
+ * 给定一个不含重复数字的数组 `nums`，返回其所有可能的全排列。你可以按任意顺序返回答案。
  *
  * Example 1:
  * Input: nums = [1, 2, 3]
@@ -14,12 +13,12 @@
  * Input: nums = [1]
  * Output: [[1]]
  *
- * Constraints:
+ * 提示:
  * 1 <= nums.length <= 6
  * -10 <= nums[i] <= 10
- * All the integers of nums are unique
+ * nums 中的所有整数互不相同
  *
- * https://leetcode.com/problems/permutations/
+ * https://leetcode-cn.com/problems/permutations/
  *
 */
 
