@@ -28,15 +28,18 @@
  * 1 <= nums.length <= 100
  * 0 <= nums[i] <= 100
  *
- * https://leetcode-cn.com/problems/next-permutation/
+ * https://leetcode.com/problems/next-permutation/
  *
 */
 
 /**
+ * 从后向前，找到第一个 arr[i] < arr[i + 1] 的元素（较小数），这样较小数之后的排列为降序排列
+ * 如果较小数的下标 < 0，说明 nums 为降序排列，不存在题目要求的下一个排列，此时 reverse 为升序排列返回即可
+ * 如果较小数的下标 >=0，从后向前，找到第一个比较小数大的数，记为较大数；让较小数和较大数交换位置，然后再把较小数之后的元素做 reverse 处理，使之成为升序数组
  *
  * Time Complexity: O(n) = while loop + while loop + reverse
- * Space complexity:  O(1)
- * Auxiliary complexity:  O(1)
+ * Space complexity: O(1)
+ * Auxiliary complexity: O(1)
  *
  * @param {number[]} nums
  */
@@ -44,7 +47,7 @@ function nextPermutation(nums) {
     const len = nums.length;
     let smallerIndex = len - 2;
 
-    while (smallerIndex >= 0 && nums[smallerIndex] >= nums[smallerIndex + 1]) {
+    while (nums[smallerIndex] >= nums[smallerIndex + 1]) {
         smallerIndex -= 1;
     }
     if (smallerIndex >= 0) {
@@ -63,16 +66,6 @@ function nextPermutation(nums) {
 /**
  *
  * @param {Array} arr
- * @param {number} i
- * @param {number} j
- */
-function swap(arr, i, j) {
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-}
-
-/**
- *
- * @param {Array} arr
  * @param {number} startIndex
  */
 function reverse(arr, startIndex) {
@@ -83,6 +76,16 @@ function reverse(arr, startIndex) {
         startIndex += 1;
         endIndex -= 1;
     }
+}
+
+/**
+ *
+ * @param {Array} arr
+ * @param {number} i
+ * @param {number} j
+ */
+function swap(arr, i, j) {
+    [arr[i], arr[j]] = [arr[j], arr[i]];
 }
 
 module.exports = nextPermutation;

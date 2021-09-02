@@ -1,8 +1,9 @@
 /*
- * Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.
- * If such an arrangement is not possible, it must rearrange it as the lowest possible order(i.e., sorted in ascending order).
- * The replacement must be in place and use only constant extra memory;
+ * 实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序列中下一个更大的排列（即，组合出下一个更大的整数）。
  *
+ * 如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。
+ *
+ * 必须原地修改，只允许使用额外常数空间。
  *
  * Example 1:
  * Input: nums = [1, 2, 3]
@@ -24,11 +25,11 @@
  * Input: nums = [1, 3, 4, 2]
  * Output: [1, 4, 2, 3]
  *
- * Constraints:
+ * 提示:
  * 1 <= nums.length <= 100
  * 0 <= nums[i] <= 100
  *
- * https://leetcode.com/problems/next-permutation/
+ * https://leetcode-cn.com/problems/next-permutation/
  *
 */
 
