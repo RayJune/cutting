@@ -1,4 +1,5 @@
-const getPermutation = require('./index');
+// const getPermutation = require('./index');
+const getPermutation = require('./optimize');
 // const getPermutation = require('./template');
 // const getPermutation = require('./template-zh');
 
