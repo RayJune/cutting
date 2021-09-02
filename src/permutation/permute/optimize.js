@@ -24,27 +24,32 @@
 */
 
 /**
- * 回溯法，用 swap 来代替 slice 和 concat 方法，以及进行合适的剪枝操作（depth === len - 1），优化时间复杂度
+ * 回溯法 + signs 标记数组
  *
- * Time Complexity: O(n*n!) = for 循环 O(n) * backtrack 执行次数 O(n!)
- * Space complexity:  O(n*n!) = 单个排列的长度 O(n) * 排列个数 O(n!)
- * Auxiliary complexity: O(n) = backtrack 函数调用栈深度
- * (n 代表输入参数 arr 数组的长度)
+ * Time Complexity: O(n*n!) = for 循环次数 O(n) * backtrack 执行次数 O(n!)
+ * Space complexity: O(n*n!) = 单个排列长度 O(n) * 排列总个数 O(n!) + signs 长度 O(n) + currentPermutation 长度 O(n) + backtrack 函数执行栈深度
+ * Auxiliary complexity: O(n) = signs 长度 O(n) + currentPermutation 长度 O(n) + backtrack 函数执行栈深度
  *
  * @param {number[]} nums
- * @return {number[][]} permutations
+ * @returns {number[][]} permutations
  */
 function permute(nums) {
     const permutations = [];
     const len = nums.length;
-    const backtrack = (depth = 0) => {
-        if (depth === len - 1) {
-            permutations.push(nums.slice());
+    const signs = new Array(len);
+    const backtrack = (currentPermutation = []) => {
+        if (currentPermutation.length === len) {
+            permutations.push(currentPermutation.slice());
         } else {
-            for (let i = depth; i < len; i++) {
-                swap(nums, i, depth);
-                backtrack(depth + 1);
-                swap(nums, depth, i);
+            for (let i = 0; i < len; i++) {
+                if (signs[i]) {
+                    continue;
+                }
+                currentPermutation.push(nums[i]);
+                signs[i] = true;
+                backtrack(currentPermutation);
+                currentPermutation.pop();
+                signs[i] = false;
             }
         }
     };
@@ -52,16 +57,6 @@ function permute(nums) {
     backtrack();
 
     return permutations;
-}
-
-/**
- *
- * @param {Array} arr
- * @param {number} i
- * @param {number} j
- */
-function swap(arr, i, j) {
-    [arr[i], arr[j]] = [arr[j], arr[i]];
 }
 
 module.exports = permute;
