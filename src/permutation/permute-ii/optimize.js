@@ -19,12 +19,12 @@
 */
 
 /**
- * Backtracking + signs
+ * 回溯法 + 利用 signs 标记来剪枝
  *
- * Time Complexity: O(n*n!): backtrack 的调用次数 O(n!) * for 循环 O(n) + 排序 O(n*log(n))
- * Space complexity:  O(n*n!): output 里的排列个数 O(n!) * 单个排列的长度 O(n) + signs 的长度 O(n) + 排序 O(log(n))
- * Auxiliary complexity: O(n): 函数调用栈的深度 O(n) + signs 的长度 O(n) + 排序 O(log(n))
- * 其中 n 代表输入参数 arr 的数组长度
+ * Time Complexity: O(n*n!): backtrack 的调用次数 O(n!) * for 循环 O(n) + 排序所需要的空间 O(n*log(n))
+ * Space complexity: O(n*n!): 单个排列的长度 O(n) * 所有排列个数 O(n!)  + signs 的长度 O(n) + 排序所需要的空间 O(log(n))
+ * Auxiliary complexity: O(n): 函数调用栈的深度 O(n) + signs 的长度 O(n) + 排序所需要的空间 O(log(n))
+ * (n 代表输入参数 arr 的数组长度)
  *
  * @param {number} nums
  * @returns {number[][]} permutations

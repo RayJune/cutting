@@ -1,6 +1,7 @@
 // const permuteUnique = require('./index');
 const permuteUnique = require('./optimize');
 // const permuteUnique = require('./template');
+// const permuteUnique = require('./template-zh');
 
 test('define permuteUnique function', () => {
     expect(typeof permuteUnique).toBe('function');
