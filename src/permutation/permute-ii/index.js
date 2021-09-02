@@ -27,7 +27,7 @@
  * (n 代表输入参数 nums 的数组长度)
  *
  * @param {number[]} nums
- * @return {number[][]} permutations
+ * @returns {number[][]} permutations
  */
 function permuteUnique(nums) {
     const map = {};
