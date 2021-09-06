@@ -30,11 +30,11 @@
 */
 
 /**
- * 使用 hashTable，空间换时间
+ * 哈希表，用空间换时间
  *
- * Time Complexity: O(n)
- * Space complexity: O(n)
- * Auxiliary complexity: O(n)
+ * Time Complexity: O(n) = for 循环 O(n)
+ * Space complexity: O(n) = map 长度 O(n)
+ * Auxiliary complexity: O(n) = map 长度 O(n)
  *
  * @param {number[]} nums
  * @param {number} target

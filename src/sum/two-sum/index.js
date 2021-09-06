@@ -32,7 +32,7 @@
 /**
  * 暴力枚举
  *
- * Time Complexity: O(n^2) = for 循环 O(n) * for 循环 O(n)
+ * Time Complexity: O(n^2) = 外层 for 循环 O(n) * 内层 for 循环 O(n)
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
  *
