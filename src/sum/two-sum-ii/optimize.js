@@ -50,9 +50,10 @@ function twoSum(numbers, target) {
 
     for (let i = 0; i < numbers.length; i++) {
         const num = numbers[i];
+        const remainingNum = target - num;
 
-        if (map[target - num] !== undefined) {
-            return [map[target - num] + 1, i + 1];
+        if (map[remainingNum] !== undefined) {
+            return [map[remainingNum] + 1, i + 1];
         }
         map[num] = i;
     }

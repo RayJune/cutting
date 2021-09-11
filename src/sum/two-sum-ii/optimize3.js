@@ -47,18 +47,18 @@
  */
 function twoSum(numbers, target) {
     const len = numbers.length;
-    let i = 0;
-    let j = len - 1;
+    let small = 0;
+    let big = len - 1;
 
-    while (i < j) {
-        const sum = numbers[j] + numbers[i];
+    while (small < big) {
+        const sum = numbers[small] + numbers[big];
 
         if (sum > target) {
-            j -= 1;
+            big -= 1;
         } else if (sum < target) {
-            i += 1;
+            small += 1;
         } else {
-            return [i + 1, j + 1];
+            return [small + 1, big + 1];
         }
     }
 
