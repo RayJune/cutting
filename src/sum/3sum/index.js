@@ -29,9 +29,7 @@
 /**
  * 先排序，然后用双指针来做，注意跳过重复的数字
  *
- * Time Complexity: O(n^2) = for 循环 O(n) * while 循环 O(n) + 排序 O(n * log(n))
- * Space complexity: O(m) = triplets 里子数组的个数 o(m) * 子数组长度 O(3)
- * Auxiliary complexity: O(log(n)) = 排序所需要的空间 O(log(n))
+ * Complexity Analyzation -> index.md
  *
  * @param {number[]} nums
  * @returns {number[][]} triplets
