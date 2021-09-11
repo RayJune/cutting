@@ -27,9 +27,9 @@
 */
 
 /**
- * 先排序，然后用双指针来做，注意跳过重复的数字
+ * 先排序，然后用哈希表来做
  *
- * Complexity Analyzation -> index.md
+ * Complexity Analyzation -> index.md，其中 auxiliary space 为 O(n)，即 map 占用的空间
  *
  * @param {number[]} nums
  * @returns {number[][]} triplets
@@ -43,8 +43,7 @@ function threeSum(nums) {
     }
     nums.sort((a, b) => a - b);
     for (let i = 0; i < len; i++) {
-        let small = i + 1;
-        let big = len - 1;
+        const map = [];
 
         if (nums[i] > 0) {
             break;
@@ -52,23 +51,16 @@ function threeSum(nums) {
         if (i > 0 && nums[i] === nums[i - 1]) {
             continue;
         }
-        while (small < big) {
-            const sum = nums[i] + nums[small] + nums[big];
+        for (let j = i + 1; j < len; j++) {
+            const remainingNum = 0 - nums[i] - nums[j];
 
-            if (sum > 0) {
-                big -= 1;
-            } else if (sum < 0) {
-                small += 1;
+            if (map[remainingNum] !== undefined) {
+                triplets.push([nums[i], remainingNum, nums[j]]);
+                while (nums[j + 1] === nums[j]) {
+                    j += 1;
+                }
             } else {
-                triplets.push([nums[i], nums[small], nums[big]]);
-                small += 1;
-                big -= 1;
-                while (nums[small] === nums[small - 1]) {
-                    small += 1;
-                }
-                while (nums[big] === nums[big + 1]) {
-                    big -= 1;
-                }
+                map[nums[j]] = j;
             }
         }
     }

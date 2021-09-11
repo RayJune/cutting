@@ -1,4 +1,5 @@
 const threeSum = require('./index');
+// const threeSum = require('./hashtable');
 // const threeSum = require('./template');
 // const threeSum = require('./template-zh');
 
