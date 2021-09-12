@@ -43,7 +43,7 @@ function threeSum(nums) {
     }
     nums.sort((a, b) => a - b);
     for (let i = 0; i < len; i++) {
-        const map = [];
+        const map = {};
 
         if (nums[i] > 0) {
             break;
