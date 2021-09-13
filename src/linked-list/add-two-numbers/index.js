@@ -35,7 +35,7 @@
  * }
  */
 
-const ListNode = require('./list-preNode');
+const ListNode = require('./list-node');
 
 /**
  * 注意相加进位，因为一个节点位置只能存储一位数字
