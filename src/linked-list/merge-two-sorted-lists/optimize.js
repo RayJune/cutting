@@ -46,7 +46,7 @@ const ListNode = require('./list-node');
  * @returns {ListNode}
  */
 function mergeTwoLists(l1, l2) {
-    const preHead = new ListNode(-1, null);
+    const preHead = new ListNode();
     let prevNode = preHead;
 
     while (l1 !== null && l2 !== null) {

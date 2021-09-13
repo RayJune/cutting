@@ -33,6 +33,10 @@ test('l1 = [1, 2, 4], l2 = [1, 3, 4]', () => {
     expect(mergeTwoLists(l1, l2)).toEqual(l3);
 });
 
+test('l1 = [0], l2 = []', () => {
+    expect(mergeTwoLists(new ListNode(0), null)).toEqual(new ListNode(0));
+});
+
 test('l1 = [], l2 = []', () => {
     expect(mergeTwoLists(null, null)).toEqual(null);
 });
