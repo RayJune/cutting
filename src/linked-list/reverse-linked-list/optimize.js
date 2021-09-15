@@ -43,14 +43,13 @@
  */
 function reverseList(head) {
     let preNode = null;
-    let node = head;
 
-    while (node) {
-        const nextNode = node.next;
+    while (head) {
+        const nextNode = head.next;
 
-        node.next = preNode;
-        preNode = node;
-        node = nextNode;
+        head.next = preNode;
+        preNode = head;
+        head = nextNode
     }
 
     return preNode;
