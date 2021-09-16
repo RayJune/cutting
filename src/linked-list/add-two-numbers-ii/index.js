@@ -37,10 +37,10 @@
 const ListNode = require('./list-node');
 
 /**
- * 用栈的思想来做
+ * 用 array 辅助来做
  *
- * Time Complexity: O(m + n) = while 循环次数
- * Space complexity: O(m + n) = 创建的 stack 的长度 + 新链表长度 O(max(m + n))
+ * Time Complexity: O(m + n) = 主函数中 while 循环次数 O(max(m + n)) + buildStack 函数中 while 的循环次数 O(m + n) + buildStack 函数中 reverse 操作 O(m + n)
+ * Space complexity: O(m + n) = 创建的 stack 的长度 O(m + n) + 输出值的新链表长度 O(max(m + n))
  * Auxiliary complexity: O(m + n) = 创建的 stack1 和 stack2 的长度
  *
  * @param {ListNode} l1
@@ -59,15 +59,15 @@ function addTwoNumbers(l1, l2) {
         const value2 = stack2[i] === undefined ? 0 : stack2[i];
         const sum = value1 + value2 + carry;
 
-        newStack.unshift(sum % 10);
+        newStack.push(sum % 10);
         carry = Math.floor(sum / 10);
         i += 1;
     }
     if (carry) {
-        newStack.unshift(carry);
+        newStack.push(carry);
     }
 
-    return buildListNode(newStack);
+    return buildReverseListNode(newStack);
 }
 
 /**
@@ -79,11 +79,11 @@ function buildStack(listNode) {
     const stack = [];
 
     while (listNode) {
-        stack.unshift(listNode.val);
+        stack.push(listNode.val);
         listNode = listNode.next;
     }
 
-    return stack;
+    return stack.reverse();
 }
 
 /**
@@ -91,14 +91,14 @@ function buildStack(listNode) {
  * @param {Array} arr
  * @returns {ListNode}
  */
-function buildListNode(arr) {
+function buildReverseListNode(arr) {
     const preHead = new ListNode();
     let preNode = preHead;
 
-    arr.forEach(num => {
-        preNode.next = new ListNode(num);
+    for (let i = arr.length - 1; i >= 0; i--) {
+        preNode.next = new ListNode(arr[i]);
         preNode = preNode.next;
-    });
+    }
 
     return preHead.next;
 }
