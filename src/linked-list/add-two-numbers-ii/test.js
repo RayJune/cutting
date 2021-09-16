@@ -1,5 +1,6 @@
 const ListNode = require('./list-node');
-const addTwoNumbers = require('./index');
+// const addTwoNumbers = require('./index');
+const addTwoNumbers = require('./optimize');
 // const addTwoNumbers = require('./template');
 // const addTwoNumbers = require('./template-zh');
 
