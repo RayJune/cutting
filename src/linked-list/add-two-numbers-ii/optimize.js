@@ -42,9 +42,9 @@ class ListNode {
 }
 
 /**
- * 先分别把两个链表反转过来，再相加，再反转
+ * 先分别把两个链表反转过来，再相加，注意相加构成新链表的时候，把新的 node 指向头部
  *
- * Time Complexity: O(m + n) = 反转 l1、l2 所用的时间 O(m + n) + 两个链表相加的时间 O(max(m + n)) + 反转两个链表和的时间 O(max(m + n))
+ * Time Complexity: O(m + n) = 反转 l1、l2 所用的时间 O(m + n) + 两个链表相加的时间 O(max(m + n))
  * Space complexity: O(max(m + n)) = 输出值所占的空间
  * Auxiliary complexity: O(1)
  *
@@ -56,7 +56,7 @@ function addTwoNumbers(l1, l2) {
     let reversedL1 = reverseListNode(l1);
     let reversedL2 = reverseListNode(l2);
     const preHead = new ListNode();
-    let preNode = preHead;
+    let secondNode = null;
     let carry = 0;
 
     while (reversedL1 || reversedL2) {
@@ -64,9 +64,9 @@ function addTwoNumbers(l1, l2) {
         const value2 = reversedL2 ? reversedL2.val : 0;
         const sum = value1 + value2 + carry;
 
-        preNode.next = new ListNode(sum % 10);
+        preHead.next = new ListNode(sum % 10, secondNode);
+        secondNode = preHead.next;
         carry = Math.floor(sum / 10);
-        preNode = preNode.next;
         if (reversedL1) {
             reversedL1 = reversedL1.next;
         }
@@ -75,10 +75,10 @@ function addTwoNumbers(l1, l2) {
         }
     }
     if (carry) {
-        preNode.next = new ListNode(carry);
+        preHead.next = new ListNode(carry, secondNode)
     }
 
-    return reverseListNode(preHead.next);
+    return preHead.next;
 }
 
 /**
