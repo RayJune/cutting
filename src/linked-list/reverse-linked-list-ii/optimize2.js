@@ -37,9 +37,9 @@ class ListNode {
 }
 
 /**
- * 把中间的链表反转，再更改反转链表首尾的指向，注意细节的处理
-
- * Time Complexity: O(n) = 两个 for 循环加一起的最大次数是 O(n)，即 left 为 1， right 为末尾时 + 反转链表操作中遍历的次数 O(n)
+ * 在待反转区间里，每遍历到一个节点，让这个新节点来到反转部分的起始位置
+ *
+ * Time Complexity: O(n) = 两个 for 循环加一起的最大次数是 O(n)，即 left 为 1， right 为末尾时
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
  * n 代表输入参数 head 链表的长度
@@ -57,38 +57,17 @@ function reverseBetween(head, left, right) {
         preNode = preNode.next;
     }
 
-    let rightNode = preNode;
+    let leftNode = preNode.next;
 
-    for (let i = 0; i < right - left + 1; i++) {
-        rightNode = rightNode.next;
+    for (let i = 0; i < right - left; i++) {
+        const nextNode = leftNode.next;
+
+        leftNode.next = nextNode.next;
+        nextNode.next = preNode.next;
+        preNode.next = nextNode;
     }
-
-    const leftNode = preNode.next;
-    const afterNode = rightNode.next;
-
-    preNode.next = null;
-    rightNode.next = null;
-    reverseLinkedList(leftNode); // 注意反转后，原来的头结点和未节点会调转过来
-    preNode.next = rightNode;
-    leftNode.next = afterNode;
 
     return preHead.next;
-}
-
-/**
- *
- * @param {ListNode} head
- */
-function reverseLinkedList(head) {
-    let preNode = null;
-
-    while (head) {
-        const nextNode = head.next;
-
-        head.next = preNode;
-        preNode = head;
-        head = nextNode;
-    }
 }
 
 module.exports = reverseBetween;
