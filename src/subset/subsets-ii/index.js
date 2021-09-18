@@ -22,8 +22,8 @@
 /**
  * Backtracking + map 去重
  *
- * Time Complexity: O(n*2^n) = 单个 subset push 次数 O(n) * backtrack 执行次数 O(2^n) + 排序 O(n*log(n))
- * Space complexity: O(n*2^n) = 单个 subset 长度 O(n) * subset 的个数 O(2^n) + O(n) backtrack 函数调用栈深度 + map 长度 O(2^n) + currentLength 长度 O(n) + 排序 O(log(n))
+ * Time Complexity: O(n^2 * 2^n) = 单个 subset push 次数 O(n) * currentSubset.toString O(n) * backtrack 执行次数 O(2^n) + 排序 O(n*log(n))
+ * Space complexity: O(n * 2^n) = 单个 subset 长度 O(n) * subset 的个数 O(2^n) + O(n) backtrack 函数调用栈深度 + map 长度 O(2^n) + currentLength 长度 O(n) + 排序 O(log(n))
  * Auxiliary complexity: O(2^n) = currentLength 长度 O(n) + backtrack 函数调用栈深度 O(n) + map 长度 O(2^n) + 排序 O(log(n))
  *
  * @param {number[]} nums
@@ -32,15 +32,17 @@
 function subsetsWithDup(nums) {
     let subsetLength = 0;
     const subsets = [];
-    const map = {};
+    const map = new Map();
     const len = nums.length;
     const backtrack = (position = 0, currentSubset = []) => {
         const currentLength = currentSubset.length;
 
         if (currentLength === subsetLength) {
-            if (map[currentSubset] === undefined) {
+            const key = currentSubset.toString();
+
+            if (map.get(key) === undefined) {
                 subsets.push(currentSubset.slice());
-                map[currentSubset] = true;
+                map.set(key, true)
             }
         } else {
             for (let i = position; i < len; i++) {
