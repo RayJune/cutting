@@ -1,8 +1,18 @@
-const ListNode = require('./list-node');
 // const addTwoNumbers = require('./index');
 const addTwoNumbers = require('./optimize');
 // const addTwoNumbers = require('./template');
 // const addTwoNumbers = require('./template-zh');
+
+class ListNode {
+    /**
+     * @param {string} val
+     * @param {ListNode} next
+     */
+    constructor(val = undefined, next = null) {
+        this.val = val;
+        this.next = next;
+    }
+}
 
 /**
  *

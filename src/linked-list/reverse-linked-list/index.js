@@ -1,4 +1,6 @@
 /*
+ * 206. Reverse Linked List
+ *
  * Given the head of a singly linked list, reverse the list, and return the reversed list.
  *
  * Example 1:
@@ -31,6 +33,10 @@
  */
 
 class ListNode {
+    /**
+     * @param {number} val
+     * @param {ListNode} next
+     */
     constructor(val = undefined, next = null) {
         this.val = val;
         this.next = next;

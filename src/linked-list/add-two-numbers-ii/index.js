@@ -1,4 +1,6 @@
 /*
+ * 445. Add Two Numbers II
+ *
  * You are given two non-empty linked lists representing two non-negative integers. The most significant digit comes first and each of their nodes contains a single digit.
  * Add the two numbers and return the sum as a linked list.
  *
@@ -34,7 +36,16 @@
  * }
  */
 
-const ListNode = require('./list-node');
+class ListNode {
+    /**
+     * @param {string} val
+     * @param {ListNode} next
+     */
+    constructor(val = undefined, next = null) {
+        this.val = val;
+        this.next = next;
+    }
+}
 
 /**
  * 用 array 辅助来做

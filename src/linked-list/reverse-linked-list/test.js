@@ -1,9 +1,19 @@
-const ListNode = require('./list-node');
 // const reverseList = require('./index');
 const reverseList = require('./optimize');
 // const reverseList = require('./recursion');
 // const reverseList = require('./template');
 // const reverseList = require('./template-zh');
+
+class ListNode {
+    /**
+     * @param {number} val
+     * @param {ListNode} next
+     */
+    constructor(val = undefined, next = null) {
+        this.val = val;
+        this.next = next;
+    }
+}
 
 /**
  *

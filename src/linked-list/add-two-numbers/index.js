@@ -1,4 +1,6 @@
 /*
+ * 2. Add Two Numbers
+ *
  * You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit.
  * Add the two numbers and return the sum as a linked list.
  *
@@ -35,7 +37,16 @@
  * }
  */
 
-const ListNode = require('./list-node');
+class ListNode {
+    /**
+     * @param {string} val
+     * @param {ListNode} next
+     */
+    constructor(val = undefined, next = null) {
+        this.val = val;
+        this.next = next;
+    }
+}
 
 /**
  * 注意相加进位，因为一个节点位置只能存储一位数字

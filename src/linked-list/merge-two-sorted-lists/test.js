@@ -1,8 +1,18 @@
-const ListNode = require('./list-node');
 // const mergeTwoLists = require('./index');
 const mergeTwoLists = require('./optimize');
 // const mergeTwoLists = require('./template');
 // const mergeTwoLists = require('./template-zh');
+
+class ListNode {
+    /**
+     * @param {string} val
+     * @param {ListNode} next
+     */
+    constructor(val = undefined, next = null) {
+        this.val = val;
+        this.next = next;
+    }
+}
 
 /**
  *
