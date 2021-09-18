@@ -28,12 +28,15 @@ function buildListNode(arr) {
     arr.forEach(numItem => {
         node.next = new Node(numItem[0]);
         node = node.next;
-        map.set(numItem[1], node);
+        if (numItem[1] !== null) {
+            map.set(numItem[1], node);
+        }
     });
+
     for (let i = 0, curNode = preHead.next; i < arr.length; i++) {
         const randomNum = arr[i][1];
 
-        curNode.random = map.get(randomNum);
+        curNode.random = randomNum !== null ? map.get(randomNum) : null;
         curNode = curNode.next
     }
 
@@ -41,7 +44,7 @@ function buildListNode(arr) {
 }
 
 /**
- * 判断两个 ListNode 中 node，node.next、node.random 的地址是否均不相等
+ * 判断两个链表中 node，node.next、node.random 的地址是否均不相等
  *
  * @param {Node} l1
  * @param {Node} l2

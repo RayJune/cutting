@@ -56,7 +56,7 @@ class Node {
      * @param {Node} next
      * @param {Node} random
      */
-    constructor(val, next, random) {
+    constructor(val, next, random = null) {
         this.val = val;
         this.next = next;
         this.random = random;
@@ -78,7 +78,7 @@ class Node {
  */
 function copyRandomList(head) {
     for (let node = head; node !== null; node = node.next.next) {
-        node.next = new Node(node.val, node.next, null);
+        node.next = new Node(node.val, node.next);
     }
     for (let node = head; node !== null; node = node.next.next) {
         const newNode = node.next;
