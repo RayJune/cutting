@@ -34,3 +34,10 @@ test('nums = [3, 3], target = 7', () => {
     expect(indexArr).toHaveLength(0);
     expect(indexArr).toEqual(expect.arrayContaining([]));
 });
+
+test('nums = [3, 3, 0], target = 3', () => {
+    const indexArr = twoSum([3, 3, 0], 3);
+
+    expect(indexArr).toHaveLength(2);
+    expect(indexArr).toEqual(expect.arrayContaining([1, 2]));
+});

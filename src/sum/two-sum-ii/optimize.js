@@ -46,16 +46,16 @@
  * @returns {number[]}
  */
 function twoSum(numbers, target) {
-    const map = {};
+    const map = new Map();
 
     for (let i = 0; i < numbers.length; i++) {
         const num = numbers[i];
-        const remainingNum = target - num;
+        const j = map.get(target - num);
 
-        if (map[remainingNum] !== undefined) {
-            return [map[remainingNum] + 1, i + 1];
+        if (j !== undefined) {
+            return [j + 1, i + 1];
         }
-        map[num] = i;
+        map.set(num, i);
     }
 
     return [];

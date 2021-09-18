@@ -43,7 +43,7 @@ function threeSum(nums) {
     }
     nums.sort((a, b) => a - b);
     for (let i = 0; i < len; i++) {
-        const map = {};
+        const map = new Map();
 
         if (nums[i] > 0) {
             break;
@@ -54,13 +54,13 @@ function threeSum(nums) {
         for (let j = i + 1; j < len; j++) {
             const remainingNum = 0 - nums[i] - nums[j];
 
-            if (map[remainingNum] !== undefined) {
+            if (map.get(remainingNum)) {
                 triplets.push([nums[i], remainingNum, nums[j]]);
                 while (nums[j + 1] === nums[j]) {
                     j += 1;
                 }
             } else {
-                map[nums[j]] = j;
+                map.set(nums[j], true);
             }
         }
     }

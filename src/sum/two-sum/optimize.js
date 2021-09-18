@@ -41,20 +41,19 @@
  * @returns {number[]}
  */
 function twoSum(nums, target) {
-    const map = {};
+    const map = new Map();
 
     for (let i = 0; i < nums.length; i++) {
         const num = nums[i];
+        const j = map.get(target - num);
 
-        if (map[target - num] !== undefined) {
-            return [i, map[target - num]];
+        if (j !== undefined) {
+            return [j, i];
         }
-        map[num] = i;
+        map.set(num, i);
     }
 
     return [];
 }
-
-twoSum([3, 2, 4], 6);
 
 module.exports = twoSum;
