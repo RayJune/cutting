@@ -1,4 +1,6 @@
 /*
+ * 78. Subsets
+ *
  * Given an integer array `nums` of unique elements, return all possible subsets (the power set).
  *
  * The solution set must not contain duplicate subsets. Return the solution in any order.
@@ -21,10 +23,10 @@
 */
 
 /**
- * Cascading
+ * Cascading, [[]] -> [[], [1]] -> [[], [1], [2], [1, 2]]
  *
- * Time Complexity: O(2^n) = slice 方法 O(n) * 遍历次数 O(2^n)
- * Space complexity: O(n*2^n) = 单个 subset 长度 O(n) * subset 个数 O(2^n)
+ * Time Complexity: O(n * 2^n) = for 循环 和 forEach 的总遍历次数 O(2^n) * forEach 中的 concat 方法 O(n)
+ * Space complexity: O(n * 2^n) = subsets 个数 (2^n) * 单个 subset 长度 O(n) + backtrack 函数调用栈深度 O(n)
  * Auxiliary complexity: O(1)
  *
  * @param {number[]} nums
@@ -32,19 +34,18 @@
  */
 function subsets(nums) {
     const subsets = [[]];
+    const len = nums.length;
 
-    for (let i = 0; i < nums.length; i++) {
-        const subsetsLength = subsets.length;
-
-        for (let j = 0; j < subsetsLength; j++) {
-            const newSubset = subsets[j].slice();
-
-            newSubset.push(nums[i]);
-            subsets.push(newSubset);
-        }
+    for (let i = 0; i < len; i++) {
+        subsets.forEach(currentSubset => {
+            //
+            subsets.push(currentSubset.concat(nums[i]));
+        });
     }
 
     return subsets;
 }
+
+// the reason why use forEach -> https://stackoverflow.com/questions/25243586/javascript-add-value-to-array-while-looping-that-will-then-also-be-included-in#answer-25243688
 
 module.exports = subsets;
