@@ -1,4 +1,6 @@
 /*
+ * 78. Subsets
+ *
  * Given an integer array `nums` of unique elements, return all possible subsets (the power set).
  *
  * The solution set must not contain duplicate subsets. Return the solution in any order.
@@ -21,40 +23,28 @@
 */
 
 /**
- * Backtracking + 剪枝 + while loop
+ * 用回溯法来做，每个 num 都有选和不选两种状态
  *
- * Time Complexity: O(n*2^n) = push 构造单个 subset 的时间 O(n) * subset 个数 O(2^n)
- * Space complexity: O(n*2^n) = 单个 subset 的长度 O(n) * subset 个数 O(2^n)
- * Auxiliary complexity: O(n) = currentSubset 长度 O(n) + backtrack 函数栈深度 O(n)
+ * Time Complexity: O(n * 2^n) = backtrack 执行次数 O(2^n) * backtrack 函数内 array.concat 和 array.slice 操作 O(n + n)
+ * Space complexity: O(n * 2^n) = subsets 个数 (2^n) * 单个 subset 长度 O(n / 2) + backtrack 函数调用栈深度 O(n)
+ * Auxiliary complexity: O(n) = 函数调用栈深度
  *
  * @param {number[]} nums
  * @returns {number[][]} subsets
  */
 function subsets(nums) {
-    let subsetLength = 1;
-    const subsets = [[]];
+    const subsets = [];
     const len = nums.length;
-    const backtrack = (position = 0, currentSubset = []) => {
-        const currentLength = currentSubset.length;
-
-        if (currentLength === subsetLength) {
-            subsets.push(currentSubset.slice());
+    const backtrack = (currentSubset = [], i = 0) => {
+        if (i === len) {
+            subsets.push(currentSubset);
         } else {
-            for (let i = position; i < len; i++) {
-                if (len - i + currentLength < subsetLength) {
-                    break;
-                }
-                currentSubset.push(nums[i]);
-                backtrack(i + 1, currentSubset);
-                currentSubset.pop();
-            }
+            backtrack(currentSubset.concat(nums[i]), i + 1);
+            backtrack(currentSubset.slice(), i + 1);
         }
     };
 
-    while (subsetLength <= len) {
-        backtrack();
-        subsetLength += 1;
-    }
+    backtrack();
 
     return subsets;
 }
