@@ -1,7 +1,5 @@
 // const subsetsWithDup = require('./index');
-// const subsetsWithDup = require('./optimize');
-// const subsetsWithDup = require('./optimize2');
-const subsetsWithDup = require('./cascading');
+const subsetsWithDup = require('./optimize');
 // const subsetsWithDup = require('./template');
 // const subsetsWithDup = require('./template-zh');
 

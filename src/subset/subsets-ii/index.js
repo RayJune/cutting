@@ -1,4 +1,6 @@
 /*
+ * 90. Subsets II
+ *
  * Given an integer array `nums` that may contain duplicates, return all possible subsets (the power set).
  *
  * The solution set must not contain duplicate subsets. Return the solution in any order.
@@ -20,47 +22,34 @@
 */
 
 /**
- * Backtracking + map 去重
+ * 用回溯法来做，每个元素都有选和不选两种状态，注意在遇到重复元素的时候剪枝
  *
- * Time Complexity: O(n^2 * 2^n) = 单个 subset push 次数 O(n) * currentSubset.toString O(n) * backtrack 执行次数 O(2^n) + 排序 O(n*log(n))
- * Space complexity: O(n * 2^n) = 单个 subset 长度 O(n) * subset 的个数 O(2^n) + O(n) backtrack 函数调用栈深度 + map 长度 O(2^n) + currentLength 长度 O(n) + 排序 O(log(n))
- * Auxiliary complexity: O(2^n) = currentLength 长度 O(n) + backtrack 函数调用栈深度 O(n) + map 长度 O(2^n) + 排序 O(log(n))
+ * Time Complexity: O(n * 2^n) = backtrack 执行次数 O(2^n) * backtrack 函数内 array.concat 和 array.slice 方法时间复杂度 O(n + n) + 排序 O(n * log(n))
+ * Space complexity: O(n * 2^n) = 所有子集的个数 O(2^n) * 子集长度 O(n) + backtrack 函数调用栈深度 O(n) + 排序 O(log(n))
+ * Auxiliary complexity: O(n) = backtrack 函数调用栈深度 O(n) + 排序 O(log(n))
  *
  * @param {number[]} nums
  * @returns {number[][]} subsets
  */
 function subsetsWithDup(nums) {
-    let subsetLength = 0;
     const subsets = [];
-    const map = new Map();
     const len = nums.length;
-    const backtrack = (position = 0, currentSubset = []) => {
-        const currentLength = currentSubset.length;
-
-        if (currentLength === subsetLength) {
-            const key = currentSubset.toString();
-
-            if (map.get(key) === undefined) {
-                subsets.push(currentSubset.slice());
-                map.set(key, true)
-            }
+    let isPreNumSelected = false;
+    const backtrack = (currentSubset = [], i = 0) => {
+        if (i === len) {
+            subsets.push(currentSubset);
         } else {
-            for (let i = position; i < len; i++) {
-                if (len - i + currentLength < subsetLength) {
-                    break;
-                }
-                currentSubset.push(nums[i]);
-                backtrack(i + 1, currentSubset);
-                currentSubset.pop();
+            if (!(i > 0 && nums[i] === nums[i - 1] && !isPreNumSelected)) {
+                isPreNumSelected = true;
+                backtrack(currentSubset.concat(nums[i]), i + 1);
             }
+            isPreNumSelected = false;
+            backtrack(currentSubset.slice(), i + 1);
         }
-    };
+    }
 
     nums.sort();
-    while (subsetLength <= len) {
-        backtrack();
-        subsetLength += 1;
-    }
+    backtrack();
 
     return subsets;
 }
