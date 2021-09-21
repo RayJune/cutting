@@ -80,16 +80,14 @@ function copyRandomList(head) {
     for (let node = head; node !== null; node = node.next.next) {
         node.next = new Node(node.val, node.next);
     }
-    for (let node = head; node !== null; node = node.next.next) {
-        const newNode = node.next;
-
-        if (node.random !== null) {
-            newNode.random = node.random.next;
-        }
-    }
 
     const newHead = head ? head.next : null;
 
+    for (let node = head; node !== null; node = node.next.next) {
+        const newNode = node.next;
+
+        newNode.random = (node.random !== null) ? node.random.next : null;
+    }
     for (let node = head; node !== null; node = node.next) {
         const newNode = node.next;
 

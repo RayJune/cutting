@@ -23,20 +23,18 @@ class Node {
 function buildListNode(arr) {
     let preHead = new Node(-1);
     let node = preHead;
-    const map = new Map();
+    const nodeArr = [];
 
     arr.forEach(numItem => {
         node.next = new Node(numItem[0]);
         node = node.next;
-        if (numItem[1] !== null) {
-            map.set(numItem[1], node);
-        }
+        nodeArr.push(node);
     });
 
     for (let i = 0, curNode = preHead.next; i < arr.length; i++) {
         const randomNum = arr[i][1];
 
-        curNode.random = randomNum !== null ? map.get(randomNum) : null;
+        curNode.random = randomNum !== null ? nodeArr[randomNum] : null;
         curNode = curNode.next
     }
 
