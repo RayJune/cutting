@@ -59,7 +59,10 @@ test('listA = [1, 9, 1, 2, 4], listB = [3, 2, 4], skipA = 3, skipB = 1', () => {
     tailA.next = intersectionNode;
     tailB.next = intersectionNode;
 
-    expect(getIntersectionNode(headA, headB)).toBe(intersectionNode);
+    const resultNode = getIntersectionNode(headA, headB);
+
+    expect(resultNode).toBe(intersectionNode);
+    expect(resultNode).toEqual(intersectionNode);
 });
 
 test('listA = [4, 1, 8, 4, 5], listB = [5, 6, 1, 8, 4, 5], skipA = 2, skipB = 3', () => {
@@ -70,5 +73,8 @@ test('listA = [4, 1, 8, 4, 5], listB = [5, 6, 1, 8, 4, 5], skipA = 2, skipB = 3'
     tailA.next = intersectionNode;
     tailB.next = intersectionNode;
 
-    expect(getIntersectionNode(headA, headB)).toBe(intersectionNode);
+    const resultNode = getIntersectionNode(headA, headB);
+
+    expect(resultNode).toBe(intersectionNode);
+    expect(resultNode).toEqual(intersectionNode);
 });
