@@ -73,7 +73,7 @@ test('define copyRandomList function', () => {
 test('head = [[1, 1], [2, 1]], test isDifferentListNode function', () => {
     const list = buildListNode([[1, 1], [2, 1]]);
 
-    expect(isDifferentListNode(list, list)).toBeFalsy();
+    expect(isDifferentListNode(list, list)).toBe(false);
 });
 
 test('head = [[1, 1], [2, 1]]', () => {
@@ -81,7 +81,7 @@ test('head = [[1, 1], [2, 1]]', () => {
     const newList = copyRandomList(list);
 
     expect(newList).toEqual(list);
-    expect(isDifferentListNode(list, newList)).toBeTruthy();
+    expect(isDifferentListNode(list, newList)).toBe(true);
 });
 
 test('head = [[3, null], [3, 0], [3, null]]', () => {
@@ -89,7 +89,7 @@ test('head = [[3, null], [3, 0], [3, null]]', () => {
     const newList = copyRandomList(list);
 
     expect(newList).toEqual(list);
-    expect(isDifferentListNode(list, newList)).toBeTruthy();
+    expect(isDifferentListNode(list, newList)).toBe(true);
 });
 
 test('head = [[7, null], [13, 0], [11, 4], [10, 2], [1, 0]]', () => {
@@ -97,7 +97,7 @@ test('head = [[7, null], [13, 0], [11, 4], [10, 2], [1, 0]]', () => {
     const newList = copyRandomList(list);
 
     expect(newList).toEqual(list);
-    expect(isDifferentListNode(list, newList)).toBeTruthy();
+    expect(isDifferentListNode(list, newList)).toBe(true);
 });
 
 test('head = []', () => {
