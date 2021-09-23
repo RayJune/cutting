@@ -41,14 +41,14 @@ test('listA = null, listB = [1], skipA = 3, skipB = 2', () => {
     const headA = null;
     const {head: headB} = buildListNode([1]);
 
-    expect(getIntersectionNode(headA, headB)).toBe(null);
+    expect(getIntersectionNode(headA, headB)).toBeNull();
 });
 
 test('listA = [2, 6, 4], listB = [1, 5], skipA = 3, skipB = 2', () => {
     const {head: headA} = buildListNode([2, 6, 4]);
     const {head: headB} = buildListNode([1, 5]);
 
-    expect(getIntersectionNode(headA, headB)).toBe(null);
+    expect(getIntersectionNode(headA, headB)).toBeNull();
 });
 
 test('listA = [1, 9, 1, 2, 4], listB = [3, 2, 4], skipA = 3, skipB = 1', () => {

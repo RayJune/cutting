@@ -45,13 +45,13 @@ test('define detectCycle function', () => {
 
 
 test('head = null, position = -1', () => {
-    expect(detectCycle(null)).toBe(null);
+    expect(detectCycle(null)).toBeNull();
 });
 
 test('head = [1], position = -1', () => {
     const {head} = buildListNode([1], -1);
 
-    expect(detectCycle(head)).toBe(null);
+    expect(detectCycle(head)).toBeNull();
 });
 
 test('head = [1, 2], position = 0', () => {
