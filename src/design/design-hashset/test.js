@@ -1,4 +1,5 @@
-const MyHashSet = require('./index');
+// const MyHashSet = require('./index');
+const MyHashSet = require('./optimize');
 // const MyHashSet = require('./template');
 // const MyHashSet = require('./template-zh');
 
