@@ -44,7 +44,7 @@
  * Space complexity: O(n + k) = this.#hashKey 占用的空间
  * Auxiliary complexity: O(n + k) = this.#hashKey 占用的空间
  *
- * 其中 n 哈希表中的元素数量，k 是预先定义的 buckets 个数（在这里是 769）
+ * 其中 n 是哈希表中的元素数量，k 是预先定义的 buckets 个数（在这里是 769）
  */
 class MyHashSet {
     #keyRange = 769;

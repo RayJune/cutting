@@ -38,8 +38,8 @@
 */
 
 class ListNode {
-    constructor(val, next) {
-        this.val = val;
+    constructor(value, next = null) {
+        this.value = value;
         this.next = next;
     }
 }
@@ -51,7 +51,7 @@ class ListNode {
  * Space complexity: O(n + k) = this.#hashKey 占用的空间
  * Auxiliary complexity: O(n + k) = this.#hashKey 占用的空间
  *
- * 其中 n 哈希表中的元素数量，k 是预先定义的 buckets 个数（在这里是 769）
+ * 其中 n 是哈希表中的元素数量，k 是预先定义的 buckets 个数（在这里是 769）
  */
 class MyHashSet {
     #keyRange = 769;
@@ -76,12 +76,12 @@ class MyHashSet {
             this.#hashKey[hash] = new ListNode(key);
         } else {
             while (bucket && bucket.next) {
-                if (bucket.val === key) {
+                if (bucket.value === key) {
                     return;
                 }
                 bucket = bucket.next;
             }
-            if (bucket.val !== key) {
+            if (bucket.value !== key) {
                 bucket.next = new ListNode(key);
             }
         }
@@ -96,7 +96,7 @@ class MyHashSet {
         let bucket = this.#hashKey[hash];
 
         while (bucket) {
-            if (bucket.val === key) {
+            if (bucket.value === key) {
                 return true;
             }
             bucket = bucket.next;
@@ -115,14 +115,14 @@ class MyHashSet {
         if (bucket === null) {
             return;
         }
-        if (bucket.val === key) {
+        if (bucket.value === key) {
             this.#hashKey[hash] = bucket.next ? bucket.next : null;
         } else {
             let preNode = bucket;
 
             bucket = bucket.next;
             while (bucket) {
-                if (bucket.val === key) {
+                if (bucket.value === key) {
                     preNode.next = bucket.next;
                 }
                 preNode = bucket;
