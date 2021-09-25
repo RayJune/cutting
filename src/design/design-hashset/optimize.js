@@ -38,7 +38,7 @@
 */
 
 class ListNode {
-    constructor(val = undefined, next = null) {
+    constructor(val, next) {
         this.val = val;
         this.next = next;
     }
