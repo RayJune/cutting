@@ -15,7 +15,6 @@ class ListNode {
 }
 
 /**
- *
  * @param {Array} arr
  * @returns {ListNode}
  */
@@ -36,13 +35,25 @@ test('define isPalindrome function', () => {
 });
 
 test('head = [1, 2]', () => {
-    expect(isPalindrome(buildListNode([1, 2]))).toBe(false);
+    const head = buildListNode([1, 2]);
+    const result = isPalindrome(head);
+
+    expect(result).toBe(false);
+    expect(head).toEqual(buildListNode([1, 2]));
 });
 
 test('head = [1, 2, 3]', () => {
-    expect(isPalindrome(buildListNode([1, 2, 3]))).toBe(false);
+    const head = buildListNode([1, 2, 3]);
+    const result = isPalindrome(head);
+
+    expect(result).toBe(false);
+    expect(head).toEqual(buildListNode([1, 2, 3]));
 });
 
 test('head = [1, 2, 2, 1]', () => {
-    expect(isPalindrome(buildListNode([1, 2, 2, 1]))).toBe(true);
+    const head = buildListNode([1, 2, 2, 1]);
+    const result = isPalindrome(head);
+
+    expect(result).toBe(true);
+    expect(head).toEqual(buildListNode([1, 2, 2, 1]));
 });

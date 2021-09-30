@@ -36,34 +36,33 @@
  * Auxiliary complexity: O(1)
  *
  * @param {ListNode} head
- * @returns {boolean}
+ * @returns {boolean} result
  */
 function isPalindrome(head) {
     let slow = head;
     let fast = head.next;
+    let result = true;
 
     while (fast && fast.next) {
         slow = slow.next;
-        fast = fast.next;
-        if (fast.next) {
-            fast = fast.next;
-        }
+        fast = fast.next.next;
     }
-    reverseList(slow.next);
 
-    let node = head;
-    const reversedHead = fast;
+    let nodeA = head;
+    let nodeB = reverseList(slow.next);
+    const headB = nodeB;
 
-    while (node && fast) {
-        if (node.val !== fast.val) {
-            return false;
+    while (nodeA && nodeB) {
+        if (nodeA.val !== nodeB.val) {
+            result = false;
+            break;
         }
-        node = node.next;
-        fast = fast.next;
+        nodeA = nodeA.next;
+        nodeB = nodeB.next;
     }
-    reverseList(reversedHead);
+    reverseList(headB);
 
-    return true;
+    return result;
 }
 
 /**
@@ -79,6 +78,8 @@ function reverseList(head) {
         preNode = head;
         head = nextNode;
     }
+
+    return preNode;
 }
 
 module.exports = isPalindrome;
