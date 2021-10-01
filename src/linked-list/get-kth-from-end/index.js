@@ -16,7 +16,7 @@
 /**
  * 快慢指针
  *
- * Time Complexity: O(n) = 两个 while 的循环次数 O(n)
+ * Time Complexity: O(n) = 两个 while 循环加一起的执行次数 O(n)
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
  *

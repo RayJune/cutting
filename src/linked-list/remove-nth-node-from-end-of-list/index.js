@@ -42,9 +42,9 @@ class ListNode {
 }
 
 /**
- * 快慢指针，用一次循环来解决
+ * 快慢指针
  *
- * Time Complexity: O(n)
+ * Time Complexity: O(n) = 两个 while 循环加一起的执行次数 O(n)
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
  *
@@ -54,25 +54,18 @@ class ListNode {
  */
 function removeNthFromEnd(head, n) {
     const preHead = new ListNode(-1, head);
-    let gap = 1;
     let fast = head;
     let slow = preHead;
 
-    while (fast) {
-        if (gap === n) {
-            if (fast.next === null) {
-                const nextNode = slow.next;
-
-                slow.next = slow.next.next;
-                nextNode.next = null;
-            } else {
-                slow = slow.next;
-            }
-        } else {
-            gap += 1;
-        }
+    while (n) {
         fast = fast.next;
+        n -= 1;
     }
+    while (fast) {
+        fast = fast.next;
+        slow = slow.next;
+    }
+    slow.next = slow.next.next;
 
     return preHead.next;
 }
