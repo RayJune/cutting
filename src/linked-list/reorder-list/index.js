@@ -23,7 +23,6 @@
  * 1 <= node.val <= 1000
  *
  * https://leetcode.com/problems/reorder-list/
- *
 */
 
 /**
@@ -50,18 +49,12 @@ function reorderList(head) {
         return head;
     }
 
-    let slow = head;
-    let fast = head.next;
-
-    while (fast && fast.next) {
-        slow = slow.next;
-        fast = fast.next.next;
-    }
-
+    const preMiddle = getPreMiddle(head);
+    const middleNode = preMiddle.next;
     let nodeA = head;
-    let nodeB = reverseList(slow.next);
+    let nodeB = reverseList(middleNode);
 
-    slow.next = null;
+    preMiddle.next = null;
     while (nodeA && nodeB) {
         const nextA = nodeA.next;
         const nextB = nodeB.next;
@@ -73,6 +66,24 @@ function reorderList(head) {
     }
 
     return head;
+}
+
+/**
+ * 返回中间节点的前一个节点，如果有两个中间节点，返回第一个中间节点
+ *
+ * @param {ListNode} head
+ * @returns {ListNode} slow
+ */
+function getPreMiddle(head) {
+    let slow = head;
+    let fast = head.next;
+
+    while (fast && fast.next) {
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+
+    return slow;
 }
 
 /**

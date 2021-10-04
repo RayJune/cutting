@@ -33,7 +33,6 @@ test('define reorderList function', () => {
     expect(typeof reorderList).toBe('function');
 });
 
-
 test('head = [1, 2, 3, 4]', () => {
     const head = buildListNode([1, 2, 3, 4]);
     const newHead = buildListNode([1, 4, 2, 3]);

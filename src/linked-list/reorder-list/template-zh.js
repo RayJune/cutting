@@ -22,7 +22,6 @@
  * 1 <= node.val <= 1000
  *
  * https://leetcode-cn.com/problems/reorder-list/
- *
 */
 
 /**
