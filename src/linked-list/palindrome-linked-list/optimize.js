@@ -13,11 +13,10 @@
  *
  * Constraints:
  *
- * The number of nodes in the list is in the range [1, 105].
+ * The number of nodes in the list is in the range [1, 10^5].
  * 0 <= Node.val <= 9
  *
  * https://leetcode.com/problems/palindrome-linked-list/
- *
 */
 
 /**
@@ -39,20 +38,13 @@
  * @returns {boolean} result
  */
 function isPalindrome(head) {
-    let slow = head;
-    let fast = head.next;
+    const middle = getMiddle(head);
     let result = true;
-
-    while (fast && fast.next) {
-        slow = slow.next;
-        fast = fast.next.next;
-    }
-
     let nodeA = head;
-    let nodeB = reverseList(slow.next);
+    let nodeB = reverseList(middle);
     const headB = nodeB;
 
-    while (nodeA && nodeB) {
+    while (nodeB) {
         if (nodeA.val !== nodeB.val) {
             result = false;
             break;
@@ -66,7 +58,26 @@ function isPalindrome(head) {
 }
 
 /**
+ * 返回链表的中间节点，如果有两个中间节点，返回第二个中间节点
+ *
  * @param {ListNode} head
+ * @returns {ListNode} slow
+ */
+function getMiddle(head) {
+    let slow = head;
+    let fast = head;
+
+    while (fast && fast.next) {
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+
+    return slow;
+}
+
+/**
+ * @param {ListNode} head
+ * @returns {ListNode} preNode
  */
 function reverseList(head) {
     let preNode = null;

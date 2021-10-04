@@ -13,11 +13,10 @@
  *
  * Constraints:
  *
- * 链表中节点数目在范围 [1, 105] 内
+ * 链表中节点数目在范围 [1, 10^5] 内
  * 0 <= Node.val <= 9
  *
  * https://leetcode-cn.com/problems/palindrome-linked-list/
- *
 */
 
 /**
