@@ -28,7 +28,6 @@
  * pos is -1 or a valid index in the linked-list.
  *
  * https://leetcode.com/problems/linked-list-cycle-ii/
- *
 */
 
 /**

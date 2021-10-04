@@ -43,7 +43,6 @@ test('define detectCycle function', () => {
     expect(typeof detectCycle).toBe('function');
 });
 
-
 test('head = null, position = -1', () => {
     expect(detectCycle(null)).toBeNull();
 });
