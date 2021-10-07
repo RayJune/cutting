@@ -43,7 +43,7 @@
 /**
  * 遍历
  *
- * Time Complexity: O(n) = 遍历次数 O(n)
+ * Time Complexity: O(n) = while 循环次数 O(n)
  * Space complexity: O(n) = result 数组长度 O(n) + stack 数组长度 O(n)
  * Auxiliary complexity: O(n) = stack 数组长度 O(n)
  *
@@ -51,18 +51,22 @@
  * @returns {number[]} result
  */
 function preorderTraversal(root) {
-    const stack = [];
     const result = [];
-    let node = root;
 
-    while (node || stack.length) {
-        while (node) {
+    if (root) {
+        const stack = [root];
+
+        while (stack.length) {
+            const node = stack.pop();
+
             result.push(node.val);
-            stack.push(node);
-            node = node.left;
+            if (node.right) {
+                stack.push(node.right);
+            }
+            if (node.left) {
+                stack.push(node.left);
+            }
         }
-        node = stack.pop();
-        node = node.right;
     }
 
     return result;
