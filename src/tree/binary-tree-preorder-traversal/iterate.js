@@ -46,7 +46,7 @@
  * Time Complexity: O(n) = while 循环次数 O(n)
  * Space complexity: O(n) = result 数组长度 O(n) + stack 数组长度 O(n)
  * Auxiliary complexity: O(n) = stack 数组长度 O(n)
- * 其中 n 为二叉树的节点数
+ * 其中 n 为二叉树的节点数，最坏情况下树呈现链状
  *
  * @param {TreeNode} root
  * @returns {number[]} result

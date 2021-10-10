@@ -43,10 +43,10 @@
 /**
  * 递归
  *
- * Time Complexity: O(n) = 遍历次数 O(n)
+ * Time Complexity: O(n) = 递归函数执行次数 O(n)
  * Space complexity: O(n) = result 数组长度 O(n) + 函数调用栈深度 O(n)
  * Auxiliary complexity: O(n) = 函数调用栈深度 O(n) 最坏情况下树呈现链状
- * 其中 n 为二叉树的节点数
+ * 其中 n 为二叉树的节点数，最坏情况下树呈现链状
  *
  * @param {TreeNode} root
  * @param {number[]} result
