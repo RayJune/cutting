@@ -44,25 +44,23 @@ Array.prototype.peek = function peek() {
     return this[0];
 }
 
-// 从 push 着手，利用 tempQueue 不断把新加入的元素放在头部，实现 last-in-first-out 的效果
+// 从 push 着手，利用 queue.push(queue.shift()) 来把新加入的元素放在头部，实现 last-in-first-out 的效果
 class MyStack {
-    #queue1 = [];
+    #queue = [];
 
     /**
      * Time Complexity: O(n) = while 循环次数
-     * Space complexity: O(n) = this.#queue1 的长度
+     * Space complexity: O(n) = this.#queue 的长度
      * Auxiliary complexity: O(1)
      * n 代表 stack 的长度
      *
      * @param {number} x
      */
     push(x) {
-        const tempQueue = [x];
-
-        while (this.#queue1.length) {
-            tempQueue.push(this.#queue1.shift());
+        this.#queue.push(x);
+        for (let i = this.#queue.length - 1; i > 0; i--) {
+            this.#queue.push(this.#queue.shift());
         }
-        this.#queue1 = tempQueue;
     }
 
     /**
@@ -74,7 +72,7 @@ class MyStack {
      * @returns {number}
      */
     pop() {
-        return this.#queue1.shift();
+        return this.#queue.shift();
     }
 
     /**
@@ -85,7 +83,7 @@ class MyStack {
      * @returns {number}
      */
     top() {
-        return this.#queue1.peek();
+        return this.#queue.peek();
     }
 
     /**
@@ -96,7 +94,7 @@ class MyStack {
      * @returns {boolean}
      */
     empty() {
-        return !this.#queue1.length;
+        return !this.#queue.length;
     }
 }
 
