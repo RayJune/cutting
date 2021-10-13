@@ -49,11 +49,10 @@ function levelOrderBottom(root) {
     }
 
     let stack = [root];
-    let isBottom = false;
     const result = [];
     const levels = [stack];
 
-    while (!isBottom) {
+    while (stack.length) {
         const temp = [];
 
         for (const node of stack) {
@@ -64,11 +63,9 @@ function levelOrderBottom(root) {
                 temp.push(node.right);
             }
         }
+        stack = temp;
         if (temp.length) {
-            stack = temp;
             levels.push(stack);
-        } else {
-            isBottom = true;
         }
     }
     for (let i = levels.length - 1; i >= 0; i--) {
