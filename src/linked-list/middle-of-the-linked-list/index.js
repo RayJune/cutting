@@ -18,7 +18,6 @@
  * 1 <= Node.val <= 100
  *
  * https://leetcode.com/problems/middle-of-the-linked-list/
- *
 */
 
 /**
@@ -37,7 +36,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {ListNode} head
- * @returns {ListNode} head
+ * @returns {ListNode}
  */
 function middleNode(head) {
     let slow = head;

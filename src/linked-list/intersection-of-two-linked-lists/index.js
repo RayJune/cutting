@@ -37,7 +37,7 @@
  *
  * @param {ListNode} headA
  * @param {ListNode} headB
- * @returns {ListNode|null}
+ * @returns {ListNode}
  */
 function getIntersectionNode(headA, headB) {
     const map = new Map();

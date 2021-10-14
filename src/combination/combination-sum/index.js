@@ -37,7 +37,6 @@
  * 1 <= target <= 500
  *
  * https://leetcode-cn.com/problems/combination-sum/
- *
 */
 
 /**
@@ -47,7 +46,7 @@
  *
  * @param {number[]} candidates
  * @param {number} target
- * @returns {number[][]} combinations
+ * @returns {number[][]}
  */
 function combinationSum(candidates, target) {
     const combinations = [];

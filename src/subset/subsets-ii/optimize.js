@@ -30,7 +30,7 @@
  * Auxiliary complexity: O(log(n)) = 排序 O(log(n))
  *
  * @param {number[]} nums
- * @returns {number[][]} subsets
+ * @returns {number[][]}
  */
 function subsetsWithDup(nums) {
     const subsets = [[]];

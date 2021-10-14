@@ -50,7 +50,7 @@
  *
  * @param {ListNode} headA
  * @param {ListNode} headB
- * @returns {ListNode|null}
+ * @returns {ListNode}
  */
 function getIntersectionNode(headA, headB) {
     if (headA === null || headB === null) {

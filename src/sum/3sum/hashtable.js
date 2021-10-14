@@ -32,7 +32,7 @@
  * Complexity Analyzation -> index.md，其中 auxiliary space 为 O(n)，即 map 占用的空间
  *
  * @param {number[]} nums
- * @returns {number[][]} triplets
+ * @returns {number[][]}
  */
 function threeSum(nums) {
     const len = nums.length;

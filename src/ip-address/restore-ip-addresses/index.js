@@ -30,7 +30,6 @@
  * s consists of digits only.
  *
  * https://leetcode.com/problems/restore-ip-addresses/
- *
 */
 
 /**
@@ -41,7 +40,7 @@
  * Auxiliary complexity: O(1) = backtrack 函数调用栈深度 O(3)
  *
  * @param {string} s
- * @returns {string[]} addresses
+ * @returns {string[]}
  */
 function restoreIpAddresses(s) {
     const addresses = [];

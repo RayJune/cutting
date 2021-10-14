@@ -74,7 +74,7 @@ class Node {
  * Auxiliary complexity: O(1)
  *
  * @param {Node} head
- * @returns {Node} newHead
+ * @returns {Node}
  */
 function copyRandomList(head) {
     for (let node = head; node !== null; node = node.next.next) {

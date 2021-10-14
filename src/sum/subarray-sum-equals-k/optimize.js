@@ -32,7 +32,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @returns {number} count
+ * @returns {number}
  */
 function subarraySum(nums, k) {
     const map = new Map([[0, 1]]);

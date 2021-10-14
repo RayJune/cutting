@@ -31,7 +31,7 @@
  *
  * @param {number[]} nums
  * @param {number} target
- * @returns {number} count
+ * @returns {number}
  */
 function threeSumSmaller(nums, target) {
     if (nums.length < 3) {

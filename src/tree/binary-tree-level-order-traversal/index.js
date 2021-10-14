@@ -40,7 +40,7 @@
  * Auxiliary complexity: O(m) = 队列长度 O(n)
  *
  * @param {TreeNode} root
- * @returns {number[]} result
+ * @returns {number[]}
  */
 function levelOrder(root) {
     if (root === null) {

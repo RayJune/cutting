@@ -30,7 +30,7 @@
  * Auxiliary complexity: O(n) = 函数调用栈深度
  *
  * @param {number[]} nums
- * @returns {number[][]} subsets
+ * @returns {number[][]}
  */
 function subsets(nums) {
     const subsets = [];

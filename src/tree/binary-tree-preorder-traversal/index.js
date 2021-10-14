@@ -50,7 +50,7 @@
  *
  * @param {TreeNode} root
  * @param {number[]} result
- * @returns {number[]} result
+ * @returns {number[]}
  */
 function preorderTraversal(root, result = []) {
     if (root) {

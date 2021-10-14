@@ -41,7 +41,6 @@
  * - IP consists only of English letters, digits and the characters '.' and ':'.
  *
  * https://leetcode.com/problems/validate-ip-address/
- *
 */
 
 /**
@@ -52,7 +51,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {string} ip
- * @returns {string} output
+ * @returns {string}
  */
 function validIPAddress(ip) {
     if (ip.length < 7 || ip.length > 39) {

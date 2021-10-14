@@ -31,7 +31,7 @@
  * Auxiliary complexity: O(n) = signs 长度 O(n) + currentPermutation 长度 O(n) + backtrack 函数执行栈深度
  *
  * @param {number[]} nums
- * @returns {number[][]} permutations
+ * @returns {number[][]}
  */
 function permute(nums) {
     const permutations = [];

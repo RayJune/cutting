@@ -46,7 +46,7 @@
  * 其中 n 代表链表中的节点数
  *
  * @param {ListNode} head
- * @returns {ListNode|null}
+ * @returns {ListNode}
  */
 function detectCycle(head) {
     if (head === null) {

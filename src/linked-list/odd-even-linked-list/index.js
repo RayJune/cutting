@@ -42,7 +42,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {ListNode} head
- * @returns {ListNode} head
+ * @returns {ListNode}
  */
 function oddEvenList(head) {
     if (head === null || head.next === null) {

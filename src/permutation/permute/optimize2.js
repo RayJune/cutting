@@ -32,7 +32,7 @@
  * (n 代表输入参数 arr 数组的长度)
  *
  * @param {number[]} nums
- * @returns {number[][]} permutations
+ * @returns {number[][]}
  */
 function permute(nums) {
     const permutations = [];

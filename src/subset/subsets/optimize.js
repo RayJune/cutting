@@ -30,7 +30,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number[]} nums
- * @returns {number[][]} subsets
+ * @returns {number[][]}
  */
 function subsets(nums) {
     const subsets = [[]];

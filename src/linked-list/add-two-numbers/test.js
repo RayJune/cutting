@@ -14,7 +14,6 @@ class ListNode {
 }
 
 /**
- *
  * @param {Array} arr
  * @returns {ListNode}
  */

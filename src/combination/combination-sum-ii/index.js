@@ -20,7 +20,6 @@
  * 1 <= target <= 30
  *
  * https://leetcode-cn.com/problems/combination-sum-ii/
- *
 */
 
 /**
@@ -30,7 +29,7 @@
  *
  * @param {number[]} candidates
  * @param {number} target
- * @returns {number[][]} combinations
+ * @returns {number[][]}
  */
 function combinationSum2(candidates, target) {
     const combinations = [];

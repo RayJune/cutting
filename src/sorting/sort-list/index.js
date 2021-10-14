@@ -47,8 +47,8 @@ class ListNode {
  * Space complexity: O(log(n)) = 函数调用栈的深度
  * Auxiliary complexity: O(log(n)) = 函数调用栈的深度
  *
- * @param {ListNode|null} head
- * @returns {ListNode|null}
+ * @param {ListNode} head
+ * @returns {ListNode}
  */
 function sortList(head) {
     if (head === null || head.next === null) {
@@ -67,7 +67,7 @@ function sortList(head) {
  * 返回中间节点的前一个节点，如果有两个中间节点，返回第一个中间节点
  *
  * @param {ListNode} head
- * @returns {ListNode} slow
+ * @returns {ListNode}
  */
 function getPreMiddle(head) {
     let slow = head;

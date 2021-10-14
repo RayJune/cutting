@@ -32,7 +32,7 @@
  * Complexity Analyzation -> index.md
  *
  * @param {number[]} nums
- * @returns {number[][]} triplets
+ * @returns {number[][]}
  */
 function threeSum(nums) {
     const len = nums.length;

@@ -15,7 +15,6 @@
  * 1 <= n <= 20
  * 1 <= k <= n
  * https://leetcode-cn.com/problems/combinations/
- *
 */
 
 /**
@@ -24,7 +23,7 @@
  *
  * @param {number} n
  * @param {number} k
- * @returns combinations
+ * @returns {number[][]}
  */
 function combine(n, k) {
     const combinations = [];

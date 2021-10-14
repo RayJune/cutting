@@ -40,7 +40,7 @@
  * Auxiliary complexity: O(m) = stack 长度 O(n)
  *
  * @param {TreeNode} root
- * @returns {number[]} result
+ * @returns {number[]}
  */
 function levelOrderBottom(root) {
     if (root === null) {

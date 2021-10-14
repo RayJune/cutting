@@ -48,8 +48,8 @@ class ListNode {
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
  *
- * @param {ListNode|null} head
- * @returns {ListNode|null}
+ * @param {ListNode} head
+ * @returns {ListNode}
  */
 function sortList(head) {
     if (head === null || head.next === null) {
@@ -100,7 +100,7 @@ function sortList(head) {
 
 /**
  * @param {ListNode} head
- * @returns {number} length
+ * @returns {number}
  */
 function getListLength(head) {
     let length = 0;
