@@ -17,6 +17,10 @@ class TreeNode {
  * @returns {TreeNode}
  */
 function buildTree(levelOrderArr) {
+    if (levelOrderArr.length === 0) {
+        return null;
+    }
+
     const root = new TreeNode(levelOrderArr.shift());
     const queue = [root];
 
@@ -43,11 +47,7 @@ test('define preorderTraversal function', () => {
 });
 
 test('root = []', () => {
-    expect(preorderTraversal(null)).toEqual([]);
-});
-
-test('root = []', () => {
-    expect(preorderTraversal(null)).toEqual([]);
+    expect(preorderTraversal(buildTree([]))).toEqual([]);
 });
 
 test('root = [1]', () => {
