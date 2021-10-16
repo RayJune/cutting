@@ -36,7 +36,7 @@
  */
 
 /**
- * 迭代，DFS，前序遍历
+ * 迭代，BFS，层序遍历
  *
  * Time Complexity: O(n) = hasPathSum 函数执行次数 O(n)
  * Space complexity: O(n) = hasPathSum 函数调用栈深度 O(n) （最坏情况下，树呈现链状，空间复杂度为 O(n)。平均情况下树的高度与节点数的对数正相关，空间复杂度为 O(log n)）
@@ -52,30 +52,35 @@ function hasPathSum(root, targetSum) {
         return false;
     }
 
-    const stack = [{
+    let stack = [{
         node: root,
         num: targetSum
     }];
 
     while (stack.length) {
-        const {node, num} = stack.pop();
-        const {left, right, val} = node;
+        const temp = [];
 
-        if (left === null && right === null && num === val) {
-            return true;
+        for (const {node, num} of stack) {
+            const {left, right, val} = node;
+
+            if (left === null && right === null && num === val) {
+                return true;
+            }
+            if (left) {
+                temp.push({
+                    node: left,
+                    num: num - val
+                });
+            }
+            if (right) {
+                temp.push({
+                    node: right,
+                    num: num - val
+                });
+            }
         }
-        if (right) {
-            stack.push({
-                node: right,
-                num: num - val
-            });
-        }
-        if (left) {
-            stack.push({
-                node: left,
-                num: num - val
-            });
-        }
+
+        stack = temp;
     }
 
     return false;
