@@ -39,11 +39,11 @@
  */
 
 /**
- * 递归，深度优先
+ * 递归，DFS
  *
- * Time Complexity: O(n) = maxDepth 函数执行次数
- * Space complexity: O(n) = maxDepth 函数调用栈深度 （最坏情况下，树呈现链状，空间复杂度为 O(n)。平均情况下树的高度与节点数的对数正相关，空间复杂度为 O(log n)）
- * Auxiliary complexity: O(n) = maxDepth 函数调用栈深度
+ * Time Complexity: O(n) = maxDepth 函数执行次数 O(n)
+ * Space complexity: O(n) = maxDepth 函数调用栈深度（最坏情况下，树呈现链状，空间复杂度为 O(n)。平均情况下树的高度与节点数的对数正相关，空间复杂度为 O(log n)）
+ * Auxiliary complexity: O(n) = maxDepth 函数调用栈深度 O(n)
  * n 为二叉树的节点数
  *
  * @param {TreeNode} root

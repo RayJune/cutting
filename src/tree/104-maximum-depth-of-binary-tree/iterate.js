@@ -39,9 +39,9 @@
  */
 
 /**
- * 迭代，广度优先
+ * 迭代，BFS
  *
- * Time Complexity: O(n) = maxDepth 函数执行次数
+ * Time Complexity: O(n) = maxDepth 函数执行次数 O(n)
  * Space complexity: O(n) = stack 长度 O(n)
  * Auxiliary complexity: O(n) = stack 长度 O(n)
  * n 为二叉树的节点数
@@ -60,12 +60,12 @@ function maxDepth(root) {
     while (stack.length) {
         const temp = [];
 
-        for (const node of stack) {
-            if (node.left) {
-                temp.push(node.left);
+        for (const {left, right} of stack) {
+            if (left) {
+                temp.push(left);
             }
-            if (node.right) {
-                temp.push(node.right);
+            if (right) {
+                temp.push(right);
             }
         }
         stack = temp;
