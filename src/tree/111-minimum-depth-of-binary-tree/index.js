@@ -33,7 +33,7 @@
  */
 
 /**
- * 递归，深度优先
+ * 递归，DFS
  *
  * Time Complexity: O(n) = maxDepth 函数执行次数
  * Space complexity: O(n) = maxDepth 函数调用栈深度 （最坏情况下，树呈现链状，空间复杂度为 O(n)。平均情况下树的高度与节点数的对数正相关，空间复杂度为 O(log n)）
@@ -47,14 +47,17 @@ function minDepth(root) {
     if (root === null) {
         return 0;
     }
-    if (root.left === null) {
-        return minDepth(root.right) + 1;
+
+    const {left, right} = root;
+
+    if (left === null) {
+        return minDepth(right) + 1;
     }
-    if (root.right === null) {
-        return minDepth(root.left) + 1;
+    if (right === null) {
+        return minDepth(left) + 1;
     }
 
-    return Math.min(minDepth(root.left), minDepth(root.right)) + 1;
+    return Math.min(minDepth(left), minDepth(right)) + 1;
 }
 
 module.exports = minDepth;
