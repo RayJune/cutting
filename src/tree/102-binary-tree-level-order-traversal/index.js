@@ -55,14 +55,14 @@ function levelOrder(root) {
         const levelSize = queue.length;
 
         for (let i = 0; i < levelSize; i++) {
-            const node = queue.shift();
+            const {left, right, val} = queue.shift();
 
-            level.push(node.val);
-            if (node.left) {
-                queue.push(node.left);
+            level.push(val);
+            if (left) {
+                queue.push(left);
             }
             if (node.right) {
-                queue.push(node.right);
+                queue.push(right);
             }
         }
         result.push(level);
