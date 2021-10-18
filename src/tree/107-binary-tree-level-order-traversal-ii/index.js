@@ -55,12 +55,12 @@ function levelOrderBottom(root) {
     while (stack.length) {
         const temp = [];
 
-        for (const node of stack) {
-            if (node.left) {
-                temp.push(node.left);
+        for (const {left, right} of stack) {
+            if (left) {
+                temp.push(left);
             }
-            if (node.right) {
-                temp.push(node.right);
+            if (right) {
+                temp.push(right);
             }
         }
         stack = temp;
