@@ -1,5 +1,8 @@
 /*
- * 给你一个整数数组 nums 和一个整数 k ，请你统计并返回该数组中和为 k 的连续子数组的个数。
+ * 560. Subarray Sum Equals k
+ *
+ * Given an array of integers nums and an integer k, return the total number of
+ * continuous subarray whose sum equals to k.
  *
  * Example 1:
  * Input: nums = [1, 1, 1], k = 2
@@ -15,8 +18,7 @@
  * -1000 <= nums[i] <= 1000
  * -10^7 <= target <= 10^7
  *
- * https://leetcode-cn.com/problems/subarray-sum-equals-k/
- *
+ * https://leetcode.com/problems/subarray-sum-equals-k/
 */
 
 module.exports = subarraySum;
