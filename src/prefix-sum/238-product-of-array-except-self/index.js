@@ -25,15 +25,6 @@
  */
 
 /**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-
-/**
  * Prefix Sum，前缀乘积和后缀乘积相乘
  *
  * Time Complexity: O(n) = 两次 for 循环次数之和 O(2n)
