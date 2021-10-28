@@ -32,8 +32,8 @@ class NumArray {
 
     /**
      * Time Complexity: O(n) = for 循环次数
-     * Space complexity: O(n) = this.#prefixSum 数组长度
-     * Auxiliary complexity: O(n) = this.#prefixSum 数组长度
+     * Space complexity: O(n) = this.#prefixSum 数组的长度
+     * Auxiliary complexity: O(n) = this.#prefixSum 数组的长度
      * 其中 n 是数组 nums 的长度
      *
      * @param {number[]} nums
