@@ -28,7 +28,7 @@
  */
 
 /**
- * Prefix Sum，一维前缀和
+ * Prefix Sum, 一维前缀和
  */
 class NumMatrix {
     #prefixSum;
@@ -57,7 +57,7 @@ class NumMatrix {
      * Time Complexity: O(m) = for 循环次数
      * Space complexity: O(1)
      * Auxiliary complexity: O(1)
-     * 其中 m 为 matrix 的行数
+     * 其中 m 是 matrix 的行数
      *
      * @param {number} row1
      * @param {number} col1
