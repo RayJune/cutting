@@ -24,8 +24,8 @@
  * Prefix Sum
  *
  * Time Complexity: O(n) = for 循环次数 O(n)
- * Space complexity: O(n) = map 的长度 O(n)
- * Auxiliary complexity: O(n) = map 的长度 O(n)
+ * Space complexity: O(n) = prefixSum 的长度 O(n)
+ * Auxiliary complexity: O(n) = prefixSum 的长度 O(n)
  * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
@@ -35,8 +35,8 @@
 function maxSubArrayLen(nums, k) {
     const prefixSum = new Map([[0, -1]]);
     const len = nums.length;
-    let maxLength = 0;
     let sum = 0;
+    let maxLen = 0;
 
     for (let i = 0; i < len; i++) {
         sum += nums[i];
@@ -44,11 +44,11 @@ function maxSubArrayLen(nums, k) {
             prefixSum.set(sum, i);
         }
         if (prefixSum.has(sum - k)) {
-            maxLength = Math.max(maxLength, i - prefixSum.get(sum - k));
+            maxLen = Math.max(maxLen, i - prefixSum.get(sum - k));
         }
     }
 
-    return maxLength;
+    return maxLen;
 }
 
 module.exports = maxSubArrayLen;
