@@ -27,22 +27,23 @@
 /**
  * Prefix Sum，前缀乘积和后缀乘积相乘
  *
- * Time Complexity: O(n) = 两次 for 循环次数之和 O(2n)
- * Space complexity: O(n) = result 数组长度 O(n)
+ * Time Complexity: O(n) = 两次 for 循环次数之和
+ * Space complexity: O(n) = result 数组长度
  * Auxiliary complexity: O(1)
- * 其中 n 为 nums 的数组长度
+ * 其中 n 为 nums 数组的长度
  *
  * @param {number[]} nums
  * @returns {number[]}
  */
 function productExceptSelf(nums) {
-    const len = nums.length;
     const result = [1];
+    const len = nums.length;
+    let right = 1;
 
-    for (let i = 1; i < len; i++) {
-        result[i] = result[i - 1] * nums[i - 1];
+    for (let i = 0; i < len - 1; i++) {
+        result[i + 1] = result[i] * nums[i];
     }
-    for (let i = len - 1, right = 1; i >= 0; i--) {
+    for (let i = len - 1; i >= 0; i--) {
         result[i] = result[i] * right;
         right *= nums[i];
     }
