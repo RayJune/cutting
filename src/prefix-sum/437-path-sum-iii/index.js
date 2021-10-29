@@ -32,11 +32,11 @@
  */
 
 /**
- * 递归访问每一个节点，然后检测以这个节点为起始且向下延伸的路径有多少种
+ * 前序遍历每一个节点，然后检测以这个节点为起始且向下延伸的路径有多少种
  *
  * Time Complexity: O(n^2) = pathSum 函数执行次数 O(n) * rootSum 函数执行次数 O(n)
  * Space complexity: O(n) = pathSum 函数调用栈深度 O(n) + rootSum 函数调用栈深度 O(n)
- * Auxiliary complexity: O(n)
+ * Auxiliary complexity: O(n) = pathSum 函数调用栈深度 O(n) + rootSum 函数调用栈深度 O(n)
  * 其中 n 是二叉树的节点数
  *
  * @param {TreeNode} root
@@ -55,9 +55,9 @@ function pathSum(root, targetSum) {
 
 /**
  * Time Complexity: O(n) = rootSum 函数执行次数
- * Space complexity: O(n) = rootSum 函数调用栈深度（最坏情况下，树呈现链状，空间复杂度为 O(n)。平均情况下树的高度与节点数的对数正相关，空间复杂度为 O(log n)）
- * Auxiliary complexity: O(n) = rootSum 函数调用栈深度 O(n)
- * n 为二叉树的节点数
+ * Space complexity: O(n) = rootSum 函数调用栈深度（最坏情况下，树呈现链状，空间复杂度为 O(n)。平均情况下树的高度和节点数的对数正相关，空间复杂度为 O(log n)
+ * Auxiliary complexity: O(n) = rootSum 函数调用栈深度
+ * 其中 n 是二叉树的节点数
  *
  * @param {TreeNode} root
  * @param {number} num
@@ -68,15 +68,10 @@ function rootSum(root, num) {
         return 0;
     }
 
-    let count = 0;
     const {left, right, val} = root;
+    const count = val === num ? 1 : 0;
 
-    if (val === num) {
-        count += 1;
-    }
-    num -= val;
-
-    return count + rootSum(left, num) + rootSum(right, num);
+    return count + rootSum(left, num - val) + rootSum(right, num - val);
 }
 
 module.exports = pathSum;

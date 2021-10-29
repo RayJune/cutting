@@ -32,7 +32,7 @@
  */
 
 /**
- * Prefix Sum
+ * Prefix Sum + 前序遍历
  *
  * Time Complexity: O(n) = preorderTraversal 函数执行次数
  * Space complexity: O(n) = preorderTraversal 函数调用栈深度 O(n) + prefixSum 占用空间 O(n)
@@ -50,14 +50,16 @@ function pathSum(root, targetSum) {
             return 0;
         }
 
-        let count = 0;
         const {left, right, val} = node;
 
         sum += val;
-        count = prefixSum.get(sum - targetSum) || 0;
         prefixSum.set(sum, (prefixSum.get(sum) || 0) + 1);
-        count += preorderTraversal(left, sum) + preorderTraversal(right, sum);
-        prefixSum.set(sum, (prefixSum.get(sum) - 1));
+
+        const count = (prefixSum.get(sum - targetSum) || 0)
+            + preorderTraversal(left, sum)
+            + preorderTraversal(right, sum);
+
+        prefixSum.set(sum, prefixSum.get(sum) - 1);
 
         return count;
     };
