@@ -28,7 +28,7 @@
  * Prefix Sum，前缀乘积和后缀乘积相乘
  *
  * Time Complexity: O(n) = 两次 for 循环次数之和
- * Space complexity: O(n) = result 数组长度
+ * Space complexity: O(n) = answer 数组长度
  * Auxiliary complexity: O(1)
  * 其中 n 为 nums 数组的长度
  *
@@ -36,19 +36,19 @@
  * @returns {number[]}
  */
 function productExceptSelf(nums) {
-    const result = [1];
+    const answer = [1];
     const len = nums.length;
     let right = 1;
 
     for (let i = 0; i < len - 1; i++) {
-        result[i + 1] = result[i] * nums[i];
+        answer[i + 1] = answer[i] * nums[i];
     }
     for (let i = len - 1; i >= 0; i--) {
-        result[i] = result[i] * right;
+        answer[i] *= right;
         right *= nums[i];
     }
 
-    return result;
+    return answer;
 }
 
 module.exports = productExceptSelf;
