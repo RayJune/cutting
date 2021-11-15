@@ -24,13 +24,14 @@
 /**
  * Prefix Sum
  *
- * Time Complexity: O(n) = for 循环次数 O(n)
- * Space complexity: O(n) = prefixSum 占用空间 O(n)
- * Auxiliary complexity: O(n) = prefixSum 占用空间 O(n)
+ * Time Complexity: O(n) = for 循环次数
+ * Space complexity: O(n) = prefixSum 长度
+ * Auxiliary complexity: O(n) = prefixSum 长度
  *
  * @param {number[]} nums
  * @param {number} k
  * @returns {number}
+ * 其中 n 是数组的长度
  */
 function subarraySum(nums, k) {
     const prefixSum = new Map([[0, 1]]);
