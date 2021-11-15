@@ -22,9 +22,9 @@
 /**
  * Prefix Sum，把 0 视作 -1，把原问题转换为求最长的连续子数组，其元素和为 0
  *
- * Time Complexity: O(n) = for 循环次数 O(n)
- * Space complexity: O(n) = prefixSum 长度 O(n)
- * Auxiliary complexity: O(n) = prefixSum 长度 O(n)
+ * Time Complexity: O(n) = for 循环次数
+ * Space complexity: O(n) = prefixSum 长度
+ * Auxiliary complexity: O(n) = prefixSum 长度
  * 其中 n 是数组的长度
  *
  * @param {number[]} nums
@@ -37,11 +37,7 @@ function findMaxLength(nums) {
     let maxLength = 0;
 
     for (let i = 0; i < len; i++) {
-        if (nums[i] === 1) {
-            sum += 1;
-        } else {
-            sum -= 1;
-        }
+        sum += (nums[i] === 1 ? 1 : -1);
         if (prefixSum.has(sum)) {
             maxLength = Math.max(maxLength, i - prefixSum.get(sum));
         } else {
