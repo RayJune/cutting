@@ -31,8 +31,8 @@
  * Prefix Sum，余数前缀和
  *
  * Time Complexity: O(n) = for 循环次数
- * Space complexity: O(min(m, k)) = 哈希表长度
- * Auxiliary complexity: O(min(m, k)) = 哈希表长度
+ * Space complexity: O(min(n, k)) = prefixSum 长度
+ * Auxiliary complexity: O(min(n, k)) = prefixSum 长度
  * 其中 n 是数组 nums 的长度
  *
  * @param {number[]} nums
@@ -44,17 +44,17 @@ function checkSubarraySum(nums, k) {
         return false;
     }
 
-    const prefixMap = new Map([[0, -1]]);
-    const length = nums.length;
+    const prefixSum = new Map([[0, -1]]);
+    const len = nums.length;
+    let remainder = 0;
 
-    for (let i = 0, remainder = 0; i < length; i++) {
+    for (let i = 0; i < len; i++) {
         remainder = (remainder + nums[i]) % k;
-        if (prefixMap.has(remainder)) {
-            if (i - prefixMap.get(remainder) >= 2) {
-                return true;
-            }
-        } else {
-            prefixMap.set(remainder, i);
+        if (!prefixSum.has(remainder)) {
+            prefixSum.set(remainder, i)
+        }
+        if (i - prefixSum.get(remainder) >= 2) {
+            return true;
         }
     }
 
