@@ -51,7 +51,7 @@ function checkSubarraySum(nums, k) {
     for (let i = 0; i < len; i++) {
         remainder = (remainder + nums[i]) % k;
         if (!prefixSum.has(remainder)) {
-            prefixSum.set(remainder, i)
+            prefixSum.set(remainder, i);
         }
         if (i - prefixSum.get(remainder) >= 2) {
             return true;
