@@ -23,7 +23,6 @@
  * Both l1 and l2 are sorted in non-decreasing order.
  *
  * https://leetcode.com/problems/merge-two-sorted-lists/
- *
 */
 
 /**
@@ -37,9 +36,10 @@
 /**
  * Recursion
  *
- * Time Complexity: O(n + m) = 递归函数调用的次数
- * Space complexity: O(n + m) = mergeTwoLists 函数调用栈深度 O(m + n) + 新链表的长度 O(m + n)
- * Auxiliary complexity: O(n + m) = mergeTwoLists 函数调用栈深度 O(m + n)
+ * Time Complexity: O(m + n) = 递归函数调用的次数
+ * Space complexity: O(m + n) = mergeTwoLists 函数调用栈深度 O(m + n) + 新链表的长度 O(m + n)
+ * Auxiliary complexity: O(m + n) = mergeTwoLists 函数调用栈深度
+ * 其中 m 和 n 分别为 l1 l2 两个链表的长度
  *
  * @param {ListNode} l1
  * @param {ListNode} l2

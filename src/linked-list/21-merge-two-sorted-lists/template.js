@@ -23,7 +23,6 @@
  * Both l1 and l2 are sorted in non-decreasing order.
  *
  * https://leetcode.com/problems/merge-two-sorted-lists/
- *
 */
 
 /**

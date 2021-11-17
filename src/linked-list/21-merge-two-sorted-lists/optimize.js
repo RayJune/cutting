@@ -23,7 +23,6 @@
  * Both l1 and l2 are sorted in non-decreasing order.
  *
  * https://leetcode.com/problems/merge-two-sorted-lists/
- *
 */
 
 /**
@@ -48,16 +47,17 @@ class ListNode {
 /**
  * Iteration
  *
- * Time Complexity: O(n + m) = while 循环次数
- * Space complexity: O(1)
+ * Time Complexity: O(m + n) = while 循环次数
+ * Space complexity: O(m + n) = 新链表的长度
  * Auxiliary complexity: O(1)
+ * 其中 m 和 n 分别为 l1 l2 两个链表的长度
  *
  * @param {ListNode} l1
  * @param {ListNode} l2
  * @returns {ListNode}
  */
 function mergeTwoLists(l1, l2) {
-    const preHead = new ListNode();
+    const preHead = new ListNode(-1);
     let prevNode = preHead;
 
     while (l1 !== null && l2 !== null) {
