@@ -1,4 +1,5 @@
-const containsNearbyAlmostDuplicate = require('./index');
+// const containsNearbyAlmostDuplicate = require('./index');
+const containsNearbyAlmostDuplicate = require('./optimize');
 // const containsNearbyAlmostDuplicate = require('./template');
 // const containsNearbyAlmostDuplicate = require('./template-zh');
 
