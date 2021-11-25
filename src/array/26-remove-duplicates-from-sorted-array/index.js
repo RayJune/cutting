@@ -36,16 +36,17 @@
  * @returns {number}
  */
 function removeDuplicates(nums) {
-    if (nums.length === 0) {
-        return 0;
+    const len = nums.length;
+
+    if (len < 2) {
+        return len;
     }
 
-    const len = nums.length;
     let fast = 1;
     let slow = 1;
 
     while (fast < len) {
-        if (nums[fast] !== nums[fast - 1]) {
+        if (nums[slow - 1] !== nums[fast]) {
             nums[slow] = nums[fast];
             slow += 1;
         }
