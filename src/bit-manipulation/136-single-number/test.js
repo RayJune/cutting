@@ -1,4 +1,5 @@
-const singleNumber = require('./index');
+// const singleNumber = require('./index');
+const singleNumber = require('./optimize');
 // const singleNumber = require('./template');
 // const singleNumber = require('./template-zh');
 
