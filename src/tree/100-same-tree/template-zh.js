@@ -20,7 +20,7 @@
  * Constraints:
  *
  * 两棵树上的节点数目都在范围 [0, 100] 内
- * -10^4 <= Node.val <= 10^4
+ * -10 ** 4 <= Node.val <= 10 ** 4
  *
  * https://leetcode-cn.com/problems/symmetric-tree/
 */

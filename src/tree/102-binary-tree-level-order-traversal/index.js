@@ -35,7 +35,7 @@
 /**
  * 广度优先搜索，用队列来做（这里用 array 当队列来用）
  *
- * Time Complexity: O(n^2) = while 和 for 循环的总遍历次数 O(n) * shift 操作 O(n)
+ * Time Complexity: O(n ** 2) = while 和 for 循环的总遍历次数 O(n) * shift 操作 O(n)
  * Space complexity: O(n) = result 数组长度 O(n) + 队列长度 O(n)
  * Auxiliary complexity: O(m) = 队列长度 O(n)
  *

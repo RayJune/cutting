@@ -22,7 +22,7 @@
  * Constraints:
  *
  * The number of nodes in the tree is in the range [0, 5000].
- * -10^4 <= Node.val <= 10^4
+ * -10 ** 4 <= Node.val <= 10 ** 4
  *
  * https://leetcode.com/problems/balanced-binary-tree/
  */
@@ -39,7 +39,7 @@
 /**
  * 自顶向下的递归
  *
- * Time Complexity: O(n^2) = isBalanced 函数执行次数 O(n) * maxDepth 函数执行次数 O(n)
+ * Time Complexity: O(n ** 2) = isBalanced 函数执行次数 O(n) * maxDepth 函数执行次数 O(n)
  * Space complexity: O(n) = 函数调用栈深度 O(n)
  * Auxiliary complexity: O(n) = 函数调用栈深度
  * n 为二叉树的节点数

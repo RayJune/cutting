@@ -33,9 +33,9 @@
 /**
  * 迭代，BFS，层序遍历
  *
- * Time Complexity: O(n^2) = while 循环次数 O(n) * path.join + path.slice 方法 O(n)
- * Space complexity: O(n^2) = result 占用空间 O(n) + stack 长度 O(n) * path 长度 O(n)
- * Auxiliary complexity: O(n^2) = stack 长度 O(n) * path 长度 O(n)
+ * Time Complexity: O(n ** 2) = while 循环次数 O(n) * path.join + path.slice 方法 O(n)
+ * Space complexity: O(n ** 2) = result 占用空间 O(n) + stack 长度 O(n) * path 长度 O(n)
+ * Auxiliary complexity: O(n ** 2) = stack 长度 O(n) * path 长度 O(n)
  *
  * @param {TreeNode} root
  * @returns {string[]}

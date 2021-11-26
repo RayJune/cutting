@@ -38,7 +38,7 @@
 /**
  * 迭代，BFS，层序遍历
  *
- * Time Complexity: O(n^2) = while + for 循环次数 O(n) * arr.slice 方法 O(n)
+ * Time Complexity: O(n ** 2) = while + for 循环次数 O(n) * arr.slice 方法 O(n)
  * Space complexity: O(n) = result 数组长度 O(n) + stack 占用空间 O(n)
  * Auxiliary complexity: O(n) = stack 占用空间 O(n)
  *
