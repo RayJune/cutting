@@ -24,8 +24,8 @@
 /**
  * 用回溯法来做，每个元素都有选和不选两种状态，注意在遇到重复元素的时候剪枝
  *
- * Time Complexity: O(n * 2^n) = backtrack 执行次数 O(2^n) * backtrack 函数内 array.concat 和 array.slice 方法时间复杂度 O(n + n) + 排序 O(n * log(n))
- * Space complexity: O(n * 2^n) = 所有子集的个数 O(2^n) * 子集长度 O(n) + backtrack 函数调用栈深度 O(n) + 排序 O(log(n))
+ * Time Complexity: O(2 ** n * n) = backtrack 执行次数 O(2 ** n) * backtrack 函数内 array.concat 和 array.slice 方法时间复杂度 O(n + n) + 排序 O(n * log(n))
+ * Space complexity: O(2 ** n * n) = 所有子集的个数 O(2 ** n) * 子集长度 O(n) + backtrack 函数调用栈深度 O(n) + 排序 O(log(n))
  * Auxiliary complexity: O(n) = backtrack 函数调用栈深度 O(n) + 排序 O(log(n))
  *
  * @param {number[]} nums

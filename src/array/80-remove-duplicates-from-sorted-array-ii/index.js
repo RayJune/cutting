@@ -19,7 +19,7 @@
  *
  * Constraints:
  * 1 <= nums.length <= 3 * 104
- * -10^4 <= nums[i] <= 10^4
+ * -10 ** 4 <= nums[i] <= 10 ** 4
  * nums is sorted in non-decreasing order.
  *
  * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/

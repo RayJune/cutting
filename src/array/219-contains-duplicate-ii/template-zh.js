@@ -16,9 +16,9 @@
  * Output: false
  *
  * Constraints:
- * 1 <= nums.length <= 10^5
- * -10^9 <= nums[i] <= 10^9
- * 0 <= k <= 10^5
+ * 1 <= nums.length <= 10 ** 5
+ * -10 ** 9 <= nums[i] <= 10 ** 9
+ * 0 <= k <= 10 ** 5
  *
  * https://leetcode-cn.com/problems/contains-duplicate-ii/
 */

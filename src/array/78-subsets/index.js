@@ -25,8 +25,8 @@
 /**
  * 用回溯法来做，每个 num 都有选和不选两种状态
  *
- * Time Complexity: O(n * 2^n) = backtrack 执行次数 O(2^n) * backtrack 函数内 array.concat 和 array.slice 操作 O(n + n)
- * Space complexity: O(n * 2^n) = subsets 个数 (2^n) * 单个 subset 长度 O(n) + backtrack 函数调用栈深度 O(n)
+ * Time Complexity: O(2 ** n * n) = backtrack 执行次数 O(2 ** n) * backtrack 函数内 array.concat 和 array.slice 操作 O(n + n)
+ * Space complexity: O(2 ** n * n) = subsets 个数 (2 ** n) * 单个 subset 长度 O(n) + backtrack 函数调用栈深度 O(n)
  * Auxiliary complexity: O(n) = 函数调用栈深度
  *
  * @param {number[]} nums

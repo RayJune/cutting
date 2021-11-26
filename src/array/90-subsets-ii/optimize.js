@@ -25,8 +25,8 @@
  * Cascading, [[]] -> [[], [1]] -> [[], [1], [2], [1, 2]] -> [[], [1], [2], [1, 2], [2, 2], [1, 2, 2]]
  * 如果出现重复元素的话，只对上一次新添加的子集们进行相加处理得到新子集们
  *
- * Time Complexity: O(n * 2^n) = 两个 for 循环总遍历次数 O(2^n) * 第二个 for 循环 中的 concat 方法 O(n) + 排序 O(n * log(n))
- * Space complexity: O(n * 2^n) = 所有子集的个数 O(2^n) * 子集长度 O(n) + 排序 O(log(n))
+ * Time Complexity: O(2 ** n * n) = 两个 for 循环总遍历次数 O(2 ** n) * 第二个 for 循环 中的 concat 方法 O(n) + 排序 O(n * log(n))
+ * Space complexity: O(2 ** n * n) = 所有子集的个数 O(2 ** n) * 子集长度 O(n) + 排序 O(log(n))
  * Auxiliary complexity: O(log(n)) = 排序 O(log(n))
  *
  * @param {number[]} nums

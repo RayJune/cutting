@@ -25,7 +25,7 @@
 /**
  * Backtracking + signs + 剪枝
  *
- * O(2^n*n) | O(n) space, n 是参数 candidates 数组的长度
+ * O(2 ** n * n) | O(n) space, n 是参数 candidates 数组的长度
  *
  * @param {number[]} candidates
  * @param {number} target

@@ -14,7 +14,7 @@
  * Output: 5, nums = [0, 1, 2, 3, 4, _, _, _, _, _]
  *
  * Constraints:
- * 0 <= nums.length <= 3 * 10^4
+ * 0 <= nums.length <= 3 * 10 ** 4
  * -100 <= nums[i] <= 100
  * nums is sorted in non-decreasing order.
  *

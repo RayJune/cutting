@@ -35,7 +35,7 @@
 /**
  * 比如 1 在 a1 的位置的组合有 (n-1)! 种，通过 k / (n - 1)! 的方式来计算第一个数字的值。以此类推得出目标组合。
  *
- * Time Complexity: O(n^2) = for 循环 O(n) + while 循环 O(n) * splice 操作 O(n) + join 操作 O(n)
+ * Time Complexity: O(n ** 2) = for 循环 O(n) + while 循环 O(n) * splice 操作 O(n) + join 操作 O(n)
  * Space complexity: O(n) = candidates 长度 O(n) + permutation 长度 O(n)
  * Auxiliary complexity: O(n) = permutation 长度 O(n)
  *

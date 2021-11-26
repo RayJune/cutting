@@ -21,7 +21,7 @@
 /**
  * 回溯法 + map 进行过滤
  *
- * Time Complexity: O(n^2 * n!) = for 循环次数 O(n) * nums.toString O(n) * backtrack 函数执行次数 O(n!)
+ * Time Complexity: O(n ** 2 * n!) = for 循环次数 O(n) * nums.toString O(n) * backtrack 函数执行次数 O(n!)
  * Space complexity: O(n * n!) = (排列长度 O(n) * 排列个数 O(n!)) + map 长度 O(n!) + 函数调用栈深度 O(n)
  * Auxiliary complexity: O(n!) = map 长度 O(n!) + backtrack 函数调用栈深度 O(n)
  * (n 代表输入参数 nums 的数组长度)

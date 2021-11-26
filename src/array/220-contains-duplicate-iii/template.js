@@ -16,10 +16,10 @@
  * Output: false
  *
  * Constraints:
- * 1 <= nums.length <= 2 * 10^4
- * -2^31 <= nums[i] <= 2^31 - 1
- * 0 <= k <= 10^4
- * 0 <= t <= 2^31 - 1
+ * 1 <= nums.length <= 2 * 10 ** 4
+ * -2 ** 31 <= nums[i] <= 2 ** 31 - 1
+ * 0 <= k <= 10 ** 4
+ * 0 <= t <= 2 ** 31 - 1
  *
  * https://leetcode.com/problems/contains-duplicate-iii/
 */

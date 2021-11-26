@@ -25,8 +25,8 @@
 /**
  * Cascading, [[]] -> [[], [1]] -> [[], [1], [2], [1, 2]]
  *
- * Time Complexity: O(n * 2^n) = for 循环 和 forEach 的总遍历次数 O(2^n) * forEach 中的 concat 方法 O(n)
- * Space complexity: O(n * 2^n) = subsets 个数 (2^n) * 单个 subset 长度 O(n) + backtrack 函数调用栈深度 O(n)
+ * Time Complexity: O(2 ** n * n) = for 循环 和 forEach 的总遍历次数 O(2 ** n) * forEach 中的 concat 方法 O(n)
+ * Space complexity: O(2 ** n * n) = subsets 个数 (2 ** n) * 单个 subset 长度 O(n) + backtrack 函数调用栈深度 O(n)
  * Auxiliary complexity: O(1)
  *
  * @param {number[]} nums
