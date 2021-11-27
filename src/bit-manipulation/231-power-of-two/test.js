@@ -1,6 +1,7 @@
 // const isPowerOfTwo = require('./index');
 const isPowerOfTwo = require('./optimize');
 // const isPowerOfTwo = require('./trick');
+// const isPowerOfTwo = require('./regex');
 // const isPowerOfTwo = require('./template');
 // const isPowerOfTwo = require('./template-zh');
 
