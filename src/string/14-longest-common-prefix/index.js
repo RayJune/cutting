@@ -22,7 +22,7 @@
 */
 
 /**
- * Horizontal scanning, 从长到短
+ * Horizontal scanning, reduce
  *
  * Time Complexity: O(m * n) = 最坏情况下，strs 中每个字符串的字符都会被比较一次
  * Space complexity: O(1)
@@ -33,18 +33,15 @@
  * @returns {string}
  */
 function longestCommonPrefix(strs) {
-    let prefix = strs[0];
+    return strs.reduce((prev, curr) => {
+        let i = 0;
 
-    for (const str of strs) {
-        while (!str.startsWith(prefix)) {
-            prefix = prefix.slice(0, -1);
-            if (prefix.length === 0) {
-                return '';
-            }
+        while (prev[i] && curr[i] && prev[i] === curr[i]) {
+            i += 1;
         }
-    }
 
-    return prefix;
+        return prev.slice(0, i);
+    });
 }
 
 module.exports = longestCommonPrefix;
