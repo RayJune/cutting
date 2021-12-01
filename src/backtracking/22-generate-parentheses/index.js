@@ -20,9 +20,9 @@
 /**
  * Backtracking
  *
- * Time Complexity: O(4 ** n / Math.sqrt(n))
- * Space complexity: O(4 ** n / Math.sqrt(n))
- * Auxiliary complexity: O(4 ** n / Math.sqrt(n))
+ * Time Complexity: O(4 ** n / Math.sqrt(n) * n) = backtrack 执行次数 O(4 ** n / Math.sqrt(n)) * backtrack 时间复杂度 O(n)
+ * Space complexity: O(4 ** n / Math.sqrt(n) * n) = result 所占空间  O(4 ** n / Math.sqrt(n) * n) + backtrack 函数调用栈深度 O(n)
+ * Auxiliary complexity: O(n) = backtrack 函数调用栈深度
  *
  * @param {number} n
  * @returns {string[]}
@@ -32,18 +32,17 @@ function generateParenthesis(n) {
     const backtrack = (arr, left, right) => {
         if (arr.length === 2 * n) {
             result.push(arr.join(''));
+        } else {
+            if (left < n) {
+                backtrack(arr.concat('('), left + 1, right);
+            }
+            if (left > right) {
+                backtrack(arr.concat(')'), left, right + 1);
+            }
+        }
+    }
 
-            return;
-        }
-        if (left > 0) {
-            backtrack(arr.concat('('), left - 1, right);
-        }
-        if (right > left) {
-            backtrack(arr.concat(')'), left, right - 1);
-        }
-    };
-
-    backtrack([], n, n);
+    backtrack([], 0, 0);
 
     return result;
 }
