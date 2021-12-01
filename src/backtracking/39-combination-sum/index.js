@@ -47,9 +47,9 @@
  * Backtracking + sorting 剪枝
  *
  * Time Complexity: O(n ** (t / m) * (t / m)) = backtrack 函数调用次数/n 叉树的节点数上限 O(n ** (t / m)) * backtrack 时间复杂度/单个 combination 的长度 O(t / m) + 排序 O(n * log(n))
- * Space complexity: O(n ** (t / m) * (t / m)) = combinations 占用空间上限 O(n ** (t / m + 1)) + backtrack 函数调用栈的深度 O(t / m) + 排序 O(log(n))
- * Auxiliary complexity: O(t / m + log(n)) = backtrack 函数调用栈深度 (t / m) + 排序 O(log(n))
- * 其中 n 为 candidates 的长度，t 为 target 的值, m 为 candidates 中的最小值
+ * Space complexity: O(n ** (t / m) * (t / m)) = combinations 占用空间上限 O(n ** (t / m) * (t / m)) + backtrack 函数调用栈深度 O(t / m) + 排序 O(log(n))
+ * Auxiliary complexity: O(t / m + log(n)) = backtrack 函数调用栈深度 O(t / m) + 排序 O(log(n))
+ * 其中 n 是 candidates 的长度，t 是 target，m 是 candidates 中的最小值
  *
  * @param {number[]} candidates
  * @param {number} target
