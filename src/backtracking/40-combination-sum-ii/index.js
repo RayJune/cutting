@@ -28,8 +28,8 @@
  * Backtracking + signs/sorting 剪枝
  *
  * Time Complexity: O(2 ** n * n) = backtrack 执行次数 O(2 ** n) * backtrack 时间复杂度 O(n) + 排序 O(n * log(n))
- * Space complexity: O(2 ** n * n) = combinations 所占空间 (2 ** n * n) + backtrack 函数调用栈深度 O(n) + 排序 O(log(n))
- * Auxiliary complexity: O(n) = backtrack 函数调用栈深度 (n) + 排序 O(log(n))
+ * Space complexity: O(2 ** n * n) = combinations 所占空间 O(2 ** n * n) + backtrack 函数调用栈深度 O(n) + 排序 O(log(n))
+ * Auxiliary complexity: O(n) = backtrack 函数调用栈深度 O(n) + 排序 O(log(n))
  * 其中 n 是 candidates 的长度
  *
  * @param {number[]} candidates
