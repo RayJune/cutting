@@ -1,5 +1,7 @@
 /*
- * Given an array of distinct integers `candidates` and a target integer `target`.
+ * 39. Combination Sum
+ *
+ * Given an array of distinct integers candidates and a target integer target.
  * Return a list of all unique combinations of candidates where the chosen numbers sum to target.
  * You may return the combinations in any order.
  *
@@ -11,10 +13,12 @@
  * Example 1:
  * Input: candidates = [2, 3, 6, 7], target = 7
  * Output: [[2, 2, 3], 7];
- * Explanation:
- * 2 and 3 are candidates, and 2 + 2 + 3 = 7. Note that 2 can be used multiple times. 7 is a candidate, and 7 = 7. These are the only two combinations.
  *
  * Example 2:
+ * Input: nums = [3, 2, 1]
+ * Output: [1, 2, 3]
+ *
+ * Example 3:
  * Input: candidates = [2, 3, 5], target = 8
  * Output: [[2, 2, 2, 2], [2, 3, 3], [3, 5]]
  *
@@ -36,13 +40,16 @@
  * All elements of candidates are distinct.
  * 1 <= target <= 500
  *
- * https://leetcode-cn.com/problems/combination-sum/
+ * https://leetcode.com/problems/combination-sum/
 */
 
 /**
- * Backtracking + 排序剪枝
+ * Backtracking + sorting 剪枝
  *
- * O(s) time | O(s) space, s 代表所有可行解的长度之和
+ * Time Complexity: O(n ** (t / m) * (t / m)) = backtrack 函数调用次数/n 叉树的节点数上限 O(n ** (t / m)) * backtrack 时间复杂度/单个 combination 的长度 O(t / m) + 排序 O(n * log(n))
+ * Space complexity: O(n ** (t / m) * (t / m)) = combinations 占用空间上限 O(n ** (t / m + 1)) + backtrack 函数调用栈的深度 O(t / m) + 排序 O(log(n))
+ * Auxiliary complexity: O(t / m + log(n)) = backtrack 函数调用栈深度 (t / m) + 排序 O(log(n))
+ * 其中 n 为 candidates 的长度，t 为 target 的值, m 为 candidates 中的最小值
  *
  * @param {number[]} candidates
  * @param {number} target
@@ -50,28 +57,22 @@
  */
 function combinationSum(candidates, target) {
     const combinations = [];
-    const len = candidates.length;
-    const backtrack = (currentTarget, currentCombination = [], i = 0) => {
-        if (i === len) {
-            return;
-        }
+    const backtrack = (currentTarget, arr, i) => {
+        if (i < candidates.length) {
+            const remain = currentTarget - candidates[i];
 
-        const remainingTarget = currentTarget - candidates[i];
-
-        if (remainingTarget > 0) {
-            currentCombination.push(candidates[i]);
-            backtrack(remainingTarget, currentCombination, i);
-            currentCombination.pop();
-            backtrack(currentTarget, currentCombination, i + 1);
-        } else if (remainingTarget === 0) {
-            currentCombination.push(candidates[i]);
-            combinations.push(currentCombination.slice());
-            currentCombination.pop();
+            if (remain === 0) {
+                combinations.push(arr.concat(candidates[i]));
+            }
+            if (remain > 0) {
+                backtrack(remain, arr.concat(candidates[i]), i);
+                backtrack(currentTarget, arr, i + 1);
+            }
         }
     };
 
     candidates.sort((a, b) => a - b);
-    backtrack(target);
+    backtrack(target, [], 0);
 
     return combinations;
 }
