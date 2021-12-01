@@ -1,5 +1,7 @@
 /*
- * Given a collection of candidates numbers (`candidates`) and a target number (`target`),
+ * 40. Combination Sum II
+ *
+ * Given a collection of candidates numbers (candidates) and a target number (target),
  * find all unique combinations in candidates where the candidate numbers sum to target.
  *
  * Each number in candidates may only be used once in the combination.
@@ -19,8 +21,7 @@
  * 1 <= candidates[i] <= 50
  * 1 <= target <= 30
  *
- * https://leetcode-cn.com/problems/combination-sum-ii/
- *
+ * https://leetcode.com/problems/combination-sum-ii/
 */
 
 module.exports = combinationSum2;

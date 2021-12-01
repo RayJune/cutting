@@ -1,4 +1,6 @@
 const combinationSum2 = require('./index');
+// const combinationSum2 = require('./template');
+// const combinationSum2 = require('./template-zh');
 
 test('define combinationSum2 function', () => {
     expect(typeof combinationSum2).toBe('function');
@@ -9,7 +11,9 @@ test('candidates = [1], target = 1', () => {
 });
 
 test('candidates = [2, 5, 2, 1, 2], target = 5', () => {
-    const sortedCombinations = combinationSum2([2, 5, 2, 1, 2], 5).map(item => item.sort()).sort();
+    const candidates = [2, 5, 2, 1, 2];
+    const sortedCombinations = combinationSum2(candidates, 5)
+        .map(item => item.sort()).sort();
 
     expect(sortedCombinations).toEqual([
         [1, 2, 2],
@@ -18,7 +22,9 @@ test('candidates = [2, 5, 2, 1, 2], target = 5', () => {
 });
 
 test('candidates = [3, 1, 3, 5, 1, 1], target = 8', () => {
-    const sortedCombinations = combinationSum2([3, 1, 3, 5, 1, 1], 8).map(item => item.sort()).sort();
+    const candidates = [3, 1, 3, 5, 1, 1];
+    const sortedCombinations = combinationSum2(candidates, 8)
+        .map(item => item.sort()).sort();
 
     expect(sortedCombinations).toEqual([
         [1, 1, 1, 5],
@@ -28,7 +34,9 @@ test('candidates = [3, 1, 3, 5, 1, 1], target = 8', () => {
 });
 
 test('candidates = [10, 1, 2, 7, 6, 1, 5], target = 8', () => {
-    const sortedCombinations = combinationSum2([10, 1, 2, 7, 6, 1, 5], 8).map(item => item.sort()).sort();
+    const candidates = [10, 1, 2, 7, 6, 1, 5];
+    const sortedCombinations = combinationSum2(candidates, 8)
+        .map(item => item.sort()).sort();
 
     expect(sortedCombinations).toEqual([
         [1, 1, 6],
@@ -39,7 +47,9 @@ test('candidates = [10, 1, 2, 7, 6, 1, 5], target = 8', () => {
 });
 
 test('candidates = [4, 1, 1, 4, 4, 4, 4, 2, 3, 5], target = 10', () => {
-    const sortedCombinations = combinationSum2([4, 1, 1, 4, 4, 4, 4, 2, 3, 5], 10).map(item => item.sort()).sort();
+    const candidates = [4, 1, 1, 4, 4, 4, 4, 2, 3, 5];
+    const sortedCombinations = combinationSum2(candidates, 10)
+        .map(item => item.sort()).sort();
 
     expect(sortedCombinations).toEqual([
         [1, 1, 3, 5],

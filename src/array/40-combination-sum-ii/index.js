@@ -1,5 +1,7 @@
 /*
- * Given a collection of candidates numbers (`candidates`) and a target number (`target`),
+ * 40. Combination Sum II
+ *
+ * Given a collection of candidates numbers (candidates) and a target number (target),
  * find all unique combinations in candidates where the candidate numbers sum to target.
  *
  * Each number in candidates may only be used once in the combination.
@@ -19,13 +21,16 @@
  * 1 <= candidates[i] <= 50
  * 1 <= target <= 30
  *
- * https://leetcode-cn.com/problems/combination-sum-ii/
+ * https://leetcode.com/problems/combination-sum-ii/
 */
 
 /**
- * Backtracking + signs + 剪枝
+ * Backtracking + signs/sorting 剪枝
  *
- * O(2 ** n * n) | O(n) space, n 是参数 candidates 数组的长度
+ * Time Complexity: O(2 ** n * n) = backtrack 执行次数 O(2 ** n) * backtrack 时间复杂度 O(n) + 排序 O(n * log(n))
+ * Space complexity: O(2 ** n * n) = combinations 所占空间 (2 ** n * n) + backtrack 函数调用栈深度 O(n) + 排序 O(log(n))
+ * Auxiliary complexity: O(n) = backtrack 函数调用栈深度 (n) + 排序 O(log(n))
+ * 其中 n 是 candidates 的长度
  *
  * @param {number[]} candidates
  * @param {number} target
@@ -33,42 +38,31 @@
  */
 function combinationSum2(candidates, target) {
     const combinations = [];
-    const len = candidates.length;
-    const signs = new Array(len);
-    const backtrack = (currentTarget, currentCombination = [], i = 0) => {
-        if (i === len) {
-            return;
-        }
-        for (let j = i; j < len; j++) {
-            if (signs[j] || (j > 0 && candidates[j] === candidates[j - 1]) && !signs[j - 1]) {
-                continue;
-            }
-
-            const remainingTarget = currentTarget - candidates[j];
-
-            if (remainingTarget > 0) {
-                signs[j] = true;
-                currentCombination.push(candidates[j]);
-                backtrack(remainingTarget, currentCombination, j + 1);
-                signs[j] = false;
-                currentCombination.pop();
-            } else if (remainingTarget === 0) {
-                currentCombination.push(candidates[j]);
-                combinations.push(currentCombination.slice());
-                currentCombination.pop();
-                break;
+    const signs = [];
+    const backtrack = (currentTarget, arr, i) => {
+        if (i < candidates.length) {
+            if (candidates[i] === candidates[i - 1] && !signs[i - 1]) {
+                backtrack(currentTarget, arr, i + 1);
             } else {
-                break;
+                const remain = currentTarget - candidates[i];
+
+                if (remain === 0) {
+                    combinations.push(arr.concat(candidates[i]));
+                }
+                if (remain > 0) {
+                    signs[i] = true;
+                    backtrack(remain, arr.concat(candidates[i]), i + 1);
+                    signs[i] = false;
+                    backtrack(currentTarget, arr, i + 1);
+                }
             }
         }
     };
 
     candidates.sort((a, b) => a - b);
-    backtrack(target);
+    backtrack(target, [], 0);
 
     return combinations;
 }
-
-combinationSum2([3, 1, 3, 5, 1, 1], 8);
 
 module.exports = combinationSum2;
