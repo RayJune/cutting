@@ -1,6 +1,6 @@
 // const permute = require('./index');
-const permute = require('./optimize');
-// const permute = require('./optimize2');
+// const permute = require('./optimize');
+const permute = require('./optimize2');
 // const permute = require('./template');
 // const permute = require('./template-zh');
 

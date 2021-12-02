@@ -28,8 +28,8 @@
  * Backtracking + signs
  *
  * Time Complexity: O(n! * n) = 遍历次数 O(n!) * 拷贝单个排列到答案数组中 O(n)
- * Space complexity: O(n! * n) = 排列个数 O(n!) * 单个排列的长度 O(n) + backtrack 函数调用栈深度 O(n)
- * Auxiliary complexity: O(n) = backtrack 函数调用栈深度 O(n)
+ * Space complexity: O(n! * n) = 排列个数 O(n!) * 单个排列的长度 O(n) + backtrack 函数调用栈深度 O(n) + signs 长度 O(n)
+ * Auxiliary complexity: O(n) = backtrack 函数调用栈深度 O(n) + signs 长度 O(n)
  * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
