@@ -1,6 +1,7 @@
 /*
- * Given a collection of numbers, nums, that might contain duplicates,
- * return all possible unique permutations in any order.
+ * 47. Permutations II
+ *
+ * Given a collection of numbers, nums, that might contain duplicates, return all possible unique permutations in any order.
  *
  * Example 1:
  * Input: nums = [1, 1, 2]
@@ -15,8 +16,6 @@
  * -10 <= nums[i] <= 10
  *
  * https://leetcode.com/problems/permutations-ii/
- *
 */
 
 module.exports = permuteUnique;
-

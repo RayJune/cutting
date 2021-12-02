@@ -1,6 +1,7 @@
 /*
- * Given a collection of numbers, nums, that might contain duplicates,
- * return all possible unique permutations in any order.
+ * 47. Permutations II
+ *
+ * Given a collection of numbers, nums, that might contain duplicates, return all possible unique permutations in any order.
  *
  * Example 1:
  * Input: nums = [1, 1, 2]
@@ -15,54 +16,42 @@
  * -10 <= nums[i] <= 10
  *
  * https://leetcode.com/problems/permutations-ii/
- *
 */
 
 /**
- * 回溯法 + map 进行过滤
+ * 回溯法 + sorting/signs 剪枝
  *
- * Time Complexity: O(n ** 2 * n!) = for 循环次数 O(n) * nums.toString O(n) * backtrack 函数执行次数 O(n!)
- * Space complexity: O(n * n!) = (排列长度 O(n) * 排列个数 O(n!)) + map 长度 O(n!) + 函数调用栈深度 O(n)
- * Auxiliary complexity: O(n!) = map 长度 O(n!) + backtrack 函数调用栈深度 O(n)
- * (n 代表输入参数 nums 的数组长度)
+ * Time Complexity: O(n! * n) = 遍历次数 O(n!) * 拷贝单个排列到答案数组中 O(n) + 排序 O(n * log(n))
+ * Space complexity: O(n! * n) = 排列个数 O(n!) * 单个排列的长度 O(n) + backtrack 函数调用栈深度 O(n) + signs 长度 O(n)+ 排序 O(log(n))
+ * Auxiliary complexity: O(n) = backtrack 函数调用栈深度 O(n) + signs 长度 O(n) + 排序 O(log(n))
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
  * @returns {number[][]}
  */
 function permuteUnique(nums) {
-    const map = new Map();
     const permutations = [];
     const len = nums.length;
-    const backtrack = (depth = 0) => {
-        if (depth === len - 1) {
-            const key = nums.toString();
-
-            if (map.get(key) === undefined) {
-                permutations.push(nums.slice());
-                map.set(key, true);
-            }
+    const signs = [];
+    const backtrack = arr => {
+        if (arr.length === len) {
+            permutations.push(arr);
         } else {
-            for (let i = depth; i < len; i++) {
-                swap(nums, i, depth);
-                backtrack(depth + 1);
-                swap(nums, depth, i);
+            for (let i = 0; i < len; i++) {
+                if (signs[i] || (nums[i] === nums[i - 1] && !signs[i - 1])) {
+                    continue;
+                }
+                signs[i] = true;
+                backtrack(arr.concat(nums[i]));
+                signs[i] = false;
             }
         }
-    }
+    };
 
-    backtrack();
+    nums.sort();
+    backtrack([]);
 
     return permutations;
-}
-
-/**
- *
- * @param {Array} arr
- * @param {number} i
- * @param {number} j
- */
-function swap(arr, i, j) {
-    [arr[i], arr[j]] = [arr[j], arr[i]];
 }
 
 module.exports = permuteUnique;

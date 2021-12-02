@@ -1,5 +1,4 @@
-// const permuteUnique = require('./index');
-const permuteUnique = require('./optimize');
+const permuteUnique = require('./index');
 // const permuteUnique = require('./template');
 // const permuteUnique = require('./template-zh');
 
