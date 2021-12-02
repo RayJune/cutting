@@ -1,4 +1,6 @@
 /*
+ * 46. Permutations
+ *
  * Given an array nums of distinct integers, return all the possible permutations.
  * You can return the answer in any order.
  *
@@ -20,16 +22,15 @@
  * All the integers of nums are unique
  *
  * https://leetcode.com/problems/permutations/
- *
 */
 
 /**
- * 回溯法 + 用 swap 方法实现原地修改，以及进行合适的剪枝操作（depth === len - 1），优化时间复杂度
+ * Backtracking + swap
  *
- * Time Complexity: O(n*n!) = for 循环 O(n) * backtrack 执行次数 O(n!)
- * Space complexity:  O(n*n!) = 单个排列的长度 O(n) * 排列个数 O(n!) + backtrack 函数调用栈深度 O(n)
- * Auxiliary complexity: O(n) = backtrack 函数调用栈深度 O(n)
- * (n 代表输入参数 arr 数组的长度)
+ * Time Complexity: O(n! * n) = 遍历次数 O(n!) * 拷贝单个排列到答案数组中 O(n)
+ * Space complexity: O(n! * n) = 排列个数 O(n!) * 单个排列的长度 O(n) + backtrack 函数调用栈的深度 O(n)
+ * Auxiliary complexity: O(n) = backtrack 函数调用栈的深度 O(n)
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
  * @returns {number[][]}
@@ -37,14 +38,14 @@
 function permute(nums) {
     const permutations = [];
     const len = nums.length;
-    const backtrack = (depth = 0) => {
-        if (depth === len - 1) {
+    const backtrack = (i = 0) => {
+        if (i === len - 1) {
             permutations.push(nums.slice());
         } else {
-            for (let i = depth; i < len; i++) {
-                swap(nums, i, depth);
-                backtrack(depth + 1);
-                swap(nums, depth, i);
+            for (let j = i; j < len; j++) {
+                [nums[j], nums[i]] = [nums[i], nums[j]];
+                backtrack(i + 1);
+                [nums[i], nums[j]] = [nums[j], nums[i]];
             }
         }
     };
@@ -52,16 +53,6 @@ function permute(nums) {
     backtrack();
 
     return permutations;
-}
-
-/**
- *
- * @param {Array} arr
- * @param {number} i
- * @param {number} j
- */
-function swap(arr, i, j) {
-    [arr[i], arr[j]] = [arr[j], arr[i]];
 }
 
 module.exports = permute;

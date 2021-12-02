@@ -1,4 +1,6 @@
 /*
+ * 46. Permutations
+ *
  * Given an array nums of distinct integers, return all the possible permutations.
  * You can return the answer in any order.
  *
@@ -20,15 +22,15 @@
  * All the integers of nums are unique
  *
  * https://leetcode.com/problems/permutations/
- *
 */
 
 /**
- * 回溯法 + signs 标记数组
+ * Backtracking + signs
  *
- * Time Complexity: O(n*n!) = for 循环次数 O(n) * backtrack 执行次数 O(n!)
- * Space complexity: O(n*n!) = 单个排列长度 O(n) * 排列总个数 O(n!) + signs 长度 O(n) + currentPermutation 长度 O(n) + backtrack 函数执行栈深度
- * Auxiliary complexity: O(n) = signs 长度 O(n) + currentPermutation 长度 O(n) + backtrack 函数执行栈深度
+ * Time Complexity: O(n! * n) = 遍历次数 O(n!) * 拷贝单个排列到答案数组中 O(n)
+ * Space complexity: O(n! * n) = 排列个数 O(n!) * 单个排列的长度 O(n) + backtrack 函数调用栈深度 O(n)
+ * Auxiliary complexity: O(n) = backtrack 函数调用栈深度 O(n)
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
  * @returns {number[][]}
@@ -36,25 +38,23 @@
 function permute(nums) {
     const permutations = [];
     const len = nums.length;
-    const signs = new Array(len);
-    const backtrack = (currentPermutation = []) => {
-        if (currentPermutation.length === len) {
-            permutations.push(currentPermutation.slice());
+    const signs = [];
+    const backtrack = arr => {
+        if (arr.length === len) {
+            permutations.push(arr);
         } else {
             for (let i = 0; i < len; i++) {
                 if (signs[i]) {
                     continue;
                 }
-                currentPermutation.push(nums[i]);
                 signs[i] = true;
-                backtrack(currentPermutation);
-                currentPermutation.pop();
+                backtrack(arr.concat(nums[i]));
                 signs[i] = false;
             }
         }
     };
 
-    backtrack();
+    backtrack([]);
 
     return permutations;
 }

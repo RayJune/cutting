@@ -1,5 +1,7 @@
 /*
- * 给定一个不含重复数字的数组 `nums`，返回其所有可能的全排列。你可以按任意顺序返回答案。
+ * 46. 全排列
+ *
+ * 给定一个不含重复数字的数组 nums，返回其所有可能的全排列。你可以按任意顺序返回答案。
  *
  * Example 1:
  * Input: nums = [1, 2, 3]
@@ -13,13 +15,12 @@
  * Input: nums = [1]
  * Output: [[1]]
  *
- * 提示:
+ * Constraints:
  * 1 <= nums.length <= 6
  * -10 <= nums[i] <= 10
- * nums 中的所有整数互不相同
+ * All the integers of nums are unique
  *
  * https://leetcode-cn.com/problems/permutations/
- *
 */
 
 module.exports = permute;
