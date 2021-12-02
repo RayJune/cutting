@@ -1,8 +1,9 @@
 /*
+ * 31. Next Permutation
+ *
  * Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.
  * If such an arrangement is not possible, it must rearrange it as the lowest possible order(i.e., sorted in ascending order).
  * The replacement must be in place and use only constant extra memory;
- *
  *
  * Example 1:
  * Input: nums = [1, 2, 3]
@@ -29,63 +30,50 @@
  * 0 <= nums[i] <= 100
  *
  * https://leetcode.com/problems/next-permutation/
- *
 */
 
 /**
- * 从后向前，找到第一个 arr[i] < arr[i + 1] 的元素（较小数），这样较小数之后的排列为降序排列
- * 如果较小数的下标 < 0，说明 nums 为降序排列，不存在题目要求的下一个排列，此时 reverse 为升序排列返回即可
- * 如果较小数的下标 >=0，从后向前，找到第一个比较小数大的数，记为较大数；让较小数和较大数交换位置，然后再把较小数之后的元素做 reverse 处理，使之成为升序数组
+ * 从后向前，找到第一个较小数，这样较小数之后的排列为降序排列
+ * 如果较小数存在，从后向前找到第一个比【较小数】大的数，记为较大数；让较小数和较大数交换位置，然后再把较小数之后的元素做 reverse 处理，使之成为升序数组
+ * 如果较小数不存在，说明 nums 为降序排列，不存在题目要求的下一个排列，此时 reverse 为升序排列返回即可
  *
  * Time Complexity: O(n) = while loop + while loop + reverse
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
  */
 function nextPermutation(nums) {
     const len = nums.length;
-    let smallerIndex = len - 2;
+    let smaller = len - 2;
 
-    while (nums[smallerIndex] >= nums[smallerIndex + 1]) {
-        smallerIndex -= 1;
+    while (nums[smaller] >= nums[smaller + 1]) {
+        smaller -= 1;
     }
-    if (smallerIndex >= 0) {
-        let biggerIndex = len - 1;
+    if (smaller >= 0) {
+        let bigger = len - 1;
 
-        while (nums[smallerIndex] >= nums[biggerIndex]) {
-            biggerIndex -= 1;
+        while (nums[smaller] >= nums[bigger]) {
+            bigger -= 1;
         }
-        swap(nums, smallerIndex, biggerIndex);
+        [nums[smaller], nums[bigger]] = [nums[bigger], nums[smaller]];
     }
-    reverse(nums, smallerIndex + 1);
-
-    return nums;
+    reverse(nums, smaller + 1);
 }
 
 /**
- *
  * @param {Array} arr
- * @param {number} startIndex
+ * @param {number} start
  */
-function reverse(arr, startIndex) {
-    let endIndex = arr.length - 1;
+function reverse(arr, start) {
+    let end = arr.length - 1;
 
-    while (startIndex < endIndex) {
-        swap(arr, startIndex, endIndex);
-        startIndex += 1;
-        endIndex -= 1;
+    while (start < end) {
+        [arr[start], arr[end]] = [arr[end], arr[start]];
+        start += 1;
+        end -= 1;
     }
-}
-
-/**
- *
- * @param {Array} arr
- * @param {number} i
- * @param {number} j
- */
-function swap(arr, i, j) {
-    [arr[i], arr[j]] = [arr[j], arr[i]];
 }
 
 module.exports = nextPermutation;
