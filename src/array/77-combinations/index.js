@@ -1,5 +1,7 @@
 /*
- * Given two integers `n` and `k`, return all possible combinations of k numbers out of the range [1, n].
+ * 77. Combinations
+ *
+ * Given two integers n and k, return all possible combinations of k numbers out of the range [1, n].
  *
  * You may return the answer in any order.
  *
@@ -15,39 +17,37 @@
  * 1 <= n <= 20
  * 1 <= k <= n
  *
- * https://leetcode-cn.com/problems/combinations/
- *
+ * https://leetcode.com/problems/combinations/
 */
 
 /**
  * Backtracking + 剪枝
  *
- * Complexity Analyzation -> index.md
+ * Time Complexity: O(C(n, k) * k) = backtrack 执行次数 O(C(n, k)) * backtrack 时间复杂度 O(k)
+ * Space complexity: O(C(n, k) * k) = combinations 所占空间 O(C(n, k) * k) + backtrack 函数调用栈深度 O(k)
+ * Auxiliary complexity: O(O(k)) = backtrack 函数调用栈深度 O(k)
  *
  * @param {number} n
  * @param {number} k
- * @returns {number[][]}
+ * @returns {number[]}
  */
 function combine(n, k) {
     const combinations = [];
-    const backtrack = (i = 1, currentCombination = []) => {
-        const len = currentCombination.length;
+    const backtrack = (arr, i) => {
+        if (i <= n + 1) {
+            const len = arr.length;
 
-        if (len === k) {
-            combinations.push(currentCombination.slice());
-        } else {
-            for (let j = i; j <= n; j++) {
-                if (len + n - j + 1 < k) {
-                    break;
-                }
-                currentCombination.push(j);
-                backtrack(j + 1, currentCombination);
-                currentCombination.pop();
+            if (len === k) {
+                combinations.push(arr);
+            }
+            if (len < k && len + n - i + 1 >= k) {
+                backtrack(arr.concat(i), i + 1);
+                backtrack(arr, i + 1);
             }
         }
-    };
+    }
 
-    backtrack();
+    backtrack([], 1);
 
     return combinations;
 }

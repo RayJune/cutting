@@ -1,9 +1,9 @@
 /*
- * 77. Combinations
+ * 77. 组合
  *
- * Given two integers n and k, return all possible combinations of k numbers out of the range [1, n].
+ * 给定两个整数 n 和 k，返回范围 [1, n] 中所有可能的 k 个数的组合。
  *
- * You may return the answer in any order.
+ * 你可以按任何顺序返回答案。
  *
  * Example 1:
  * Input: n = 4, k = 2
@@ -17,7 +17,7 @@
  * 1 <= n <= 20
  * 1 <= k <= n
  *
- * https://leetcode.com/problems/combinations/
+ * https://leetcode-cn.com/problems/combinations/
 */
 
 module.exports = combine;
