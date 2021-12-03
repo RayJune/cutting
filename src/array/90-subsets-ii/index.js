@@ -1,7 +1,7 @@
 /*
  * 90. Subsets II
  *
- * Given an integer array `nums` that may contain duplicates, return all possible subsets (the power set).
+ * Given an integer array nums that may contain duplicates, return all possible subsets (the power set).
  *
  * The solution set must not contain duplicate subsets. Return the solution in any order.
  *
@@ -18,38 +18,38 @@
  * -10 <= k <= 10
  *
  * https://leetcode.com/problems/subsets-ii/
- *
 */
 
 /**
- * 用回溯法来做，每个元素都有选和不选两种状态，注意在遇到重复元素的时候剪枝
+ * Backtracking
  *
- * Time Complexity: O(2 ** n * n) = backtrack 执行次数 O(2 ** n) * backtrack 函数内 array.concat 和 array.slice 方法时间复杂度 O(n + n) + 排序 O(n * log(n))
- * Space complexity: O(2 ** n * n) = 所有子集的个数 O(2 ** n) * 子集长度 O(n) + backtrack 函数调用栈深度 O(n) + 排序 O(log(n))
- * Auxiliary complexity: O(n) = backtrack 函数调用栈深度 O(n) + 排序 O(log(n))
+ * Time Complexity: O(2 ** n * n) = backtrack 执行次数 O(2 ** n) * backtrack 时间复杂度 O(n) + 排序 O(n * log(n))
+ * Space complexity: O(2 ** n * n) = subsets 个数 (2 ** n) * 单个 subset 长度 O(n) + backtrack 函数调用栈深度 O(n) + 排序 O(log(n))
+ * Auxiliary complexity: O(n) = 函数调用栈深度 O(n) + 排序 O(log(n))
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
  * @returns {number[][]}
  */
 function subsetsWithDup(nums) {
+    let isPrevSelected = false;
     const subsets = [];
     const len = nums.length;
-    let isPreNumSelected = false;
-    const backtrack = (currentSubset = [], i = 0) => {
+    const backtrack = (arr, i) => {
         if (i === len) {
-            subsets.push(currentSubset);
+            subsets.push(arr);
         } else {
-            if (!(i > 0 && nums[i] === nums[i - 1] && !isPreNumSelected)) {
-                isPreNumSelected = true;
-                backtrack(currentSubset.concat(nums[i]), i + 1);
+            if (!(nums[i] === nums[i - 1] && !isPrevSelected)) {
+                isPrevSelected = true;
+                backtrack(arr.concat(nums[i]), i + 1);
             }
-            isPreNumSelected = false;
-            backtrack(currentSubset.slice(), i + 1);
+            isPrevSelected = false;
+            backtrack(arr.slice(), i + 1);
         }
-    }
+    };
 
     nums.sort();
-    backtrack();
+    backtrack([], 0);
 
     return subsets;
 }

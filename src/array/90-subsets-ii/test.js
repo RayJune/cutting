@@ -8,34 +8,28 @@ test('define subsetsWithDup function', () => {
 });
 
 test('nums = [0]', () => {
-    const output = subsetsWithDup([0]);
+    const sortedSubsets = subsetsWithDup([0]).map(item => item.sort()).sort();
 
-    expect(output).toHaveLength(2);
-    expect(output).toEqual(expect.arrayContaining([
-        [],
-        [0]
-    ]));
+    expect(sortedSubsets).toEqual([[], [0]]);
 });
 
 test('nums = [1, 2, 2]', () => {
-    const output = subsetsWithDup([1, 2, 2]);
+    const sortedSubsets = subsetsWithDup([1, 2, 2]).map(item => item.sort()).sort();
 
-    expect(output).toHaveLength(6);
-    expect(output).toEqual(expect.arrayContaining([
+    expect(sortedSubsets).toEqual([
         [],
         [1],
         [1, 2],
         [1, 2, 2],
         [2],
         [2, 2]
-    ]))
+    ]);
 });
 
 test('nums = [1, 2, 3]', () => {
-    const output = subsetsWithDup([1, 2, 3]);
+    const sortedSubsets = subsetsWithDup([1, 2, 3]).map(item => item.sort()).sort();
 
-    expect(output).toHaveLength(8);
-    expect(output).toEqual(expect.arrayContaining([
+    expect(sortedSubsets).toEqual([
         [],
         [1],
         [1, 2],
@@ -44,14 +38,13 @@ test('nums = [1, 2, 3]', () => {
         [2],
         [2, 3],
         [3]
-    ]))
+    ]);
 });
 
 test('nums = [1, 4, 4, 4, 4]', () => {
-    const output = subsetsWithDup([1, 4, 4, 4, 4]);
+    const sortedSubsets = subsetsWithDup([1, 4, 4, 4, 4]).map(item => item.sort()).sort();
 
-    expect(output).toHaveLength(10);
-    expect(output).toEqual(expect.arrayContaining([
+    expect(sortedSubsets).toEqual([
         [],
         [1],
         [1, 4],
@@ -62,14 +55,13 @@ test('nums = [1, 4, 4, 4, 4]', () => {
         [4, 4],
         [4, 4, 4],
         [4, 4, 4, 4]
-    ]))
+    ]);
 });
 
 test('nums = [4, 4, 4, 1, 1]', () => {
-    const output = subsetsWithDup([4, 4, 4, 4, 1]);
+    const sortedSubsets = subsetsWithDup([4, 4, 4, 4, 1]).map(item => item.sort()).sort();
 
-    expect(output).toHaveLength(10);
-    expect(output).toEqual(expect.arrayContaining([
+    expect(sortedSubsets).toEqual([
         [],
         [1],
         [1, 4],
@@ -80,5 +72,5 @@ test('nums = [4, 4, 4, 1, 1]', () => {
         [4, 4],
         [4, 4, 4],
         [4, 4, 4, 4]
-    ]))
+    ]);
 });

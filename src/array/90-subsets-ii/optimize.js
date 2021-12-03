@@ -1,7 +1,7 @@
 /*
  * 90. Subsets II
  *
- * Given an integer array `nums` that may contain duplicates, return all possible subsets (the power set).
+ * Given an integer array nums that may contain duplicates, return all possible subsets (the power set).
  *
  * The solution set must not contain duplicate subsets. Return the solution in any order.
  *
@@ -18,16 +18,16 @@
  * -10 <= k <= 10
  *
  * https://leetcode.com/problems/subsets-ii/
- *
 */
 
 /**
  * Cascading, [[]] -> [[], [1]] -> [[], [1], [2], [1, 2]] -> [[], [1], [2], [1, 2], [2, 2], [1, 2, 2]]
  * 如果出现重复元素的话，只对上一次新添加的子集们进行相加处理得到新子集们
  *
- * Time Complexity: O(2 ** n * n) = 两个 for 循环总遍历次数 O(2 ** n) * 第二个 for 循环 中的 concat 方法 O(n) + 排序 O(n * log(n))
- * Space complexity: O(2 ** n * n) = 所有子集的个数 O(2 ** n) * 子集长度 O(n) + 排序 O(log(n))
- * Auxiliary complexity: O(log(n)) = 排序 O(log(n))
+ * Time Complexity: Time Complexity: O(2 ** n * n) = 遍历次数 O(2 ** n) * 复制单个 subset 到结果数组中 O(n) + 排序 O(n * log(n))
+ * Space complexity: O(2 ** n * n) = subsets 个数 (2 ** n) * 单个 subset 长度 O(n) + 排序 O(log(n))
+ * Auxiliary complexity: O(log(n)) = 排序
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
  * @returns {number[][]}
@@ -35,14 +35,14 @@
 function subsetsWithDup(nums) {
     const subsets = [[]];
     const len = nums.length;
-    let subsetsLength = 0;
+    let subsetsLen = 0;
 
     nums.sort();
     for (let i = 0; i < len; i++) {
-        const startIndex = i > 0 && nums[i] === nums[i - 1] ? subsetsLength : 0;
+        const start = nums[i] === nums[i - 1] ? subsetsLen : 0;
 
-        subsetsLength = subsets.length;
-        for (let j = startIndex; j < subsetsLength; j++) {
+        subsetsLen = subsets.length;
+        for (let j = start; j < subsetsLen; j++) {
             subsets.push(subsets[j].concat(nums[i]));
         }
     }
