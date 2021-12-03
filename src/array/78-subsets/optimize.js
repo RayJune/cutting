@@ -1,7 +1,7 @@
 /*
  * 78. Subsets
  *
- * Given an integer array `nums` of unique elements, return all possible subsets (the power set).
+ * Given an integer array nums of unique elements, return all possible subsets (the power set).
  *
  * The solution set must not contain duplicate subsets. Return the solution in any order.
  *
@@ -19,27 +19,25 @@
  * All the nums are unique
  *
  * https://leetcode.com/problems/subsets/
- *
 */
 
 /**
  * Cascading, [[]] -> [[], [1]] -> [[], [1], [2], [1, 2]]
  *
- * Time Complexity: O(2 ** n * n) = for 循环 和 forEach 的总遍历次数 O(2 ** n) * forEach 中的 concat 方法 O(n)
- * Space complexity: O(2 ** n * n) = subsets 个数 (2 ** n) * 单个 subset 长度 O(n) + backtrack 函数调用栈深度 O(n)
+ * Time Complexity: O(2 ** n * n) = 遍历次数 O(2 ** n) * 复制单个 subset 到结果数组中 O(n)
+ * Space complexity: O(2 ** n * n) = subsets 个数 (2 ** n) * 单个 subset 长度 O(n)
  * Auxiliary complexity: O(1)
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
  * @returns {number[][]}
  */
 function subsets(nums) {
     const subsets = [[]];
-    const len = nums.length;
 
-    for (let i = 0; i < len; i++) {
-        subsets.forEach(currentSubset => {
-            //
-            subsets.push(currentSubset.concat(nums[i]));
+    for (const char of nums) {
+        subsets.forEach(arr => {
+            subsets.push(arr.concat(char));
         });
     }
 

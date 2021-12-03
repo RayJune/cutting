@@ -1,7 +1,7 @@
 /*
  * 78. Subsets
  *
- * Given an integer array `nums` of unique elements, return all possible subsets (the power set).
+ * Given an integer array nums of unique elements, return all possible subsets (the power set).
  *
  * The solution set must not contain duplicate subsets. Return the solution in any order.
  *
@@ -19,15 +19,15 @@
  * All the nums are unique
  *
  * https://leetcode.com/problems/subsets/
- *
 */
 
 /**
- * 用回溯法来做，每个 num 都有选和不选两种状态
+ * Backtracking
  *
- * Time Complexity: O(2 ** n * n) = backtrack 执行次数 O(2 ** n) * backtrack 函数内 array.concat 和 array.slice 操作 O(n + n)
+ * Time Complexity: O(2 ** n * n) = backtrack 执行次数 O(2 ** n) * backtrack 时间复杂度 O(n)
  * Space complexity: O(2 ** n * n) = subsets 个数 (2 ** n) * 单个 subset 长度 O(n) + backtrack 函数调用栈深度 O(n)
  * Auxiliary complexity: O(n) = 函数调用栈深度
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
  * @returns {number[][]}
@@ -35,16 +35,16 @@
 function subsets(nums) {
     const subsets = [];
     const len = nums.length;
-    const backtrack = (currentSubset = [], i = 0) => {
+    const backtrack = (arr, i) => {
         if (i === len) {
-            subsets.push(currentSubset);
+            subsets.push(arr);
         } else {
-            backtrack(currentSubset.concat(nums[i]), i + 1);
-            backtrack(currentSubset.slice(), i + 1);
+            backtrack(arr.slice(), i + 1);
+            backtrack(arr.concat(nums[i]), i + 1);
         }
     };
 
-    backtrack();
+    backtrack([], 0);
 
     return subsets;
 }

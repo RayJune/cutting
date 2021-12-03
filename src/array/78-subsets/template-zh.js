@@ -5,7 +5,6 @@
  *
  * 解集不能包含重复的子集。你可以按任意顺序返回解集。
  *
- *
  * Example 1:
  * Input: nums = [1, 2, 3]
  * Output: [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]];
@@ -14,14 +13,12 @@
  * Input: nums = [0]
  * Output: [[], [0]]
  *
- * 提示:
- *
+ * Constraints:
  * 1 <= nums.length <= 10
  * -10 <= k <= 10
- * nums 中所有的元素互不相同
+ * All the nums are unique
  *
  * https://leetcode-cn.com/problems/subsets/
- *
 */
 
 module.exports = subsets;

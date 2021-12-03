@@ -8,39 +8,28 @@ test('define subsets function', () => {
 });
 
 test('nums = [0]', () => {
-    const output = subsets([0]);
+    const sortedSubsets = subsets([0]).map(item => item.sort()).sort();
 
-    expect(output).toHaveLength(2);
-    expect(output).toEqual(expect.arrayContaining([
-        [],
-        [0]
-    ]))
+    expect(sortedSubsets).toEqual([[], [0]])
 });
 
 test('nums = [1, 2]', () => {
-    const output = subsets([1, 2]);
+    const sortedSubsets = subsets([1, 2]).map(item => item.sort()).sort();
 
-    expect(output).toHaveLength(4);
-    expect(output).toEqual(expect.arrayContaining([
-        [],
-        [1],
-        [2],
-        [1, 2]
-    ]))
+    expect(sortedSubsets).toEqual([[], [1], [1, 2], [2]]);
 });
 
 test('nums = [1, 2, 3]', () => {
-    const output = subsets([1, 2, 3]);
+    const sortedSubsets = subsets([1, 2, 3]).map(item => item.sort()).sort();
 
-    expect(output).toHaveLength(8);
-    expect(output).toEqual(expect.arrayContaining([
+    expect(sortedSubsets).toEqual([
         [],
         [1],
-        [2],
         [1, 2],
-        [3],
+        [1, 2, 3],
         [1, 3],
+        [2],
         [2, 3],
-        [1, 2, 3]
-    ]))
+        [3]
+    ]);
 });
