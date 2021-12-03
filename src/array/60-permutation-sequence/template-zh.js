@@ -1,4 +1,6 @@
 /*
+ * 60. 排列序列
+ *
  * 给出集合 [1, 2, 3, ..., n]，其所有元素共有 n! 种排列。
  *
  * 按大小顺序列出所有排列情况，并一一标记，当 n = 3 时，所有排列如下：
@@ -24,12 +26,11 @@
  * Input: n = 3, k = 1
  * Output: "123"
  *
- * 提示:
+ * Constraints:
  * 1 <= n <= 9
  * 1 <= k <= n!
  *
  * https://leetcode-cn.com/problems/permutation-sequence/
- *
 */
 
 module.exports = getPermutation;

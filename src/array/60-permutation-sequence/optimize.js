@@ -1,4 +1,6 @@
 /*
+ * 60. Permutation Sequence
+ *
  * The set [1, 2, 3, ..., n] contains a total of n! unique permutations.
  *
  * By listing and labeling all of the permutations in order, we get the following sequence for n = 3:
@@ -29,13 +31,12 @@
  * 1 <= k <= n!
  *
  * https://leetcode.com/problems/permutation-sequence/
- *
 */
 
 /**
  * 用 nextPermutation 来做
  *
- * Time Complexity: O(k*n) = for 循环次数 O(n) + for 循环次数 O(k) * nextPermutation 时间复杂度 O(n) + join 方法 O(n)
+ * Time Complexity: O(k * n) = for 循环构建 permutation 初始数组 O(n) + nextPermutation 时间复杂度 O(k) * nextPermutation 执行次数 O(n)
  * Space complexity: O(n) = permutation 长度 O(n)
  * Auxiliary complexity: O(1)
  *
@@ -57,51 +58,40 @@ function getPermutation(n, k) {
 }
 
 /**
+ * Time Complexity: O(n) = while loop + while loop + reverse
+ * Space complexity: O(1)
+ * Auxiliary complexity: O(1)
  *
- * @param {number[]} permutation
+ * @param {number[]} nums
  */
-function nextPermutation(permutation) {
-    const len = permutation.length;
-    let smallerIndex = len - 2;
+function nextPermutation(nums) {
+    const len = nums.length;
+    let smaller = len - 2;
 
-    while (permutation[smallerIndex] >= permutation[smallerIndex + 1]) {
-        smallerIndex -= 1;
+    while (nums[smaller] >= nums[smaller + 1]) {
+        smaller -= 1;
     }
+    let bigger = len - 1;
 
-    if (smallerIndex >= 0) {
-        let biggerIndex = len - 1;
-
-        while (permutation[smallerIndex] >= permutation[biggerIndex]) {
-            biggerIndex -= 1;
-        }
-        swap(permutation, smallerIndex, biggerIndex);
+    while (nums[smaller] >= nums[bigger]) {
+        bigger -= 1;
     }
-    reverse(permutation, smallerIndex + 1);
+    [nums[smaller], nums[bigger]] = [nums[bigger], nums[smaller]];
+    reverse(nums, smaller + 1);
 }
 
 /**
- *
  * @param {Array} arr
- * @param {number} startIndex
+ * @param {number} start
  */
-function reverse(arr, startIndex) {
-    let endIndex = arr.length - 1;
+function reverse(arr, start) {
+    let end = arr.length - 1;
 
-    while (startIndex < endIndex) {
-        swap(arr, startIndex, endIndex);
-        startIndex += 1;
-        endIndex -= 1;
+    while (start < end) {
+        [arr[start], arr[end]] = [arr[end], arr[start]];
+        start += 1;
+        end -= 1;
     }
-}
-
-/**
- *
- * @param {Array} arr
- * @param {number} i
- * @param {number} j
- */
-function swap(arr, i, j) {
-    [arr[i], arr[j]] = [arr[j], arr[i]];
 }
 
 module.exports = getPermutation;
