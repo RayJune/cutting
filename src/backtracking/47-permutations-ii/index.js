@@ -19,7 +19,7 @@
 */
 
 /**
- * 回溯法 + sorting/signs 剪枝
+ * Backtracking + sorting/signs 剪枝
  *
  * Time Complexity: O(n! * n) = 遍历次数 O(n!) * 拷贝单个排列到答案数组中 O(n) + 排序 O(n * log(n))
  * Space complexity: O(n! * n) = 排列个数 O(n!) * 单个排列的长度 O(n) + backtrack 函数调用栈深度 O(n) + signs 长度 O(n)+ 排序 O(log(n))
