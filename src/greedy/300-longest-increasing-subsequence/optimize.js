@@ -33,6 +33,7 @@
  * Time Complexity: O(n * log(n)) = for 循环次数 * 二分查找 O(log(n))
  * Space complexity: O(n) = arr 长度
  * Auxiliary complexity: O(n) = arr 长度
+ * 其中 n 是数组 nums 的长度
  *
  * @param {number[]} nums
  * @returns {number}
@@ -40,9 +41,9 @@
 function lengthOfLIS(nums) {
     const arr = [nums[0]];
 
-    for (let i = 1; i < nums.length; i++) {
-        if (nums[i] > arr[arr.length - 1]) {
-            arr.push(nums[i]);
+    for (const char of nums) {
+        if (char > arr[arr.length - 1]) {
+            arr.push(char);
         } else {
             let left = 0;
             let right = arr.length - 1;
@@ -50,13 +51,13 @@ function lengthOfLIS(nums) {
             while (left < right) {
                 const mid = Math.floor((left + right) / 2);
 
-                if (arr[mid] < nums[i]) {
+                if (arr[mid] < char) {
                     left = mid + 1;
                 } else {
                     right = mid;
                 }
             }
-            arr[left] = nums[i];
+            arr[left] = char;
         }
     }
 

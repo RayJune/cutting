@@ -33,6 +33,7 @@
  * Time Complexity: O(n ** 2) = 两层 for 循环次数之和
  * Space complexity: O(n) = dp 长度
  * Auxiliary complexity: O(n) = dp 长度
+ * 其中 n 是数组 nums 的长度
  *
  * @param {number[]} nums
  * @return {number}
