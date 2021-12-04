@@ -26,6 +26,7 @@
  * Time Complexity: O(n) = for 循环次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
+ * 其中 n 是数组 nums 的长度
  *
  * @param {number[]} nums
  * @return {number}
