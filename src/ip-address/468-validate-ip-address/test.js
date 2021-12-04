@@ -1,6 +1,6 @@
-// const validateIPAddress = require('./index');
-const validateIPAddress = require('./regex');
+const validateIPAddress = require('./index');
 // const validateIPAddress = require('./template');
+// const validateIPAddress = require('./template-zh');
 
 test('define validateIPAddress function', () => {
     expect(typeof validateIPAddress).toBe('function');

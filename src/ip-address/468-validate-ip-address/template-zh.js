@@ -1,9 +1,11 @@
 /*
+ * 468. 验证IP地址
+ *
  * 编写一个函数来验证输入的字符串是否是有效的 IPv4 或 IPv6 地址。
  *
- * - 如果是有效的 IPv4 地址，返回 "IPv4"；
- * - 如果是有效的 IPv6 地址，返回 "IPv6";
- * - 如果不是上述类型的 IP 地址，返回 "Neither";
+ * 如果是有效的 IPv4 地址，返回 "IPv4"；
+ * 如果是有效的 IPv6 地址，返回 "IPv6";
+ * 如果不是上述类型的 IP 地址，返回 "Neither";
  *
  * IPv4 地址由十进制数和点来表示，每个地址包含 4 个十进制数，其范围为 0 - 255，用 (".") 分隔，比如 172.16.254.1；
  *
@@ -42,11 +44,9 @@
  * Output: "Neither"
  *
  * Constraints:
- *
- * - IP 仅由英文字母, 数字，字符 '.' 和 ':' 组成。
+ * IP consists only of English letters, digits and the characters '.' and ':'.
  *
  * https://leetcode-cn.com/problems/validate-ip-address/
- *
 */
 
 module.exports = validIPAddress;
