@@ -1,9 +1,11 @@
 /*
- * Given a string `s` containing only digits, return all possible valid IP addresses that can be obtained from s.
- * You can return them in any order.
+ * 93. Restore IP Addresses
  *
- * A valid IP address consists of exactly four integers, each integer is between 0 and 255, separated by single dots and cannot have leading zeros.
- * For example, "0.1.2.201" and "192.168.1.1" are valid IP addresses and "0.011.255.245", "192.168.1.312" and "192.168@1.1" are invalid IP addresses.
+ * A valid IP address consists of exactly four integers separated by single dots. Each integer is between 0 and 255 (inclusive) and cannot have leading zeros.
+ *
+ * For example, "0.1.2.201" and "192.168.1.1" are valid IP addresses, but "0.011.255.245", "192.168.1.312" and "192.168@1.1" are invalid IP addresses.
+ *
+ * Given a string s containing only digits, return all possible valid IP addresses that can be formed by inserting dots into s. You are not allowed to reorder or remove any digits in s. You may return the valid IP addresses in any order.
  *
  * Example 1:
  * Input: s = "25525511135"
@@ -33,41 +35,41 @@
 */
 
 /**
- * 用回溯法来做，注意在符合条件的情况下剪枝
+ * Backtracking
  *
- * Time Complexity: O(1) = tree 深度为 3，有 4 个互相影响的树需要遍历 O(3^4) * 把一个合格的 ip push 到 result 中 O(0 <= s.length <= 12)
- * Space complexity: O(1) = 合格 ip 个数 O(0 <= N <= 19) (在 s.length = 8 时可能会出现的最多合格 ip 个数为 19) * ip 长度 O(4 <= M <=12) + backtrack 函数调用栈深度 O(3)
- * Auxiliary complexity: O(1) = backtrack 函数调用栈深度 O(3)
+ * Time Complexity: O(s) = 遍历次数 O(3 ** 4) * 将 arr 加入到答案数组中 O(s)
+ * Space complexity: O(s) = backtrack 函数调用栈深度 O(4) + 答案数组长度 O(3 ** 4 * s)
+ * Auxiliary complexity: O(1) = backtrack 函数调用栈深度 O(4)
  *
  * @param {string} s
  * @returns {string[]}
  */
 function restoreIpAddresses(s) {
-    const addresses = [];
-    const backtrack = (currentIp = new Array(4).fill(''), i = 0, position = 0) => {
-        const len = s.length;
+    if (s.length < 4 || s.length > 12) {
+        return [];
+    }
 
-        if (position === 4 && i === len) {
-            addresses.push(currentIp.join('.'));
+    const addresses = [];
+    const len = s.length;
+    const backtrack = (arr, i) => {
+        if (arr.length === 4) {
+            if (i === len) {
+                addresses.push(arr.join('.'));
+            }
         } else {
-            if (len - i + currentIp.length < 4) {
-                return;
-            }
-            if (currentIp[position] === '0') {
-                return;
-            }
-            currentIp[position] += String(s[i]);
-            if (Number(currentIp[position] <= 255)) {
-                backtrack(currentIp.slice(), i + 1, position + 1);
-                backtrack(currentIp.slice(), i + 1, position);
+            for (let j = 1; j < Math.min(4, len - i + 1); j++) {
+                const str = s.substring(i, i + j);
+
+                if ((str[0] !== '0' || j === 1) && Number(str) <= 255) {
+                    arr.push(str);
+                    backtrack(arr, i + j);
+                    arr.pop();
+                }
             }
         }
     };
 
-    if (s.length < 4 || s.length > 12) {
-        return [];
-    }
-    backtrack();
+    backtrack([], 0);
 
     return addresses;
 }
