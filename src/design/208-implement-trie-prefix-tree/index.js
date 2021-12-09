@@ -34,46 +34,91 @@
  * https://leetcode.com/problems/implement-trie-prefix-tree/
 */
 
-class Trie {
-    children = {
-        isEnd: false
-    };
+class TrieNode {
+    constructor(char = undefined) {
+        this.char = char;
+        this.isEnd = false;
+        this.children = new Map();
+    }
+}
 
+class Trie {
+    root = new TrieNode();
+
+    /**
+     * Time Complexity: O(n) = for...of 循环次数
+     * Space complexity: O(n) = 占用存储空间
+     * Auxiliary complexity: O(n) = 占用存储空间
+     * 其中 n 为 word 的长度
+     *
+     * @param {string} word
+     */
     insert(word) {
-        let node = this.children;
+        let node = this.root;
 
         for (const char of word) {
-            if (!node[char]) {
-                node[char] = {isEnd: false};
+            if (!node.children.has(char)) {
+                node.children.set(char, new TrieNode(char));
             }
-            node = node[char];
+            node = node.children.get(char);;
         }
         node.isEnd = true;
     }
 
+    /**
+     * Time Complexity: O(n) = for...of 循环次数
+     * Space complexity: O(1)
+     * Auxiliary complexity: O(1)
+     * 其中 n 为 word 的长度
+     *
+     * @param {string} prefix
+     * @returns {boolean}
+     */
     searchPrefix(prefix) {
         return Boolean(this.#searchHelper(prefix));
     }
 
+    /**
+     * @param {string} prefix
+     * @returns {TrieNode}
+     */
     #searchHelper(prefix) {
-        let node = this.children;
+        let node = this.root;
 
         for (const char of prefix) {
-            if (!node[char]) {
+            if (!node.children.has(char)) {
                 return false;
             }
-            node = node[char];
+            node = node.children.get(char);
         }
 
         return node;
     }
 
+    /**
+     * Time Complexity: O(n) = for...of 循环次数
+     * Space complexity: O(1)
+     * Auxiliary complexity: O(1)
+     * 其中 n 为 word 的长度
+     *
+     * @param {string} prefix
+     * @returns {boolean}
+     */
     search(word) {
         const node = this.#searchHelper(word);
 
         return node && node.isEnd;
     }
 
+    /**
+     * Time Complexity: O(n) = for...of 循环次数
+     * Space complexity: O(1)
+     * Auxiliary complexity: O(1)
+     * 其中 n 为 word 的长度
+     *
+     * @param {string} prefix
+     * @returns {boolean}
+     */
     startsWith(prefix) {
         return this.searchPrefix(prefix);
     }
