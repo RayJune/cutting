@@ -34,51 +34,48 @@
  * Constraints:
  *
  * 1 <= capacity <= 3000
- * 0 <= key <= 10^4
- * 0 <= value <= 10^5
- * At most 2 * 10^5 calls will be made to get and put.
+ * 0 <= key <= 10 ** 4
+ * 0 <= value <= 10 ** 5
+ * At most 2 * 10 ** 5 calls will be made to get and put.
  *
  * https://leetcode.com/problems/lru-cache/
- *
 */
 
+/**
+ * 用 map 来定位，用 DoubleLinkedListNode 来执行 LRU 操作
+ * 其中用双向链表而不是链表是为了便于删除节点
+ */
 class DoubleLinkedListNode {
     constructor(key = undefined, value = undefined) {
         this.key = key;
         this.value = value;
+        this.prev = null;
         this.next = null;
-        this.pre = null;
     }
 }
 
-/**
- * 快速查找数据 -> 哈希表，对数据进行 LRU 操作 -> 双向链表
- * 用双向链表而不是链表是为了让删除操作更容易
- */
 class LRUCache {
     #capacity;
-    #preHead;
-    #afterTail;
     #map = new Map();
+    #preHead = new DoubleLinkedListNode();
+    #afterTail = new DoubleLinkedListNode();
 
     constructor(capacity) {
         this.#capacity = capacity;
-        this.#preHead = new DoubleLinkedListNode();
-        this.#afterTail = new DoubleLinkedListNode();
         this.#preHead.next = this.#afterTail;
-        this.#afterTail.pre = this.#preHead;
+        this.#afterTail.prev = this.#preHead;
     }
 
     /**
      * Time Complexity: O(1)
-     * Space complexity: O(capacity) = 哈希表和双向链表占用的存储空间
-     * Auxiliary complexity: O(capacity) = 哈希表和双向链表占用的存储空间
+     * Space complexity: O(1)
+     * Auxiliary complexity: O(1)
      *
      * @param {number} key
      * @returns {number}
      */
     get(key) {
-        const node = this.#map.get(key)
+        const node = this.#map.get(key);
 
         if (node) {
             this.#removeNode(node);
@@ -91,39 +88,11 @@ class LRUCache {
     }
 
     /**
-     * Time Complexity: O(1)
-     * Space complexity: O(capacity) = 哈希表和双向链表占用的存储空间
-     * Auxiliary complexity: O(capacity) = 哈希表和双向链表占用的存储空间
-     *
-     * @param {number} key
-     * @param {number} value
-     */
-    put(key, value) {
-        let node = this.#map.get(key);
-
-        if (node) {
-            node.value = value;
-            this.#removeNode(node);
-            this.#unshiftNode(node);
-        } else {
-            if (this.#map.size === this.#capacity) {
-                const tail = this.#afterTail.pre;
-
-                this.#map.delete(tail.key);
-                this.#removeNode(tail);
-            }
-            node = new DoubleLinkedListNode(key, value);
-            this.#map.set(key, node);
-            this.#unshiftNode(node);
-        }
-    }
-
-    /**
      * @param {DoubleLinkedListNode} node
      */
     #removeNode(node) {
-        node.pre.next = node.next;
-        node.next.pre = node.pre;
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
         node.pre = null;
         node.next = null;
     }
@@ -135,9 +104,39 @@ class LRUCache {
         const head = this.#preHead.next;
 
         this.#preHead.next = node;
-        node.pre = this.#preHead;
+        node.prev = this.#preHead;
         node.next = head;
-        head.pre = node;
+        head.prev = node;
+    }
+
+    /**
+     * Time Complexity: O(1)
+     * Space complexity: O(capacity) = map 占用空间
+     * Auxiliary complexity: O(capacity) = map 占用空间
+     *
+     * @param {number} key
+     * @param {number} value
+     */
+    put(key, value) {
+        const node = this.#map.get(key);
+
+        if (node) {
+            node.value = value;
+            this.#removeNode(node);
+            this.#unshiftNode(node);
+        } else {
+            if (this.#map.size === this.#capacity) {
+                const tail = this.#afterTail.prev;
+
+                this.#removeNode(tail);
+                this.#map.delete(tail.key);
+            }
+
+            const newNode = new DoubleLinkedListNode(key, value);
+
+            this.#unshiftNode(newNode);
+            this.#map.set(key, newNode);
+        }
     }
 }
 

@@ -34,16 +34,15 @@
  * Constraints:
  *
  * 1 <= capacity <= 3000
- * 0 <= key <= 10^4
- * 0 <= value <= 10^5
- * At most 2 * 10^5 calls will be made to get and put.
+ * 0 <= key <= 10 ** 4
+ * 0 <= value <= 10 ** 5
+ * At most 2 * 10 ** 5 calls will be made to get and put.
  *
  * https://leetcode.com/problems/lru-cache/
- *
 */
 
 /**
- * 利用 Map.prototype.keys 返回的 iterator 来实现 LRU 操作
+ * 利用 map.keys() 来实现 LRU 操作
  */
 class LRUCache {
     #capacity;
@@ -55,14 +54,14 @@ class LRUCache {
 
     /**
      * Time Complexity: O(1)
-     * Space complexity: O(capacity) = 哈希表占用的存储空间
-     * Auxiliary complexity: O(capacity) = 哈希表占用的存储空间
+     * Space complexity: O(1)
+     * Auxiliary complexity: O(1)
      *
      * @param {number} key
      * @returns {number}
      */
     get(key) {
-        const value = this.#map.get(key)
+        const value = this.#map.get(key);
 
         if (value !== undefined) {
             this.#map.delete(key);
@@ -76,8 +75,8 @@ class LRUCache {
 
     /**
      * Time Complexity: O(1)
-     * Space complexity: O(capacity) = 哈希表和双向链表占用的存储空间
-     * Auxiliary complexity: O(capacity) = 哈希表和双向链表占用的存储空间
+     * Space complexity: O(capacity) = map 占用空间
+     * Auxiliary complexity: O(capacity) = map 占用空间
      *
      * @param {number} key
      * @param {number} value

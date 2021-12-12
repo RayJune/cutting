@@ -32,12 +32,11 @@
  * Constraints:
  *
  * 1 <= capacity <= 3000
- * 0 <= key <= 10^4
- * 0 <= value <= 10^5
- * 最多调用 2 * 10^5 次 get 和 put
+ * 0 <= key <= 10 ** 4
+ * 0 <= value <= 10 ** 5
+ * At most 2 * 10 ** 5 calls will be made to get and put.
  *
  * https://leetcode-cn.com/problems/lru-cache/
- *
 */
 
 module.exports = LRUCache;
