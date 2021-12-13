@@ -26,7 +26,6 @@
  * 题目数据保证列表表示的数字不含前导零
  *
  * https://leetcode-cn.com/problems/add-two-numbers/
- *
 */
 
 /**

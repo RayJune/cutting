@@ -26,7 +26,6 @@
  * It is guaranteed that the list represents a number that does not have leading zeros.
  *
  * https://leetcode.com/problems/add-two-numbers/
- *
 */
 
 /**
@@ -38,40 +37,37 @@
  */
 
 class ListNode {
-    /**
-     * @param {string} val
-     * @param {ListNode} next
-     */
-    constructor(val = undefined, next = null) {
+    constructor(val, next = null) {
         this.val = val;
         this.next = next;
     }
 }
 
 /**
- * 注意相加进位，因为一个节点位置只能存储一位数字
+ * 注意进位
  *
- * Time Complexity: O(max(m + n))
- * Space complexity: O(1)
+ * Time Complexity: O(max(m + n)) = while 循环次数
+ * Space complexity: O(max(m + n)) = 返回值链表的节点数
  * Auxiliary complexity: O(1)
+ * 其中 n 是 l1 链表的节点数，m 是 l2 链表的节点数
  *
  * @param {ListNode} l1
  * @param {ListNode} l2
  * @returns {ListNode}
  */
 function addTwoNumbers(l1, l2) {
-    const preHead = new ListNode();
-    let preNode = preHead;
+    const preHead = new ListNode(-1);
+    let prevNode = preHead;
     let carry = 0;
 
     while (l1 || l2) {
         const value1 = l1 ? l1.val : 0;
         const value2 = l2 ? l2.val : 0;
-        const sum = value1 + value2 + carry;
 
-        preNode.next = new ListNode(sum % 10);
-        preNode = preNode.next;
-        carry = Math.floor(sum / 10);
+        carry += value1 + value2;
+        prevNode.next = new ListNode(carry % 10);
+        prevNode = prevNode.next;
+        carry = Math.floor(carry / 10);
         if (l1) {
             l1 = l1.next;
         }
@@ -80,7 +76,7 @@ function addTwoNumbers(l1, l2) {
         }
     }
     if (carry) {
-        preNode.next = new ListNode(carry);
+        prevNode.next = new ListNode(carry);
     }
 
     return preHead.next;
