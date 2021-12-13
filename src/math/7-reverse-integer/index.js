@@ -28,9 +28,9 @@
 */
 
 /**
- * Reverse
+ * 用 parseInt 来消除负号
  *
- * Time Complexity: O(log(x)) = 粗略的算约有 log10(x) 位
+ * Time Complexity: O(log10(x)) = while 循环次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
  *
@@ -45,7 +45,7 @@ function reverse(x) {
         if (reversedX < (-2) ** 31 || reversedX > 2 ** 31 - 1) {
             return 0;
         }
-        x = parseInt(x / 10);
+        x = parseInt(x / 10, 10);
     }
 
     return reversedX;

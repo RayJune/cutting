@@ -1,5 +1,4 @@
 const reverse = require('./index');
-// const reverse = require('./reverse');
 // const reverse = require('./template');
 // const reverse = require('./template-zh');
 
