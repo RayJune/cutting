@@ -1,5 +1,4 @@
-// const maximumProduct = require('./index');
-const maximumProduct = require('./optimize');
+const maximumProduct = require('./index');
 // const maximumProduct = require('./template');
 // const maximumProduct = require('./template-zh');
 

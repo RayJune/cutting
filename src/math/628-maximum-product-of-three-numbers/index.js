@@ -23,22 +23,42 @@
 */
 
 /**
- * sort
+ * Single Scan
  *
- * Time Complexity: O(n * log(n)) = sort
- * Space complexity: O(log(n)) = sort
- * Auxiliary complexity: O(log(n)) = sort
+ * Time Complexity: O(n) = for...of 循环次数
+ * Space complexity: O(1)
+ * Auxiliary complexity: O(1)
  *
  * @param {number[]} nums
  * @returns {number}
  */
 function maximumProduct(nums) {
-    const len = nums.length;
+    let min1 = Infinity;
+    let min2 = Infinity;
+    let max1 = -Infinity;
+    let max2 = -Infinity;
+    let max3 = -Infinity;
 
-    nums.sort((a, b) => a - b);
+    for (const num of nums) {
+        if (num < min1) {
+            min2 = min1;
+            min1 = num;
+        } else if (num < min2) {
+            min2 = num;
+        }
+        if (num > max1) {
+            max3 = max2;
+            max2 = max1;
+            max1 = num;
+        } else if (num > max2) {
+            max3 = max2;
+            max2 = num;
+        } else if (num > max3) {
+            max3 = num;
+        }
+    }
 
-    return Math.max(nums[0] * nums[1] * nums[len - 1],
-        nums[len - 1] * nums[len - 2] * nums[len - 3]);
+    return Math.max(min1 * min2 * max1, max1 * max2 * max3);
 }
 
 module.exports = maximumProduct;
