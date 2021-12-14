@@ -25,7 +25,6 @@
  * It is guaranteed that the list represents a number that does not have leading zeros.
  *
  * https://leetcode.com/problems/add-two-numbers-ii/
- *
 */
 
 /**

@@ -25,7 +25,6 @@
  * It is guaranteed that the list represents a number that does not have leading zeros.
  *
  * https://leetcode.com/problems/add-two-numbers-ii/
- *
 */
 
 /**
@@ -44,11 +43,11 @@ class ListNode {
 }
 
 /**
- * stack
+ * 先找到两个链表的长度，再对位相加反转组成新链表，再边处理新链表的进位边反转
  *
- * Time Complexity: O(max(m, n)) = 遍历次数
- * Space complexity: O(m + n) = stack1 和 stack2 的长度 O(m + n) + 返回值链表的节点数 O(max(m + n))
- * Auxiliary complexity: O(m + n) = stack1 和 stack2 的长度
+ * Time Complexity: O(max(m + n)) = 遍历次数
+ * Space complexity: O(max(m + n)) = 返回值链表的节点数
+ * Auxiliary complexity: O(1)
  * 其中 m 和 n 分别是 l1 和 l2 的节点数
  *
  * @param {ListNode} l1
@@ -56,30 +55,49 @@ class ListNode {
  * @returns {ListNode}
  */
 function addTwoNumbers(l1, l2) {
-    const stack1 = [];
-    const stack2 = [];
+    let i = 0;
+    let j = 0;
+    let node1 = l1;
+    let node2 = l2;
 
-    while (l1 || l2) {
-        if (l1) {
-            stack1.push(l1.val);
-            l1 = l1.next;
+    while (node1 || node2) {
+        if (node1) {
+            i += 1;
+            node1 = node1.next;
         }
-        if (l2) {
-            stack2.push(l2.val);
-            l2 = l2.next;
+        if (node2) {
+            j += 1;
+            node2 = node2.next;
         }
     }
 
     let head = null;
+
+    while (i > 0 && j > 0) {
+        let value = 0;
+
+        if (i >= j) {
+            value += l1.val;
+            l1 = l1.next;
+            i -= 1;
+        }
+        if (i < j) {
+            value += l2.val;
+            l2 = l2.next;
+            j -= 1;
+        }
+        head = new ListNode(value, head);
+    }
+
     let carry = 0;
+    let node = head;
 
-    while (stack1.length || stack2.length) {
-        const value1 = stack1.length ? stack1.pop() : 0;
-        const value2 = stack2.length ? stack2.pop() : 0;
-
-        carry += value1 + value2;
+    head = null;
+    while (node) {
+        carry += node.val;
         head = new ListNode(carry % 10, head);
         carry = Math.floor(carry / 10);
+        node = node.next;
     }
     if (carry) {
         head = new ListNode(carry, head);

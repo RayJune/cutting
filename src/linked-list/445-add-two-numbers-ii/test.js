@@ -1,13 +1,10 @@
 // const addTwoNumbers = require('./index');
-const addTwoNumbers = require('./optimize');
+// const addTwoNumbers = require('./reverse-input');
+const addTwoNumbers = require('./reverse-output');
 // const addTwoNumbers = require('./template');
 // const addTwoNumbers = require('./template-zh');
 
 class ListNode {
-    /**
-     * @param {string} val
-     * @param {ListNode} next
-     */
     constructor(val = undefined, next = null) {
         this.val = val;
         this.next = next;
@@ -15,7 +12,6 @@ class ListNode {
 }
 
 /**
- *
  * @param {Array} arr
  * @returns {ListNode}
  */

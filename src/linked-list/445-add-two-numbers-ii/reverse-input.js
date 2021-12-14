@@ -25,7 +25,6 @@
  * It is guaranteed that the list represents a number that does not have leading zeros.
  *
  * https://leetcode.com/problems/add-two-numbers-ii/
- *
 */
 
 /**
@@ -37,42 +36,37 @@
  */
 
 class ListNode {
-    /**
-     * @param {string} val
-     * @param {ListNode} next
-     */
-    constructor(val = undefined, next = null) {
+    constructor(val, next) {
         this.val = val;
         this.next = next;
     }
 }
 
 /**
- * 先分别把两个链表反转过来，再相加，注意相加构成新链表的时候，把新的 node 指向头部
+ * 先分别把两个链表反转过来，再相加，注意相加构成新链表的时候，把新的 node 放在头部
  *
- * Time Complexity: O(m + n) = 反转 l1、l2 所用的时间 O(m + n) + 两个链表相加的时间 O(max(m + n))
- * Space complexity: O(max(m + n)) = 输出值所占的空间
+ * Time Complexity: O(m + n) = reverse 操作 O(m + n) + while 循环次数 O(max(m + n))
+ * Space complexity: O(max(m + n)) = 返回值链表的节点数
  * Auxiliary complexity: O(1)
+ * 其中 m 和 n 分别是 l1 和 l2 的节点数
  *
  * @param {ListNode} l1
  * @param {ListNode} l2
  * @returns {ListNode}
  */
 function addTwoNumbers(l1, l2) {
-    let reversedL1 = reverseListNode(l1);
-    let reversedL2 = reverseListNode(l2);
-    const preHead = new ListNode();
-    let secondNode = null;
+    let reversedL1 = reverseList(l1);
+    let reversedL2 = reverseList(l2);
+    let head = null;
     let carry = 0;
 
     while (reversedL1 || reversedL2) {
         const value1 = reversedL1 ? reversedL1.val : 0;
         const value2 = reversedL2 ? reversedL2.val : 0;
-        const sum = value1 + value2 + carry;
 
-        preHead.next = new ListNode(sum % 10, secondNode);
-        secondNode = preHead.next;
-        carry = Math.floor(sum / 10);
+        carry += value1 + value2;
+        head = new ListNode(carry % 10, head);
+        carry = Math.floor(carry / 10);
         if (reversedL1) {
             reversedL1 = reversedL1.next;
         }
@@ -81,29 +75,28 @@ function addTwoNumbers(l1, l2) {
         }
     }
     if (carry) {
-        preHead.next = new ListNode(carry, secondNode)
+        head = new ListNode(carry, head);
     }
 
-    return preHead.next;
+    return head;
 }
 
 /**
- *
- * @param {ListNode} list
+ * @param {ListNode} head
  * @returns {ListNode}
  */
-function reverseListNode(list) {
-    let preNode = null;
+function reverseList(head) {
+    let prevNode = null;
 
-    while (list) {
-        const nextNode = list.next;
+    while (head) {
+        const nextNode = head.next;
 
-        list.next = preNode;
-        preNode = list;
-        list = nextNode;
+        head.next = prevNode;
+        prevNode = head;
+        head = nextNode;
     }
 
-    return preNode;
+    return prevNode;
 }
 
 module.exports = addTwoNumbers;

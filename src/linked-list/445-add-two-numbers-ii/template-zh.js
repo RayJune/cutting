@@ -6,7 +6,6 @@
  *
  * 你可以假设除了数字 0 之外，这两个数字都不会以零开头。
  *
- *
  * Example 1:
  * Input: l1 = [7, 2, 4, 3], l2 = [5, 6, 4]
  * Output: [7, 8, 0, 7]
@@ -26,7 +25,6 @@
  * 题目数据保证列表表示的数字不含前导零
  *
  * https://leetcode-cn.com/problems/add-two-numbers-ii/
- *
 */
 
 /**
