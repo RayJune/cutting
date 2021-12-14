@@ -21,7 +21,6 @@
  * -5000 <= Node.val <= 5000
  *
  * https://leetcode-cn.com/problems/reverse-linked-list/
- *
 */
 
 /**

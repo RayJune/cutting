@@ -21,7 +21,6 @@
  * -5000 <= Node.val <= 5000
  *
  * https://leetcode.com/problems/reverse-linked-list/
- *
 */
 
 /**
@@ -32,54 +31,27 @@
  * }
  */
 
-class ListNode {
-    /**
-     * @param {number} val
-     * @param {ListNode} next
-     */
-    constructor(val = undefined, next = null) {
-        this.val = val;
-        this.next = next;
-    }
-}
-
 /**
- * 用 array 来做
- *
- * Time Complexity: O(n) = while 循环次数 O(n) + for 循环次数 (n)
- * Space complexity: O(n) = stack 长度 O(n) + 新的反转链表长度 O(n)
- * Auxiliary complexity: O(n) = stack 长度 O(n)
- * 其中 n 代表输入参数 head 链表的长度
+ * Time Complexity: O(n) = while 循环次数
+ * Space complexity: O(1)
+ * Auxiliary complexity: O(1)
+ * 其中 n 是 head 作为头节点的链表的节点数
  *
  * @param {ListNode} head
  * @returns {ListNode}
  */
 function reverseList(head) {
-    const stack = [];
+    let prevNode = null;
 
     while (head) {
-        stack.push(head.val);
-        head = head.next;
+        const nextNode = head.next;
+
+        head.next = prevNode;
+        prevNode = head;
+        head = nextNode
     }
 
-    return buildReverseListNode(stack);
-}
-
-/**
- *
- * @param {Array} arr
- * @returns {ListNode}
- */
-function buildReverseListNode(arr) {
-    const preHead = new ListNode();
-    let preNode = preHead;
-
-    for (let i = arr.length - 1; i >= 0; i--) {
-        preNode.next = new ListNode(arr[i]);
-        preNode = preNode.next;
-    }
-
-    return preHead.next;
+    return prevNode;
 }
 
 module.exports = reverseList;
