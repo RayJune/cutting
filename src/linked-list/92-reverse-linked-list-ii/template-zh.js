@@ -20,7 +20,6 @@
  * 1 <= left <= right <= n
  *
  * https://leetcode-cn.com/problems/reverse-linked-list-ii/
- *
 */
 
 /**

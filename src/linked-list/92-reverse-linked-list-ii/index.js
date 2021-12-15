@@ -20,7 +20,6 @@
  * 1 <= left <= right <= n
  *
  * https://leetcode.com/problems/reverse-linked-list-ii/
- *
 */
 
 /**
@@ -32,23 +31,19 @@
  */
 
 class ListNode {
-    /**
-     * @param {number} val
-     * @param {ListNode} next
-     */
-    constructor(val = undefined, next = null) {
+    constructor(val, next) {
         this.val = val;
         this.next = next;
     }
 }
 
 /**
- * 用 array 辅助来做
+ * 把中间的链表反转，再更改反转链表首尾的指向
  *
- * Time Complexity: O(n) = while 循环次数 O(n) + 数组操作 O(n)
- * Space complexity: O(n) = arr 长度 O(n) + 新创建的 listNode 长度 O(n)
- * Auxiliary complexity: O(n) = arr 长度 O(n) + 新创建的 listNode 长度 O(n)
- * n 代表输入参数 head 链表的长度
+ * Time Complexity: O(n) = 遍历次数 O(n) + reverseLinkedList 遍历次数 O(n)
+ * Space complexity: O(1)
+ * Auxiliary complexity: O(1)
+ * 其中 n 是 head 作为头节点的链表的节点数
  *
  * @param {ListNode} head
  * @param {number} left
@@ -56,34 +51,44 @@ class ListNode {
  * @returns {ListNode}
  */
 function reverseBetween(head, left, right) {
-    const arr = [];
+    const preHead = new ListNode(-1, head);
+    let prevNode = preHead;
 
-    while (head) {
-        arr.push(head.val);
-        head = head.next;
+    for (let i = 0; i < left - 1; i++) {
+        prevNode = prevNode.next;
     }
 
-    const reversedArr = arr.slice(left - 1, right).reverse();
-    const newArr = [...arr.slice(0, left - 1), ...reversedArr, ...arr.slice(right)];
+    const leftNode = prevNode.next;
+    let rightNode = prevNode;
 
-    return buildListNode(newArr);
+    for (let i = 0; i < right - left + 1; i++) {
+        rightNode = rightNode.next;
+    }
+
+    const afterNode = rightNode.next;
+
+    prevNode.next = null;
+    rightNode.next = null;
+    reverseLinkedList(leftNode);
+    leftNode.next = afterNode;
+    prevNode.next = rightNode;
+
+    return preHead.next;
 }
 
 /**
- *
- * @param {Array} arr
- * @returns {ListNode}
+ * @param {ListNode} head
  */
-function buildListNode(arr) {
-    let preHead = new ListNode();
-    let preNode = preHead;
+function reverseLinkedList(head) {
+    let prevNode = null;
 
-    arr.forEach(num => {
-        preNode.next = new ListNode(num);
-        preNode = preNode.next;
-    });
+    while (head) {
+        const nextNode = head.next;
 
-    return preHead.next;
+        head.next = prevNode;
+        prevNode = head;
+        head = nextNode;
+    }
 }
 
 module.exports = reverseBetween;
