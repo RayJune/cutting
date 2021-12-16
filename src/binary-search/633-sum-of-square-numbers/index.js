@@ -19,9 +19,9 @@
 */
 
 /**
- * Math.sqrt()
+ * sqrt + Two Pointers
  *
- * Time Complexity: O(sqrt(c) * log(c)) = for 循环次数 sqrt(c) * Math.sqrt 时间复杂度 O(log(c))
+ * Time Complexity: O(log(c) + sqrt(c)) = Math.sqrt 时间复杂度 O(log(c)) + while 循环次数 sqrt(c)
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
  *
@@ -29,8 +29,17 @@
  * @returns {boolean}
  */
 function judgeSquareSum(c) {
-    for (let i = 0; i * i <= c; i++) {
-        if (Number.isInteger(Math.sqrt(c - i * i))) {
+    let left = 0;
+    let right = Math.floor(Math.sqrt(c));
+
+    while (left <= right) {
+        const sum = left ** 2 + right ** 2;
+
+        if (sum < c) {
+            left += 1;
+        } else if (sum > c) {
+            right -= 1;
+        } else {
             return true;
         }
     }

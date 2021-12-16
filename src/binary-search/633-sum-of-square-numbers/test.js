@@ -1,5 +1,4 @@
-// const judgeSquareSum = require('./index');
-const judgeSquareSum = require('./optimize');
+const judgeSquareSum = require('./index');
 // const judgeSquareSum = require('./template');
 // const judgeSquareSum = require('./template-zh');
 
