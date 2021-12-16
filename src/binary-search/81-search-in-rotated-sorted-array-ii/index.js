@@ -34,6 +34,7 @@
  * Time Complexity: O(n) = 最差情况为所有元素都是重复的；最好情况为没有元素重复，此时为 O(log(n))
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
  * @param {number} target

@@ -45,7 +45,7 @@ function solution(isBadVersion) {
         let right = n;
 
         while (left < right) {
-            const mid = left + Math.floor((right - left) / 2);
+            const mid = Math.floor((right + left) / 2);
 
             if (isBadVersion(mid)) {
                 right = mid;

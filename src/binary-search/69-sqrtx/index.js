@@ -37,7 +37,7 @@ function mySqrt(x) {
     let right = x;
 
     while (left <= right) {
-        const mid = left + Math.floor((right - left) / 2);
+        const mid = Math.floor((right + left) / 2);
         const square = mid ** 2;
 
         if (square < x) {
