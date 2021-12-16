@@ -35,7 +35,7 @@ function isPerfectSquare(num) {
 
     while (left <= right) {
         const mid = left + Math.floor((right - left) / 2);
-        const square = mid * mid;
+        const square = mid ** 2;
 
         if (square < num) {
             left = mid + 1;
