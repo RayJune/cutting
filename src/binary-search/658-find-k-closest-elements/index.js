@@ -42,7 +42,7 @@ function findClosestElements(arr, k, x) {
     let right = arr.length - 1;
 
     while (left < right) {
-        const mid = Math.floor((right + left) / 2);
+        const mid = left + Math.floor((right - left) / 2);
 
         if (x - arr[mid] > arr[mid + k] - x) {
             left = mid + 1;
