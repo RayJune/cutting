@@ -14,7 +14,7 @@
  * Output: 2, nums = [2, 2, _, _]
  *
  * Example 2:
- * Input: [0, 1, 2, 2, 3, 0, 4, 2], val = 2
+ * Input: nums = [0, 1, 2, 2, 3, 0, 4, 2], val = 2
  * Output: 5, nums = [0, 1, 4, 0, 3, _, _, _]
  *
  * Constraints:
@@ -36,11 +36,7 @@
  * @param {number} val
  * @returns {number}
  */
- function removeElement(nums, val) {
-    if (nums.length === 0) {
-        return 0;
-    }
-
+function removeElement(nums, val) {
     let left = 0;
     let right = nums.length;
 
