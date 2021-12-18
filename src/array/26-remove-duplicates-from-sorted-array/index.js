@@ -14,7 +14,7 @@
  * Output: 2, nums = [1, 2, _]
  *
  * Example 2:
- * Input: [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+ * Input: nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
  * Output: 5, nums = [0, 1, 2, 3, 4, _, _, _, _, _]
  *
  * Constraints:
@@ -36,14 +36,13 @@
  * @returns {number}
  */
 function removeDuplicates(nums) {
-    const len = nums.length;
-
-    if (len < 2) {
-        return len;
+    if (nums.length < 2) {
+        return nums.length;
     }
 
     let fast = 1;
     let slow = 1;
+    const len = nums.length;
 
     while (fast < len) {
         if (nums[slow - 1] !== nums[fast]) {
