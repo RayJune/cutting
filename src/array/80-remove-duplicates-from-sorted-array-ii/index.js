@@ -18,8 +18,8 @@
  * Output: 7, nums = [0, 0, 1, 1, 2, 3, 3, _, _]
  *
  * Constraints:
- * 1 <= nums.length <= 3 * 104
- * -10 ** 4 <= nums[i] <= 10 ** 4
+ * 1 <= nums.length <= 3 * 10 ** 4
+ * (-10) ** 4 <= nums[i] <= 10 ** 4
  * nums is sorted in non-decreasing order.
  *
  * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/
@@ -36,14 +36,13 @@
  * @returns {number}
  */
 function removeDuplicates(nums) {
-    const len = nums.length;
-
-    if (len < 3) {
-        return len;
+    if (nums.length < 3) {
+        return nums.length;
     }
 
-    let slow = 2;
     let fast = 2;
+    let slow = 2;
+    const len = nums.length;
 
     while (fast < len) {
         if (nums[slow - 2] !== nums[fast]) {
