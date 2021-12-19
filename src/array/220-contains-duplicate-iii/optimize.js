@@ -17,7 +17,7 @@
  *
  * Constraints:
  * 1 <= nums.length <= 2 * 10 ** 4
- * -2 ** 31 <= nums[i] <= 2 ** 31 - 1
+ * (-2) ** 31 <= nums[i] <= 2 ** 31 - 1
  * 0 <= k <= 10 ** 4
  * 0 <= t <= 2 ** 31 - 1
  *
@@ -29,9 +29,9 @@ const BinarySearchTree = require('./binary-search-tree');
 /**
  * Binary Search Tree
  *
- * Time Complexity: O(n * min(k, n)) = 外层 for 循环次数 O(n) * bst 的 has/ceiling/floor/add/remove 操作 O(min(k, n))，平均时间复杂度为 O(log(min(k, n)))
- * Space complexity: O(min(k, n)) = bst 占用的空间
- * Auxiliary complexity: O(min(k, n)) = bst 占用的空间
+ * Time Complexity: O(n * log(min(k, n))) = 外层 for 循环次数 O(n) * bst 的 has/ceiling/floor/add/remove 操作 O(min(k, n))，平均时间复杂度为 O(log(min(k, n)))
+ * Space complexity: O(log(min(k, n))) = bst 占用的空间
+ * Auxiliary complexity: O(log(min(k, n))) = bst 占用的空间
  * 其中 n 为 nums 的长度
  *
  * @param {number[]} nums

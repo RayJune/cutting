@@ -17,7 +17,7 @@
  *
  * Constraints:
  * 1 <= nums.length <= 2 * 10 ** 4
- * -2 ** 31 <= nums[i] <= 2 ** 31 - 1
+ * (-2) ** 31 <= nums[i] <= 2 ** 31 - 1
  * 0 <= k <= 10 ** 4
  * 0 <= t <= 2 ** 31 - 1
  *
@@ -25,11 +25,11 @@
 */
 
 /**
- * Buckets, [0, t], [t + 1, 2t + 1],...
+ * Buckets + Hash Map, [0, t], [t + 1, 2t + 1],...
  *
  * Time Complexity: O(n) = for 循环次数 O(n)
- * Space complexity: O(min(k, n)) = map 占用空间
- * Auxiliary complexity: O(min(k, n)) = map 占用空间
+ * Space complexity: O(min(k, n)) = map 长度
+ * Auxiliary complexity: O(min(k, n)) = map 长度
  * 其中 n 为 nums 的长度
  *
  * @param {number[]} nums
@@ -39,11 +39,11 @@
  */
 function containsNearbyAlmostDuplicate(nums, k, t) {
     const map = new Map();
-    const getID = num => num >= 0 ?
+    const getId = num => num >= 0 ?
         Math.floor(num / (t + 1)) : Math.floor((num + 1) / (t + 1)) - 1;
 
-    for (let i = 0; i < nums.length; ++i) {
-        const id = getID(nums[i]);
+    for (let i = 0; i < nums.length; i++) {
+        const id = getId(nums[i]);
 
         if (map.has(id)) {
             return true;
@@ -56,7 +56,7 @@ function containsNearbyAlmostDuplicate(nums, k, t) {
         }
         map.set(id, nums[i]);
         if (map.size > k) {
-            map.delete(getID(nums[i - k]));
+            map.delete(getId(nums[i - k]));
         }
     }
 

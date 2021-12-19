@@ -17,7 +17,7 @@
  *
  * Constraints:
  * 1 <= nums.length <= 2 * 10 ** 4
- * -2 ** 31 <= nums[i] <= 2 ** 31 - 1
+ * (-2) ** 31 <= nums[i] <= 2 ** 31 - 1
  * 0 <= k <= 10 ** 4
  * 0 <= t <= 2 ** 31 - 1
  *
@@ -38,8 +38,8 @@
  * @returns {boolean}
  */
 function containsNearbyAlmostDuplicate(nums, k, t) {
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = Math.max(i - k, 0); j < i; j++) {
+    for (let i = 1; i < nums.length; i++) {
+        for (let j = Math.max(0, i - k); j < i; j++) {
             if (Math.abs(nums[i] - nums[j]) <= t) {
                 return true;
             }
