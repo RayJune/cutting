@@ -54,11 +54,7 @@ function repeatedSubstringPattern(s) {
         next.push(i);
     }
 
-    if (next[next.length - 1] && len % (len - next[next.length - 1]) === 0) {
-        return true;
-    }
-
-    return false;
+    return next[next.length - 1] !== 0 && len % (len - next[next.length - 1]) === 0;
 }
 
 module.exports = repeatedSubstringPattern;
