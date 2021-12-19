@@ -4,7 +4,7 @@
  * Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
  *
  * Example 1:
- * Input: [1, 2, 3, 1]
+ * Input: nums = [1, 2, 3, 1]
  * Output: true
  *
  * Example 2:
@@ -23,11 +23,11 @@
 */
 
 /**
- * Hash Table
+ * Hash Set
  *
  * Time Complexity: O(n) = for 循环次数
- * Space complexity: O(n) = set 占用空间
- * Auxiliary complexity: O(n) = set 占用空间
+ * Space complexity: O(n) = set 长度
+ * Auxiliary complexity: O(n) = set 长度
  * 其中 n 为 nums 的长度
  *
  * @param {number[]} nums
@@ -38,10 +38,9 @@ function containsDuplicate(nums) {
 
     for (const num of nums) {
         if (set.has(num)) {
-            return true
-        } else {
-            set.add(num);
+            return true;
         }
+        set.add(num);
     }
 
     return false;

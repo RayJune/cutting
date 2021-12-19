@@ -6,7 +6,7 @@ test('define containsDuplicate function', () => {
     expect(typeof containsDuplicate).toBe('function');
 });
 
-test('nums = [1, 2, 3, 1]', () => {
+test('nums = nums = [1, 2, 3, 1]', () => {
     expect(containsDuplicate([1, 2, 3, 1])).toBe(true);
 });
 

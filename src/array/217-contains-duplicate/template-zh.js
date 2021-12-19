@@ -6,7 +6,7 @@
  * 如果存在一值在数组中出现至少两次，函数返回 true 。如果数组中每个元素都不相同，则返回 false 。
  *
  * Example 1:
- * Input: [1, 2, 3, 1]
+ * Input: nums = [1, 2, 3, 1]
  * Output: true
  *
  * Example 2:
