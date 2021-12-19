@@ -17,14 +17,14 @@
  *
  * Constraints:
  * 1 <= nums.length <= 10 ** 5
- * -10 ** 9 <= nums[i] <= 10 ** 9
+ * (-10) ** 9 <= nums[i] <= 10 ** 9
  * 0 <= k <= 10 ** 5
  *
  * https://leetcode.com/problems/contains-duplicate-ii/
 */
 
 /**
- * Hash Table
+ * Hash Map
  *
  * Time Complexity: O(n) = for 循环次数
  * Space complexity: O(n) = map 长度

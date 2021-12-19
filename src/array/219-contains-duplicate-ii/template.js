@@ -4,7 +4,7 @@
  * Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
  *
  * Example 1:
- * Input: [1, 2, 3, 1], k = 3
+ * Input: nums = [1, 2, 3, 1], k = 3
  * Output: true
  *
  * Example 2:
@@ -17,7 +17,7 @@
  *
  * Constraints:
  * 1 <= nums.length <= 10 ** 5
- * -10 ** 9 <= nums[i] <= 10 ** 9
+ * (-10) ** 9 <= nums[i] <= 10 ** 9
  * 0 <= k <= 10 ** 5
  *
  * https://leetcode.com/problems/contains-duplicate-ii/
