@@ -21,7 +21,7 @@
 */
 
 /**
- * Sliding Window
+ * Sliding Window + Hash Map
  *
  * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(1)
@@ -33,12 +33,11 @@
  */
 function lengthOfLongestSubstringTwoDistinct(s) {
     const map = new Map();
-    const len = s.length;
     let left = 0;
     let right = 0;
     let maxLen = 0;
 
-    while (right < len) {
+    while (right < s.length) {
         map.set(s[right], (map.get(s[right]) | 0) + 1);
         while (map.size > 2) {
             map.set(s[left], map.get(s[left]) - 1);
