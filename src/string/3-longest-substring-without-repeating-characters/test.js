@@ -21,3 +21,7 @@ test('s = "pwwkew"', () => {
 test('s = ""', () => {
     expect(lengthOfLongestSubstring('')).toBe(0);
 });
+
+test('s = " "', () => {
+    expect(lengthOfLongestSubstring(' ')).toBe(1);
+});

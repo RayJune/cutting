@@ -31,7 +31,7 @@
 */
 
 /**
- * Sliding Window
+ * Sliding Window + Hash Set
  *
  * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(min(n, s)) = set 长度
@@ -43,13 +43,12 @@
  */
 function lengthOfLongestSubstring(s) {
     const set = new Set();
-    const len = s.length;
     let left = 0;
     let right = 0;
     let maxLen = 0;
 
-    while (right < len - 1) {
-        while (!set.has(s[right])) {
+    while (right < s.length) {
+        while (!set.has(s[right]) && right < s.length) {
             set.add(s[right]);
             right += 1;
         }
