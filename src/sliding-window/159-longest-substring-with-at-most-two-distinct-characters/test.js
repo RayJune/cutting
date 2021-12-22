@@ -1,4 +1,5 @@
-const lengthOfLongestSubstringTwoDistinct = require('./index');
+// const lengthOfLongestSubstringTwoDistinct = require('./index');
+const lengthOfLongestSubstringTwoDistinct = require('./optimize');
 // const lengthOfLongestSubstringTwoDistinct = require('./template');
 // const lengthOfLongestSubstringTwoDistinct = require('./template-zh');
 
