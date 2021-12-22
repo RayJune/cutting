@@ -41,9 +41,9 @@ class ListNode {
 }
 
 /**
- * 从已排序链表里从前往后找插入点
+ * Insertion Sort
  *
- * Time Complexity: O(n^2) = 外层 while 循环次数 O(n) * 内层 while 循环次数 O(n)
+ * Time Complexity: O(n ** 2) = 外层 while 循环次数 O(n) * 内层 while 循环次数 O(n)
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
  *
@@ -61,14 +61,14 @@ function insertionSortList(head) {
 
     while (node) {
         if (lastSorted.val > node.val) {
-            let preNode = preHead;
+            let prevNode = preHead;
 
-            while (preNode.next.val <= node.val) {
-                preNode = preNode.next;
+            while (prevNode.next.val <= node.val) {
+                prevNode = prevNode.next;
             }
             lastSorted.next = node.next;
-            node.next = preNode.next;
-            preNode.next = node;
+            node.next = prevNode.next;
+            prevNode.next = node;
         } else {
             lastSorted = lastSorted.next;
         }

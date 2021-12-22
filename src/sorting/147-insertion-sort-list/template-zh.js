@@ -23,8 +23,8 @@
  *
  * Constraints:
  *
- * 链表中节点的数目在范围 [0, 5 * 10^4] 内
- * -10^5 <= Node.val <= 10^5
+ * The number of nodes in the list is in the range [1, 5000].
+ * -5000 <= Node.val <= 5000
  *
  * https://leetcode-cn.com/problems/insertion-sort-list/
 */
