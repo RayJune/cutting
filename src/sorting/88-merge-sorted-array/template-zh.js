@@ -7,7 +7,6 @@
  *
  * 注意：最终，合并后数组不应由函数返回，而是存储在数组 nums1 中。为了应对这种情况，nums1 的初始长度为 m + n，其中前 m 个元素表示应合并的元素，后 n 个元素为 0 ，应忽略。nums2 的长度为 n 。
  *
- *
  * Example 1:
  * Input: nums1 = [1, 2, 3, 0, 0, 0], m = 3, nums2 = [2, 5, 6], n = 3
  * Output: [1, 2, 2, 3, 5, 6]
@@ -26,7 +25,7 @@
  * nums2.length == n
  * 0 <= m, n <= 200
  * 1 <= m + n <= 200
- * -10^9 <= nums1[i], nums2[j] <= 10^9
+ * (-10) ** 9 <= nums1[i], nums2[j] <= 10 ** 9
  *
  * https://leetcode-cn.com/problems/merge-sorted-array/
 */

@@ -25,17 +25,18 @@
  * nums2.length == n
  * 0 <= m, n <= 200
  * 1 <= m + n <= 200
- * -10^9 <= nums1[i], nums2[j] <= 10^9
+ * (-10) ** 9 <= nums1[i], nums2[j] <= 10 ** 9
  *
  * https://leetcode.com/problems/merge-sorted-array/
 */
 
 /**
- * Two Pointers
+ * Two Pointers (Start From the End)
  *
  * Time Complexity: O(m + n) = for 循环次数
- * Space complexity: O(m + n) = nums1Copy 长度
- * Auxiliary complexity: O(m + n) = nums1Copy 长度
+ * Space complexity: O(n) = nums1 增加的长度
+ * Auxiliary complexity: O(1)
+ * 其中 m 和 n 分别是 num1 和 nums2 的长度
  *
  * @param {number[]} nums1
  * @param {number} m
@@ -43,27 +44,19 @@
  * @param {number} n
  */
 function merge(nums1, m, nums2, n) {
-    const nums1Copy = Array.from(nums1);
-    let p1 = 0;
-    let p2 = 0;
+    let p1 = m - 1;
+    let p2 = n - 1;
 
-    for (let i = 0; i < m + n; i++) {
-        if (p1 < m && p2 < n) {
-            if (nums1Copy[p1] < nums2[p2]) {
-                nums1[i] = nums1Copy[p1];
-                p1 += 1;
-            } else {
-                nums1[i] = nums2[p2];
-                p2 += 1;
-            }
+    for (let i = m + n - 1; i >= 0; i--) {
+        if (p2 < 0) {
+            break;
+        }
+        if (nums1[p1] > nums2[p2]) {
+            nums1[i] = nums1[p1];
+            p1 -= 1;
         } else {
-            if (p1 < m) {
-                nums1[i] = nums1Copy[p1];
-                p1 += 1;
-            } else {
-                nums1[i] = nums2[p2];
-                p2 += 1;
-            }
+            nums1[i] = nums2[p2];
+            p2 -= 1;
         }
     }
 }

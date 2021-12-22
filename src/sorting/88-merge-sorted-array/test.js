@@ -1,6 +1,5 @@
 // const merge = require('./index');
-// const merge = require('./optimize');
-const merge = require('./optimize2');
+const merge = require('./optimize');
 // // const merge = require('./template');
 // // const merge = require('./template-zh');
 

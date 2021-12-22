@@ -25,17 +25,18 @@
  * nums2.length == n
  * 0 <= m, n <= 200
  * 1 <= m + n <= 200
- * -10^9 <= nums1[i], nums2[j] <= 10^9
+ * (-10) ** 9 <= nums1[i], nums2[j] <= 10 ** 9
  *
  * https://leetcode.com/problems/merge-sorted-array/
 */
 
 /**
- * Merge and sort
+ * splice + sort
  *
  * Time Complexity: O((m + n) * log(m + n)) = 快速排序时间复杂度
- * Space complexity: O(log(m + n)) = 快速排序空间复杂度
+ * Space complexity: O(log(m + n)) = 快速排序空间复杂度 O(log(m + n)) + nums1 增加的数组长度 O(log(n))
  * Auxiliary complexity: O(log(m + n)) = 快速排序空间复杂度
+ * 其中 m 和 n 分别是 num1 和 nums2 的长度
  *
  * @param {number[]} nums1
  * @param {number} m
