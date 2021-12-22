@@ -42,7 +42,7 @@
 */
 
 /**
- * 利用 map.keys() 来实现 LRU 操作
+ * Ordered Dictionary
  */
 class LRUCache {
     #capacity;

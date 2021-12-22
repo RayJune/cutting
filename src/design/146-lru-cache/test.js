@@ -1,5 +1,5 @@
 const LRUCache = require('./index');
-// const LRUCache = require('./iterator');
+// const LRUCache = require('./trick');
 // const LRUCache = require('./template');
 // const LRUCache = require('./template-zh');
 
