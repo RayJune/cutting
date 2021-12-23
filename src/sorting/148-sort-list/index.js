@@ -17,8 +17,8 @@
  *
  * Constraints:
  *
- * The number of nodes in the list is in the range [0, 5 * 10^4].
- * -10^5 <= Node.val <= 10^5
+ * The number of nodes in the list is in the range [0, 5 * 10 ** 4].
+ * (-10) ** 5 <= Node.val <= (10) ** 5
  *
  * https://leetcode.com/problems/sort-list/
 */
@@ -40,6 +40,7 @@ class ListNode {
 
 /**
  * 自顶向下归并排序
+ *
  * 1. 用快慢指针找到中间点，并断开两个链表
  * 2. 对两个子链表进行排序、合并
  *
