@@ -25,7 +25,7 @@
  * sort
  *
  * Time Complexity: O(n * log(n)) = 排序 O(n * log(n)) + for 循环次数 O(n)
- * Space complexity: O(n + log(n)) = merged 长度 O(n) + 排序 O(log(n))
+ * Space complexity: O(n) = merged 数组长度 O(n) + 排序 O(log(n))
  * Auxiliary complexity: O(log(n)) = 排序 O(log(n))
  * 其中 n 是 intervals 数组的长度
  *
