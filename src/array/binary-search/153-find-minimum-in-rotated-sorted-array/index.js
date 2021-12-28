@@ -44,7 +44,7 @@
  * Auxiliary complexity: O(1)
  * 其中 n 是 nums 数组的长度
  *
- * @param {number} nums
+ * @param {number[]} nums
  * @returns {number}
  */
 function findMin(nums) {
