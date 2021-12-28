@@ -1,9 +1,9 @@
 /*
- * 437. Path Sum III
+ * 437. 路径总和 III
  *
- * Given the root of a binary tree and an integer targetSum, return the number of paths where the sum of the values along the path equals targetSum.
+ * 给定一个二叉树的根节点 root ，和一个整数 targetSum ，求该二叉树里节点值之和等于 targetSum 的路径的数目。
  *
- * The path does not need to start or end at the root or a leaf, but it must go downwards (i.e., traveling only from parent nodes to child nodes).
+ * 路径不需要从根节点开始，也不需要在叶子节点结束，但是路径方向必须是向下的（只能从父节点到子节点）。
  *
  * Example 1:
  * Input: root = [10, 5, -3, 3, 2, null, 11, 3, -2, null, 1], targetSum = 8
@@ -15,12 +15,12 @@
  *
  * Constraints:
  *
- * The number of nodes in the tree is in the range [0, 1000].
- * -10^9 <= Node.val <= 10^9
+ * 二叉树的节点个数的范围是 [0, 1000].
+ * (-10) ** 9 <= Node.val <= 10 ** 9
  * -1000 <= targetSum <= 1000
  *
- * https://leetcode.com/problems/path-sum-iii/
- */
+ * https://leetcode-cn.com/problems/path-sum-iii/
+*/
 
 /**
  * Definition for a binary tree node.

@@ -16,7 +16,7 @@
  * Constraints:
  *
  * The number of nodes in the tree is in the range [0, 1000].
- * -10^9 <= Node.val <= 10^9
+ * (-10) ** 9 <= Node.val <= 10 ** 9
  * -1000 <= targetSum <= 1000
  *
  * https://leetcode.com/problems/path-sum-iii/
