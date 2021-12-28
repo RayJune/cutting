@@ -1,4 +1,6 @@
 /*
+ * 1. Two Sum
+ *
  * Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
  *
  * You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -19,41 +21,12 @@
  * Output: [0, 1]
  *
  * Constraints:
- *
- * 2 <= nums.length <= 10^4
- * -10^9 <= nums[i] <= 10^9
- * -10^9 <= target <= 10^9
+ * 2 <= nums.length <= 10 ** 4
+ * (-10) ** 9 <= nums[i] <= 10 ** 9
+ * (-10) ** 9 <= target <= 10 ** 9
  * Only one valid answer exists.
  *
  * https://leetcode.com/problems/two-sum/
- *
 */
-
-/**
- * 哈希表，用空间换时间
- *
- * Time Complexity: O(n) = for 循环 O(n)
- * Space complexity: O(n) = map 长度 O(n)
- * Auxiliary complexity: O(n) = map 长度 O(n)
- *
- * @param {number[]} nums
- * @param {number} target
- * @returns {number[]}
- */
-function twoSum(nums, target) {
-    const map = new Map();
-
-    for (let i = 0; i < nums.length; i++) {
-        const num = nums[i];
-        const j = map.get(target - num);
-
-        if (j !== undefined) {
-            return [j, i];
-        }
-        map.set(num, i);
-    }
-
-    return [];
-}
 
 module.exports = twoSum;

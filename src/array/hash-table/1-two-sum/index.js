@@ -1,4 +1,6 @@
 /*
+ * 1. Two Sum
+ *
  * Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
  *
  * You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -19,36 +21,35 @@
  * Output: [0, 1]
  *
  * Constraints:
- *
- * 2 <= nums.length <= 10^4
- * -10^9 <= nums[i] <= 10^9
- * -10^9 <= target <= 10^9
+ * 2 <= nums.length <= 10 ** 4
+ * (-10) ** 9 <= nums[i] <= 10 ** 9
+ * (-10) ** 9 <= target <= 10 ** 9
  * Only one valid answer exists.
  *
  * https://leetcode.com/problems/two-sum/
- *
 */
 
 /**
- * 暴力枚举
+ * Hash Map
  *
- * Time Complexity: O(n^2) = 外层 for 循环 O(n) * 内层 for 循环 O(n)
- * Space complexity: O(1)
- * Auxiliary complexity: O(1)
+ * Time Complexity: O(n) = for 循环次数
+ * Space complexity: O(n) = map 长度
+ * Auxiliary complexity: O(n) = map 长度
  *
  * @param {number[]} nums
  * @param {number} target
  * @returns {number[]}
  */
 function twoSum(nums, target) {
-    const len = nums.length;
+    const map = new Map();
 
-    for (let i = 0; i < len; i++) {
-        for (let j = i + 1; j < len; j++) {
-            if ((nums[i] + nums[j]) === target) {
-                return [i, j];
-            }
+    for (let i = 0; i < nums.length; i++) {
+        const num = nums[i];
+
+        if (map.has(target - num)) {
+            return [map.get(target - num), i];
         }
+        map.set(num, i);
     }
 
     return [];

@@ -1,5 +1,4 @@
-// const twoSum = require('./index');
-const twoSum = require('./optimize');
+const twoSum = require('./index');
 // const twoSum = require('./template');
 // const twoSum = require('./template-zh');
 
