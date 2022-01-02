@@ -28,7 +28,7 @@
 */
 
 /**
- * Two Pointers + Sort, 需要注意的该题目隐藏条件：triplets 可以重复，不需要去重
+ * Sort + Two Pointers, 需要注意的该题目隐藏条件：triplets 可以重复，不需要去重
  *
  * Time Complexity: O(n ** 2) = 遍历次数 O(n ** 2) + 排序 O(n * log(n))
  * Space complexity: O(log(n)) = 排序

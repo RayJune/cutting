@@ -25,7 +25,7 @@
 */
 
 /**
- * Two Pointers + Sort, 注意跳过重复的数字
+ * Sort + Two Pointers, 注意跳过重复的数字
  *
  * Time Complexity: O(n ** 2) = 遍历次数 O(n ** 2) + 排序 O(n * log(n))
  * Space complexity: O(n) = triplets 长度 O(n) + 排序 O(log(n))

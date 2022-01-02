@@ -25,7 +25,7 @@
 */
 
 /**
- * Two Pointers + Sort
+ * Sort + Two Pointers
  *
  * Time Complexity: O(n ** 2) = 遍历次数 O(n ** 2) + 排序 O(n * log(n))
  * Space complexity: O(n) = quadruplets 长度 O(n) + 排序 O(log(n))
