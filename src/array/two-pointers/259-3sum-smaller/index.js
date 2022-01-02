@@ -1,6 +1,7 @@
 /*
- * Given an array of n integers nums and an integer target, find the number of index triplets i, j, k
- * with 0 <= i < j < k < n that satisfy the condition nums[i] + nums[j] + nums[k] < target.
+ * 259. 3Sum Smaller
+ *
+ * Given an array of n integers nums and an integer target, find the number of index triplets i, j, k with 0 <= i < j < k < n that satisfy the condition nums[i] + nums[j] + nums[k] < target.
  *
  * Example 1:
  * Input: nums = [-2, 0, 1, 3], target = 2
@@ -10,24 +11,28 @@
  * [-2, 0, 3]
  *
  * Example 2:
+ * Input: nums = [], target = 0
+ * Output: 0
+ *
+ * Example 3:
  * Input: nums = [0], target = 0
  * Output: 0
  *
  * Constraints:
- *
  * n == nums.length
  * 0 <= n <= 3500
  * -100 <= nums[i] <= 100
  * -100 <= target <= 100
  *
  * https://leetcode.com/problems/3sum-smaller/
- *
 */
 
 /**
- * 排序 + 双指针，需要注意的该题目隐藏条件：triplets 可以重复，不需要去重
+ * Two Pointers + Sort, 需要注意的该题目隐藏条件：triplets 可以重复，不需要去重
  *
- * Complexity Analyzation -> index.md
+ * Time Complexity: O(n ** 2) = 遍历次数 O(n ** 2) + 排序 O(n * log(n))
+ * Space complexity: O(log(n)) = 排序
+ * Auxiliary complexity: O(log(n)) = 排序
  *
  * @param {number[]} nums
  * @param {number} target
@@ -43,17 +48,17 @@ function threeSumSmaller(nums, target) {
 
     nums.sort((a, b) => a - b);
     for (let i = 0; i < len; i++) {
-        let small = i + 1;
-        let big = len - 1;
+        let left = i + 1;
+        let right = len - 1;
 
-        while (small < big) {
-            const sum = nums[i] + nums[small] + nums[big];
+        while (left < right) {
+            const sum = nums[i] + nums[left] + nums[right];
 
             if (sum < target) {
-                count += (big - small);
-                small += 1;
+                count += (right - left);
+                left += 1;
             } else {
-                big -= 1;
+                right -= 1;
             }
         }
     }
