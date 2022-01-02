@@ -1,11 +1,9 @@
 /*
- * Two Sum II - Input array is sorted
+ * 167. Two Sum II - Input array is sorted
  *
- * Given an array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number.
+ * Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.
  *
- *
- * Return the indices of the two numbers (1-indexed) as an integer array answer of size 2, where 1 <= answer[0] < answer[1] <= numbers.length.
- *
+ * Return the indices of the two numbers, index1 and index2, added by one as an integer array [index1, index2] of length 2.
  *
  * The tests are generated such that there is exactly one solution. You may not use the same element twice.
  *
@@ -23,7 +21,6 @@
  * Output: [1, 2]
  *
  * Constraints:
- *
  * 2 <= numbers.length <= 3 * 104
  * -1000 <= numbers[i] <= 1000
  * numbers is sorted in non-decreasing order.
@@ -31,31 +28,34 @@
  * The tests are generated such that there is exactly one solution.
  *
  * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
- *
 */
 
 /**
- * 哈希表，用空间换时间
+ * Two Pointers
  *
- * Time Complexity: O(n) = for 循环 O(n)
- * Space complexity: O(n) = map 长度 O(n)
- * Auxiliary complexity: O(n) = map 长度 O(n)
+ * Time Complexity: O(n) = while 循环次数
+ * Space complexity: O(1)
+ * Auxiliary complexity: O(1)
  *
  * @param {number[]} numbers
  * @param {number} target
  * @returns {number[]}
  */
 function twoSum(numbers, target) {
-    const map = new Map();
+    const len = numbers.length;
+    let left = 0;
+    let right = len - 1;
 
-    for (let i = 0; i < numbers.length; i++) {
-        const num = numbers[i];
-        const j = map.get(target - num);
+    while (left < right) {
+        const sum = numbers[left] + numbers[right];
 
-        if (j !== undefined) {
-            return [j + 1, i + 1];
+        if (sum > target) {
+            right -= 1;
+        } else if (sum < target) {
+            left += 1;
+        } else {
+            return [left + 1, right + 1];
         }
-        map.set(num, i);
     }
 
     return [];

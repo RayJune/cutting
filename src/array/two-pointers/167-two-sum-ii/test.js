@@ -1,7 +1,4 @@
-// const twoSum = require('./index');
-// const twoSum = require('./optimize');
-// const twoSum = require('./optimize2');
-const twoSum = require('./optimize3');
+const twoSum = require('./index');
 // const twoSum = require('./template');
 // const twoSum = require('./template-zh');
 
