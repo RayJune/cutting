@@ -47,25 +47,21 @@
 /**
  * regex
  *
- * Time Complexity: O(n) = trim/match 操作
+ * Time Complexity: O(n) = trim / match 操作
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
+ * 其中 n 为字符串 s 的长度
  *
  * @param {string} s
  * @returns {number}
  */
 function myAtoi(s) {
     const match = s.trim().match(/^[-+]?\d+/);
-    const number = match ? Number(match[0]) : 0;
+    const num = match ? Number(match[0]) : 0;
+    const max = 2 ** 31 - 1;
+    const min = (-2) ** 31;
 
-    if (number < (-2) ** 31) {
-        return (-2) ** 31;
-    }
-    if (number > 2 ** 31 - 1) {
-        return 2 ** 31 - 1;
-    }
-
-    return number;
+    return Math.sign(num) === 1 ? Math.min(num, max) : Math.max(num, min);
 }
 
 module.exports = myAtoi;

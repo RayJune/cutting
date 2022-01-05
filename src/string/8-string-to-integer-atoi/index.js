@@ -45,9 +45,9 @@
 */
 
 class DFA {
-    state = 'start';
-    sign = 1;
-    absAnswer = 0;
+    #state = 'start';
+    #sign = 1;
+    #result = 0;
     #map = new Map([
         ['start', ['start', 'signed', 'number', 'end']],
         ['signed', ['end', 'end', 'number', 'end']],
@@ -69,20 +69,28 @@ class DFA {
         return 3;
     }
 
-    get(char) {
-        this.state = this.#map.get(this.state)[this.#getIndex(char)];
-        if (this.state === 'signed') {
-            this.sign = char === '-' ? -1 : 1;
+    transition(char) {
+        this.#state = this.#map.get(this.#state)[this.#getIndex(char)];
+        if (this.#state === 'signed') {
+            this.#sign = char === '-' ? -1 : 1;
         }
-        if (this.state === 'number') {
-            this.absAnswer = this.absAnswer * 10 + Number(char);
-            this.absAnswer = Math.min(this.absAnswer, this.sign === 1 ? 2 ** 31 - 1 : 2 ** 31);
+        if (this.#state === 'number') {
+            this.#result = this.#result * 10 + Number(char);
+            this.#result = Math.min(this.#result, this.#sign === 1 ? 2 ** 31 - 1 : 2 ** 31);
         }
+    }
+
+    getState() {
+        return this.#state;
+    }
+
+    getInteger() {
+        return this.#sign * this.#result;
     }
 }
 
 /**
- * DFA
+ * Deterministic Finite Automaton (DFA)
  *
  * Time Complexity: O(n) = for...of 循环次数
  * Space complexity: O(1)
@@ -96,13 +104,13 @@ function myAtoi(s) {
     const dfa = new DFA();
 
     for (const char of s) {
-        dfa.get(char);
-        if (dfa.state === 'end') {
+        dfa.transition(char);
+        if (dfa.getState() === 'end') {
             break;
         }
     }
 
-    return dfa.sign * dfa.absAnswer;
+    return dfa.getInteger();
 }
 
 module.exports = myAtoi;
