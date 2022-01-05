@@ -30,7 +30,7 @@
 /**
  * 用 parseInt 来消除负号
  *
- * Time Complexity: O(log10(x)) = while 循环次数
+ * Time Complexity: O(log(x)) = while 循环次数为 x 十进制的位数 log10(x)
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
  *
@@ -39,10 +39,12 @@
  */
 function reverse(x) {
     let reversedX = 0;
+    const max = 2 ** 31 - 1;
+    const min = (-2) ** 31;
 
-    while (x !== 0) {
+    while (x) {
         reversedX = reversedX * 10 + x % 10;
-        if (reversedX < (-2) ** 31 || reversedX > 2 ** 31 - 1) {
+        if (reversedX > max || reversedX < min) {
             return 0;
         }
         x = parseInt(x / 10, 10);
