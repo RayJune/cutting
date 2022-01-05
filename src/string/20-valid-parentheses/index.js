@@ -41,6 +41,7 @@
  * Time Complexity: O(n) = for...of 循环次数
  * Space complexity: O(n) = stack 长度, 最坏情况下比如连续的 (
  * Auxiliary complexity: O(n) = stack 长度
+ * 其中 n 是字符串 s 的长度
  *
  * @param {string} s
  * @returns {boolean}
