@@ -1,6 +1,5 @@
 // const longestCommonPrefix = require('./index');
 const longestCommonPrefix = require('./optimize');
-// const longestCommonPrefix = require('./binary-search');
 // const longestCommonPrefix = require('./template');
 // const longestCommonPrefix = require('./template-zh');
 
