@@ -38,12 +38,12 @@ function lengthOfLongestSubstringTwoDistinct(s) {
     let maxLen = 0;
 
     while (right < s.length) {
-        map.set(s[right], (map.get(s[right]) | 0) + 1);
+        map.set(s[right], (map.get(s[right]) || 0) + 1);
         while (map.size > 2) {
             map.set(s[left], map.get(s[left]) - 1);
             if (map.get(s[left]) === 0) {
                 map.delete(s[left]);
-            };
+            }
             left += 1;
         }
         maxLen = Math.max(maxLen, right - left + 1);
