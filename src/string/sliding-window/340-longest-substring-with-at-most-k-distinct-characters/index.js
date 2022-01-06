@@ -39,7 +39,7 @@ function lengthOfLongestSubstringKDistinct(s, k) {
     let maxLen = 0;
 
     while (right < s.length) {
-        map.set(s[right], (map.get(s[right]) | 0) + 1);
+        map.set(s[right], (map.get(s[right]) || 0) + 1);
         while (map.size > k) {
             map.set(s[left], map.get(s[left]) - 1);
             if (map.get(s[left]) === 0) {
