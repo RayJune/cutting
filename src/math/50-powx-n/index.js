@@ -25,7 +25,7 @@
 */
 
 /**
- * Fast Power Algorithm
+ * Fast Power Algorithm Recursive
  *
  * Time Complexity: O(log(n)) = myPow 函数调用次数
  * Space complexity: O(log(n)) = myPow 函数调用栈深度

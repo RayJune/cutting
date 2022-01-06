@@ -25,7 +25,7 @@
 */
 
 /**
- * Fast Power Algorithm
+ * Fast Power Algorithm Iterative
  *
  * Time Complexity: O(log(n)) = while 循环次数
  * Space complexity: O(1)
@@ -46,7 +46,7 @@ function myPow(x, n) {
 
     let power = 1;
 
-    while (n > 0) {
+    while (n) {
         if (n % 2 === 1) {
             power *= x;
         }
