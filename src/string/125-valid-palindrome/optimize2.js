@@ -25,6 +25,8 @@
 */
 
 /**
+ * Two Pointers
+ *
  * Time Complexity: O(n) = 内外层 while 循环次数之和 O(n)
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
@@ -33,15 +35,15 @@
  * @returns {boolean}
  */
 function isPalindrome(s) {
-    const isAlnum = num => /[a-zA-Z0-9]/i.test(num);
+    const skip = char => /[^a-zA-Z0-9]/.test(char);
     let left = 0;
     let right = s.length - 1;
 
     while (left < right) {
-        while (left < right && !isAlnum(s[left])) {
+        while (left < right && skip(s[left])) {
             left += 1;
         }
-        while (left < right && !isAlnum(s[right])) {
+        while (left < right && skip(s[right])) {
             right -= 1;
         }
         if (s[left].toLowerCase() !== s[right].toLowerCase()) {
