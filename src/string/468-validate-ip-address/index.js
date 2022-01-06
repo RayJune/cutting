@@ -58,14 +58,14 @@ function validIPAddress(ip) {
     if (ip.length < 7 || ip.length > 39) {
         return 'Neither';
     }
-
     if (validateIPv4(ip.split('.'))) {
         return 'IPv4';
-    } else if (validateIPv6(ip.split(':'))) {
-        return 'IPv6';
-    } else {
-        return 'Neither';
     }
+    if (validateIPv6(ip.split(':'))) {
+        return 'IPv6';
+    }
+
+    return 'Neither';
 }
 
 /**
