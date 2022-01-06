@@ -44,8 +44,8 @@ function addStrings(num1, num2) {
     let carry = 0;
 
     while (i >= 0 || j >= 0) {
-        const value1 = num1[i] - '0' || 0;
-        const value2 = num2[j] - '0'|| 0;
+        const value1 = num1[i] - 0 || 0;
+        const value2 = num2[j] - 0|| 0;
 
         carry += value1 + value2;
         sum.push(carry % 10);
