@@ -33,12 +33,12 @@
  * @returns {string}
  */
 function multiply(num1, num2) {
-    const len1 = num1.length;
-    const len2 = num2.length;
-    const result = new Array(len1 + len2).fill(0);
+    const m = num1.length;
+    const n = num2.length;
+    const result = new Array(m + n).fill(0);
 
-    for (let i = len1 - 1; i >= 0; i--) {
-        for (let j = len2 - 1; j >= 0; j--) {
+    for (let i = m - 1; i >= 0; i--) {
+        for (let j = n - 1; j >= 0; j--) {
             const value = result[i + j + 1] + num1[i] * num2[j];
 
             result[i + j + 1] = value % 10;
