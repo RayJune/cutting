@@ -42,18 +42,18 @@
  * @returns {boolean}
  */
 function isPalindrome(x) {
-    if (x < 0 || (x % 10 === 0 && x !== 0)) {
+    if (x < 0 || (x !== 0 && x % 10 === 0)) {
         return false;
     }
 
-    let reversedNum = 0;
+    let reversedX = 0;
 
-    while (x > reversedNum) {
-        reversedNum = reversedNum * 10 + x % 10;
+    while (reversedX < x) {
+        reversedX = reversedX * 10 + x % 10;
         x = Math.floor(x / 10);
     }
 
-    return x === reversedNum || x === Math.floor(reversedNum / 10);
+    return reversedX === x || Math.floor(reversedX / 10) === x;
 }
 
 module.exports = isPalindrome;
