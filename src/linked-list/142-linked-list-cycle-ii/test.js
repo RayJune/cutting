@@ -4,10 +4,6 @@ const detectCycle = require('./optimize');
 // const detectCycle = require('./template-zh');
 
 class ListNode {
-    /**
-     * @param {number} val
-     * @param {ListNode} next
-     */
     constructor(val = undefined, next = null) {
         this.val = val;
         this.next = next;
@@ -15,7 +11,7 @@ class ListNode {
 }
 
 /**
- * @param {Array} arr
+ * @param {number[]} arr
  * @param {number} position
  * @returns {{head: ListNode, arr: Array}}
  */

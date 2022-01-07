@@ -3,10 +3,6 @@ const deleteNode = require('./index');
 // const deleteNode = require('./template-zh');
 
 class ListNode {
-    /**
-     * @param {number} val
-     * @param {ListNode} next
-     */
     constructor(val = undefined, next = null) {
         this.val = val;
         this.next = next;

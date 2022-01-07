@@ -3,11 +3,11 @@ const copyRandomList = require('./optimize');
 // const copyRandomList = require('./template');
 // const copyRandomList = require('./template-zh');
 
-class Node {
+class ListNode {
     /**
      * @param {number} val
-     * @param {Node} next
-     * @param {Node} random
+     * @param {ListNode} next
+     * @param {ListNode} random
      */
     constructor(val = undefined, next = null, random = null) {
         this.val = val;
@@ -18,15 +18,15 @@ class Node {
 
 /**
  * @param {Array} arr
- * @returns {Node}
+ * @returns {ListNode}
  */
 function buildListNode(arr) {
-    let preHead = new Node(-1);
+    let preHead = new ListNode(-1);
     let node = preHead;
     const nodeArr = [];
 
     arr.forEach(numItem => {
-        node.next = new Node(numItem[0]);
+        node.next = new ListNode(numItem[0]);
         node = node.next;
         nodeArr.push(node);
     });
@@ -44,8 +44,8 @@ function buildListNode(arr) {
 /**
  * 判断两个链表中 node，node.next、node.random 的地址是否均不相等
  *
- * @param {Node} l1
- * @param {Node} l2
+ * @param {ListNode} l1
+ * @param {ListNode} l2
  * @returns {Boolean}
  */
 function isDifferentListNode(l1, l2) {

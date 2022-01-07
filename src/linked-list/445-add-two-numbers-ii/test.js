@@ -3,29 +3,7 @@
 const addTwoNumbers = require('./reverse-output');
 // const addTwoNumbers = require('./template');
 // const addTwoNumbers = require('./template-zh');
-
-class ListNode {
-    constructor(val = undefined, next = null) {
-        this.val = val;
-        this.next = next;
-    }
-}
-
-/**
- * @param {Array} arr
- * @returns {ListNode}
- */
-function buildListNode(arr) {
-    let preHead = new ListNode(-1);
-    let node = preHead;
-
-    arr.forEach(num => {
-        node.next = new ListNode(num);
-        node = node.next;
-    });
-
-    return preHead.next;
-}
+const buildListNode = require('../../utils/buildListNode');
 
 test('define addTwoNumbers function', () => {
     expect(typeof addTwoNumbers).toBe('function');

@@ -4,10 +4,6 @@ const getIntersectionNode = require('./optimize');
 // const getIntersectionNode = require('./template-zh');
 
 class ListNode {
-    /**
-     * @param {number} val
-     * @param {ListNode} next
-     */
     constructor(val = undefined, next = null) {
         this.val = val;
         this.next = next;
@@ -15,7 +11,7 @@ class ListNode {
 }
 
 /**
- * @param {Array} arr
+ * @param {number[]} arr
  * @returns {{head: ListNode, tail: ListNode}}
  */
 function buildListNode(arr) {

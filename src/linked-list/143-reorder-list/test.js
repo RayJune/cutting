@@ -1,33 +1,7 @@
 const reorderList = require('./index');
 // const reorderList = require('./template');
 // const reorderList = require('./template-zh');
-
-class ListNode {
-    /**
-     * @param {string} val
-     * @param {ListNode} next
-     */
-    constructor(val = undefined, next = null) {
-        this.val = val;
-        this.next = next;
-    }
-}
-
-/**
- * @param {Array} arr
- * @returns {ListNode}
- */
-function buildListNode(arr) {
-    let preHead = new ListNode(-1);
-    let node = preHead;
-
-    arr.forEach(num => {
-        node.next = new ListNode(num);
-        node = node.next;
-    });
-
-    return preHead.next;
-}
+const buildListNode = require('../../utils/buildListNode');
 
 test('define reorderList function', () => {
     expect(typeof reorderList).toBe('function');

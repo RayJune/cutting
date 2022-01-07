@@ -1,36 +1,15 @@
 const insertionSortList = require('./index');
 // // const insertionSortList = require('./template');
 // // const insertionSortList = require('./template-zh');
-
-class ListNode {
-    constructor(val, next = null) {
-        this.val = val;
-        this.next = next;
-    }
-}
-
-/**
- * @param {Array} arr
- * @returns {ListNode}
- */
-function buildListNode(arr) {
-    let preHead = new ListNode(-1);
-    let node = preHead;
-
-    arr.forEach(num => {
-        node.next = new ListNode(num);
-        node = node.next;
-    });
-
-    return preHead.next;
-}
+const buildListNode = require('../../utils/buildListNode');
 
 test('define insertionSortList function', () => {
     expect(typeof insertionSortList).toBe('function');
 });
 
 test('head = []', () => {
-    expect(insertionSortList(null)).toBeNull();
+    expect(insertionSortList(buildListNode([])))
+        .toEqual(buildListNode([]));
 });
 
 test('head = [1]', () => {

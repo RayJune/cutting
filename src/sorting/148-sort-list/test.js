@@ -2,36 +2,14 @@
 const sortList = require('./optimize');
 // // const sortList = require('./template');
 // // const sortList = require('./template-zh');
-
-class ListNode {
-    constructor(val, next = null) {
-        this.val = val;
-        this.next = next;
-    }
-}
-
-/**
- * @param {Array} arr
- * @returns {ListNode}
- */
-function buildListNode(arr) {
-    let preHead = new ListNode(-1);
-    let node = preHead;
-
-    arr.forEach(num => {
-        node.next = new ListNode(num);
-        node = node.next;
-    });
-
-    return preHead.next;
-}
+const buildListNode = require('../../utils/buildListNode');
 
 test('define sortList function', () => {
     expect(typeof sortList).toBe('function');
 });
 
 test('head = []', () => {
-    expect(sortList(null)).toBeNull();
+    expect(sortList(buildListNode([]))).toEqual(buildListNode([]));
 });
 
 test('head = [1]', () => {
