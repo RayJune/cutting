@@ -1,8 +1,7 @@
 /*
  * 2. Add Two Numbers
  *
- * You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit.
- * Add the two numbers and return the sum as a linked list.
+ * You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
  *
  * You may assume the two numbers do not contain any leading zero, except the number 0 itself.
  *
@@ -20,7 +19,6 @@
  * Output: [8, 9, 9, 9, 0, 0, 0, 1]
  *
  * Constraints:
- *
  * The number of nodes in each linked list is in the range [1, 100].
  * 0 <= Node.val <= 9
  * It is guaranteed that the list represents a number that does not have leading zeros.
@@ -57,7 +55,7 @@ class ListNode {
  */
 function addTwoNumbers(l1, l2) {
     const preHead = new ListNode(-1);
-    let prevNode = preHead;
+    let node = preHead;
     let carry = 0;
 
     while (l1 || l2) {
@@ -65,8 +63,8 @@ function addTwoNumbers(l1, l2) {
         const value2 = l2 ? l2.val : 0;
 
         carry += value1 + value2;
-        prevNode.next = new ListNode(carry % 10);
-        prevNode = prevNode.next;
+        node.next = new ListNode(carry % 10);
+        node = node.next;
         carry = Math.floor(carry / 10);
         if (l1) {
             l1 = l1.next;
@@ -76,7 +74,7 @@ function addTwoNumbers(l1, l2) {
         }
     }
     if (carry) {
-        prevNode.next = new ListNode(carry);
+        node.next = new ListNode(carry);
     }
 
     return preHead.next;

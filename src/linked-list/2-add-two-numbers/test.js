@@ -8,12 +8,17 @@ test('define addTwoNumbers function', () => {
 });
 
 test('l1 = [2, 4, 3], l2 = [5, 6, 4]', () => {
-    expect(addTwoNumbers(buildListNode([2, 4, 3]), buildListNode([5, 6, 4])))
-        .toEqual(buildListNode([7, 0, 8]));
+    const l1 = buildListNode([2, 4, 3]);
+    const l2 = buildListNode([5, 6, 4]);
+
+    expect(addTwoNumbers(l1, l2)).toEqual(buildListNode([7, 0, 8]));
 });
 
 test('l1 = [0], l2 = [0]', () => {
-    expect(addTwoNumbers(buildListNode([0]), buildListNode([0])))
+    const l1 = buildListNode([0]);
+    const l2 = buildListNode([0]);
+
+    expect(addTwoNumbers(l1, l2))
         .toEqual(buildListNode([0]));
 });
 
