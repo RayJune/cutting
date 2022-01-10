@@ -19,7 +19,6 @@
  * Output: [0]
  *
  * Constraints:
- *
  * The number of nodes in each linked list is in the range [1, 100].
  * 0 <= Node.val <= 9
  * It is guaranteed that the list represents a number that does not have leading zeros.
@@ -55,44 +54,10 @@ class ListNode {
  * @returns {ListNode}
  */
 function addTwoNumbers(l1, l2) {
-    let i = 0;
-    let j = 0;
-    let node1 = l1;
-    let node2 = l2;
-
-    while (node1 || node2) {
-        if (node1) {
-            i += 1;
-            node1 = node1.next;
-        }
-        if (node2) {
-            j += 1;
-            node2 = node2.next;
-        }
-    }
-
+    let node = reverseAddWithoutCarry(l1, l2);
     let head = null;
-
-    while (i > 0 && j > 0) {
-        let value = 0;
-
-        if (i >= j) {
-            value += l1.val;
-            l1 = l1.next;
-            i -= 1;
-        }
-        if (i < j) {
-            value += l2.val;
-            l2 = l2.next;
-            j -= 1;
-        }
-        head = new ListNode(value, head);
-    }
-
     let carry = 0;
-    let node = head;
 
-    head = null;
     while (node) {
         carry += node.val;
         head = new ListNode(carry % 10, head);
@@ -104,6 +69,62 @@ function addTwoNumbers(l1, l2) {
     }
 
     return head;
+}
+
+/**
+ * @param {ListNode} l1
+ * @param {ListNode} l2
+ * @returns {ListNode}
+ */
+function reverseAddWithoutCarry(l1, l2) {
+    let {m, n} = getListsNum(l1, l2);
+    let head = null;
+
+    while (m && n) {
+        let value = 0;
+
+        if (m >= n) {
+            value += l1.val;
+            l1 = l1.next;
+            m -= 1;
+        }
+        if (m < n) {
+            value += l2.val;
+            l2 = l2.next;
+            n -= 1;
+        }
+        head = new ListNode(value, head);
+    }
+
+    return head;
+}
+
+/**
+ * @param {ListNode} l1
+ * @param {ListNode} l2
+ * @returns {{m: number, n: number}}
+ */
+function getListsNum(l1, l2) {
+    let node1 = l1;
+    let node2 = l2;
+    let m = 0;
+    let n = 0;
+
+    while (node1 || node2) {
+        if (node1) {
+            m += 1;
+            node1 = node1.next;
+        }
+        if (node2) {
+            n += 1;
+            node2 = node2.next;
+        }
+    }
+
+    return {
+        m,
+        n
+    };
 }
 
 module.exports = addTwoNumbers;
