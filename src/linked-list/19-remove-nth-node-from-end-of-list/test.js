@@ -8,16 +8,22 @@ test('define removeNthFromEnd function', () => {
 });
 
 test('head = [1], n = 1', () => {
-    expect(removeNthFromEnd(buildListNode([1]), 1)).
+    const head = buildListNode([1]);
+
+    expect(removeNthFromEnd(head, 1)).
         toEqual(buildListNode([]));
 });
 
 test('head = [1, 2], n = 1', () => {
-    expect(removeNthFromEnd(buildListNode([1, 2]), 1))
+    const head = buildListNode([1, 2]);
+
+    expect(removeNthFromEnd(head, 1))
         .toEqual(buildListNode([1]));
 });
 
 test('head = [1, 2, 3, 4, 5], n = 2', () => {
-    expect(removeNthFromEnd(buildListNode([1, 2, 3, 4, 5]), 2))
+    const head = buildListNode([1, 2, 3, 4, 5]);
+
+    expect(removeNthFromEnd(head, 2))
         .toEqual(buildListNode([1, 2, 3, 5]));
 });

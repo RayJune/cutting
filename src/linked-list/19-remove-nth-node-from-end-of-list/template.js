@@ -16,14 +16,12 @@
  * Output: [1]
  *
  * Constraints:
- *
  * The number of nodes in the list is sz.
  * 1 <= sz <= 30
  * 0 <= Node.val <= 100
  * 1 <= n <= sz
  *
  * https://leetcode.com/problems/remove-nth-node-from-end-of-list/
- *
 */
 
 /**

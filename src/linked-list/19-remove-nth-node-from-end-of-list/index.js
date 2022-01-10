@@ -16,14 +16,12 @@
  * Output: [1]
  *
  * Constraints:
- *
  * The number of node in the list is sz.
  * 1 <= sz <= 30
  * 0 <= Node.val <= 100
  * 1 <= n <= sz
  *
  * https://leetcode.com/problems/remove-nth-node-from-end-of-list/
- *
 */
 
 /**
@@ -42,9 +40,9 @@ class ListNode {
 }
 
 /**
- * 快慢指针
+ * Two Pointers
  *
- * Time Complexity: O(n) = 两个 while 循环加一起的执行次数 O(n)
+ * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
  *
@@ -54,18 +52,18 @@ class ListNode {
  */
 function removeNthFromEnd(head, n) {
     const preHead = new ListNode(-1, head);
-    let fast = head;
-    let slow = preHead;
+    let first = head;
+    let second = preHead;
 
     while (n) {
-        fast = fast.next;
+        first = first.next;
         n -= 1;
     }
-    while (fast) {
-        fast = fast.next;
-        slow = slow.next;
+    while (first) {
+        first = first.next;
+        second = second.next;
     }
-    slow.next = slow.next.next;
+    second.next = second.next.next;
 
     return preHead.next;
 }
