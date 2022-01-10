@@ -9,8 +9,7 @@
  * Input: head = 1->2->3->4->5, k = 2
  * Output: 4->5
  *
- * https://leetcode.com/problems/remove-nth-node-from-end-of-list/
- *
+ * https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/
 */
 
 module.exports = getKthFromEnd;

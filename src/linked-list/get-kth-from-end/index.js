@@ -14,9 +14,9 @@
 */
 
 /**
- * 快慢指针
+ * Two Pointers
  *
- * Time Complexity: O(n) = 两个 while 循环加一起的执行次数 O(n)
+ * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
  *
@@ -25,19 +25,19 @@
  * @return {ListNode}
  */
 function getKthFromEnd(head, k) {
-    let fast = head;
-    let slow = head;
+    let first = head;
+    let second = head;
 
-    while (fast && k > 0) {
-        fast = fast.next;
+    while (first && k) {
+        first = first.next;
         k -= 1;
     }
-    while (fast) {
-        fast = fast.next;
-        slow = slow.next;
+    while (first) {
+        first = first.next;
+        second = second.next;
     }
 
-    return slow;
+    return second;
 }
 
 module.exports = getKthFromEnd;

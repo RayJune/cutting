@@ -1,5 +1,5 @@
 const getKthFromEnd = require('./index');
-// const getKthFromEnd = require('./template');
+// const getKthFromEnd = require('./template-zh');
 const buildListNode = require('../../utils/buildListNode');
 
 test('define getKthFromEnd function', () => {
@@ -13,6 +13,8 @@ test('head = [1], n = 1', () => {
 });
 
 test('head = [1, 2, 3, 4, 5], n = 2', () => {
-    expect(getKthFromEnd(buildListNode([1, 2, 3, 4, 5]), 2))
+    const head = buildListNode([1, 2, 3, 4, 5]);
+
+    expect(getKthFromEnd(head, 2))
         .toEqual(buildListNode([4, 5]));
 });
