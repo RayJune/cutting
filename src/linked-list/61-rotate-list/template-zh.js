@@ -12,10 +12,9 @@
  * Output: [2, 0, 1]
  *
  * Constraints:
- *
  * 链表中节点的数目在范围 [0, 500] 内
  * -100 <= Node.val <= 100
- * 0 <= k <= 2 * 10^9
+ * 0 <= k <= 2 * 10 ** 9
  *
  * https://leetcode-cn.com/problems/rotate-list/
 */

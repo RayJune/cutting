@@ -12,10 +12,9 @@
  * Output: [2, 0, 1]
  *
  * Constraints:
- *
  * The number of nodes in the list is in the range [0, 500].
  * -100 <= Node.val <= 100
- * 0 <= k <= 2 * 10^9
+ * 0 <= k <= 2 * 10 ** 9
  *
  * https://leetcode.com/problems/rotate-list/
 */
@@ -31,7 +30,7 @@
 /**
  * 闭合为环
  *
- * Time Complexity: O(n) = while 循环计算链表节点数 O(n) + while 循环移动头部位置 O(n)
+ * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
  *
@@ -40,7 +39,7 @@
  * @returns {ListNode}
  */
 function rotateRight(head, k) {
-    if (k === 0 || !head || !head.next) {
+    if (k === 0 || head === null || head.next === null) {
         return head;
     }
 
