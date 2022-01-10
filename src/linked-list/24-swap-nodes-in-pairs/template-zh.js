@@ -18,12 +18,10 @@
  * Output: [1]
  *
  * Constraints:
- *
  * 链表中节点的数目在范围  [0, 100] 内
  * 0 <= Node.val <= 100
  *
  * https://leetcode-cn.com/problems/swap-nodes-in-pairs/
- *
 */
 
 /**

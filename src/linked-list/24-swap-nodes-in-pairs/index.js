@@ -17,12 +17,10 @@
  * Output: [1]
  *
  * Constraints:
- *
  * The number of nodes in the list is in the range [0, 100].
  * 0 <= Node.val <= 100
  *
  * https://leetcode.com/problems/swap-nodes-in-pairs/
- *
 */
 
 /**
@@ -43,7 +41,7 @@ class ListNode {
 /**
  * 注意交换节点的时候不要生成环，可以画图判断一下操作步骤是否正确
  *
- * Time Complexity: O(n)
+ * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
  *
@@ -52,16 +50,17 @@ class ListNode {
  */
 function swapPairs(head) {
     const preHead = new ListNode(-1, head);
-    let preNode = preHead;
+    let prevNode = preHead;
+    let node = head;
 
-    while (head && head.next) {
-        const nextNode = head.next;
+    while (node && node.next) {
+        const nextNode = node.next;
 
-        preNode.next = head.next;
-        head.next = head.next.next;
-        nextNode.next = head;
-        preNode = head;
-        head = head.next;
+        prevNode.next = nextNode;
+        node.next = node.next.next;
+        nextNode.next = node;
+        prevNode = node;
+        node = node.next;
     }
 
     return preHead.next;
