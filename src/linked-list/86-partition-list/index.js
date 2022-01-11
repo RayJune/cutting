@@ -1,8 +1,7 @@
 /*
  * 86. Partition List
  *
- * Given the head of a linked list and a value x, partition it such that all nodes less than x
- * come before nodes greater than or equal to x.
+ * Given the head of a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.
  *
  * You should preserve the original relative order of the nodes in each of the two partitions.
  *
@@ -15,7 +14,6 @@
  * Output: [1, 2]
  *
  * Constraints:
- *
  * The number of nodes in the list is in the range [0, 200].
  * -100 <= Node.val <= 100
  * -200 <= x <= 200
@@ -39,7 +37,7 @@ class ListNode {
 }
 
 /**
- * 双指针
+ * Two Pointers
  *
  * Time Complexity: O(n) = while 循环次数
  * Space complexity: O(1)
@@ -50,25 +48,25 @@ class ListNode {
  * @returns {ListNode}
  */
 function partition(head, x) {
-    let small = new ListNode(-1);
-    let large = new ListNode(-1);
-    const smallHead = small;
-    const largeHead = large;
+    const preHead1 = new ListNode(-1);
+    const preHead2 = new ListNode(-1);
+    let prevNode1 = preHead1;
+    let prevNode2 = preHead2;
 
     while (head) {
         if (head.val < x) {
-            small.next = head;
-            small = small.next;
+            prevNode1.next = head;
+            prevNode1 = prevNode1.next;
         } else {
-            large.next = head;
-            large = large.next;
+            prevNode2.next = head;
+            prevNode2 = prevNode2.next;
         }
         head = head.next;
     }
-    large.next = null;
-    small.next = largeHead.next;
+    prevNode1.next = preHead2.next;
+    prevNode2.next = null;
 
-    return smallHead.next;
+    return preHead1.next;
 }
 
 module.exports = partition;
