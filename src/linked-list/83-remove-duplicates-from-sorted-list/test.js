@@ -9,18 +9,21 @@ test('define deleteDuplicates function', () => {
 
 test('head = [1, 1, 2]', () => {
     const head = buildListNode([1, 1, 2]);
-    const newHead = buildListNode([1, 2]);
-    const result = deleteDuplicates(head);
 
-    expect(result).toBe(head);
-    expect(result).toEqual(newHead);
+    expect(deleteDuplicates(head))
+        .toEqual(buildListNode([1, 2]));
 });
 
 test('head = [1, 1, 2, 3, 3]', () => {
     const head = buildListNode([1, 1, 2, 3, 3]);
-    const newHead = buildListNode([1, 2, 3]);
-    const result = deleteDuplicates(head);
 
-    expect(result).toBe(head);
-    expect(result).toEqual(newHead);
+    expect(deleteDuplicates(head))
+        .toEqual(buildListNode([1, 2, 3]));
+});
+
+test('head = [1, 1, 1]', () => {
+    const head = buildListNode([1, 1, 1]);
+
+    expect(deleteDuplicates(head))
+        .toEqual(buildListNode([1]));
 });

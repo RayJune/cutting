@@ -2,6 +2,7 @@
  * 83. Remove Duplicates from Sorted List
  *
  * Given the head of a sorted linked list, delete all duplicates such that each element appears only once.
+ *
  * Return the linked list sorted as well.
  *
  * Example 1:
@@ -13,13 +14,11 @@
  * Output: [1, 2, 3]
  *
  * Constraints:
- *
  * The number of nodes in the list is in the range [0, 300].
  * -100 <= Node.val <= 100
  * The list is guaranteed to be sorted in ascending order.
  *
  * https://leetcode.com/problems/remove-duplicates-from-sorted-list/
- *
 */
 
 /**
@@ -31,12 +30,12 @@
  */
 
 /**
- * 遍历
+ * 注意 [1, 1, 1] 的这种重复数大于 2 的情况
  *
- * Time Complexity: O(n) = while 循环遍历次数
+ * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
- * 其中 n 代表链表中的节点数
+ * 其中 n 是链表中的节点数
  *
  * @param {ListNode} head
  * @returns {ListNode}
