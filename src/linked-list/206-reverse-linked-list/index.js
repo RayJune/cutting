@@ -16,7 +16,6 @@
  * Output: []
  *
  * Constraints:
- *
  * The number of nodes in the list is the range [0, 5000]
  * -5000 <= Node.val <= 5000
  *
@@ -32,6 +31,8 @@
  */
 
 /**
+ * 不断把当前节点指向前一个节点
+ *
  * Time Complexity: O(n) = while 循环次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
@@ -42,13 +43,14 @@
  */
 function reverseList(head) {
     let prevNode = null;
+    let node = head;
 
-    while (head) {
-        const nextNode = head.next;
+    while (node) {
+        const nextNode = node.next;
 
-        head.next = prevNode;
-        prevNode = head;
-        head = nextNode
+        node.next = prevNode;
+        prevNode = node;
+        node = nextNode;
     }
 
     return prevNode;
