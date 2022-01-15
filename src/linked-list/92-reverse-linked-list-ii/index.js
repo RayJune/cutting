@@ -1,8 +1,7 @@
 /*
  * 92. Reverse Linked List II
  *
- * Given the head of a singly linked list and two integers left and right where left <= right,
- * reverse the nodes of the list from position left to position right, and return the reversed list.
+ * Given the head of a singly linked list and two integers left and right where left <= right, reverse the nodes of the list from position left to position right, and return the reversed list.
  *
  * Example 1:
  * Input: head = [1, 2, 3, 4, 5], left = 2, right = 4
@@ -13,7 +12,6 @@
  * Output: [5]
  *
  * Constraints:
- *
  * The number of nodes in the list is n.
  * 1 <= n <= 500
  * -500 <= Node.val <= 500
@@ -38,9 +36,9 @@ class ListNode {
 }
 
 /**
- * 把中间的链表反转，再更改反转链表首尾的指向
+ * 在待反转区间里，每遍历到一个节点，让这个节点来到反转部分的起始位置
  *
- * Time Complexity: O(n) = 遍历次数 O(n) + reverseLinkedList 遍历次数 O(n)
+ * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
  * 其中 n 是 head 作为头节点的链表的节点数
@@ -58,37 +56,17 @@ function reverseBetween(head, left, right) {
         prevNode = prevNode.next;
     }
 
-    const leftNode = prevNode.next;
-    let rightNode = prevNode;
+    const node = prevNode.next;
 
-    for (let i = 0; i < right - left + 1; i++) {
-        rightNode = rightNode.next;
+    for (let i = 0; i < right - left; i++) {
+        const nextNode = node.next;
+
+        node.next = nextNode.next;
+        nextNode.next = prevNode.next;
+        prevNode.next = nextNode;
     }
-
-    const afterNode = rightNode.next;
-
-    prevNode.next = null;
-    rightNode.next = null;
-    reverseLinkedList(leftNode);
-    leftNode.next = afterNode;
-    prevNode.next = rightNode;
 
     return preHead.next;
-}
-
-/**
- * @param {ListNode} head
- */
-function reverseLinkedList(head) {
-    let prevNode = null;
-
-    while (head) {
-        const nextNode = head.next;
-
-        head.next = prevNode;
-        prevNode = head;
-        head = nextNode;
-    }
 }
 
 module.exports = reverseBetween;

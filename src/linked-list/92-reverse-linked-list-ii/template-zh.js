@@ -1,7 +1,8 @@
 /*
- * 92. 反转链表 ii
+ * 92. 反转链表 II
  *
  * 给你单链表的头指针 head 和两个整数 left 和 right ，其中 left <= right。
+ *
  * 请你反转从位置 left 到位置 right 的链表节点，返回反转后的链表。
  *
  * Example 1:
@@ -13,7 +14,6 @@
  * Output: [5]
  *
  * Constraints:
- *
  * 链表中节点数目为 n
  * 1 <= n <= 500
  * -500 <= Node.val <= 500
