@@ -33,13 +33,11 @@
  * Explanation: The given linked list is empty (null pointer), so return null.
  *
  * Constraints:
- *
  * 0 <= n <= 1000
  * -10000 <= Node.val <= 10000
  * Node.random is null or is pointing to some node in the linked list.
  *
  * https://leetcode.com/problems/copy-list-with-random-pointer/
- *
 */
 
 /**
@@ -51,31 +49,56 @@
  * };
  */
 
+class Node {
+    constructor(val, next, random = null) {
+        this.val = val;
+        this.next = next;
+        this.random = random;
+    }
+}
+
 /**
- * Backtracking + HashMap
- * 用哈希表记录每一个 node 的创建情况，防止重复构建
+ * 1. 构建链表 a -> a' -> b -> b' -> c -> c'，并给 a', b', c' 的 next 赋值
+ * 2. 给 a', b', c' 的 random 赋值
+ * 3. 拆分出 a' -> b' -> c'
  *
- * Time Complexity: O(n) = copyRandomList 函数执行次数
- * Space complexity: O(n) = map 占用空间 O(3n) + 函数执行栈深度 O(n) + 输出值 O(3n)
- * Auxiliary complexity: O(n) = map 占用空间 O(3n) + 函数执行栈深度 O(n)
+ * Time Complexity: O(n) = 遍历次数
+ * Space complexity: O(n) = 新链表长度
+ * Auxiliary complexity: O(1)
+ * 其中 n 是 head 作为头结点的链表长度
  *
  * @param {Node} head
- * @param {Map} map
  * @returns {Node}
  */
-function copyRandomList(head, map = new Map()) {
+function copyRandomList(head) {
     if (head === null) {
-        return null;
-    }
-    if (!map.has(head)) {
-        map.set(head, {val: head.val});
-        Object.assign(map.get(head), {
-            next: copyRandomList(head.next, map),
-            random: copyRandomList(head.random, map)
-        });
+        return head;
     }
 
-    return map.get(head);
+    let node = head;
+
+    while (node) {
+        node.next = new Node(node.val, node.next);
+        node = node.next.next;
+    }
+
+    const newHead = head.next;
+
+    node = head;
+    while (node) {
+        node.next.random = node.random ? node.random.next : null;
+        node = node.next.next;
+    }
+    node = head;
+    while (node) {
+        const newNode = node.next;
+
+        node.next = newNode.next;
+        newNode.next = newNode.next ? newNode.next.next : null;
+        node = node.next;
+    }
+
+    return newHead;
 }
 
 module.exports = copyRandomList;

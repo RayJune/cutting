@@ -1,14 +1,8 @@
-// const copyRandomList = require('./index');
-const copyRandomList = require('./optimize');
+const copyRandomList = require('./index');
 // const copyRandomList = require('./template');
 // const copyRandomList = require('./template-zh');
 
-class ListNode {
-    /**
-     * @param {number} val
-     * @param {ListNode} next
-     * @param {ListNode} random
-     */
+class Node {
     constructor(val = undefined, next = null, random = null) {
         this.val = val;
         this.next = next;
@@ -17,25 +11,25 @@ class ListNode {
 }
 
 /**
- * @param {Array} arr
- * @returns {ListNode}
+ * @param {number[]} arr
+ * @returns {Node}
  */
 function buildListNode(arr) {
-    let preHead = new ListNode(-1);
+    let preHead = new Node(-1);
     let node = preHead;
     const nodeArr = [];
 
     arr.forEach(numItem => {
-        node.next = new ListNode(numItem[0]);
+        node.next = new Node(numItem[0]);
         node = node.next;
         nodeArr.push(node);
     });
-
-    for (let i = 0, curNode = preHead.next; i < arr.length; i++) {
+    node = preHead.next;
+    for (let i = 0; i < arr.length; i++) {
         const randomNum = arr[i][1];
 
-        curNode.random = randomNum !== null ? nodeArr[randomNum] : null;
-        curNode = curNode.next
+        node.random = randomNum ? nodeArr[randomNum] : null;
+        node = node.next
     }
 
     return preHead.next;
@@ -44,8 +38,8 @@ function buildListNode(arr) {
 /**
  * 判断两个链表中 node，node.next、node.random 的地址是否均不相等
  *
- * @param {ListNode} l1
- * @param {ListNode} l2
+ * @param {Node} l1
+ * @param {Node} l2
  * @returns {Boolean}
  */
 function isDifferentListNode(l1, l2) {
@@ -53,10 +47,10 @@ function isDifferentListNode(l1, l2) {
         if (l1 === l2) {
             return false;
         }
-        if (l1.next !== null && l2.next !== null && l1.next === l2.next) {
+        if (l1.next && l2.next && l1.next === l2.next) {
             return false;
         }
-        if (l1.random !== null && l2.random !== null && l1.random === l2.random) {
+        if (l1.random && l2.random && l1.random === l2.random) {
             return false;
         }
         l1 = l1.next;
@@ -70,36 +64,39 @@ test('define copyRandomList function', () => {
     expect(typeof copyRandomList).toBe('function');
 });
 
-test('head = [[1, 1], [2, 1]], test isDifferentListNode function', () => {
-    const list = buildListNode([[1, 1], [2, 1]]);
+test('test isDifferentListNode function', () => {
+    const head = buildListNode([[1, 1], [2, 1]]);
 
-    expect(isDifferentListNode(list, list)).toBe(false);
+    expect(isDifferentListNode(head, head)).toBe(false);
 });
 
 test('head = [[1, 1], [2, 1]]', () => {
-    const list = buildListNode([[1, 1], [2, 1]]);
-    const newList = copyRandomList(list);
+    const head = buildListNode([[1, 1], [2, 1]]);
+    const copy = copyRandomList(head);
 
-    expect(newList).toEqual(list);
-    expect(isDifferentListNode(list, newList)).toBe(true);
+    expect(copy).toEqual(head);
+    expect(isDifferentListNode(head, copy)).toBe(true);
 });
 
 test('head = [[3, null], [3, 0], [3, null]]', () => {
-    const list = buildListNode([[3, null], [3, 0], [3, null]]);
-    const newList = copyRandomList(list);
+    const head = buildListNode([[3, null], [3, 0], [3, null]]);
+    const copy = copyRandomList(head);
 
-    expect(newList).toEqual(list);
-    expect(isDifferentListNode(list, newList)).toBe(true);
+    expect(copy).toEqual(head);
+    expect(isDifferentListNode(head, copy)).toBe(true);
 });
 
 test('head = [[7, null], [13, 0], [11, 4], [10, 2], [1, 0]]', () => {
-    const list = buildListNode([[7, null], [13, 0], [11, 4], [10, 2], [1, 0]]);
-    const newList = copyRandomList(list);
+    const head = buildListNode([[7, null], [13, 0], [11, 4], [10, 2], [1, 0]]);
+    const copy = copyRandomList(head);
 
-    expect(newList).toEqual(list);
-    expect(isDifferentListNode(list, newList)).toBe(true);
+    expect(copy).toEqual(head);
+    expect(isDifferentListNode(head, copy)).toBe(true);
 });
 
 test('head = []', () => {
-    expect(copyRandomList(null)).toBeNull();;
+    const head = buildListNode([]);
+    const copy = copyRandomList(head);
+
+    expect(copy).toEqual(head);
 });

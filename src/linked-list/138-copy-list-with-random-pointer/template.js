@@ -33,13 +33,11 @@
  * Explanation: The given linked list is empty (null pointer), so return null.
  *
  * Constraints:
- *
  * 0 <= n <= 1000
  * -10000 <= Node.val <= 10000
  * Node.random is null or is pointing to some node in the linked list.
  *
  * https://leetcode.com/problems/copy-list-with-random-pointer/
- *
 */
 
 /**
