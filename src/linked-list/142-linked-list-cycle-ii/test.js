@@ -13,7 +13,7 @@ class ListNode {
 /**
  * @param {number[]} arr
  * @param {number} position
- * @returns {{head: ListNode, arr: Array}}
+ * @returns {{head: ListNode, arr: ListNode[]}}
  */
 function buildListNode(arr, position) {
     let preHead = new ListNode(-1);
@@ -40,7 +40,9 @@ test('define detectCycle function', () => {
 });
 
 test('head = null, position = -1', () => {
-    expect(detectCycle(null)).toBeNull();
+    const {head} = buildListNode([], -1);
+
+    expect(detectCycle(head)).toBeNull();
 });
 
 test('head = [1], position = -1', () => {

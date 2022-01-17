@@ -21,9 +21,8 @@
  * Output: false
  *
  * Constraints:
- *
- * The number of the nodes in the list is in the range [0, 10^4].
- * -10^5 <= Node.val <= 10^5
+ * The number of the nodes in the list is in the range [0, 10 ** 4].
+ * (-10) ** 5 <= Node.val <= 10 ** 5
  * pos is -1 or a valid index in the linked-list.
  *
  * https://leetcode.com/problems/linked-list-cycle-ii/
@@ -38,12 +37,12 @@
  */
 
 /**
- * Floyd's Cycle Finding Algorithm
+ * Two Pointers
  *
- * Time Complexity: O(n) = 外层 while 循环次数 O(n) + 内层 while 循环次数 O(n)
+ * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
- * 其中 n 代表链表中的节点数
+ * 其中 n 是 head 作为头结点的链表长度
  *
  * @param {ListNode} head
  * @returns {ListNode}
@@ -53,22 +52,20 @@ function detectCycle(head) {
         return null;
     }
 
-    let slow = head;
     let fast = head;
+    let slow = head;
 
     while (fast && fast.next) {
-        slow = slow.next;
         fast = fast.next.next;
+        slow = slow.next;
 
-        if (slow === fast) {
-            let target = head;
-
-            while (slow !== target) {
+        if (fast === slow) {
+            while (slow !== head) {
                 slow = slow.next;
-                target = target.next;
+                head = head.next;
             }
 
-            return target;
+            return head;
         }
     }
 
