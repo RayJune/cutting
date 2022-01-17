@@ -38,17 +38,25 @@ test('define hasCycle function', () => {
 
 
 test('head = null, position = -1', () => {
-    expect(hasCycle(null)).toBe(false);
+    const head = buildListNode([], -1);
+
+    expect(hasCycle(head)).toBe(false);
 });
 
 test('head = [1], position = -1', () => {
-    expect(hasCycle(buildListNode([1], -1))).toBe(false);
+    const head = buildListNode([1], -1);
+
+    expect(hasCycle(head)).toBe(false);
 });
 
 test('head = [1, 2], position = 0', () => {
-    expect(hasCycle(buildListNode([1, 2], 0))).toBe(true);
+    const head = buildListNode([1, 2], 0);
+
+    expect(hasCycle(head)).toBe(true);
 });
 
 test('head = [3, 2, 0, -4], position = 1', () => {
-    expect(hasCycle(buildListNode([3, 2, 0, -4], 1))).toBe(true);
+    const head = buildListNode([3, 2, 0, -4], 1);
+
+    expect(hasCycle(head)).toBe(true);
 });

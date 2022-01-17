@@ -21,13 +21,11 @@
  * Output: false
  *
  * Constraints:
- *
- * The number of the nodes in the list is in the range [0, 104].
- * -105 <= Node.val <= 105
+ * The number of the nodes in the list is in the range [0, 10 ** 4].
+ * (-10) ** 5 <= Node.val <= 10 ** 5
  * pos is -1 or a valid index in the linked-list.
  *
  * https://leetcode.com/problems/linked-list-cycle/
- *
 */
 
 /**
@@ -39,24 +37,24 @@
  */
 
 /**
- * 用 map 来做
+ * Hash Set
  *
- * Time Complexity: O(n) = while 循环次数
- * Space complexity: O(n) = map 所占空间
- * Auxiliary complexity: O(n) = map 所占空间
- * 其中 n 代表链表中的节点数
+ * Time Complexity: O(n) = 遍历次数
+ * Space complexity: O(n) = set 长度
+ * Auxiliary complexity: O(n) = set 长度
+ * 其中 n 是 head 作为头结点的链表长度
  *
  * @param {ListNode} head
- * @returns {Boolean} has cycle or not
+ * @returns {Boolean}
  */
 function hasCycle(head) {
-    const map = new Map();
+    const set = new Set();
 
     while (head) {
-        if (map.get(head)) {
+        if (set.has(head)) {
             return true;
         }
-        map.set(head, true);
+        set.add(head);
         head = head.next;
     }
 

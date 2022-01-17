@@ -21,13 +21,11 @@
  * Output: false
  *
  * Constraints:
- *
- * The number of the nodes in the list is in the range [0, 104].
- * -105 <= Node.val <= 105
+ * The number of the nodes in the list is in the range [0, 10 ** 4].
+ * (-10) ** 5 <= Node.val <= 10 ** 5
  * pos is -1 or a valid index in the linked-list.
  *
  * https://leetcode.com/problems/linked-list-cycle/
- *
 */
 
 /**
@@ -39,15 +37,15 @@
  */
 
 /**
- * Floyd's Cycle Finding Algorithm
+ * Two Pointers
  *
- * Time Complexity: O(n) = while 循环次数
+ * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
  * 其中 n 代表链表中的节点数
  *
  * @param {ListNode} head
- * @returns {Boolean} has cycle or not
+ * @returns {Boolean}
  */
 function hasCycle(head) {
     if (head === null) {
