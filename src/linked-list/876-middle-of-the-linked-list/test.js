@@ -8,15 +8,21 @@ test('define middleNode function', () => {
 });
 
 test('head = [1, 2, 3, 4, 5]', () => {
-    expect(middleNode(buildListNode([1, 2, 3, 4, 5])))
+    const head = buildListNode([1, 2, 3, 4, 5]);
+
+    expect(middleNode(head))
         .toEqual(buildListNode([3, 4, 5]));
 });
 
 test('head = [1, 2, 3, 4, 5, 6]', () => {
-    expect(middleNode(buildListNode([1, 2, 3, 4, 5, 6])))
+    const head = buildListNode([1, 2, 3, 4, 5, 6]);
+
+    expect(middleNode(head))
         .toEqual(buildListNode([4, 5, 6]));
 });
 
 test('head = [1]', () => {
-    expect(buildListNode([1])).toEqual(buildListNode([1]));
+    const head = buildListNode([1]);
+
+    expect(middleNode(head)).toEqual(buildListNode([1]));
 });
