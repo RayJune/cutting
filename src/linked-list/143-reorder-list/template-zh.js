@@ -17,8 +17,7 @@
  * Output: [1, 5, 2, 4, 3]
  *
  * Constraints:
- *
- * 链表的长度范围为 [1, 5 * 10e4]
+ * 链表的长度范围为 [1, 5 * 10 ** 4]
  * 1 <= node.val <= 1000
  *
  * https://leetcode-cn.com/problems/reorder-list/

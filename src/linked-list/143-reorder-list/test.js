@@ -9,34 +9,28 @@ test('define reorderList function', () => {
 
 test('head = [1, 2, 3, 4]', () => {
     const head = buildListNode([1, 2, 3, 4]);
-    const newHead = buildListNode([1, 4, 2, 3]);
-    const newList = reorderList(head);
 
-    expect(newList).toBe(head);
-    expect(newList).toEqual(newHead);
+    expect(reorderList(head))
+        .toEqual(buildListNode([1, 4, 2, 3]));
 });
 
 test('head = [1, 2, 3, 4, 5]', () => {
     const head = buildListNode([1, 2, 3, 4, 5]);
-    const newHead = buildListNode([1, 5, 2, 4, 3]);
-    const newList = reorderList(head);
 
-    expect(newList).toBe(head);
-    expect(newList).toEqual(newHead);
+    expect(reorderList(head))
+        .toEqual(buildListNode([1, 5, 2, 4, 3]));
 });
 
 test('head = [1]', () => {
     const head = buildListNode([1]);
-    const newList = reorderList(head);
 
-    expect(newList).toBe(head);
-    expect(newList).toEqual(head);
+    expect(reorderList(head))
+        .toEqual(buildListNode([1]));
 });
 
 test('head = [1, 2]', () => {
     const head = buildListNode([1, 2]);
-    const newList = reorderList(head);
 
-    expect(newList).toBe(head);
-    expect(newList).toEqual(head);
+    expect(reorderList(head))
+        .toEqual(buildListNode([1, 2]));
 });

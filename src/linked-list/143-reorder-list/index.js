@@ -18,8 +18,7 @@
  * Output: [1, 5, 2, 4, 3]
  *
  * Constraints:
- *
- * The number of nodes in the list is in the range [1, 5 * 10e4]
+ * The number of nodes in the list is in the range [1, 5 * 10 ** 4]
  * 1 <= node.val <= 1000
  *
  * https://leetcode.com/problems/reorder-list/
@@ -34,10 +33,9 @@
  */
 
 /**
- * 利用快慢指针得到链表的中间位置
- * 然后把后半部分反转，再按规则把两个链表合并
+ * 用快慢指针找到 preMid, 把链表后半部分分隔后反转，再按规则把两个链表合并
  *
- * Time Complexity: O(n) = while 循环次数 O(n / 2) + reverseList O(n / 2) + 插入 O(n / 2)
+ * Time Complexity: O(n) = getPreMid / reverseList / while 循环次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
  *
@@ -45,24 +43,24 @@
  * @returns {ListNode}
  */
 function reorderList(head) {
-    if (head.next === null) {
+    if (head.next === null || head.next.next === null) {
         return head;
     }
 
-    const preMiddle = getPreMiddle(head);
-    const middleNode = preMiddle.next;
+    const preMid = getPreMid(head);
+    const mid = preMid.next;
     let nodeA = head;
-    let nodeB = reverseList(middleNode);
+    let nodeB = reverseList(mid);
 
-    preMiddle.next = null;
+    preMid.next = null;
     while (nodeA && nodeB) {
         const nextA = nodeA.next;
         const nextB = nodeB.next;
 
         nodeA.next = nodeB;
         nodeB.next = nextA;
-        nodeB = nextB;
         nodeA = nextA;
+        nodeB = nextB;
     }
 
     return head;
@@ -74,7 +72,7 @@ function reorderList(head) {
  * @param {ListNode} head
  * @returns {ListNode}
  */
-function getPreMiddle(head) {
+function getPreMid(head) {
     let slow = head;
     let fast = head.next;
 
@@ -91,17 +89,17 @@ function getPreMiddle(head) {
  * @returns {ListNode}
  */
 function reverseList(head) {
-    let preNode = null;
+    let prevNode = null;
 
     while (head) {
         const nextNode = head.next;
 
-        head.next = preNode;
-        preNode = head;
+        head.next = prevNode;
+        prevNode = head;
         head = nextNode;
     }
 
-    return preNode;
+    return prevNode;
 }
 
 module.exports = reorderList;
