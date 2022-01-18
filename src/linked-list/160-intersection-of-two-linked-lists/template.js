@@ -1,8 +1,7 @@
 /*
  * 160. Intersection of Two Linked Lists
  *
- * Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect.
- * If the two linked lists have no intersection at all, return null.
+ * Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null.
  *
  * Note that the linked lists must retain their original structure after the function returns.
  *
@@ -19,7 +18,6 @@
  * Output: No intersection
  *
  * Constraints:
- *
  * The number of nodes of listA is in the m.
  * The number of nodes of listB is in the n.
  * 0 <= m, n <= 3 * 104
@@ -30,7 +28,6 @@
  * intersectVal == listA[skipA] == listB[skipB] if listA and listB intersect.
  *
  * https://leetcode.com/problems/intersection-of-two-linked-lists/
- *
 */
 
 /**

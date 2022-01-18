@@ -1,8 +1,7 @@
 /*
  * 160. 相交链表
  *
- * 给你两个单链表的头节点 headA 和 headB，请你找出并返回两个单链表相交的起始节点。
- * 如果两个链表没有交点，返回 null 。
+ * 给你两个单链表的头节点 headA 和 headB，请你找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 null 。
  *
  * Example 1:
  * Input: intersectVal = 8, listA = [4, 1, 8, 4, 5], listB = [5, 6, 1, 8, 4, 5], skipA = 2, skipB = 3
@@ -17,7 +16,6 @@
  * Output: No intersection
  *
  * Constraints:
- *
  * listA 中节点数目为 m
  * listB 中节点数目为 n
  * 0 <= m, n <= 3 * 104
@@ -28,7 +26,6 @@
  * 如果 listA 和 listB 有交点，intersectVal == listA[skipA + 1] == listB[skipB + 1]
  *
  * https://leetcode-cn.com/problems/intersection-of-two-linked-lists/
- *
 */
 
 /**

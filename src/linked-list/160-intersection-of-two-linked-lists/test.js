@@ -33,8 +33,8 @@ test('define getIntersectionNode function', () => {
     expect(typeof getIntersectionNode).toBe('function');
 });
 
-test('listA = null, listB = [1], skipA = 3, skipB = 2', () => {
-    const headA = null;
+test('listA = [], listB = [1], skipA = 3, skipB = 2', () => {
+    const {head: headA} = buildListNode([]);
     const {head: headB} = buildListNode([1]);
 
     expect(getIntersectionNode(headA, headB)).toBeNull();
@@ -55,10 +55,8 @@ test('listA = [1, 9, 1, 2, 4], listB = [3, 2, 4], skipA = 3, skipB = 1', () => {
     tailA.next = intersectionNode;
     tailB.next = intersectionNode;
 
-    const resultNode = getIntersectionNode(headA, headB);
-
-    expect(resultNode).toBe(intersectionNode);
-    expect(resultNode).toEqual(intersectionNode);
+    expect(getIntersectionNode(headA, headB))
+        .toEqual(intersectionNode);
 });
 
 test('listA = [4, 1, 8, 4, 5], listB = [5, 6, 1, 8, 4, 5], skipA = 2, skipB = 3', () => {
@@ -69,8 +67,6 @@ test('listA = [4, 1, 8, 4, 5], listB = [5, 6, 1, 8, 4, 5], skipA = 2, skipB = 3'
     tailA.next = intersectionNode;
     tailB.next = intersectionNode;
 
-    const resultNode = getIntersectionNode(headA, headB);
-
-    expect(resultNode).toBe(intersectionNode);
-    expect(resultNode).toEqual(intersectionNode);
+    expect(getIntersectionNode(headA, headB))
+        .toEqual(intersectionNode);
 });

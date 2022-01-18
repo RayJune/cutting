@@ -1,23 +1,33 @@
 /*
  * 160. Intersection of Two Linked Lists
  *
- * Given the head of a singly linked list, return true if it is a palindrome.
+ * Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null.
+ *
+ * Note that the linked lists must retain their original structure after the function returns.
  *
  * Example 1:
- * Input: head = [1, 2, 2, 1]
- * Output: true
+ * Input: intersectVal = 8, listA = [4, 1, 8, 4, 5], listB = [5, 6, 1, 8, 4, 5], skipA = 2, skipB = 3
+ * Output: Intersected at '8'
  *
  * Example 2:
- * Input: head = [1, 2]
- * Output: false
+ * intersectVal = 2, listA = [1, 9, 1, 2, 4], listB = [3, 2, 4], skipA = 3, skipB = 1
+ * Output: Intersected at '2'
+ *
+ * Example 3:
+ * Input: intersectVal = 0, listA = [2, 6, 4], listB = [1, 5], skipA = 3, skipB = 2
+ * Output: No intersection
  *
  * Constraints:
- *
- * The number of nodes in the list is in the range [1, 105].
- * 0 <= Node.val <= 9
+ * The number of nodes of listA is in the m.
+ * The number of nodes of listB is in the n.
+ * 0 <= m, n <= 3 * 104
+ * 1 <= Node.val <= 105
+ * 0 <= skipA <= m
+ * 0 <= skipB <= n
+ * intersectVal is 0 if listA and listB do not intersect.
+ * intersectVal == listA[skipA] == listB[skipB] if listA and listB intersect.
  *
  * https://leetcode.com/problems/intersection-of-two-linked-lists/
- *
 */
 
 /**
@@ -29,30 +39,28 @@
  */
 
 /**
- * 用哈希表来做
+ * Hash Set
  *
- * Time Complexity: O(m + n) = 第一次 while 循环 O(m) + 第二次 while 循环 O(n)
- * Space complexity: O(m) = map 的长度
- * Auxiliary complexity: O(m) = map 的长度
+ * Time Complexity: O(m + n) = 遍历次数
+ * Space complexity: O(m) = set 长度
+ * Auxiliary complexity: O(m) = set 长度
  *
  * @param {ListNode} headA
  * @param {ListNode} headB
  * @returns {ListNode}
  */
 function getIntersectionNode(headA, headB) {
-    const map = new Map();
-    let node = headA;
+    const set = new Set();
 
-    while (node) {
-        map.set(node, true);
-        node = node.next;
+    while (headA) {
+        set.add(headA);
+        headA = headA.next;
     }
-    node = headB;
-    while (node) {
-        if (map.get(node)) {
-            return node;
+    while (headB) {
+        if (set.has(headB)) {
+            return headB;
         }
-        node = node.next;
+        headB = headB.next;
     }
 
     return null;
