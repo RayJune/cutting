@@ -10,7 +10,7 @@ class ListNode {
 }
 
 /**
- * @param {Array} arr
+ * @param {number[]} arr
  * @param {number} i
  * @returns {{head: ListNode, node: ListNode}}
  */
