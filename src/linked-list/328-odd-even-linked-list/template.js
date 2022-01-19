@@ -18,10 +18,9 @@
  * Output: [2, 3, 6, 7, 1, 5, 4]
  *
  * Constraints:
- *
  * n == number of nodes in the linked list
- * 0 <= n <= 10^4
- * -10^6 <= Node.val <= 10^6
+ * 0 <= n <= 10 ** 4
+ * (-10) ** 6 <= Node.val <= 10 ** 6
  *
  * https://leetcode.com/problems/odd-even-linked-list/
 */

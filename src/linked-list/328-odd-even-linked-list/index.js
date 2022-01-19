@@ -18,10 +18,9 @@
  * Output: [2, 3, 6, 7, 1, 5, 4]
  *
  * Constraints:
- *
  * n == number of nodes in the linked list
- * 0 <= n <= 10^4
- * -10^6 <= Node.val <= 10^6
+ * 0 <= n <= 10 ** 4
+ * (-10) ** 6 <= Node.val <= 10 ** 6
  *
  * https://leetcode.com/problems/odd-even-linked-list/
 */
@@ -35,11 +34,12 @@
  */
 
 /**
- * 双指针
+ * Two Pointers
  *
- * Time Complexity: O(n) = while 循环次数
+ * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
+ * 其中 n 是 head 作为头节点的链表的节点数
  *
  * @param {ListNode} head
  * @returns {ListNode}
@@ -56,7 +56,7 @@ function oddEvenList(head) {
     while (even && even.next) {
         odd.next = even.next;
         odd = odd.next;
-        even.next = odd.next
+        even.next = odd.next;
         even = even.next;
     }
     odd.next = evenHead;
