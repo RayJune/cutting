@@ -12,8 +12,7 @@
  * Output: false
  *
  * Constraints:
- *
- * The number of nodes in the list is in the range [1, 10^5].
+ * The number of nodes in the list is in the range [1, 10 ** 5].
  * 0 <= Node.val <= 9
  *
  * https://leetcode.com/problems/palindrome-linked-list/
@@ -28,25 +27,35 @@
  */
 
 /**
- * 用 arr 来做
+ * Array + Two Pointers
  *
- * Time Complexity: O(n) = while 循环次数 O(n) + join 方法 O(n) + reverse 方法 O(n) + join 方法 O(n)
- * Space complexity: O(n) = arr 长度 O(n)
- * Auxiliary complexity: O(n) = arr 长度 O(n)
+ * Time Complexity: O(n) = 遍历次数
+ * Space complexity: O(n) = arr 长度
+ * Auxiliary complexity: O(n) = arr 长度
  *
  * @param {ListNode} head
  * @returns {boolean}
  */
 function isPalindrome(head) {
-    let node = head;
     const arr = [];
 
-    while (node) {
-        arr.push(node.val);
-        node = node.next;
+    while (head) {
+        arr.push(head.val);
+        head = head.next;
     }
 
-    return arr.join('') === arr.reverse().join('');
+    let left = 0;
+    let right = arr.length - 1;
+
+    while (left < right) {
+        if (arr[left] !== arr[right]) {
+            return false;
+        }
+        left += 1;
+        right -= 1;
+    }
+
+    return true;
 }
 
 module.exports = isPalindrome;

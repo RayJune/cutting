@@ -12,8 +12,7 @@
  * Output: false
  *
  * Constraints:
- *
- * The number of nodes in the list is in the range [1, 10^5].
+ * The number of nodes in the list is in the range [1, 10 ** 5].
  * 0 <= Node.val <= 9
  *
  * https://leetcode.com/problems/palindrome-linked-list/
@@ -30,7 +29,7 @@
 /**
  * 先用快慢指针找到中间节点，然后把后半段链表反转后与前半段链表相比较，最后把链表恢复为原样
  *
- * Time Complexity: O(n) = 第一个 while 循环次数 O(n / 2) + reverseList O(n / 2) + 第二个 while 循环次数 O(n / 2)
+ * Time Complexity: O(n) = 遍历次数 / reverseList
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
  *
@@ -38,23 +37,23 @@
  * @returns {boolean}
  */
 function isPalindrome(head) {
-    const middle = getMiddle(head);
-    let result = true;
+    const mid = getMid(head);
     let nodeA = head;
-    let nodeB = reverseList(middle);
+    let nodeB = reverseList(mid);
     const headB = nodeB;
 
     while (nodeB) {
         if (nodeA.val !== nodeB.val) {
-            result = false;
-            break;
+            reverseList(headB);
+
+            return false;
         }
         nodeA = nodeA.next;
         nodeB = nodeB.next;
     }
     reverseList(headB);
 
-    return result;
+    return true;
 }
 
 /**
@@ -63,7 +62,7 @@ function isPalindrome(head) {
  * @param {ListNode} head
  * @returns {ListNode}
  */
-function getMiddle(head) {
+function getMid(head) {
     let slow = head;
     let fast = head;
 
@@ -80,17 +79,17 @@ function getMiddle(head) {
  * @returns {ListNode}
  */
 function reverseList(head) {
-    let preNode = null;
+    let prevNode = null;
 
     while (head) {
         const nextNode = head.next;
 
-        head.next = preNode;
-        preNode = head;
+        head.next = prevNode;
+        prevNode = head;
         head = nextNode;
     }
 
-    return preNode;
+    return prevNode;
 }
 
 module.exports = isPalindrome;
