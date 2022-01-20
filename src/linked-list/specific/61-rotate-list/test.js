@@ -1,7 +1,7 @@
 const rotateRight = require('./index');
 // const rotateRight = require('./template');
 // const rotateRight = require('./template-zh');
-const buildListNode = require('../../utils/buildListNode');
+const buildListNode = require('../../../utils/buildListNode');
 
 test('define rotateRight function', () => {
     expect(typeof rotateRight).toBe('function');

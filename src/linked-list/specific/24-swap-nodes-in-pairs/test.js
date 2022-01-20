@@ -1,7 +1,7 @@
 const swapPairs = require('./index');
 // const swapPairs = require('./template');
 // const swapPairs = require('./template-zh');
-const buildListNode = require('../../utils/buildListNode');
+const buildListNode = require('../../../utils/buildListNode');
 
 test('define swapPairs function', () => {
     expect(typeof swapPairs).toBe('function');
