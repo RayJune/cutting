@@ -1,7 +1,7 @@
 const reverseBetween = require('./index');
 // const reverseBetween = require('./template');
 // const reverseBetween = require('./template-zh');
-const buildListNode = require('../../utils/buildListNode');
+const buildListNode = require('../../../utils/buildListNode');
 
 test('define reverseBetween function', () => {
     expect(typeof reverseBetween).toBe('function');

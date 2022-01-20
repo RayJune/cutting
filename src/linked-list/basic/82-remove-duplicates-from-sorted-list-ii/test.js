@@ -1,7 +1,7 @@
 const deleteDuplicates = require('./index');
 // const deleteDuplicates = require('./template');
 // const deleteDuplicates = require('./template-zh');
-const buildListNode = require('../../utils/buildListNode');
+const buildListNode = require('../../../utils/buildListNode');
 
 test('define deleteDuplicates function', () => {
     expect(typeof deleteDuplicates).toBe('function');

@@ -3,7 +3,7 @@
 const addTwoNumbers = require('./optimize2');
 // const addTwoNumbers = require('./template');
 // const addTwoNumbers = require('./template-zh');
-const buildListNode = require('../../utils/buildListNode');
+const buildListNode = require('../../../utils/buildListNode');
 
 test('define addTwoNumbers function', () => {
     expect(typeof addTwoNumbers).toBe('function');
