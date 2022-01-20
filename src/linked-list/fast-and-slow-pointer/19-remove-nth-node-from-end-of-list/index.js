@@ -40,7 +40,7 @@ class ListNode {
 }
 
 /**
- * Two Pointers
+ * Fast and Slow Pointer
  *
  * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(1)
@@ -52,18 +52,18 @@ class ListNode {
  */
 function removeNthFromEnd(head, n) {
     const preHead = new ListNode(-1, head);
-    let first = head;
-    let second = preHead;
+    let fast = head;
+    let slow = preHead;
 
     while (n) {
-        first = first.next;
+        fast = fast.next;
         n -= 1;
     }
-    while (first) {
-        first = first.next;
-        second = second.next;
+    while (fast) {
+        fast = fast.next;
+        slow = slow.next;
     }
-    second.next = second.next.next;
+    slow.next = slow.next.next;
 
     return preHead.next;
 }

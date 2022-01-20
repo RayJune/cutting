@@ -1,6 +1,6 @@
 const getKthFromEnd = require('./index');
 // const getKthFromEnd = require('./template-zh');
-const buildListNode = require('../../utils/buildListNode');
+const buildListNode = require('../../../utils/buildListNode');
 
 test('define getKthFromEnd function', () => {
     expect(typeof getKthFromEnd).toBe('function');

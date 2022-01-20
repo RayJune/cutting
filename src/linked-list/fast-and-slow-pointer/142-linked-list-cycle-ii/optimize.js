@@ -37,7 +37,7 @@
  */
 
 /**
- * Two Pointers
+ * Fast and Slow Pointer
  *
  * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(1)
