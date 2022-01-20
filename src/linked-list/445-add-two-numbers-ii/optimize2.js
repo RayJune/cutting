@@ -44,8 +44,8 @@ class ListNode {
 /**
  * 先找到两个链表的长度，再对位相加反转组成新链表，再边处理新链表的进位边反转
  *
- * Time Complexity: O(max(m + n)) = 遍历次数
- * Space complexity: O(max(m + n)) = 返回值链表的节点数
+ * Time Complexity: O(max(m, n)) = 遍历次数
+ * Space complexity: O(max(m, n)) = 返回值链表的节点数
  * Auxiliary complexity: O(1)
  * 其中 m 和 n 分别是 l1 和 l2 的节点数
  *
@@ -80,7 +80,7 @@ function reverseAddWithoutCarry(l1, l2) {
     let {m, n} = getListsNum(l1, l2);
     let head = null;
 
-    while (m && n) {
+    while (m || n) {
         let value = 0;
 
         if (m >= n) {
@@ -105,19 +105,17 @@ function reverseAddWithoutCarry(l1, l2) {
  * @returns {{m: number, n: number}}
  */
 function getListsNum(l1, l2) {
-    let node1 = l1;
-    let node2 = l2;
     let m = 0;
     let n = 0;
 
-    while (node1 || node2) {
-        if (node1) {
+    while (l1 || l2) {
+        if (l1) {
             m += 1;
-            node1 = node1.next;
+            l1 = l1.next;
         }
-        if (node2) {
+        if (l2) {
             n += 1;
-            node2 = node2.next;
+            l2 = l2.next;
         }
     }
 

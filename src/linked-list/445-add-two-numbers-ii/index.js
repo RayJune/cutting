@@ -42,10 +42,10 @@ class ListNode {
 }
 
 /**
- * 先分别把两个链表反转过来，再相加，注意相加构成新链表的时候，把新的 node 放在头部
+ * 先分别把两个链表反转过来，再相加
  *
- * Time Complexity: O(m + n) = reverse 操作 O(m + n) + while 循环次数 O(max(m + n))
- * Space complexity: O(max(m + n)) = 返回值链表的节点数
+ * Time Complexity: O(m + n) = reverse 操作 O(m + n) + while 循环次数 O(max(m, n))
+ * Space complexity: O(max(m, n)) = 返回值链表的节点数
  * Auxiliary complexity: O(1)
  * 其中 m 和 n 分别是 l1 和 l2 的节点数
  *

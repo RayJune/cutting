@@ -46,7 +46,7 @@ class ListNode {
  * Stack
  *
  * Time Complexity: O(max(m, n)) = 遍历次数
- * Space complexity: O(m + n) = stack1 和 stack2 的长度 O(m + n) + 返回值链表的节点数 O(max(m + n))
+ * Space complexity: O(m + n) = stack1 和 stack2 的长度 O(m + n) + 返回值链表的节点数 O(max(m, n))
  * Auxiliary complexity: O(m + n) = stack1 和 stack2 的长度
  * 其中 m 和 n 分别是 l1 和 l2 的节点数
  *
