@@ -18,9 +18,8 @@
  * Output: false
  *
  * Constraints:
- *
  * The number of nodes in the tree is in the range [1, 10 ** 4].
- * -2 ** 31 <= Node.val <= 2 ** 31 - 1
+ * (-2) ** 31 <= Node.val <= 2 ** 31 - 1
  *
  * https://leetcode.com/problems/validate-binary-search-tree/
 */
@@ -50,20 +49,19 @@ function isValidBST(root) {
     }
 
     const stack = [];
-    let node = root;
     let prevValue = -Infinity;
 
-    while (node || stack.length) {
-        while (node) {
-            stack.push(node);
-            node = node.left;
+    while (root || stack.length) {
+        while (root) {
+            stack.push(root);
+            root = root.left;
         }
-        node = stack.pop();
-        if (prevValue >= node.val) {
+        root = stack.pop();
+        if (prevValue >= root.val) {
             return false;
         }
-        prevValue = node.val;
-        node = node.right;
+        prevValue = root.val;
+        root = root.right;
     }
 
     return true;

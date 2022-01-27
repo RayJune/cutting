@@ -18,9 +18,8 @@
  * Output: false
  *
  * Constraints:
- *
  * The number of nodes in the tree is in the range [1, 10 ** 4].
- * -2 ** 31 <= Node.val <= 2 ** 31 - 1
+ * (-2) ** 31 <= Node.val <= 2 ** 31 - 1
  *
  * https://leetcode.com/problems/validate-binary-search-tree/
 */
@@ -37,9 +36,10 @@
 /**
  * Recursion
  *
- * Time Complexity: O(n) = isValidBST 函数执行次数
- * Space complexity: O(n) = isValidBST 函数调用栈深度
- * Auxiliary complexity: O(n) = isValidBST 函数调用栈深度
+ * Time Complexity: O(n) = 函数执行次数
+ * Space complexity: O(n) = 函数调用栈深度
+ * Auxiliary complexity: O(n) = 函数调用栈深度
+ * 其中 n 是二叉树的节点数
  *
  * @param {TreeNode} root
  * @param {number} [low=-Infinity]
