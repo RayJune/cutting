@@ -1,5 +1,5 @@
 const LRUCache = require('./index');
-// const LRUCache = require('./trick');
+// const LRUCache = require('./linked-hashmap');
 // const LRUCache = require('./template');
 // const LRUCache = require('./template-zh');
 

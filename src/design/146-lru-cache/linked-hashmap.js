@@ -42,7 +42,7 @@
 */
 
 /**
- * Ordered Dictionary
+ * LinkedHashMap
  */
 class LRUCache {
     #capacity;
@@ -61,9 +61,9 @@ class LRUCache {
      * @returns {number}
      */
     get(key) {
-        const value = this.#map.get(key);
+        if (this.#map.has(key)) {
+            const value = this.#map.get(key);
 
-        if (value !== undefined) {
             this.#map.delete(key);
             this.#map.set(key, value);
 

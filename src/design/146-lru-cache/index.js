@@ -12,7 +12,6 @@
  * The functions get and put must each run in O(1) average time complexity.
  *
  * Example 1:
- *
  * Input
  * ["LRUCache", "put", "put", "get", "put", "get", "put", "get", "get", "get"]
  * [[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]
@@ -32,7 +31,6 @@
  * lRUCache.get(4);    // return 4
  *
  * Constraints:
- *
  * 1 <= capacity <= 3000
  * 0 <= key <= 10 ** 4
  * 0 <= value <= 10 ** 5
@@ -46,11 +44,9 @@
  * 其中用双向链表而不是链表是为了便于删除节点
  */
 class DoubleLinkedListNode {
-    constructor(key = undefined, value = undefined) {
+    constructor(key = undefined, value = undefined, next = null, prev = null) {
         this.key = key;
         this.value = value;
-        this.prev = null;
-        this.next = null;
     }
 }
 
@@ -75,9 +71,9 @@ class LRUCache {
      * @returns {number}
      */
     get(key) {
-        const node = this.#map.get(key);
+        if (this.#map.has(key)) {
+            const node = this.#map.get(key);
 
-        if (node) {
             this.#removeNode(node);
             this.#unshiftNode(node);
 
@@ -93,7 +89,7 @@ class LRUCache {
     #removeNode(node) {
         node.prev.next = node.next;
         node.next.prev = node.prev;
-        node.pre = null;
+        node.prev = null;
         node.next = null;
     }
 
@@ -101,12 +97,12 @@ class LRUCache {
      * @param {DoubleLinkedListNode} node
      */
     #unshiftNode(node) {
-        const head = this.#preHead.next;
+        const oldHead = this.#preHead.next;
 
         this.#preHead.next = node;
         node.prev = this.#preHead;
-        node.next = head;
-        head.prev = node;
+        node.next = oldHead;
+        oldHead.prev = node;
     }
 
     /**
@@ -118,9 +114,9 @@ class LRUCache {
      * @param {number} value
      */
     put(key, value) {
-        const node = this.#map.get(key);
+        if (this.#map.has(key)) {
+            const node = this.#map.get(key);
 
-        if (node) {
             node.value = value;
             this.#removeNode(node);
             this.#unshiftNode(node);
@@ -128,14 +124,14 @@ class LRUCache {
             if (this.#map.size === this.#capacity) {
                 const tail = this.#afterTail.prev;
 
-                this.#removeNode(tail);
                 this.#map.delete(tail.key);
+                this.#removeNode(tail);
             }
 
             const newNode = new DoubleLinkedListNode(key, value);
 
-            this.#unshiftNode(newNode);
             this.#map.set(key, newNode);
+            this.#unshiftNode(newNode);
         }
     }
 }

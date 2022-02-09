@@ -12,7 +12,6 @@
  * The functions get and put must each run in O(1) average time complexity.
  *
  * Example 1:
- *
  * Input
  * ["LRUCache", "put", "put", "get", "put", "get", "put", "get", "get", "get"]
  * [[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]
@@ -32,7 +31,6 @@
  * lRUCache.get(4);    // return 4
  *
  * Constraints:
- *
  * 1 <= capacity <= 3000
  * 0 <= key <= 10 ** 4
  * 0 <= value <= 10 ** 5
