@@ -10,7 +10,6 @@
  * void remove(key) Removes the key key in the HashSet. If key does not exist in the HashSet, do nothing.
  *
  * Example 1:
- *
  * Input
  * ["MyHashSet", "add", "add", "contains", "contains", "add", "contains", "remove", "contains"]
  * [[], [1], [2], [1], [3], [2], [2], [2], [2]]
@@ -29,26 +28,24 @@
  * myHashSet.contains(2); // return False, (already removed)
  *
  * Constraints:
- *
- * 0 <= key <= 10^6
- * At most 10^4 calls will be made to add, remove, and contains.
+ * 0 <= key <= 10 ** 6
+ * At most 10 ** 4 calls will be made to add, remove, and contains.
  *
  * https://leetcode.com/problems/design-hashset/
- *
 */
 
 /**
  * 用数组作为 bucket 来解决哈希冲突
  *
  * Time Complexity: O(n / k) = 假设哈希值是均匀分布的，则每个 bucket 长度为 n / k
- * Space complexity: O(n + k) = this.#hashKey 占用的空间
- * Auxiliary complexity: O(n + k) = this.#hashKey 占用的空间
+ * Space complexity: O(n + k) = this.#hashBucket 占用的空间
+ * Auxiliary complexity: O(n + k) = this.#hashBucket 占用的空间
  *
  * 其中 n 是哈希表中的元素数量，k 是预先定义的 buckets 个数（在这里是 769）
  */
 class MyHashSet {
     #keyRange = 769;
-    #hashKey = new Array(this.#keyRange).fill([]);
+    #hashBucket = new Array(this.#keyRange).fill([]);
 
     /**
      * @param {number} key
@@ -58,12 +55,15 @@ class MyHashSet {
         return key % this.#keyRange;
     }
 
+    #getBucket(key) {
+        return this.#hashBucket[this.#hash(key)];
+    }
+
     /**
      * @param {number} key
      */
     add(key) {
-        const hash = this.#hash(key);
-        const bucket = this.#hashKey[hash];
+        const bucket = this.#getBucket(key);
 
         if (!bucket.includes(key)) {
             bucket.push(key);
@@ -75,8 +75,7 @@ class MyHashSet {
      * @returns {boolean}
      */
     contains(key) {
-        const hash = this.#hash(key);
-        const bucket = this.#hashKey[hash];
+        const bucket = this.#getBucket(key);
 
         return bucket.includes(key);
     }
@@ -85,8 +84,7 @@ class MyHashSet {
      * @param {number} key
      */
     remove(key) {
-        const hash = this.#hash(key);
-        const bucket = this.#hashKey[hash];
+        const bucket = this.#getBucket(key);
         const index = bucket.indexOf(key);
 
         if (index !== -1) {

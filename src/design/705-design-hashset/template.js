@@ -10,7 +10,6 @@
  * void remove(value) Removes the value value in the HashSet. If value does not exist in the HashSet, do nothing.
  *
  * Example 1:
- *
  * Input
  * ["MyHashSet", "add", "add", "contains", "contains", "add", "contains", "remove", "contains"]
  * [[], [1], [2], [1], [3], [2], [2], [2], [2]]
@@ -29,12 +28,10 @@
  * myHashSet.contains(2); // return False, (already removed)
  *
  * Constraints:
- *
- * 0 <= value <= 10^6
- * At most 10^4 calls will be made to add, remove, and contains.
+ * 0 <= value <= 10 ** 6
+ * At most 10 ** 4 calls will be made to add, remove, and contains.
  *
  * https://leetcode.com/problems/design-hashset/
- *
 */
 
 module.exports = MyHashSet;

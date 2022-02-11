@@ -10,7 +10,6 @@
  * void remove(key) Removes the key key in the HashSet. If key does not exist in the HashSet, do nothing.
  *
  * Example 1:
- *
  * Input
  * ["MyHashSet", "add", "add", "contains", "contains", "add", "contains", "remove", "contains"]
  * [[], [1], [2], [1], [3], [2], [2], [2], [2]]
@@ -29,12 +28,10 @@
  * myHashSet.contains(2); // return False, (already removed)
  *
  * Constraints:
- *
- * 0 <= key <= 10^6
- * At most 10^4 calls will be made to add, remove, and contains.
+ * 0 <= key <= 10 ** 6
+ * At most 10 ** 4 calls will be made to add, remove, and contains.
  *
  * https://leetcode.com/problems/design-hashset/
- *
 */
 
 class ListNode {
@@ -48,14 +45,14 @@ class ListNode {
  * 用链表作为 bucket 来解决哈希冲突
  *
  * Time Complexity: O(n / k) = 假设哈希值是均匀分布的，则每个 bucket 长度为 n / k
- * Space complexity: O(n + k) = this.#hashKey 占用的空间
- * Auxiliary complexity: O(n + k) = this.#hashKey 占用的空间
+ * Space complexity: O(n + k) = this.#hashBucket 占用的空间
+ * Auxiliary complexity: O(n + k) = this.#hashBucket 占用的空间
  *
  * 其中 n 是哈希表中的元素数量，k 是预先定义的 buckets 个数（在这里是 769）
  */
 class MyHashSet {
     #keyRange = 769;
-    #hashKey = new Array(this.#keyRange).fill(null);
+    #hashBucket = new Array(this.#keyRange).fill(null);
 
     /**
      * @param {number} key
@@ -70,10 +67,10 @@ class MyHashSet {
      */
     add(key) {
         const hash = this.#hash(key);
-        let bucket = this.#hashKey[hash];
+        let bucket = this.#hashBucket[hash];
 
         if (bucket === null) {
-            this.#hashKey[hash] = new ListNode(key);
+            this.#hashBucket[hash] = new ListNode(key);
         } else {
             while (bucket && bucket.next) {
                 if (bucket.value === key) {
@@ -93,7 +90,7 @@ class MyHashSet {
      */
     contains(key) {
         const hash = this.#hash(key);
-        let bucket = this.#hashKey[hash];
+        let bucket = this.#hashBucket[hash];
 
         while (bucket) {
             if (bucket.value === key) {
@@ -110,22 +107,23 @@ class MyHashSet {
      */
     remove(key) {
         const hash = this.#hash(key);
-        let bucket = this.#hashKey[hash];
+        let bucket = this.#hashBucket[hash];
 
         if (bucket === null) {
             return;
         }
         if (bucket.value === key) {
-            this.#hashKey[hash] = bucket.next ? bucket.next : null;
+            this.#hashBucket[hash] = bucket.next ? bucket.next : null;
         } else {
-            let preNode = bucket;
+            let prevNode = bucket;
 
             bucket = bucket.next;
             while (bucket) {
                 if (bucket.value === key) {
-                    preNode.next = bucket.next;
+                    prevNode.next = bucket.next;
+                    break;
                 }
-                preNode = bucket;
+                prevNode = bucket;
                 bucket = bucket.next;
             }
         }
