@@ -14,7 +14,6 @@
  * Input
  * ["MyHashMap", "put", "put", "get", "get", "put", "get", "remove", "get"]
  * [[], [1, 1], [2, 2], [1], [3], [2, 1], [2], [2], [2]]
- *
  * Output
  * [null, null, null, 1, -1, null, 1, null, -1]
  *
@@ -31,11 +30,10 @@
  *
  * Constraints:
  *
- * 0 <= key, value <= 10^6
- * At most 10^4 calls will be made to put, get, and remove.
+ * 0 <= key, value <= 10 ** 6
+ * At most 10 ** 4 calls will be made to put, get, and remove.
  *
  * https://leetcode.com/problems/design-hashmap/
- *
 */
 
 module.exports = MyHashMap;

@@ -14,7 +14,6 @@
  * Input
  * ["MyHashMap", "put", "put", "get", "get", "put", "get", "remove", "get"]
  * [[], [1, 1], [2, 2], [1], [3], [2, 1], [2], [2], [2]]
- *
  * Output
  * [null, null, null, 1, -1, null, 1, null, -1]
  *
@@ -30,12 +29,10 @@
  * myHashMap.get(2);    // return -1 (i.e., not found), The map is now [[1, 1]]
  *
  * Constraints:
- *
- * 0 <= key, value <= 10^6
- * 最多调用 104 次 put、get 和 remove 方法
+ * 0 <= key, value <= 10 ** 6
+ * 最多调用 10 ** 4 次 put、get 和 remove 方法
  *
  * https://leetcode-cn.com/problems/design-hashmap/
- *
 */
 
 module.exports = MyHashMap;

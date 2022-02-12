@@ -14,7 +14,6 @@
  * Input
  * ["MyHashMap", "put", "put", "get", "get", "put", "get", "remove", "get"]
  * [[], [1, 1], [2, 2], [1], [3], [2, 1], [2], [2], [2]]
- *
  * Output
  * [null, null, null, 1, -1, null, 1, null, -1]
  *
@@ -30,25 +29,23 @@
  * myHashMap.get(2);    // return -1 (i.e., not found), The map is now [[1, 1]]
  *
  * Constraints:
- *
- * 0 <= key, value <= 10^6
- * At most 10^4 calls will be made to put, get, and remove.
+ * 0 <= key, value <= 10 ** 6
+ * At most 10 ** 4 calls will be made to put, get, and remove.
  *
  * https://leetcode.com/problems/design-hashmap/
- *
 */
 
 /**
  * 用数组作为 bucket 来解决哈希冲突
  *
  * Time Complexity: O(n / k) = 假设哈希值是均匀分布的，则每个 bucket 长度为 n / k
- * Space complexity: O(n + k) = this.#hashKey 占用的空间 O(n + 2k)
- * Auxiliary complexity: O(n + k) = this.#hashKey 占用的空间 O(n + 2k)
+ * Space complexity: O(n + k) = this.#hashBucket 占用的空间
+ * Auxiliary complexity: O(n + k) = this.#hashBucket 占用的空间
  * 其中 n 是哈希表中的元素数量，k 是预先定义的 buckets 个数（在这里是 769）
  */
 class MyHashMap {
     #keyRange = 769;
-    #hashKey = new Array(this.#keyRange).fill([]);
+    #hashBucket = new Array(this.#keyRange).fill([]);
 
     /**
      * @param {number} key
@@ -58,22 +55,23 @@ class MyHashMap {
         return key % this.#keyRange;
     }
 
+    #getBucket(key) {
+        return this.#hashBucket[this.#hash(key)];
+    }
+
     /**
      * @param {number} key
      * @param {number} value
      */
     put(key, value) {
-        const hash = this.#hash(key);
-        const bucket = this.#hashKey[hash];
+        const bucket = this.#getBucket(key);
+        const index = bucket.findIndex(item => item[0] === key);
 
-        for (const item of bucket) {
-            if (item[0] === key) {
-                item[1] = value;
-
-                return;
-            }
+        if (index !== -1) {
+            bucket[index][1] = value;
+        } else {
+            bucket.push([key, value]);
         }
-        bucket.push([key, value]);
     }
 
     /**
@@ -81,24 +79,17 @@ class MyHashMap {
      * @returns {number}
      */
     get(key) {
-        const hash = this.#hash(key);
-        const bucket = this.#hashKey[hash];
+        const bucket = this.#getBucket(key);
+        const index = bucket.findIndex(item => item[0] === key);
 
-        for (const item of bucket) {
-            if (item[0] === key) {
-                return item[1];
-            }
-        }
-
-        return -1;
+        return index === -1 ? -1 : bucket[index][1];
     }
 
     /**
      * @param {number} key
      */
     remove(key) {
-        const hash = this.#hash(key);
-        const bucket = this.#hashKey[hash];
+        const bucket = this.#getBucket(key);
         const index = bucket.findIndex(item => item[0] === key);
 
         if (index !== -1) {
