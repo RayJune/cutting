@@ -31,7 +31,6 @@
  * myQueue.empty(); // return false
  *
  * Constraints:
- *
  * 1 <= x <= 9
  * At most 100 calls will be made to push, pop, peek, and empty.
  * All the calls to pop and peek are valid.
@@ -47,7 +46,7 @@ class MyQueue {
      * Time Complexity: O(1)
      * Space complexity: O(n) = #stack1 的长度
      * Auxiliary complexity: O(1)
-     * n 代表 stack 的长度
+     * 其中 n 是队列内元素的个数
      *
      * @param {number} x
      */
@@ -59,7 +58,7 @@ class MyQueue {
      * Time Complexity: O(n) = 均摊时间复杂度 O(1), 最坏情况下 O(n)
      * Space complexity: O(1)
      * Auxiliary complexity: O(1)
-     * n 代表 stack 的长度
+     * 其中 n 是队列内元素的个数
      *
      * @returns {number}
      */
@@ -96,7 +95,7 @@ class MyQueue {
      * @returns {boolean}
      */
     empty() {
-        return !this.#stack1.length && !this.#stack2.length;
+        return this.#stack1.length === 0 && this.#stack2.length === 0;
     }
 }
 
