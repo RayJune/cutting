@@ -45,7 +45,7 @@
  */
 class MyHashSet {
     #keyRange = 769;
-    #hashBucket = new Array(this.#keyRange).fill([]);
+    #hashBucket = new Array(this.#keyRange).fill().map(() => []);
 
     /**
      * @param {number} key
