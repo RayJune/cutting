@@ -30,7 +30,6 @@
  * myStack.empty(); // return False
  *
  * Constraints:
- *
  * 1 <= x <= 9
  * At most 100 calls will be made to push, pop, top, and empty.
  * All the calls to pop and top are valid.
@@ -38,45 +37,41 @@
  * https://leetcode.com/problems/implement-stack-using-queues/
 */
 
-// 从 pop 着手，把队列里除第一个元素外的都 pop 出来存在 tempQueue 里，第一个元素就是 last-in-first-out 的值
+// 因为 JS 里没有 queue 数据结构，这里用 array 来模拟 queue，并加入 queue 的 peek 方法
+// 这里没有用箭头函数来写是因为 this 的绑定问题
+Array.prototype.peek = function peek() {
+    return this[0];
+}
+
+// 在 push 操作时，先 push 进去，然后执行 n - 1 次 push(shift) 操作，这样刚 push 进去的就成为第一个要出来的元素
 class MyStack {
     #queue = [];
-    #top;
 
     /**
-     * Time Complexity: O(1)
+     * Time Complexity: O(n) = while 循环次数
      * Space complexity: O(n) = this.#queue 的长度
      * Auxiliary complexity: O(1)
-     * n 代表 stack 的长度
+     * 其中 n 是栈内元素的个数
      *
      * @param {number} x
      */
     push(x) {
         this.#queue.push(x);
-        this.#top = x;
+        for (let i = this.#queue.length - 1; i > 0; i--) {
+            this.#queue.push(this.#queue.shift());
+        }
     }
 
     /**
-     * Time Complexity: O(n) = while 循环次数 O(n)
+     * Time Complexity: O(1)
      * Space complexity: O(1)
      * Auxiliary complexity: O(1)
-     * n 代表 stack 的长度
+     * 其中 n 是栈内元素的个数
      *
      * @returns {number}
      */
     pop() {
-        const tempQueue = [];
-
-        while (this.#queue.length > 1) {
-            this.#top = this.#queue.shift();
-            tempQueue.push(this.#top);
-        }
-
-        const lastItem = this.#queue.shift();
-
-        this.#queue = tempQueue;
-
-        return lastItem;
+        return this.#queue.shift();
     }
 
     /**
@@ -87,7 +82,7 @@ class MyStack {
      * @returns {number}
      */
     top() {
-        return this.#top;
+        return this.#queue.peek();
     }
 
     /**
@@ -98,7 +93,7 @@ class MyStack {
      * @returns {boolean}
      */
     empty() {
-        return !this.#queue.length;
+        return this.#queue.length === 0;
     }
 }
 

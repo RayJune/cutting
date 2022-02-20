@@ -13,7 +13,7 @@
  * 说明：
  *
  * 你只能使用队列的基本操作 —— 也就是 push to back、peek/pop from front、size 和 is empty 这些操作。
- * 你所使用的语言也许不支持队列。 你可以使用 list （列表）或者 deque（双端队列）来模拟一个队列 , 只要是标准的队列操作即可。
+ * 你所使用的语言也许不支持队列。你可以使用 list （列表）或者 deque（双端队列）来模拟一个队列，只要是标准的队列操作即可。
  *
  * Example 1:
  * ["MyStack", "push", "push", "top", "pop", "empty"]
@@ -30,7 +30,6 @@
  * myStack.empty(); // return False
  *
  * Constraints:
- *
  * 1 <= x <= 9
  * At most 100 calls will be made to push, pop, top, and empty.
  * All the calls to pop and top are valid.

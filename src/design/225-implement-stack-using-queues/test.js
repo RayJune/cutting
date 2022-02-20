@@ -1,5 +1,4 @@
-// const MyStack = require('./index');
-const MyStack = require('./optimize');
+const MyStack = require('./index');
 // const MyStack = require('./template');
 // const MyStack = require('./template-zh');
 
