@@ -18,4 +18,5 @@ test('Example 1', () => {
     expect(wordDictionary.search('bad')).toBe(true);
     expect(wordDictionary.search('.ad')).toBe(true);
     expect(wordDictionary.search('b..')).toBe(true);
+    expect(wordDictionary.search('.xy')).toBe(false);
 });

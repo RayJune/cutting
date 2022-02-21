@@ -36,23 +36,18 @@
 */
 
 class TrieNode {
-    constructor(char = undefined) {
-        this.char = char;
-        this.isEnd = false;
-        this.children = new Map();
-    }
+    isEnd = false;
+    children = new Map();
 }
 
 class Trie {
-    constructor() {
-        this.root = new TrieNode();
-    }
+    root = new TrieNode();
 
     /**
      * Time Complexity: O(n) = for...of 循环次数
      * Space complexity: O(n) = 占用存储空间
      * Auxiliary complexity: O(n) = 占用存储空间
-     * 其中 n 为 word 的长度
+     * 其中 n 为插入字符串的长度
      *
      * @param {string} word
      */
@@ -61,7 +56,7 @@ class Trie {
 
         for (const char of word) {
             if (!node.children.has(char)) {
-                node.children.set(char, new TrieNode(char));
+                node.children.set(char, new TrieNode());
             }
             node = node.children.get(char);;
         }
@@ -70,7 +65,7 @@ class Trie {
 }
 
 class WordDictionary {
-    tire = new Trie();
+    #tire = new Trie();
 
     /**
      * Time Complexity: O(n) = Trie addWord 方法
@@ -80,7 +75,7 @@ class WordDictionary {
      * @param {string} word
      */
     addWord(word) {
-        this.tire.insert(word);
+        this.#tire.insert(word);
     }
 
     /**
@@ -97,25 +92,23 @@ class WordDictionary {
                 return node.isEnd;
             }
 
-            const char = word[i];
-
-            if (char !== '.') {
-                node = node.children.get(char);
-                if (node && dfs(i + 1, node)) {
-                    return true;
-                }
-            } else {
+            if (word[i] === '.') {
                 for (const child of node.children.values()) {
-                    if (node && dfs(i + 1, child)) {
+                    if (dfs(i + 1, child)) {
                         return true;
                     }
+                }
+            } else {
+                node = node.children.get(word[i]);
+                if (node && dfs(i + 1, node)) {
+                    return true;
                 }
             }
 
             return false;
         };
 
-        return dfs(0, this.tire.root);
+        return dfs(0, this.#tire.root);
     }
 }
 
