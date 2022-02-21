@@ -15,6 +15,7 @@ test('Example 1', () => {
     expect(trie.search('apple')).toBe(true);
     expect(trie.search('app')).toBe(false);
     expect(trie.startsWith('app')).toBe(true);
+    expect(trie.startsWith('epp')).toBe(false);
     trie.insert('app');
     expect(trie.search('app')).toBe(true);
 });
