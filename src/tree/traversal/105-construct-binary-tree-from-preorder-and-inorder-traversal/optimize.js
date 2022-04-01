@@ -12,7 +12,6 @@
  * Output: [-1]
  *
  * Constraints:
- *
  * 1 <= preorder.length <= 3000
  * inorder.length == preorder.length
  * -3000 <= preorder[i], inorder[i] <= 3000
@@ -42,20 +41,19 @@ class TreeNode {
 }
 
 /**
- * 用 hashmap 和下标操作来优化时间复杂度和空间复杂度
- * inorder 起到区分出左右字树的作用
+ * 用 hashmap 优化时间、空间复杂度
  *
- * Time Complexity: O(n) = buildTree 函数执行次数 O(n)
- * Space complexity: O(n) = 创建树所需要的空间 O(n) + hashmap 占用的空间 O(n)
- * Auxiliary complexity: O(n) = hashmap 占用的空间 O(n)
- * n 是树中的节点个数
+ * Time Complexity: O(n) = helper 函数执行次数 / buildMap 内遍历次数
+ * Space Complexity: O(n) = 创建树所需要的空间 / hashmap 占用的空间 O(n) + helper 函数调用栈深度 O(m)
+ * Auxiliary Complexity: O(n) = hashmap 占用的空间 O(n) + helper 函数调用栈深度 O(m)
+ * 其中 n 是树中的节点个数，m 是树的高度
  *
  * @param {number[]} preorder
  * @param {number[]} inorder
  * @return {TreeNode}
  */
 function buildTree(preorder, inorder) {
-    if (!preorder.length || !inorder.length) {
+    if (inorder.length === 0) {
         return null;
     }
 
@@ -63,26 +61,25 @@ function buildTree(preorder, inorder) {
     const map = buildMap(inorder);
     const helper = (start, end) => {
         if (start > end) {
-            return null
+            return null;
         }
 
-        const value = preorder[i];
-        const pivot = map.get(value)
-        const root = new TreeNode(value)
+        const root = new TreeNode(preorder[i]);
+        const pivot = map.get(preorder[i]);
 
         i += 1;
-        root.left = helper(start, pivot - 1)
-        root.right = helper(pivot + 1, end)
+        root.left = helper(start, pivot - 1);
+        root.right = helper(pivot + 1, end);
 
         return root;
-    }
+    };
 
     return helper(0, inorder.length - 1);
 }
 
 /**
  * @param {number[]} inorder
- * @returns {Map<number, number>} map
+ * @returns {Map<number, number>}
  */
 function buildMap(inorder) {
     const map = new Map();

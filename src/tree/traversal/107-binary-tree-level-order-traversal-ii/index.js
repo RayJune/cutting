@@ -16,7 +16,6 @@
  * Output: [[1]]
  *
  * Constraints:
- *
  * The number of nodes in the tree is in the range [0, 2000].
  * -100 <= Node.val <= 100
  *
@@ -37,8 +36,8 @@
  * 这里遵循题目要求的顺序来遍历，未使用 array.reverse 方法
  *
  * Time Complexity: O(n) = while 和 for 循环的总遍历次数 O(n + n)
- * Space complexity: O(n) = result 数组长度 O(n) + levels 占用空间 O(n) + stack 长度 O(n)
- * Auxiliary complexity: O(m) = levels 占用空间 O(n) + stack 长度 O(n)
+ * Space Complexity: O(n) = result 数组长度 O(n) + levels 占用空间 O(n) + stack 长度 O(n)
+ * Auxiliary Complexity: O(m) = levels 占用空间 O(n) + stack 长度 O(n)
  *
  * @param {TreeNode} root
  * @returns {number[]}

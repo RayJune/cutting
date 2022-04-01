@@ -24,7 +24,6 @@
  * Output: [1, 2]
  *
  * Constraints:
- *
  * The number of nodes in the tree is in the range [0, 100].
  * -100 <= Node.val <= 100
  *
@@ -43,10 +42,10 @@
 /**
  * Morris 遍历
  *
- * Time Complexity: O(n) = 遍历次数 O(n)
- * Space complexity: O(n) = result 数组长度 O(n)
- * Auxiliary complexity: O(1)
- * 其中 n 为二叉树的节点数，最坏情况下树呈现链状
+ * Time Complexity: O(n) = 遍历次数
+ * Space Complexity: O(n) = result 数组长度（最坏情况下树呈现链状）
+ * Auxiliary Complexity: O(1)
+ * 其中 n 为以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
  * @returns {number[]}

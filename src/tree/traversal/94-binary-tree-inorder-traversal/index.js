@@ -43,9 +43,9 @@
  * Recursion
  *
  * Time Complexity: O(n) = 函数执行次数
- * Space complexity: O(n) = result 数组长度 / 函数调用栈深度 （最坏情况下树呈链状）
- * Auxiliary complexity: O(n) = 函数调用栈深度（最坏情况下树呈链状）
- * 其中 n 是二叉树的节点数
+ * Space Complexity: O(n) = result 数组长度 / 函数调用栈深度 （最坏情况下树呈链状）
+ * Auxiliary Complexity: O(n) = 函数调用栈深度（最坏情况下树呈链状）
+ * 其中 n 为以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
  * @param {number[]} [result=[]]

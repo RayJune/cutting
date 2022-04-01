@@ -16,7 +16,6 @@
  * Output: [[1]]
  *
  * Constraints:
- *
  * The number of nodes in the tree is in the range [0, 2000].
  * -100 <= Node.val <= 100
  *
@@ -36,8 +35,8 @@
  * 广度优先搜索，用 stack 来做，使用 reverse 方法
  *
  * Time Complexity: O(n) = while 和 for 循环的总遍历次数 O(n) + reverse 操作 O(n)
- * Space complexity: O(n) = result 数组长度 O(n) + stack 长度 O(n)
- * Auxiliary complexity: O(m) = stack 长度 O(n)
+ * Space Complexity: O(n) = result 数组长度 O(n) + stack 长度 O(n)
+ * Auxiliary Complexity: O(m) = stack 长度 O(n)
  *
  * @param {TreeNode} root
  * @returns {number[]}

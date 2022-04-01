@@ -12,7 +12,6 @@
  * Output: [-1]
  *
  * Constraints:
- *
  * 1 <= preorder.length <= 3000
  * inorder.length == preorder.length
  * -3000 <= preorder[i], inorder[i] <= 3000
@@ -44,17 +43,17 @@ class TreeNode {
 /**
  * 用 preorder[0] 找出 root，然后再用 root 在 inorder 中所处的位置区分出左右子树
  *
- * Time Complexity: O(n ** 2) = buildTree 函数执行次数 O(n) * array.indexOf + array.slice 操作 O(n)
- * Space complexity: O(n) = 创建树所需要的空间 O(n) + 函数调用栈深度 O(m) + array.slice 创建新数组占用的空间 O(n)
- * Auxiliary complexity: O(n) = array.slice 创建新数组占用的空间 O(n) + 函数调用栈深度 O(m)
- * n 是树中的节点个数，m 是树的高度
+ * Time Complexity: O(n ** 2) = buildTree 函数执行次数 O(n) * array.shift/indexOf/array.slice 操作 O(n)
+ * Space Complexity: O(n * m) = 创建树所需要的空间 O(n) + 函数调用栈深度 O(m) + array.slice 创建新数组占用空间 O(n * m)
+ * Auxiliary Complexity: O(n) = array.slice 创建新数组占用的空间 O(n) + 函数调用栈深度 O(m)
+ * 其中 n 是树中的节点个数，m 是树的高度
  *
  * @param {number[]} preorder
  * @param {number[]} inorder
  * @return {TreeNode}
  */
 function buildTree(preorder, inorder) {
-    if (!preorder.length || !inorder.length) {
+    if (inorder.length === 0) {
         return null;
     }
 

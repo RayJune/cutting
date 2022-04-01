@@ -12,7 +12,6 @@
  * Output: [-1]
  *
  * Constraints:
- *
  * 1 <= inorder.length <= 3000
  * postorder.length == inorder.length
  * -3000 <= inorder[i], postorder[i] <= 3000

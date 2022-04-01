@@ -16,7 +16,6 @@
  * Output: [[1]]
  *
  * Constraints:
- *
  * The number of nodes in the tree is in the range [0, 2000].
  * -100 <= Node.val <= 100
  *
@@ -33,11 +32,12 @@
  */
 
 /**
- * 广度优先搜索，用队列来做（这里用 array 当队列来用）
+ * BFS，用 stack 来做
  *
- * Time Complexity: O(n ** 2) = while 和 for 循环的总遍历次数 O(n) * shift 操作 O(n)
- * Space complexity: O(n) = result 数组长度 O(n) + 队列长度 O(n)
- * Auxiliary complexity: O(m) = 队列长度 O(n)
+ * Time Complexity: O(n) = 遍历次数
+ * Space Complexity: O(n) = result 数组长度 / stack 长度
+ * Auxiliary Complexity: O(n) = stack 长度
+ * 其中 n 为以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
  * @returns {number[]}
@@ -48,24 +48,23 @@ function levelOrder(root) {
     }
 
     const result = [];
-    const queue = [root];
+    let stack = [root];
 
-    while (queue.length) {
+    while (stack.length) {
         const level = [];
-        const levelSize = queue.length;
+        const temp = [];
 
-        for (let i = 0; i < levelSize; i++) {
-            const {left, right, val} = queue.shift();
-
+        for (const {left, right, val} of stack) {
             level.push(val);
             if (left) {
-                queue.push(left);
+                temp.push(left);
             }
-            if (node.right) {
-                queue.push(right);
+            if (right) {
+                temp.push(right);
             }
         }
         result.push(level);
+        stack = temp;
     }
 
     return result;

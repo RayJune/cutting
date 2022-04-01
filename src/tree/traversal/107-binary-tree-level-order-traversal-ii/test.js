@@ -1,8 +1,8 @@
-// const levelOrderBottom = require('./index');
-const levelOrderBottom = require('./optimize');
+const levelOrderBottom = require('./index');
+// const levelOrderBottom = require('./reverse');
 // const levelOrderBottom = require('./template');
 // const levelOrderBottom = require('./template-zh');
-const buildBinaryTree = require('../../utils/buildBinaryTree');
+const buildBinaryTree = require('../../../utils/buildBinaryTree');
 
 test('define levelOrderBottom function', () => {
     expect(typeof levelOrderBottom).toBe('function');

@@ -12,7 +12,6 @@
  * Output: [-1]
  *
  * Constraints:
- *
  * 1 <= inorder.length <= 3000
  * postorder.length == inorder.length
  * -3000 <= inorder[i], postorder[i] <= 3000
@@ -42,19 +41,19 @@ class TreeNode {
 }
 
 /**
- * 用 postorder[0] 找出 root，然后再用 root 在 inorder 中所处的位置区分出左右子树
+ * 用 hashmap 优化时间、空间复杂度
  *
- * Time Complexity: O(n ** 2) = buildTree 函数执行次数 O(n) * array.indexOf + array.slice 操作 O(n)
- * Space complexity: O(n) = 创建树所需要的空间 O(n) + 函数调用栈深度 O(m) + array.slice 创建新数组占用的空间 O(n)
- * Auxiliary complexity: O(n) = array.slice 创建新数组占用的空间 O(n) + 函数调用栈深度 O(m)
- * n 是树中的节点个数，m 是树的高度
+ * Time Complexity: O(n) = helper 函数执行次数
+ * Space Complexity: O(n) = 创建树所需要的空间 O(n) + hashmap 占用的空间 O(n) + helper 函数调用栈深度 O(m)
+ * Auxiliary Complexity: O(n) = hashmap 占用的空间 O(n) + helper 函数调用栈深度 O(m)
+ * 其中 n 是树中的节点个数，m 是树的高度
  *
  * @param {number[]} postorder
  * @param {number[]} inorder
  * @return {TreeNode}
  */
 function buildTree(inorder, postorder) {
-    if (!inorder.length || !postorder.length) {
+    if (inorder.length === 0) {
         return null;
     }
 
@@ -62,12 +61,12 @@ function buildTree(inorder, postorder) {
     const map = buildMap(inorder);
     const helper = (start, end) => {
         if (start > end) {
-            return null
+            return null;
         }
 
         const value = postorder[i];
-        const pivot = map.get(value)
-        const root = new TreeNode(value)
+        const pivot = map.get(value);
+        const root = new TreeNode(value);
 
         i -= 1;
         root.right = helper(pivot + 1, end)
@@ -81,7 +80,7 @@ function buildTree(inorder, postorder) {
 
 /**
  * @param {number[]} inorder
- * @returns {Map<number, number>} map
+ * @returns {Map<number, number>}
  */
 function buildMap(inorder) {
     const map = new Map();

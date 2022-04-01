@@ -28,7 +28,6 @@
  * -100 <= Node.val <= 100
  *
  * https://leetcode.com/problems/binary-tree-inorder-traversal/
- *
 */
 
 /**

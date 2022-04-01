@@ -2,7 +2,7 @@
 const buildTree = require('./optimize');
 // const buildTree = require('./template');
 // const buildTree = require('./template-zh');
-const buildBinaryTree = require('../../utils/buildBinaryTree');
+const buildBinaryTree = require('../../../utils/buildBinaryTree');
 
 test('define buildTree function', () => {
     expect(typeof buildTree).toBe('function');

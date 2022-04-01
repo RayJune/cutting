@@ -24,7 +24,6 @@
  * Output: [2, 1]
  *
  * Constraints:
- *
  * The number of nodes in the tree is in the range [0, 100].
  * -100 <= Node.val <= 100
  *

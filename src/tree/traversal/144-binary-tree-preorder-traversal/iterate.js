@@ -24,7 +24,6 @@
  * Output: [1, 2]
  *
  * Constraints:
- *
  * The number of nodes in the tree is in the range [0, 100].
  * -100 <= Node.val <= 100
  *
@@ -43,30 +42,31 @@
 /**
  * 遍历
  *
- * Time Complexity: O(n) = while 循环次数 O(n)
- * Space complexity: O(n) = result 数组长度 O(n) + stack 数组长度 O(n)
- * Auxiliary complexity: O(n) = stack 数组长度 O(n)
- * 其中 n 为二叉树的节点数，最坏情况下树呈现链状
+ * Time Complexity: O(n) = while 循环次数
+ * Space Complexity: O(n) = result 数组长度 / stack 数组长度（最坏情况下树呈现链状）
+ * Auxiliary Complexity: O(n) = stack 数组长度（最坏情况下树呈现链状）
+ * 其中 n 为以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
  * @returns {number[]}
  */
 function preorderTraversal(root) {
+    if (root === null) {
+        return [];
+    }
+
     const result = [];
+    const stack = [root];
 
-    if (root) {
-        const stack = [root];
+    while (stack.length) {
+        const {val, left, right} = stack.pop();
 
-        while (stack.length) {
-            const node = stack.pop();
-
-            result.push(node.val);
-            if (node.right) {
-                stack.push(node.right);
-            }
-            if (node.left) {
-                stack.push(node.left);
-            }
+        result.push(val);
+        if (right) {
+            stack.push(right);
+        }
+        if (left) {
+            stack.push(left);
         }
     }
 

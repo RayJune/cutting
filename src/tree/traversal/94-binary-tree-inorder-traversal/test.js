@@ -3,7 +3,7 @@ const inorderTraversal = require('./index');
 // const inorderTraversal = require('./optimize');
 // const inorderTraversal = require('./template');
 // const inorderTraversal = require('./template-zh');
-const buildBinaryTree = require('../../utils/buildBinaryTree');
+const buildBinaryTree = require('../../../utils/buildBinaryTree');
 
 test('define inorderTraversal function', () => {
     expect(typeof inorderTraversal).toBe('function');
