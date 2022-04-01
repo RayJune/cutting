@@ -1,7 +1,7 @@
 const sortedArrayToBST = require('./index');
 // const sortedArrayToBST = require('./template');
 // const sortedArrayToBST = require('./template-zh');
-const buildBinaryTree = require('../../utils/buildBinaryTree');
+const buildBinaryTree = require('../../../utils/buildBinaryTree');
 
 test('define sortedArrayToBST function', () => {
     expect(typeof sortedArrayToBST).toBe('function');

@@ -2,7 +2,7 @@ const isValidBST = require('./index');
 // const isValidBST = require('./iterate');
 // const isValidBST = require('./template');
 // const isValidBST = require('./template-zh');
-const buildBinaryTree = require('../../utils/buildBinaryTree');
+const buildBinaryTree = require('../../../utils/buildBinaryTree');
 
 test('define isValidBST function', () => {
     expect(typeof isValidBST).toBe('function');

@@ -37,8 +37,9 @@
  * Inorder Traversal
  *
  * Time Complexity: O(n) = while 循环次数
- * Space complexity: O(n) = stack 长度
- * Auxiliary complexity: O(n) = stack 长度
+ * Space Complexity: O(n) = stack 长度
+ * Auxiliary Complexity: O(n) = stack 长度
+ * 其中 n 为以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
  * @returns {boolean}
@@ -49,7 +50,7 @@ function isValidBST(root) {
     }
 
     const stack = [];
-    let prevValue = -Infinity;
+    let prevVal = -Infinity;
 
     while (root || stack.length) {
         while (root) {
@@ -57,10 +58,10 @@ function isValidBST(root) {
             root = root.left;
         }
         root = stack.pop();
-        if (prevValue >= root.val) {
+        if (root.val <= prevVal) {
             return false;
         }
-        prevValue = root.val;
+        prevVal = root.val;
         root = root.right;
     }
 

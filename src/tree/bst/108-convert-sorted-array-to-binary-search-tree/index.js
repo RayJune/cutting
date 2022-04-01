@@ -44,8 +44,8 @@ class TreeNode {
  * Inorder Traversal, 总是选择中间位置左边的数字作为根节点
  *
  * Time Complexity: O(n) = 函数执行次数
- * Space complexity: O(n) = 生成的二叉搜索树节点个数 / 函数调用栈深度
- * Auxiliary complexity: O(n) = 函数调用栈深度
+ * Space Complexity: O(n) = 生成的二叉搜索树节点个数 / 函数调用栈深度
+ * Auxiliary Complexity: O(n) = 函数调用栈深度
  * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
