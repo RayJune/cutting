@@ -18,7 +18,6 @@
  * Output: []
  *
  * Constraints:
- *
  * The number of nodes in the tree is in the range [0, 5000].
  * -1000 <= Node.val <= 1000
  * -1000 <= targetSum <= 1000
@@ -36,11 +35,12 @@
  */
 
 /**
- * 迭代，BFS，层序遍历
+ * Recursion
  *
- * Time Complexity: O(n ** 2) = while + for 循环次数 O(n) * arr.slice 方法 O(n)
- * Space complexity: O(n) = result 数组长度 O(n) + stack 占用空间 O(n)
- * Auxiliary complexity: O(n) = stack 占用空间 O(n)
+ * Time Complexity: O(n ** 2) = 函数执行次数 O(n) * path.slice 方法 O(n)
+ * Space Complexity: O(n) = result 数组长度 / 函数调用栈深度
+ * Auxiliary Complexity: O(n) = 函数调用栈深度
+ * 其中 n 为以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
  * @param {number} targetSum
@@ -52,39 +52,23 @@ function pathSum(root, targetSum) {
     }
 
     const result = [];
-    let stack = [{
-        node: root,
-        num: targetSum,
-        arr: []
-    }];
+    const helper = (node, num, path = []) => {
+        const {left, right, val} = node;
 
-    while (stack.length) {
-        const temp = [];
-
-        for (const {node, num, arr} of stack) {
-            const {left, right, val} = node;
-
-            arr.push(val);
-            if (left === null && right === null && num === val) {
-                result.push(arr);
-            }
-            if (left) {
-                temp.push({
-                    node: left,
-                    num: num - val,
-                    arr: arr.slice()
-                });
-            }
-            if (right) {
-                temp.push({
-                    node: right,
-                    num: num - val,
-                    arr: arr.slice()
-                });
-            }
+        path.push(val);
+        num -= val;
+        if (left === null && right === null && num === 0) {
+            result.push(path);
         }
-        stack = temp;
+        if (left) {
+            helper(left, num, path.slice());
+        }
+        if (right) {
+            helper(right, num, path.slice());
+        }
     }
+
+    helper(root, targetSum);
 
     return result;
 }

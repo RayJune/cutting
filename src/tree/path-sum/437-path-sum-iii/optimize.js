@@ -14,7 +14,6 @@
  * Output: 3
  *
  * Constraints:
- *
  * The number of nodes in the tree is in the range [0, 1000].
  * (-10) ** 9 <= Node.val <= 10 ** 9
  * -1000 <= targetSum <= 1000
@@ -32,12 +31,12 @@
  */
 
 /**
- * Prefix Sum + 前序遍历
+ * Prefix Sum + Recursion
  *
- * Time Complexity: O(n) = preorderTraversal 函数执行次数
- * Space complexity: O(n) = preorderTraversal 函数调用栈深度 O(n) + prefixSum 占用空间 O(n)
- * Auxiliary complexity: O(n) = preorderTraversal 函数调用栈深度 O(n) + prefixSum 占用空间 O(n)
- * 其中 n 是二叉树的节点数
+ * Time Complexity: O(n) = 函数执行次数
+ * Space Complexity: O(n) = 函数调用栈深度 / map 占用空间
+ * Auxiliary Complexity: O(n) = 函数调用栈深度 / map 占用空间
+ * 其中 n 为以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
  * @param {number} targetSum
@@ -45,26 +44,24 @@
  */
 function pathSum(root, targetSum) {
     const prefixSum = new Map([[0, 1]]);
-    const preorderTraversal = (node, sum) => {
+    const helper = (node, sum) => {
         if (node === null) {
             return 0;
         }
 
+        let count = 0;
         const {left, right, val} = node;
 
         sum += val;
+        count = prefixSum.get(sum - targetSum) || 0;
         prefixSum.set(sum, (prefixSum.get(sum) || 0) + 1);
-
-        const count = (prefixSum.get(sum - targetSum) || 0)
-            + preorderTraversal(left, sum)
-            + preorderTraversal(right, sum);
-
+        count += helper(left, sum) + helper(right, sum);
         prefixSum.set(sum, prefixSum.get(sum) - 1);
 
         return count;
     };
 
-    return preorderTraversal(root, 0);
+    return helper(root, 0);
 }
 
 module.exports = pathSum;

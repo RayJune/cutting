@@ -14,7 +14,6 @@
  * Output: 3
  *
  * Constraints:
- *
  * The number of nodes in the tree is in the range [0, 1000].
  * (-10) ** 9 <= Node.val <= 10 ** 9
  * -1000 <= targetSum <= 1000
@@ -34,10 +33,10 @@
 /**
  * 前序遍历每一个节点，然后检测以这个节点为起始且向下延伸的路径有多少种
  *
- * Time Complexity: O(n^2) = pathSum 函数执行次数 O(n) * rootSum 函数执行次数 O(n)
- * Space complexity: O(n) = pathSum 函数调用栈深度 O(n) + rootSum 函数调用栈深度 O(n)
- * Auxiliary complexity: O(n) = pathSum 函数调用栈深度 O(n) + rootSum 函数调用栈深度 O(n)
- * 其中 n 是二叉树的节点数
+ * Time Complexity: O(n ** 2) = pathSum 函数执行次数 O(n) * rootSum 函数执行次数 O(n)
+ * Space Complexity: O(n) = pathSum 函数调用栈深度 O(n) + rootSum 函数调用栈深度 O(n)
+ * Auxiliary Complexity: O(n) = pathSum 函数调用栈深度 / rootSum 函数调用栈深度
+ * 其中 n 为以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
  * @param {number} targetSum
@@ -54,10 +53,10 @@ function pathSum(root, targetSum) {
 }
 
 /**
- * Time Complexity: O(n) = rootSum 函数执行次数
- * Space complexity: O(n) = rootSum 函数调用栈深度（最坏情况下，树呈现链状，空间复杂度为 O(n)。平均情况下树的高度和节点数的对数正相关，空间复杂度为 O(log n)
- * Auxiliary complexity: O(n) = rootSum 函数调用栈深度
- * 其中 n 是二叉树的节点数
+ * Time Complexity: O(n) = 函数执行次数
+ * Space Complexity: O(n) = 函数调用栈深度（最坏情况下，树呈现链状，空间复杂度为 O(n)。平均情况下树的高度和节点数的对数正相关，空间复杂度为 O(log n)
+ * Auxiliary Complexity: O(n) = 函数调用栈深度
+ * 其中 n 为以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
  * @param {number} num

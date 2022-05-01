@@ -1,9 +1,7 @@
 const hasPathSum = require('./index');
-// const hasPathSum = require('./iterate');
-// const hasPathSum = require('./iterate2');
 // const hasPathSum = require('./template');
 // const hasPathSum = require('./template-zh');
-const buildBinaryTree = require('../../utils/buildBinaryTree');
+const buildBinaryTree = require('../../../utils/buildBinaryTree');
 
 test('define hasPathSum function', () => {
     expect(typeof hasPathSum).toBe('function');

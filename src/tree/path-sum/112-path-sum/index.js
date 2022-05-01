@@ -18,12 +18,11 @@
  * Output: false
  *
  * Constraints:
- *
  * The number of nodes in the tree is in the range [0, 5000].
  * -1000 <= Node.val <= 1000
  * -1000 <= targetSum <= 1000
  *
- * https://leetcode.com/problems/path-num/
+ * https://leetcode.com/problems/path-sum/
  */
 
 /**
@@ -36,12 +35,12 @@
  */
 
 /**
- * 迭代，DFS，前序遍历
+ * Recursion
  *
- * Time Complexity: O(n) = hasPathSum 函数执行次数 O(n)
- * Space complexity: O(n) = hasPathSum 函数调用栈深度 O(n) （最坏情况下，树呈现链状，空间复杂度为 O(n)。平均情况下树的高度与节点数的对数正相关，空间复杂度为 O(log n)）
- * Auxiliary complexity: O(n) = hasPathSum 函数调用栈深度 O(n)
- * n 为二叉树的节点数
+ * Time Complexity: O(n) = 函数执行次数
+ * Space Complexity: O(n) = 函数调用栈深度（最坏情况下，树呈现链状，空间复杂度为 O(n)。平均情况下树的高度与节点数的对数正相关，空间复杂度为 O(log n)）
+ * Auxiliary Complexity: O(n) = 函数调用栈深度
+ * 其中 n 为以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
  * @param {number} targetSum
@@ -52,33 +51,14 @@ function hasPathSum(root, targetSum) {
         return false;
     }
 
-    const stack = [{
-        node: root,
-        num: targetSum
-    }];
+    const {val, left, right} = root;
 
-    while (stack.length) {
-        const {node, num} = stack.pop();
-        const {left, right, val} = node;
-
-        if (left === null && right === null && num === val) {
-            return true;
-        }
-        if (right) {
-            stack.push({
-                node: right,
-                num: num - val
-            });
-        }
-        if (left) {
-            stack.push({
-                node: left,
-                num: num - val
-            });
-        }
+    targetSum -= val;
+    if (left === null && right === null) {
+        return targetSum === 0;
     }
 
-    return false;
+    return hasPathSum(left, targetSum) || hasPathSum(right, targetSum);
 }
 
 module.exports = hasPathSum;

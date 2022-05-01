@@ -1,9 +1,9 @@
 /*
- * 113. 路径总和 II
+ * 113. Path Sum II
  *
- * 给你二叉树的根节点 root 和一个整数目标和 targetSum ，找出所有从根节点到叶子节点路径总和等于给定目标和的路径。
+ * Given the root of a binary tree and an integer targetSum, return all root-to-leaf paths where the sum of the node values in the path equals targetSum. Each path should be returned as a list of the node values, not node references.
  *
- * 叶子节点是指没有子节点的节点。
+ * A root-to-leaf path is a path starting from the root and ending at any leaf node. A leaf is a node with no children.
  *
  * Example 1:
  * Input: root = [5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1], targetSum = 22
@@ -18,13 +18,12 @@
  * Output: []
  *
  * Constraints:
- *
- * 树中节点总数在范围 [0, 5000] 内
+ * The number of nodes in the tree is in the range [0, 5000].
  * -1000 <= Node.val <= 1000
  * -1000 <= targetSum <= 1000
  *
- * https://leetcode-cn.com/problems/path-sum-ii/
-*/
+ * https://leetcode.com/problems/path-sum-ii/
+ */
 
 /**
  * Definition for a binary tree node.
