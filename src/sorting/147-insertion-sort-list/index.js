@@ -48,7 +48,7 @@ class ListNode {
  * Auxiliary complexity: O(1)
  *
  * @param {ListNode} head
- * @returns {ListNode}
+ * @return {ListNode}
  */
 function insertionSortList(head) {
     if (head === null || head.next === null) {

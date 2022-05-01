@@ -40,7 +40,7 @@
  * 其中 n 为以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
- * @returns {number[]}
+ * @return {number[]}
  */
 function levelOrder(root) {
     if (root === null) {

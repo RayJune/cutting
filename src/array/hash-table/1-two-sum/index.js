@@ -38,7 +38,7 @@
  *
  * @param {number[]} nums
  * @param {number} target
- * @returns {number[]}
+ * @return {number[]}
  */
 function twoSum(nums, target) {
     const map = new Map();

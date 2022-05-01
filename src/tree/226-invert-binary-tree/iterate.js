@@ -45,7 +45,7 @@
  * n 为二叉树的节点数
  *
  * @param {TreeNode} root
- * @returns {TreeNode}
+ * @return {TreeNode}
  */
 function invertTree(root) {
     const stack = [root];

@@ -30,7 +30,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @returns {number}
+ * @return {number}
  */
 function subarraySum(nums, k) {
     let count = 0;

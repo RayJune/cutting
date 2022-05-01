@@ -98,7 +98,7 @@ class DFA {
  * 其中 n 为字符串 s 的长度
  *
  * @param {string} s
- * @returns {number}
+ * @return {number}
  */
 function myAtoi(s) {
     const dfa = new DFA();

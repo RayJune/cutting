@@ -44,7 +44,7 @@
  *
  * @param {TreeNode} root
  * @param {number} targetSum
- * @returns {number[]}
+ * @return {number[]}
  */
 function pathSum(root, targetSum) {
     if (root === null) {

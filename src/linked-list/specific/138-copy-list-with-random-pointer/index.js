@@ -68,7 +68,7 @@ class Node {
  * 其中 n 是 head 作为头结点的链表长度
  *
  * @param {Node} head
- * @returns {Node}
+ * @return {Node}
  */
 function copyRandomList(head) {
     if (head === null) {

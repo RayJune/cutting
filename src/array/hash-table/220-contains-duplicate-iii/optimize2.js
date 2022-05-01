@@ -35,7 +35,7 @@
  * @param {number[]} nums
  * @param {number} k
  * @param {number} t
- * @returns {boolean}
+ * @return {boolean}
  */
 function containsNearbyAlmostDuplicate(nums, k, t) {
     const map = new Map();

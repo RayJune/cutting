@@ -33,7 +33,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number[]} nums
- * @returns {number}
+ * @return {number}
  */
 function removeDuplicates(nums) {
     if (nums.length < 3) {

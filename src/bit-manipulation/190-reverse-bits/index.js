@@ -25,7 +25,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number} n
- * @returns {number}
+ * @return {number}
  */
 function reverseBits(n) {
     let reverse = 0;

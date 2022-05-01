@@ -39,7 +39,7 @@
  * 其中 n 是字符串 s 的长度，s 是字符集大小（字符串中可能出现的字符）
  *
  * @param {string} s
- * @returns {number}
+ * @return {number}
  */
 function lengthOfLongestSubstring(s) {
     const set = new Set();

@@ -33,7 +33,7 @@
  * 其中 n 为 nums 数组的长度
  *
  * @param {number[]} nums
- * @returns {number[]}
+ * @return {number[]}
  */
 function productExceptSelf(nums) {
     const answer = [1];

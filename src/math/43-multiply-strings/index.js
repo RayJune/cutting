@@ -30,7 +30,7 @@
  *
  * @param {string} num1
  * @param {string} num2
- * @returns {string}
+ * @return {string}
  */
 function multiply(num1, num2) {
     const m = num1.length;

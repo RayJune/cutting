@@ -34,7 +34,7 @@
  *
  * @param {number} target
  * @param {number[]} nums
- * @returns {number}
+ * @return {number}
  */
 function minSubArrayLen(target, nums) {
     let left = 0;

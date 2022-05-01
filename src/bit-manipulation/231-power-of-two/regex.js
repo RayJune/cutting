@@ -40,7 +40,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number} n
- * @returns {boolean}
+ * @return {boolean}
  */
 function isPowerOfTwo(n) {
     return /^10*$/.test(n.toString(2));

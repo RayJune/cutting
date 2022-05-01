@@ -46,7 +46,7 @@ class ListNode {
  * Auxiliary complexity: O(1)
  *
  * @param {ListNode} head
- * @returns {ListNode}
+ * @return {ListNode}
  */
 function swapPairs(head) {
     const preHead = new ListNode(-1, head);

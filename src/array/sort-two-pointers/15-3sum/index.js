@@ -32,7 +32,7 @@
  * Auxiliary complexity: O(log(n)) = 排序
  *
  * @param {number[]} nums
- * @returns {number[][]}
+ * @return {number[][]}
  */
 function threeSum(nums) {
     if (nums.length < 3) {

@@ -51,7 +51,7 @@ class ListNode {
  *
  * @param {ListNode} l1
  * @param {ListNode} l2
- * @returns {ListNode}
+ * @return {ListNode}
  */
 function addTwoNumbers(l1, l2) {
     let node = reverseAddWithoutCarry(l1, l2);
@@ -74,7 +74,7 @@ function addTwoNumbers(l1, l2) {
 /**
  * @param {ListNode} l1
  * @param {ListNode} l2
- * @returns {ListNode}
+ * @return {ListNode}
  */
 function reverseAddWithoutCarry(l1, l2) {
     let {m, n} = getListsNum(l1, l2);
@@ -102,7 +102,7 @@ function reverseAddWithoutCarry(l1, l2) {
 /**
  * @param {ListNode} l1
  * @param {ListNode} l2
- * @returns {{m: number, n: number}}
+ * @return {{m: number, n: number}}
  */
 function getListsNum(l1, l2) {
     let m = 0;

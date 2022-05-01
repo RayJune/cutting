@@ -44,7 +44,7 @@
  * @param {TreeNode} root
  * @param {number} [low=-Infinity]
  * @param {number} [high=Infinity]
- * @returns {boolean}
+ * @return {boolean}
  */
 function isValidBST(root, low = -Infinity, high = Infinity) {
     if (root === null) {

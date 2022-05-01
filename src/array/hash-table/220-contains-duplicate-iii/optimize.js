@@ -37,7 +37,7 @@ const BinarySearchTree = require('./binary-search-tree');
  * @param {number[]} nums
  * @param {number} k
  * @param {number} t
- * @returns {boolean}
+ * @return {boolean}
  */
 function containsNearbyAlmostDuplicate(nums, k, t) {
     const bst = new BinarySearchTree();

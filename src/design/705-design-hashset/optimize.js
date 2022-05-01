@@ -56,7 +56,7 @@ class MyHashSet {
 
     /**
      * @param {number} key
-     * @returns {number}
+     * @return {number}
      */
     #hash(key) {
         return key % this.#keyRange;
@@ -86,7 +86,7 @@ class MyHashSet {
 
     /**
      * @param {number} key
-     * @returns {boolean}
+     * @return {boolean}
      */
     contains(key) {
         const hash = this.#hash(key);

@@ -39,7 +39,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number} x
- * @returns {boolean}
+ * @return {boolean}
  */
 function isPalindrome(x) {
     if (x < 0 || (x !== 0 && x % 10 === 0)) {

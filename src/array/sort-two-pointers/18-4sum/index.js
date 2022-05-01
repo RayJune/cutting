@@ -33,7 +33,7 @@
  *
  * @param {number[]} nums
  * @param {number} target
- * @returns {number[][]}
+ * @return {number[][]}
  */
 function fourSum(nums, target) {
     if (nums.length < 4) {

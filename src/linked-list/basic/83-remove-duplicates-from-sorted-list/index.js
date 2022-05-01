@@ -38,7 +38,7 @@
  * 其中 n 是链表中的节点数
  *
  * @param {ListNode} head
- * @returns {ListNode}
+ * @return {ListNode}
  */
 function deleteDuplicates(head) {
     let node = head;

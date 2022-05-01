@@ -49,7 +49,7 @@ class ListNode {
  *
  * @param {ListNode} l1
  * @param {ListNode} l2
- * @returns {ListNode}
+ * @return {ListNode}
  */
 function mergeTwoLists(l1, l2) {
     const preHead = new ListNode(-1);

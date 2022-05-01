@@ -42,7 +42,7 @@
  *
  * @param {number} n
  * @param {number} k
- * @returns {string}
+ * @return {string}
  */
 function getPermutation(n, k) {
     let count = 0;

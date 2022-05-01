@@ -45,7 +45,7 @@
  * n 为二叉树的节点数
  *
  * @param {TreeNode} root
- * @returns {number}
+ * @return {number}
  */
 function isBalanced(root) {
     if (root === null) {
@@ -60,7 +60,7 @@ function isBalanced(root) {
 
 /**
  * @param {TreeNode} root
- * @returns {number}
+ * @return {number}
  */
 function maxDepth(root) {
     if (root === null) {

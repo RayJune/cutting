@@ -44,7 +44,7 @@
  * 其中 n 是字符串 s 的长度
  *
  * @param {string} s
- * @returns {boolean}
+ * @return {boolean}
  */
 function isValid(s) {
     if (s.length % 2 === 1) {

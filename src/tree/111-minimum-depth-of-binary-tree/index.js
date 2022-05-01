@@ -41,7 +41,7 @@
  * n 为二叉树的节点数
  *
  * @param {TreeNode} root
- * @returns {number}
+ * @return {number}
  */
 function minDepth(root) {
     if (root === null) {

@@ -31,7 +31,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @returns {number}
+ * @return {number}
  */
 function twoSumLessThanK(nums, k) {
     if (nums.length < 2) {

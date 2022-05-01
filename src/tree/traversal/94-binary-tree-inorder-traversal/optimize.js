@@ -49,7 +49,7 @@
  *
  * @param {TreeNode} root
  * @param {number[]} result
- * @returns {number[]}
+ * @return {number[]}
  */
 function inorderTraversal(root) {
     const result = [];

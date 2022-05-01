@@ -79,7 +79,7 @@ function buildTree(preorder, inorder) {
 
 /**
  * @param {number[]} inorder
- * @returns {Map<number, number>}
+ * @return {Map<number, number>}
  */
 function buildMap(inorder) {
     const map = new Map();

@@ -50,7 +50,7 @@
  *
  * @param {number[]} days
  * @param {number[]} costs
- * @returns {number}
+ * @return {number}
  */
 function mincostTickets(days, costs) {
     const dp = new Array(days[days.length - 1] + 1).fill(0);

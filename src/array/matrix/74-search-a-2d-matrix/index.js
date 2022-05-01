@@ -32,7 +32,7 @@
  *
  * @param {number[][]} matrix
  * @param {number} target
- * @returns {boolean}
+ * @return {boolean}
  */
 function searchMatrix(matrix, target) {
     const m = matrix.length;

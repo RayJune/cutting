@@ -51,7 +51,7 @@ class ListNode {
  *
  * @param {ListNode} l1
  * @param {ListNode} l2
- * @returns {ListNode}
+ * @return {ListNode}
  */
 function addTwoNumbers(l1, l2) {
     let reversedL1 = reverseList(l1);
@@ -82,7 +82,7 @@ function addTwoNumbers(l1, l2) {
 
 /**
  * @param {ListNode} head
- * @returns {ListNode}
+ * @return {ListNode}
  */
 function reverseList(head) {
     let prevNode = null;

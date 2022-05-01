@@ -31,7 +31,7 @@
  * Auxiliary complexity: O(n)
  *
  * @param {string} s
- * @returns {boolean}
+ * @return {boolean}
  */
 function validPalindrome(s) {
     let left = 0;
@@ -56,7 +56,7 @@ function validPalindrome(s) {
  * @param {string} s
  * @param {left} left
  * @param {right} right
- * @returns {boolean}
+ * @return {boolean}
  */
 function isPalindrome(s, left, right) {
     while (left < right) {

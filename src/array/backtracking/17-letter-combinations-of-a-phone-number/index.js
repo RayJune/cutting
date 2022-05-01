@@ -42,7 +42,7 @@
  * 其中 n 是 digits 的长度
  *
  * @param {string} digits
- * @returns {string[]}
+ * @return {string[]}
  */
 function letterCombinations(digits) {
     if (digits.length === 0) {

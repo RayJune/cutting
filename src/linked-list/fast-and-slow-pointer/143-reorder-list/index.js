@@ -40,7 +40,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {ListNode} head
- * @returns {ListNode}
+ * @return {ListNode}
  */
 function reorderList(head) {
     if (head.next === null || head.next.next === null) {
@@ -70,7 +70,7 @@ function reorderList(head) {
  * 返回中间节点的前一个节点，如果有两个中间节点，返回第一个中间节点
  *
  * @param {ListNode} head
- * @returns {ListNode}
+ * @return {ListNode}
  */
 function getPreMid(head) {
     let slow = head;
@@ -86,7 +86,7 @@ function getPreMid(head) {
 
 /**
  * @param {ListNode} head
- * @returns {ListNode}
+ * @return {ListNode}
  */
 function reverseList(head) {
     let prevNode = null;

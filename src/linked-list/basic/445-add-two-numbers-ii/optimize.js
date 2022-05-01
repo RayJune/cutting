@@ -52,7 +52,7 @@ class ListNode {
  *
  * @param {ListNode} l1
  * @param {ListNode} l2
- * @returns {ListNode}
+ * @return {ListNode}
  */
 function addTwoNumbers(l1, l2) {
     const stack1 = [];

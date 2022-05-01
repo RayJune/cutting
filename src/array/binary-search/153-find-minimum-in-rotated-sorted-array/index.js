@@ -45,7 +45,7 @@
  * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
- * @returns {number}
+ * @return {number}
  */
 function findMin(nums) {
     let left = 0;

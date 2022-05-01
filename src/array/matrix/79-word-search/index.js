@@ -39,7 +39,7 @@
  *
  * @param {character[][]} board
  * @param {string} word
- * @returns {boolean}
+ * @return {boolean}
  */
 function exist(board, word) {
     const m = board.length;

@@ -40,7 +40,7 @@
  *
  * @param {TreeNode} root
  * @param {number} targetSum
- * @returns {number}
+ * @return {number}
  */
 function pathSum(root, targetSum) {
     const prefixSum = new Map([[0, 1]]);

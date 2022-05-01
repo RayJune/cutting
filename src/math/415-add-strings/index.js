@@ -35,7 +35,7 @@
  *
  * @param {string} num1
  * @param {string} num2
- * @returns {string}
+ * @return {string}
  */
 function addStrings(num1, num2) {
     const sum = [];

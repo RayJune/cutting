@@ -69,7 +69,7 @@ class Trie {
      * 其中 n 为查询字符串的长度
      *
      * @param {string} prefix
-     * @returns {boolean}
+     * @return {boolean}
      */
     search(word) {
         let node = this.#root;
@@ -91,7 +91,7 @@ class Trie {
      * 其中 n 为查询字符串的长度
      *
      * @param {string} prefix
-     * @returns {boolean}
+     * @return {boolean}
      */
     startsWith(prefix) {
         let node = this.#root;

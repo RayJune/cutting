@@ -30,7 +30,7 @@
  * 其中 n 是 intervals 数组的长度
  *
  * @param {number[][]} intervals
- * @returns {number[][]}
+ * @return {number[][]}
  */
 function merge(intervals) {
     if (intervals.length < 2) {

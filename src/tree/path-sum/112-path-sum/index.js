@@ -44,7 +44,7 @@
  *
  * @param {TreeNode} root
  * @param {number} targetSum
- * @returns {boolean}
+ * @return {boolean}
  */
 function hasPathSum(root, targetSum) {
     if (root === null) {

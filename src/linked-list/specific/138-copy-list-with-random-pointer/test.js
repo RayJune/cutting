@@ -12,7 +12,7 @@ class Node {
 
 /**
  * @param {number[]} arr
- * @returns {Node}
+ * @return {Node}
  */
 function buildListNode(arr) {
     let preHead = new Node(-1);
@@ -40,7 +40,7 @@ function buildListNode(arr) {
  *
  * @param {Node} l1
  * @param {Node} l2
- * @returns {Boolean}
+ * @return {Boolean}
  */
 function isDifferentListNode(l1, l2) {
     while (l1 && l2) {

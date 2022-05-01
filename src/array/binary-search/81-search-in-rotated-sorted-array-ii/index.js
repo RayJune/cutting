@@ -38,7 +38,7 @@
  *
  * @param {number[]} nums
  * @param {number} target
- * @returns {boolean}
+ * @return {boolean}
  */
 function search(nums, target) {
     let left = 0;

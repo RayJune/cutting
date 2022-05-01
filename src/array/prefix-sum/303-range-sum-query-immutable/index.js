@@ -53,7 +53,7 @@ class NumArray {
      *
      * @param {number} i
      * @param {number} j
-     * @returns {number}
+     * @return {number}
      */
     sumRange(i, j) {
         return this.#prefixSum[j + 1] - this.#prefixSum[i];

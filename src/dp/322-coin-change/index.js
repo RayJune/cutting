@@ -46,7 +46,7 @@
  *
  * @param {number[]} coins
  * @param {number} amount
- * @returns {number}
+ * @return {number}
  */
 function coinChange(coins, amount) {
     if (amount === 0) {

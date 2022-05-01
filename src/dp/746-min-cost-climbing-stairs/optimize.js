@@ -41,7 +41,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number[]} cost
- * @returns {number}
+ * @return {number}
  */
 function minCostClimbingStairs(cost) {
     let prev = 0;

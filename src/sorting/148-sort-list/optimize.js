@@ -49,7 +49,7 @@ class ListNode {
  * Auxiliary complexity: O(1)
  *
  * @param {ListNode} head
- * @returns {ListNode}
+ * @return {ListNode}
  */
 function sortList(head) {
     if (head === null || head.next === null) {
@@ -100,7 +100,7 @@ function sortList(head) {
 
 /**
  * @param {ListNode} head
- * @returns {number}
+ * @return {number}
  */
 function getListLength(head) {
     let length = 0;
@@ -119,7 +119,7 @@ function getListLength(head) {
  *
  * @param {ListNode} l1
  * @param {ListNode} l2
- * @returns {ListNode}
+ * @return {ListNode}
  */
 function mergeTwoLists(l1, l2) {
     const preHead = new ListNode(-1);

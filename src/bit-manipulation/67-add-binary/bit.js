@@ -29,7 +29,7 @@
  *
  * @param {string} a
  * @param {string} b
- * @returns {string}
+ * @return {string}
  */
 function addBinary(a, b) {
     let binaryA = BigInt(`0b${a}`);

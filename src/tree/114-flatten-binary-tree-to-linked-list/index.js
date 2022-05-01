@@ -57,7 +57,7 @@ function flatten(root) {
 /**
  * @param {TreeNode} root
  * @param {number[]} result
- * @returns {number[]}
+ * @return {number[]}
  */
 function preorderTraversal(root, result = []) {
     if (root) {

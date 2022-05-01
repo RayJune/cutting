@@ -40,7 +40,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number[]} prices
- * @returns {number}
+ * @return {number}
  */
 function maxProfit(prices) {
     let maxProfit = 0;

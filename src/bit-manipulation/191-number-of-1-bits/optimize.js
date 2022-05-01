@@ -29,7 +29,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number} n
- * @returns {number}
+ * @return {number}
  */
 function hammingWeight(n) {
     let count = 0;

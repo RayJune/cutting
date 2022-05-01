@@ -33,7 +33,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number[]} nums
- * @returns {number}
+ * @return {number}
  */
 function maxProduct(nums) {
     let currMax = 1;

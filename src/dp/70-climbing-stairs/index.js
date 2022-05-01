@@ -34,7 +34,7 @@
  * Auxiliary complexity: O(n) = dp 数组长度
  *
  * @param {number} n
- * @returns {number}
+ * @return {number}
  */
 function climbStairs(n) {
     const dp = [1, 1];

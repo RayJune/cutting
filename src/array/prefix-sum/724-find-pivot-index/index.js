@@ -37,7 +37,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number[]} nums
- * @returns {number}
+ * @return {number}
  */
 function pivotIndex(nums) {
     const sum = nums.reduce((a, b) => a + b, 0);

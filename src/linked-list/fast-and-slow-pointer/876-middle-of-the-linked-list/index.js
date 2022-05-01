@@ -37,7 +37,7 @@
  * 其中 n 是 head 作为头结点的链表长度
  *
  * @param {ListNode} head
- * @returns {ListNode}
+ * @return {ListNode}
  */
 function middleNode(head) {
     let slow = head;

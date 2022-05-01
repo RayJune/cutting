@@ -26,7 +26,7 @@ function quickSort(arr, left = 0, right = arr.length - 1) {
  * @param {number[]} arr
  * @param {number} left
  * @param {number} right
- * @returns {number}
+ * @return {number}
  */
 function partition(arr, left, right) {
     const {pivot, pivotIndex} = getMedian(arr, left, right);
@@ -48,7 +48,7 @@ function partition(arr, left, right) {
  * @param {number[]} arr
  * @param {number} left
  * @param {number} right
- * @returns {{pivot: number, pivotIndex: number}}
+ * @return {{pivot: number, pivotIndex: number}}
  */
 function getMedian(arr, left, right) {
     let pivot = arr[left];

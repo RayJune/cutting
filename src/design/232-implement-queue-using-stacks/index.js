@@ -60,7 +60,7 @@ class MyQueue {
      * Auxiliary complexity: O(1)
      * 其中 n 是队列内元素的个数
      *
-     * @returns {number}
+     * @return {number}
      */
     pop() {
         if (this.#stack2.length === 0) {
@@ -77,7 +77,7 @@ class MyQueue {
      * Space complexity: O(1)
      * Auxiliary complexity: O(1)
      *
-     * @returns {number}
+     * @return {number}
      */
     peek() {
         const item = this.pop();
@@ -92,7 +92,7 @@ class MyQueue {
      * Space complexity: O(1)
      * Auxiliary complexity: O(1)
      *
-     * @returns {boolean}
+     * @return {boolean}
      */
     empty() {
         return this.#stack1.length === 0 && this.#stack2.length === 0;

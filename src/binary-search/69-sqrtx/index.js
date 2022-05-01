@@ -30,7 +30,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number} x
- * @returns {number}
+ * @return {number}
  */
 function mySqrt(x) {
     let left = 0;

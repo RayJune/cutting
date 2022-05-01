@@ -26,7 +26,7 @@
  * Auxiliary complexity: O(n) = start 和 end 数组长度 O(n) + 排序 O(log(n))
  *
  * @param {number[][]} intervals
- * @returns {number}
+ * @return {number}
  */
 function minMeetingRooms(intervals) {
     const start = [];

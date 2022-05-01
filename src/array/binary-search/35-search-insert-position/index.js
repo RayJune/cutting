@@ -36,7 +36,7 @@
  *
  * @param {number[]} nums
  * @param {number} target
- * @returns {number}
+ * @return {number}
  */
 function searchInsert(nums, target) {
     let left = 0;

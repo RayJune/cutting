@@ -33,7 +33,7 @@
  *
  * @param {number[]} nums
  * @param {number} target
- * @returns {number}
+ * @return {number}
  */
 function threeSumClosest(nums, target) {
     let closet = Infinity;

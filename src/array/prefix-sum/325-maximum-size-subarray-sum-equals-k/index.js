@@ -30,7 +30,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @returns {number}
+ * @return {number}
  */
 function maxSubArrayLen(nums, k) {
     const prefixSum = new Map([[0, -1]]);

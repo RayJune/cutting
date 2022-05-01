@@ -38,7 +38,7 @@
  *
  * @param {number[]} nums
  * @param {number} target
- * @returns {number[]}
+ * @return {number[]}
  */
 function searchRange(nums, target) {
     const start = binarySearch(nums, target, true);
@@ -55,7 +55,7 @@ function searchRange(nums, target) {
  * @param {number[]} nums
  * @param {number} target
  * @param {boolean} lower
- * @returns {number}
+ * @return {number}
  */
 function binarySearch(nums, target, lower) {
     let left = 0;

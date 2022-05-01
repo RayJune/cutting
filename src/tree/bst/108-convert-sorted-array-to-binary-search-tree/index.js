@@ -49,7 +49,7 @@ class TreeNode {
  * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
- * @returns {TreeNode}
+ * @return {TreeNode}
  */
 function sortedArrayToBST(nums) {
     if (nums.length === 0) {

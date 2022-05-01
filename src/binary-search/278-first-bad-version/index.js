@@ -33,7 +33,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {Function} isBadVersion
- * @returns {Function}
+ * @return {Function}
  */
 function solution(isBadVersion) {
     /**

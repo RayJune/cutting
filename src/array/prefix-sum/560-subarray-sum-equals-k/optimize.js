@@ -30,7 +30,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @returns {number}
+ * @return {number}
  * 其中 n 是数组的长度
  */
 function subarraySum(nums, k) {

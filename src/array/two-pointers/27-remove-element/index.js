@@ -34,7 +34,7 @@
  *
  * @param {number[]} nums
  * @param {number} val
- * @returns {number}
+ * @return {number}
  */
 function removeElement(nums, val) {
     let fast = 0;

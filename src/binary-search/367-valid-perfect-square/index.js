@@ -27,7 +27,7 @@
  * Auxiliary complexity: O()
  *
  * @param {number} num
- * @returns {boolean}
+ * @return {boolean}
  */
 function isPerfectSquare(num) {
     let left = 0;

@@ -35,7 +35,7 @@
  * @param {number[]} arr
  * @param {number} k
  * @param {number} x
- * @returns {number[]}
+ * @return {number[]}
  */
 function findClosestElements(arr, k, x) {
     let left = 0;

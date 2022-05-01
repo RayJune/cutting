@@ -40,7 +40,7 @@
  *
  * @param {TreeNode} root
  * @param {number} targetSum
- * @returns {number}
+ * @return {number}
  */
 function pathSum(root, targetSum) {
     if (root === null) {
@@ -60,7 +60,7 @@ function pathSum(root, targetSum) {
  *
  * @param {TreeNode} root
  * @param {number} num
- * @returns {number}
+ * @return {number}
  */
 function rootSum(root, num) {
     if (root === null) {

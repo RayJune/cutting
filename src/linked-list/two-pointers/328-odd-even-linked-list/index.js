@@ -42,7 +42,7 @@
  * 其中 n 是 head 作为头节点的链表的节点数
  *
  * @param {ListNode} head
- * @returns {ListNode}
+ * @return {ListNode}
  */
 function oddEvenList(head) {
     if (head === null || head.next === null) {
