@@ -18,7 +18,6 @@
  * Output: false
  *
  * Constraints:
- *
  * 1 <= nums.length <= 10 ** 5
  * 0 <= nums[i] <= 10 ** 9
  * 0 <= sum(nums[i]) <= 2 ** 31 - 1
@@ -30,7 +29,7 @@
 /**
  * Prefix Sum，余数前缀和
  *
- * Time Complexity: O(n) = for 循环次数
+ * Time Complexity: O(n) = .some 遍历次数
  * Space complexity: O(min(n, k)) = prefixSum 长度
  * Auxiliary complexity: O(min(n, k)) = prefixSum 长度
  * 其中 n 是数组 nums 的长度
@@ -45,20 +44,16 @@ function checkSubarraySum(nums, k) {
     }
 
     const prefixSum = new Map([[0, -1]]);
-    const len = nums.length;
     let remainder = 0;
 
-    for (let i = 0; i < len; i++) {
-        remainder = (remainder + nums[i]) % k;
+    return nums.some((num, i) => {
+        remainder = (remainder + num) % k;
         if (!prefixSum.has(remainder)) {
             prefixSum.set(remainder, i);
         }
-        if (i - prefixSum.get(remainder) >= 2) {
-            return true;
-        }
-    }
 
-    return false;
+        return i - prefixSum.get(remainder) >= 2;
+    });
 }
 
 module.exports = checkSubarraySum;

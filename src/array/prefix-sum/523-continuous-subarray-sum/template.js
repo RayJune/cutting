@@ -18,7 +18,6 @@
  * Output: false
  *
  * Constraints:
- *
  * 1 <= nums.length <= 10 ** 5
  * 0 <= nums[i] <= 10 ** 9
  * 0 <= sum(nums[i]) <= 2 ** 31 - 1
