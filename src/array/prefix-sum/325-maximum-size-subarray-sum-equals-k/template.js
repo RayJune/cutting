@@ -12,7 +12,6 @@
  * Output: 2
  *
  * Constraints:
- *
  * 1 <= nums.length <= 2 * 10 ** 5
  * (-10) ** 4 <= nums[i] <= 10 ** 4
  * (-10) ** 9 <= k <= 10 ** 9
