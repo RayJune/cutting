@@ -10,7 +10,6 @@
  * Output: 7
  *
  * Constraints:
- *
  * 1 <= nums.length <= 3 * 10 ** 4
  * (-10) ** 4 <= nums[i] <= 10 ** 4
  * 2 <= k <= 10 ** 4
