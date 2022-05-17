@@ -13,7 +13,6 @@
  * Output: 2
  *
  * Constraints:
- *
  * 1 <= nums.length <= 2 * 10 ** 4
  * -1000 <= nums[i] <= 1000
  * (-10) ** 7 <= target <= 10 ** 7
@@ -22,29 +21,28 @@
 */
 
 /**
- * Brute Force
+ * Prefix Sum
  *
- * Time Complexity: O(n ** 2) = for 循环 O(n) * for 循环 O(n)
- * Space complexity: O(1)
- * Auxiliary complexity: O(1)
+ * Time Complexity: O(n) = for...of 遍历次数
+ * Space complexity: O(n) = prefixSum 长度
+ * Auxiliary complexity: O(n) = prefixSum 长度
+ * 其中 n 是数组的长度
  *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
  */
 function subarraySum(nums, k) {
+    const prefixSum = new Map([[0, 1]]);
     let count = 0;
-    const len = nums.length;
+    let sum = 0;
 
-    for (let i = 0; i < len; i++) {
-        let sum = 0;
-
-        for (let j = i; j < len; j++) {
-            sum += nums[j];
-            if (sum === k) {
-                count += 1;
-            }
+    for (const num of nums) {
+        sum += num;
+        if (prefixSum.has(sum - k)) {
+            count += prefixSum.get(sum - k);
         }
+        prefixSum.set(sum, prefixSum.has(sum) ? prefixSum.get(sum) + 1 : 1);
     }
 
     return count;

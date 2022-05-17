@@ -1,5 +1,4 @@
-// const subarraySum = require('./index');
-const subarraySum = require('./optimize');
+const subarraySum = require('./index');
 // const subarraySum = require('./template');
 // const subarraySum = require('./template-zh');
 
