@@ -15,7 +15,6 @@
  * Output: [null, 1, -1, -3]
  *
  * Constraints:
- *
  * 1 <= nums.length <= 10 ** 4
  * (-10) ** 5 <= nums[i] <= 10 ** 5
  * 0 <= left <= right < nums.length

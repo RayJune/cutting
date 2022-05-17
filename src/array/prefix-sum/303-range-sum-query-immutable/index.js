@@ -15,7 +15,6 @@
  * Output: [null, 1, -1, -3]
  *
  * Constraints:
- *
  * 1 <= nums.length <= 10 ** 4
  * (-10) ** 5 <= nums[i] <= 10 ** 5
  * 0 <= left <= right < nums.length
@@ -31,7 +30,7 @@ class NumArray {
     #prefixSum = [0];
 
     /**
-     * Time Complexity: O(n) = for 循环次数
+     * Time Complexity: O(n) = .forEach 遍历次数
      * Space complexity: O(n) = this.#prefixSum 数组的长度
      * Auxiliary complexity: O(n) = this.#prefixSum 数组的长度
      * 其中 n 是数组 nums 的长度
@@ -39,11 +38,9 @@ class NumArray {
      * @param {number[]} nums
      */
     constructor(nums) {
-        const len = nums.length;
-
-        for (let i = 0; i < len; i++) {
-            this.#prefixSum[i + 1] = this.#prefixSum[i] + nums[i];
-        }
+        nums.forEach((num, i) => {
+            this.#prefixSum[i + 1] = this.#prefixSum[i] + num;
+        });
     }
 
     /**
