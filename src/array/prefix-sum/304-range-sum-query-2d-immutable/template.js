@@ -15,7 +15,6 @@
  * Output: [null, 8, 11, 12]
  *
  * Constraints:
- *
  * m == matrix.length
  * n == matrix[i].length
  * 1 <= m, n <= 200

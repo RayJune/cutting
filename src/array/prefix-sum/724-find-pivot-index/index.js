@@ -22,7 +22,6 @@
  * Output: 0
  *
  * Constraints:
- *
  * 1 <= nums.length <= 10 ** 4
  * -1000 <= nums[i] <= 1000
  *
@@ -32,7 +31,7 @@
 /**
  * Prefix Sum
  *
- * Time Complexity: O(n) = reduce 方法 O(n) + for 循环次数 O(n)
+ * Time Complexity: O(n) = reduce 方法 / for 循环次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
  *
@@ -41,10 +40,9 @@
  */
 function pivotIndex(nums) {
     const sum = nums.reduce((a, b) => a + b, 0);
-    const len = nums.length;
     let prefixSum = 0;
 
-    for (let i = 0; i < len; i++) {
+    for (let i = 0; i < nums.length; i++) {
         if (prefixSum * 2 + nums[i] === sum) {
             return i;
         }

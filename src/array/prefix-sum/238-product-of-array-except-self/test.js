@@ -11,8 +11,8 @@ test('nums = [1, 2, 3, 4]', () => {
 });
 
 test('nums = [-1, 1, 0, -3, 3]', () => {
-    const result = productExceptSelf([-1, 1, 0, -3, 3])
+    const answer = productExceptSelf([-1, 1, 0, -3, 3])
         .map(num => num === 0 ? Math.abs(num) : num);
 
-    expect(result).toEqual([0, 0, 9, 0, 0]);
+    expect(answer).toEqual([0, 0, 9, 0, 0]);
 });

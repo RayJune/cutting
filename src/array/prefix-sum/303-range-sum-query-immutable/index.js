@@ -30,7 +30,7 @@ class NumArray {
     #prefixSum = [0];
 
     /**
-     * Time Complexity: O(n) = .forEach 遍历次数
+     * Time Complexity: O(n) = .forEach 循环次数
      * Space complexity: O(n) = this.#prefixSum 数组的长度
      * Auxiliary complexity: O(n) = this.#prefixSum 数组的长度
      * 其中 n 是数组 nums 的长度

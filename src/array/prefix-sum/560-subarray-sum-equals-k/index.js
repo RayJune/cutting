@@ -23,7 +23,7 @@
 /**
  * Prefix Sum
  *
- * Time Complexity: O(n) = for...of 遍历次数
+ * Time Complexity: O(n) = for...of 循环次数
  * Space complexity: O(n) = prefixSum 长度
  * Auxiliary complexity: O(n) = prefixSum 长度
  * 其中 n 是数组的长度

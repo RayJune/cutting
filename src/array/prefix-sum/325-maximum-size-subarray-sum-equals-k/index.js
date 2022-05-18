@@ -22,7 +22,7 @@
 /**
  * Prefix Sum
  *
- * Time Complexity: O(n) = .forEach 遍历次数
+ * Time Complexity: O(n) = .forEach 循环次数
  * Space complexity: O(n) = prefixSum 的长度
  * Auxiliary complexity: O(n) = prefixSum 的长度
  * 其中 n 是 nums 数组的长度
@@ -33,16 +33,16 @@
  */
 function maxSubArrayLen(nums, k) {
     const prefixSum = new Map([[0, -1]]);
-    let sum = 0;
     let maxLen = 0;
+    let sum = 0;
 
     nums.forEach((num, i) => {
         sum += num;
-        if (!prefixSum.has(sum)) {
-            prefixSum.set(sum, i);
-        }
         if (prefixSum.has(sum - k)) {
             maxLen = Math.max(maxLen, i - prefixSum.get(sum - k));
+        }
+        if (!prefixSum.has(sum)) {
+            prefixSum.set(sum, i);
         }
     });
 

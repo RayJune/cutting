@@ -29,7 +29,7 @@
 /**
  * Prefix Sum，余数前缀和
  *
- * Time Complexity: O(n) = .some 遍历次数
+ * Time Complexity: O(n) = .some 循环次数
  * Space complexity: O(min(n, k)) = prefixSum 长度
  * Auxiliary complexity: O(min(n, k)) = prefixSum 长度
  * 其中 n 是数组 nums 的长度

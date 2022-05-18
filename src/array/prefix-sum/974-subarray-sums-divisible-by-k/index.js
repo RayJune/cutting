@@ -35,7 +35,6 @@ function subarraysDivByK(nums, k) {
 
     for (const num of nums) {
         remainder = (remainder + num) % k;
-
         if (remainder < 0) {
             remainder += k;
         }

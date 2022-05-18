@@ -21,7 +21,7 @@
 /**
  * Prefix Sum，把 0 视作 -1，把原问题转换为求最长的连续子数组，其元素和为 0
  *
- * Time Complexity: O(n) = .forEach 遍历次数
+ * Time Complexity: O(n) = .forEach 循环次数
  * Space complexity: O(n) = prefixSum 长度
  * Auxiliary complexity: O(n) = prefixSum 长度
  * 其中 n 是数组的长度
@@ -31,8 +31,8 @@
  */
 function findMaxLength(nums) {
     const prefixSum = new Map([[0, -1]]);
-    let sum = 0;
     let maxLength = 0;
+    let sum = 0;
 
     nums.forEach((num, i) => {
         sum += (num === 1 ? 1 : -1);
