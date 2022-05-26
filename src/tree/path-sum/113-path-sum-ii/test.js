@@ -7,19 +7,19 @@ test('define pathSum function', () => {
     expect(typeof pathSum).toBe('function');
 });
 
-test('root = [], targetSUm = 0', () => {
+test('root = [], targetSum = 0', () => {
     expect(pathSum(buildBinaryTree([]), 0)).toEqual([]);
 });
 
-test('root = [1, 2], targetSUm = 0', () => {
+test('root = [1, 2], targetSum = 0', () => {
     expect(pathSum(buildBinaryTree([1, 2]), 0)).toEqual([]);
 });
 
-test('root = [1, 2, 3], targetSUm = 5', () => {
+test('root = [1, 2, 3], targetSum = 5', () => {
     expect(pathSum(buildBinaryTree([1, 2, 3]), 5)).toEqual([]);
 });
 
-test('root = [5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1], targetSUm = 5', () => {
+test('root = [5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1], targetSum = 5', () => {
     const root = buildBinaryTree([5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1]);
     const result = pathSum(root, 22);
 

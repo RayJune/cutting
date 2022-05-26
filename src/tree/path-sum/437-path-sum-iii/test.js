@@ -1,5 +1,4 @@
-// const pathSum = require('./index');
-const pathSum = require('./optimize');
+const pathSum = require('./index');
 // const pathSum = require('./template');
 // const pathSum = require('./template-zh');
 const buildBinaryTree = require('../../../utils/buildBinaryTree');

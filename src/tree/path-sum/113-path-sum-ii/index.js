@@ -47,28 +47,25 @@
  * @return {number[]}
  */
 function pathSum(root, targetSum) {
-    if (root === null) {
-        return [];
-    }
-
     const result = [];
-    const helper = (node, num, path = []) => {
-        const {left, right, val} = node;
+    const helper = (node, sum, path) => {
+        if (node === null) {
+            return;
+        }
 
+        const {val, left, right} = node;
+
+        sum -= val;
         path.push(val);
-        num -= val;
-        if (left === null && right === null && num === 0) {
-            result.push(path);
+        if (left === null && right === null && sum === 0) {
+            result.push(path.slice());
         }
-        if (left) {
-            helper(left, num, path.slice());
-        }
-        if (right) {
-            helper(right, num, path.slice());
-        }
-    }
+        helper(left, sum, path);
+        helper(right, sum, path);
+        path.pop();
+    };
 
-    helper(root, targetSum);
+    helper(root, targetSum, []);
 
     return result;
 }
