@@ -43,21 +43,26 @@
  * @return {number}
  */
 function pathSum(root, targetSum) {
+    if (root === null) {
+        return 0;
+    }
+
     const prefixSum = new Map([[0, 1]]);
     const helper = (node, sum) => {
-        if (node === null) {
-            return 0;
-        }
-
-        let count = 0;
         const {left, right, val} = node;
+        let count = 0;
 
         sum += val;
         if (prefixSum.has(sum - targetSum)) {
             count += prefixSum.get(sum - targetSum);
         }
         prefixSum.set(sum, prefixSum.has(sum) ? prefixSum.get(sum) + 1 : 1);
-        count += helper(left, sum) + helper(right, sum);
+        if (left) {
+            count += helper(left, sum);
+        }
+        if (right) {
+            count += helper(right, sum);
+        }
         prefixSum.set(sum, prefixSum.get(sum) - 1);
 
         return count;
