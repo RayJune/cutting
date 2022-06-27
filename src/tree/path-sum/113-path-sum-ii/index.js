@@ -38,7 +38,7 @@
  * Recursion
  *
  * Time Complexity: O(n ** 2) = 函数执行次数 O(n) * path.slice 方法 O(n)
- * Space Complexity: O(n) = result 数组长度 / 函数调用栈深度
+ * Space Complexity: O(n ** 2) = result 数组长度（最坏情况下树呈链状）O(n ** 2) + 函数调用栈深度 O(n)
  * Auxiliary Complexity: O(n) = 函数调用栈深度
  * 其中 n 为以 root 为根节点的二叉树的节点数
  *
@@ -47,25 +47,29 @@
  * @return {number[]}
  */
 function pathSum(root, targetSum) {
+    if (root === null) {
+        return [];
+    }
+
     const result = [];
     const helper = (node, sum, path) => {
-        if (node === null) {
-            return;
-        }
+        const {left, right, val} = node;
 
-        const {val, left, right} = node;
-
-        sum -= val;
+        sum += val;
         path.push(val);
-        if (left === null && right === null && sum === 0) {
+        if (left === null && right === null && sum === targetSum) {
             result.push(path.slice());
         }
-        helper(left, sum, path);
-        helper(right, sum, path);
+        if (left) {
+            helper(left, sum, path);
+        }
+        if (right) {
+            helper(right, sum, path);
+        }
         path.pop();
     };
 
-    helper(root, targetSum, []);
+    helper(root, 0, []);
 
     return result;
 }
