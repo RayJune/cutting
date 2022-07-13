@@ -24,7 +24,7 @@
  */
 
 /**
- * Prefix Sum，前缀乘积和后缀乘积相乘
+ * Prefix Sum，先用前缀积构造数组，再依次与后缀积相乘
  *
  * Time Complexity: O(n) = 两次 for 循环次数之和
  * Space complexity: O(n) = answer 数组长度
@@ -37,14 +37,14 @@
 function productExceptSelf(nums) {
     const answer = [1];
     const len = nums.length;
-    let right = 1;
+    let postfixProduct = 1;
 
-    for (let i = 0; i < len - 1; i++) {
-        answer[i + 1] = answer[i] * nums[i];
+    for (let i = 1; i < len; i++) {
+        answer[i] = answer[i - 1] * nums[i - 1];
     }
-    for (let i = len - 1; i >= 0; i--) {
-        answer[i] *= right;
-        right *= nums[i];
+    for (let i = len - 2; i >= 0; i--) {
+        postfixProduct *= nums[i + 1];
+        answer[i] *= postfixProduct;
     }
 
     return answer;
