@@ -20,7 +20,7 @@
  * (-10) ** 4 <= nums[i] <= 10 ** 4
  * nums is sorted in a strictly increasing order.
  *
- * https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
+ * https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/
 */
 
 /**
