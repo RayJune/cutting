@@ -21,7 +21,7 @@
  * The number of nodes in the tree is in the range [1, 10 ** 4].
  * (-2) ** 31 <= Node.val <= 2 ** 31 - 1
  *
- * https://leetcode-cn.com/problems/validate-binary-search-tree/
+ * https://leetcode.cn/problems/validate-binary-search-tree/
 */
 
 /**

@@ -1,5 +1,4 @@
 const isValidBST = require('./index');
-// const isValidBST = require('./iterate');
 // const isValidBST = require('./template');
 // const isValidBST = require('./template-zh');
 const buildBinaryTree = require('../../../utils/buildBinaryTree');

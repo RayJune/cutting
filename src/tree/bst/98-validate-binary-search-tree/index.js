@@ -51,7 +51,7 @@ function isValidBST(root, low = -Infinity, high = Infinity) {
         return true;
     }
 
-    const {val, left, right} = root;
+    const {left, right, val} = root;
 
     if (val <= low || val >= high) {
         return false;
