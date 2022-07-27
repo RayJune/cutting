@@ -2,7 +2,7 @@
 const isSymmetric = require('./iterate');
 // const isSymmetric = require('./template');
 // const isSymmetric = require('./template-zh');
-const buildBinaryTree = require('../../utils/buildBinaryTree');
+const buildBinaryTree = require('utils/buildBinaryTree');
 
 test('define isSymmetric function', () => {
     expect(typeof isSymmetric).toBe('function');

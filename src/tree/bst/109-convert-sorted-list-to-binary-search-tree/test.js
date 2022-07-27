@@ -2,8 +2,8 @@
 const sortedListToBST = require('./optimize');
 // const sortedListToBST = require('./template');
 // const sortedListToBST = require('./template-zh');
-const buildListNode = require('../../../utils/buildListNode');
-const buildBinaryTree = require('../../../utils/buildBinaryTree');
+const buildListNode = require('utils/buildListNode');
+const buildBinaryTree = require('utils/buildBinaryTree');
 
 test('define sortedListToBST function', () => {
     expect(typeof sortedListToBST).toBe('function');

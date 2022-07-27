@@ -2,7 +2,7 @@ const maxDepth = require('./index');
 // const maxDepth = require('./iterate');
 // const maxDepth = require('./template');
 // const maxDepth = require('./template-zh');
-const buildBinaryTree = require('../../utils/buildBinaryTree');
+const buildBinaryTree = require('utils/buildBinaryTree');
 
 test('define maxDepth function', () => {
     expect(typeof maxDepth).toBe('function');

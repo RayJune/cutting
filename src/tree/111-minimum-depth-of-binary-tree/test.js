@@ -3,7 +3,7 @@ const minDepth = require('./index');
 // const minDepth = require('./iterate2');
 // const minDepth = require('./template');
 // const minDepth = require('./template-zh');
-const buildBinaryTree = require('../../utils/buildBinaryTree');
+const buildBinaryTree = require('utils/buildBinaryTree');
 
 test('define minDepth function', () => {
     expect(typeof minDepth).toBe('function');

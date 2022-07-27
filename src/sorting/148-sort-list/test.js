@@ -2,7 +2,7 @@
 const sortList = require('./optimize');
 // // const sortList = require('./template');
 // // const sortList = require('./template-zh');
-const buildListNode = require('../../utils/buildListNode');
+const buildListNode = require('utils/buildListNode');
 
 test('define sortList function', () => {
     expect(typeof sortList).toBe('function');

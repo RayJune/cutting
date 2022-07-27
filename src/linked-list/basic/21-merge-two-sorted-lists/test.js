@@ -1,7 +1,7 @@
 const mergeTwoLists = require('./index');
 // const mergeTwoLists = require('./template');
 // const mergeTwoLists = require('./template-zh');
-const buildListNode = require('../../../utils/buildListNode');
+const buildListNode = require('utils/buildListNode');
 
 test('define mergeTwoLists function', () => {
     expect(typeof mergeTwoLists).toBe('function');

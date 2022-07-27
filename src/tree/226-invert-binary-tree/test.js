@@ -2,7 +2,7 @@ const invertTree = require('./index');
 // const invertTree = require('./iterate');
 // const invertTree = require('./template');
 // const invertTree = require('./template-zh');
-const buildBinaryTree = require('../../utils/buildBinaryTree');
+const buildBinaryTree = require('utils/buildBinaryTree');
 
 test('define invertTree function', () => {
     expect(typeof invertTree).toBe('function');

@@ -1,7 +1,7 @@
 const reverseList = require('./index');
 // const reverseList = require('./template');
 // const reverseList = require('./template-zh');
-const buildListNode = require('../../../utils/buildListNode');
+const buildListNode = require('utils/buildListNode');
 
 test('define reverseList function', () => {
     expect(typeof reverseList).toBe('function');

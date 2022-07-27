@@ -2,7 +2,8 @@ const isSameTree = require('./index');
 // const isSameTree = require('./iterate');
 // const isSameTree = require('./template');
 // const isSameTree = require('./template-zh');
-const buildBinaryTree = require('../../utils/buildBinaryTree');
+// const buildBinaryTree = require('utils/buildBinaryTree');
+const buildBinaryTree = require('utils/buildBinaryTree');
 
 test('define isSameTree function', () => {
     expect(typeof isSameTree).toBe('function');

@@ -3,7 +3,7 @@
 const recoverTree = require('./optimize2');
 // const recoverTree = require('./template');
 // const recoverTree = require('./template-zh');
-const buildBinaryTree = require('../../../utils/buildBinaryTree');
+const buildBinaryTree = require('utils/buildBinaryTree');
 
 test('define recoverTree function', () => {
     expect(typeof recoverTree).toBe('function');

@@ -1,7 +1,7 @@
 const removeElements = require('./index');
 // const removeElements = require('./template');
 // const removeElements = require('./template-zh');
-const buildListNode = require('../../../utils/buildListNode');
+const buildListNode = require('utils/buildListNode');
 
 test('define removeElements function', () => {
     expect(typeof removeElements).toBe('function');

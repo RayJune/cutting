@@ -3,7 +3,7 @@ const preorderTraversal = require('./iterate');
 // const preorderTraversal = require('./optimize');
 // const preorderTraversal = require('./template');
 // const preorderTraversal = require('./template-zh');
-const buildBinaryTree = require('../../../utils/buildBinaryTree');
+const buildBinaryTree = require('utils/buildBinaryTree');
 
 test('define preorderTraversal function', () => {
     expect(typeof preorderTraversal).toBe('function');

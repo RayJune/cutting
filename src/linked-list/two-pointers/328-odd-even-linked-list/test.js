@@ -1,7 +1,7 @@
 const oddEvenList = require('./index');
 // const oddEvenList = require('./template');
 // const oddEvenList = require('./template-zh');
-const buildListNode = require('../../../utils/buildListNode');
+const buildListNode = require('utils/buildListNode');
 
 test('define oddEvenList function', () => {
     expect(typeof oddEvenList).toBe('function');

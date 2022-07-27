@@ -2,7 +2,7 @@
 const isPalindrome = require('./optimize');
 // const isPalindrome = require('./template');
 // const isPalindrome = require('./template-zh');
-const buildListNode = require('../../../utils/buildListNode');
+const buildListNode = require('utils/buildListNode');
 
 test('define isPalindrome function', () => {
     expect(typeof isPalindrome).toBe('function');

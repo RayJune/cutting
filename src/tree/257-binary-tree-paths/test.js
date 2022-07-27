@@ -3,7 +3,7 @@ const binaryTreePaths = require('./index');
 // const binaryTreePaths = require('./iterate2');
 // const binaryTreePaths = require('./template');
 // const binaryTreePaths = require('./template-zh');
-const buildBinaryTree = require('../../utils/buildBinaryTree');
+const buildBinaryTree = require('utils/buildBinaryTree');
 
 test('define binaryTreePaths function', () => {
     expect(typeof binaryTreePaths).toBe('function');

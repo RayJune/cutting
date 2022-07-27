@@ -1,7 +1,7 @@
 const lowestCommonAncestor = require('./index');
 // const lowestCommonAncestor = require('./template');
 // const lowestCommonAncestor = require('./template-zh');
-const buildBinaryTree = require('../../../utils/buildBinaryTree');
+const buildBinaryTree = require('utils/buildBinaryTree');
 
 test('define lowestCommonAncestor function', () => {
     expect(typeof lowestCommonAncestor).toBe('function');

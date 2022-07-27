@@ -2,7 +2,7 @@
 const isBalanced = require('./optimize');
 // const isBalanced = require('./template');
 // const isBalanced = require('./template-zh');
-const buildBinaryTree = require('../../utils/buildBinaryTree');
+const buildBinaryTree = require('utils/buildBinaryTree');
 
 test('define isBalanced function', () => {
     expect(typeof isBalanced).toBe('function');

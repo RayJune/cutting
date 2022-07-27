@@ -3,7 +3,7 @@
 const flatten = require('./optimize2');
 // const flatten = require('./template');
 // const flatten = require('./template-zh');
-const buildBinaryTree = require('../../utils/buildBinaryTree');
+const buildBinaryTree = require('utils/buildBinaryTree');
 
 test('define flatten function', () => {
     expect(typeof flatten).toBe('function');

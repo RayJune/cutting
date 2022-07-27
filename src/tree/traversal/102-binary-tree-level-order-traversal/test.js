@@ -1,7 +1,7 @@
 const levelOrder = require('./index');
 // const levelOrder = require('./template');
 // const levelOrder = require('./template-zh');
-const buildBinaryTree = require('../../../utils/buildBinaryTree');
+const buildBinaryTree = require('utils/buildBinaryTree');
 
 test('define levelOrder function', () => {
     expect(typeof levelOrder).toBe('function');
