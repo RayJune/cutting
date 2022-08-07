@@ -20,7 +20,7 @@
  * 1 <= m, n <= 100
  * (-10 ** 4) <= matrix[i][j], target <= 10 ** 4
  *
- * https://leetcode-cn.com/problems/search-a-2d-matrix/
+ * https://leetcode.cn/problems/search-a-2d-matrix/
 */
 
 module.exports = searchMatrix;

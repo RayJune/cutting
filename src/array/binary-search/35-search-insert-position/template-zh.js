@@ -23,7 +23,7 @@
  * nums 为无重复元素的升序排列数组
  * (-10) ** 4 <= target <= 10 ** 4
  *
- * https://leetcode-cn.com/problems/search-insert-position/
+ * https://leetcode.cn/problems/search-insert-position/
 */
 
 module.exports = searchInsert;

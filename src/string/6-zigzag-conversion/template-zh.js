@@ -36,7 +36,7 @@
  * s consists of English letters (lower-case and upper-case), ',' and '.'.
  * 1 <= numRows <= 1000
  *
- * https://leetcode-cn.com/problems/zigzag-conversion/
+ * https://leetcode.cn/problems/zigzag-conversion/
 */
 
 module.exports = convert;

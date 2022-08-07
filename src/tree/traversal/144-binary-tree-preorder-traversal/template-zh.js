@@ -27,7 +27,7 @@
  * 树中节点数目在范围 [0, 100] 内
  * -100 <= Node.val <= 100
  *
- * https://leetcode-cn.com/problems/binary-tree-preorder-traversal/
+ * https://leetcode.cn/problems/binary-tree-preorder-traversal/
 */
 
 /**

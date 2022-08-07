@@ -21,7 +21,7 @@
  * -100 <= Node.val <= 100
  * l1 和 l2 均按非递减顺序排列
  *
- * https://leetcode-cn.com/problems/merge-two-sorted-lists/
+ * https://leetcode.cn/problems/merge-two-sorted-lists/
 */
 
 /**

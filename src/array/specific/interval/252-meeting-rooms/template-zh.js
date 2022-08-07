@@ -16,7 +16,7 @@
  * intervals[i].length == 2
  * 0 <= starti <= endi <= 10 ** 6
  *
- * https://leetcode-cn.com/problems/meeting-rooms/
+ * https://leetcode.cn/problems/meeting-rooms/
 */
 
 module.exports = canAttendMeetings;

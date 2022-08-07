@@ -20,7 +20,7 @@
  * 0 <= nums[i] <= 50
  * 0 <= val <= 100
  *
- * https://leetcode-cn.com/problems/remove-element/
+ * https://leetcode.cn/problems/remove-element/
 */
 
 module.exports = removeElement;

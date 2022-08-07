@@ -23,7 +23,7 @@
  * 0 <= nums[i] <= n
  * All the numbers of nums are unique.
  *
- * https://leetcode-cn.com/problems/missing-number/
+ * https://leetcode.cn/problems/missing-number/
 */
 
 module.exports = missingNumber;

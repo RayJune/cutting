@@ -21,7 +21,7 @@
  * (-2) ** 31 <= n <= 2 ** 31 - 1
  * (-10) ** 4 <= x ** n <= 10 ** 4
  *
- * https://leetcode-cn.com/problems/powx-n/
+ * https://leetcode.cn/problems/powx-n/
 */
 
 module.exports = myPow;

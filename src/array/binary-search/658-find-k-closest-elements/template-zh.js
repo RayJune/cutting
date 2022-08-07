@@ -22,7 +22,7 @@
  * arr is sorted in ascending order.
  * (-10 ** 4) <= arr[i], x <= 10 ** 4
  *
- * https://leetcode-cn.com/problems/find-k-closest-elements/
+ * https://leetcode.cn/problems/find-k-closest-elements/
 */
 
 module.exports = findClosestElements;

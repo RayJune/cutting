@@ -27,7 +27,7 @@
  * -1000 <= target <= 1000
  * The tests are generated such that there is exactly one solution.
  *
- * https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/
+ * https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/
 */
 
 module.exports = twoSum;

@@ -24,7 +24,7 @@
  * (-10) ** 9 <= target <= 10 ** 9
  * Only one valid answer exists.
  *
- * https://leetcode-cn.com/problems/4sum-ii/
+ * https://leetcode.cn/problems/4sum-ii/
 */
 
 module.exports = fourSumCount;

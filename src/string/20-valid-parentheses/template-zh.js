@@ -32,7 +32,7 @@
  * 1 <= s.length <= 10 ** 4
  * s consists of parentheses only '()[]{}'.
  *
- * https://leetcode-cn.com/problems/valid-parentheses/
+ * https://leetcode.cn/problems/valid-parentheses/
 */
 
 module.exports = isValid;

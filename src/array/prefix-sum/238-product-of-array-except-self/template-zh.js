@@ -20,7 +20,7 @@
  * -30 <= nums[i] <= 30
  * The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
  *
- * https://leetcode-cn.com/problems/product-of-array-except-self/
+ * https://leetcode.cn/problems/product-of-array-except-self/
 */
 
 module.exports = productExceptSelf;

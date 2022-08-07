@@ -20,7 +20,7 @@
  * preorder 保证为二叉树的前序遍历序列
  * inorder 保证为二叉树的中序遍历序列
  *
- * https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
+ * https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
 */
 
 /**

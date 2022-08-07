@@ -24,7 +24,7 @@
  *
  * Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
  *
- * https://leetcode-cn.com/problems/maximum-subarray/
+ * https://leetcode.cn/problems/maximum-subarray/
 */
 
 module.exports = maxSubArray;

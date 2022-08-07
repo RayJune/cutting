@@ -31,7 +31,7 @@
  * word and prefix consist only of lowercase English letters.
  * At most 3 * 10 ** 4 calls in total will be made to insert, search, and startsWith.
  *
- * https://leetcode-cn.com/problems/implement-trie-prefix-tree/
+ * https://leetcode.cn/problems/implement-trie-prefix-tree/
 */
 
 module.exports = Trie;

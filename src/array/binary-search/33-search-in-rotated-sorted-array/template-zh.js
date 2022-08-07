@@ -26,7 +26,7 @@
  * nums is an ascending array that is possibly rotated.
  * (-10) ** 4 <= target <= 10 ** 4
  *
- * https://leetcode-cn.com/problems/search-in-rotated-sorted-array/
+ * https://leetcode.cn/problems/search-in-rotated-sorted-array/
 */
 
 module.exports = search;

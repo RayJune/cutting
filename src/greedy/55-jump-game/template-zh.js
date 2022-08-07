@@ -21,7 +21,7 @@
  * 1 <= nums.length <= 10 ** 4
  * 0 <= nums[i] <= 10 ** 5
  *
- * https://leetcode-cn.com/problems/jump-game/
+ * https://leetcode.cn/problems/jump-game/
 */
 
 module.exports = canJump;

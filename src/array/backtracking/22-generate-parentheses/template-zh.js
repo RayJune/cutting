@@ -16,7 +16,7 @@
  * Constraints:
  * 1 <= n <= 8
  *
- * https://leetcode-cn.com/problems/generate-parentheses/
+ * https://leetcode.cn/problems/generate-parentheses/
 */
 
 module.exports = generateParenthesis;

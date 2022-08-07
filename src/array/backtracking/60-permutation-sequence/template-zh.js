@@ -30,7 +30,7 @@
  * 1 <= n <= 9
  * 1 <= k <= n!
  *
- * https://leetcode-cn.com/problems/permutation-sequence/
+ * https://leetcode.cn/problems/permutation-sequence/
 */
 
 module.exports = getPermutation;

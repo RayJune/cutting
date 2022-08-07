@@ -18,7 +18,7 @@
  * 0 <= strs[i].length <= 200
  * strs[i] consists of only lower-case English letters.
  *
- * https://leetcode-cn.com/problems/longest-common-prefix/
+ * https://leetcode.cn/problems/longest-common-prefix/
 */
 
 module.exports = longestCommonPrefix;

@@ -18,7 +18,7 @@
  * -100 <= Node.val <= 100
  * -200 <= x <= 200
  *
- * https://leetcode-cn.com/problems/partition-list/
+ * https://leetcode.cn/problems/partition-list/
 */
 
 /**

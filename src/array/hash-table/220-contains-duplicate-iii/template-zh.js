@@ -23,7 +23,7 @@
  * 0 <= k <= 10 ** 4
  * 0 <= t <= 2 ** 31 - 1
  *
- * https://leetcode-cn.com/problems/contains-duplicate-iii/
+ * https://leetcode.cn/problems/contains-duplicate-iii/
 */
 
 module.exports = containsNearbyAlmostDuplicate;

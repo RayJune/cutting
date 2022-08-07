@@ -21,7 +21,7 @@
  * 1 <= nums.length <= 200
  * (-10) ** 9 <= nums[i] <= 10 ** 9
  *
- * https://leetcode-cn.com/problems/4sum/
+ * https://leetcode.cn/problems/4sum/
 */
 
 module.exports = fourSum;

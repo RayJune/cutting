@@ -18,7 +18,7 @@
  * (-10) ** 9 <= Node.val <= 10 ** 9
  * -1000 <= targetSum <= 1000
  *
- * https://leetcode-cn.com/problems/path-sum-iii/
+ * https://leetcode.cn/problems/path-sum-iii/
 */
 
 /**

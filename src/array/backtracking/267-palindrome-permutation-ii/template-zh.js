@@ -17,7 +17,7 @@
  * 1 <= s.length <= 16
  * s consists of only lowercase English letters.
  *
- * https://leetcode-cn.com/problems/palindrome-permutation-ii/
+ * https://leetcode.cn/problems/palindrome-permutation-ii/
 */
 
 module.exports = generatePalindromes;

@@ -16,7 +16,7 @@
  * (-2) ** 31 <= nums[i] <= 2 ** 31 - 1
  * Each element in nums appears exactly three times except for one element which appears once.
  *
- * https://leetcode-cn.com/problems/single-number-ii/
+ * https://leetcode.cn/problems/single-number-ii/
 */
 
 module.exports = singleNumber;

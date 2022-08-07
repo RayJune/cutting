@@ -26,7 +26,7 @@
  * The number of nodes in the list is in the range [1, 5000].
  * -5000 <= Node.val <= 5000
  *
- * https://leetcode-cn.com/problems/insertion-sort-list/
+ * https://leetcode.cn/problems/insertion-sort-list/
 */
 
 /**

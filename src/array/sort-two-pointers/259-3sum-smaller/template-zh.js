@@ -30,7 +30,7 @@
  * -100 <= nums[i] <= 100
  * -100 <= target <= 100
  *
- * https://leetcode-cn.com/problems/3sum-smaller/
+ * https://leetcode.cn/problems/3sum-smaller/
 */
 
 module.exports = threeSumSmaller;

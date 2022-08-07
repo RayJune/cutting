@@ -18,7 +18,7 @@
  * Constraints:
  * The input must be a binary string of length 32.
  *
- * https://leetcode-cn.com/problems/number-of-1-bits/
+ * https://leetcode.cn/problems/number-of-1-bits/
 */
 
 module.exports = hammingWeight;

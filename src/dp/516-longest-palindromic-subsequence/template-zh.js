@@ -19,7 +19,7 @@
  * 1 <= s.length <= 1000
  * s consists only of lowercase English letters.
  *
- * https://leetcode-cn.com/problems/longest-palindromic-subsequence/
+ * https://leetcode.cn/problems/longest-palindromic-subsequence/
 */
 
 module.exports = longestPalindromeSubseq;

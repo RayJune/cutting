@@ -24,7 +24,7 @@
  * 1 <= s.length <= 1000
  * s consist of only digits and English letters.
  *
- * https://leetcode-cn.com/problems/longest-palindromic-substring/
+ * https://leetcode.cn/problems/longest-palindromic-substring/
 */
 
 module.exports = longestPalindrome;

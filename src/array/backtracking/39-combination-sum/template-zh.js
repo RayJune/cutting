@@ -37,7 +37,7 @@
  * All elements of candidates are distinct.
  * 1 <= target <= 500
  *
- * https://leetcode-cn.com/problems/combination-sum/
+ * https://leetcode.cn/problems/combination-sum/
 */
 
 module.exports = combinationSum;

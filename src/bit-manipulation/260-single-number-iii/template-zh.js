@@ -22,7 +22,7 @@
  * (-2) ** 31 <= nums[i] <= 2 ** 31 - 1
  * Each integer in nums will appear twice, only two integers will appear once.
  *
- * https://leetcode-cn.com/problems/single-number-iii/
+ * https://leetcode.cn/problems/single-number-iii/
 */
 
 module.exports = singleNumber;

@@ -26,7 +26,7 @@
  * (-10) ** 9 <= target <= 10 ** 9
  * Only one valid answer exists.
  *
- * https://leetcode-cn.com/problems/two-sum/
+ * https://leetcode.cn/problems/two-sum/
 */
 
 module.exports = twoSum;

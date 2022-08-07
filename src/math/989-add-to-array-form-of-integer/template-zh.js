@@ -31,7 +31,7 @@
  * num does not contain any leading zeros except for the zero itself.
  * 1 <= k <= 10 ** 4
  *
- * https://leetcode-cn.com/problems/add-to-array-form-of-integer/
+ * https://leetcode.cn/problems/add-to-array-form-of-integer/
 */
 
 module.exports = addToArrayForm;

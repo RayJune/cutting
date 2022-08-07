@@ -20,7 +20,7 @@
  * 1 <= s.length <= 10 ** 5
  * s consists of lowercase English letters.
  *
- * https://leetcode-cn.com/problems/valid-palindrome-ii/
+ * https://leetcode.cn/problems/valid-palindrome-ii/
 */
 
 module.exports = validPalindrome;

@@ -23,7 +23,7 @@
  * 1 <= nums.length <= 10 ** 5
  * 1 <= nums[i] <= 10 ** 5
  *
- * https://leetcode-cn.com/problems/minimum-size-subarray-sum/
+ * https://leetcode.cn/problems/minimum-size-subarray-sum/
 */
 
 module.exports = minSubArrayLen;

@@ -18,7 +18,7 @@
  * (-10) ** 4 <= nums[i] <= 10 ** 4
  * nums is sorted in non-decreasing order.
  *
- * https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/
+ * https://leetcode.cn/problems/remove-duplicates-from-sorted-array-ii/
 */
 
 module.exports = removeDuplicates;

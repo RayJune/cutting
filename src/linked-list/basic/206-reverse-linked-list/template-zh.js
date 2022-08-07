@@ -19,7 +19,7 @@
  * 链表中节点的数目范围是 [0, 5000]
  * -5000 <= Node.val <= 5000
  *
- * https://leetcode-cn.com/problems/reverse-linked-list/
+ * https://leetcode.cn/problems/reverse-linked-list/
 */
 
 /**

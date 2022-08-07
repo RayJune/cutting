@@ -21,7 +21,7 @@
  * 2 <= cost.length <= 1000
  * 0 <= cost[i] <= 999
  *
- * https://leetcode-cn.com/problems/min-cost-climbing-stairs/
+ * https://leetcode.cn/problems/min-cost-climbing-stairs/
 */
 
 module.exports = minCostClimbingStairs;

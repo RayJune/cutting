@@ -18,7 +18,7 @@
  * -10 <= nums[i] <= 10
  * The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
  *
- * https://leetcode-cn.com/problems/maximum-product-subarray/
+ * https://leetcode.cn/problems/maximum-product-subarray/
 */
 
 module.exports = maxProduct;

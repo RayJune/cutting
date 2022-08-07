@@ -17,7 +17,7 @@
  * 1 <= nums.length <= 10 ** 4
  * -10 ** 9 <= nums[i] <= 10 ** 9
  *
- * https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/
+ * https://leetcode.cn/problems/longest-continuous-increasing-subsequence/
 */
 
 module.exports = findLengthOfLCIS;

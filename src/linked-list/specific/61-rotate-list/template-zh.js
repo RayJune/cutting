@@ -16,7 +16,7 @@
  * -100 <= Node.val <= 100
  * 0 <= k <= 2 * 10 ** 9
  *
- * https://leetcode-cn.com/problems/rotate-list/
+ * https://leetcode.cn/problems/rotate-list/
 */
 
 /**

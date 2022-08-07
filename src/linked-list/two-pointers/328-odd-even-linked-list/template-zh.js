@@ -17,7 +17,7 @@
  * 应当保持奇数节点和偶数节点的相对顺序。
  * 链表的第一个节点视为奇数节点，第二个节点视为偶数节点，以此类推。
  *
- * https://leetcode-cn.com/problems/odd-even-linked-list/
+ * https://leetcode.cn/problems/odd-even-linked-list/
 */
 
 /**

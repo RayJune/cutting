@@ -17,7 +17,7 @@
  * 1 <= s.length <= 10 ** 5
  * s consists of English letters.
  *
- * https://leetcode-cn.com/problems/longest-substring-with-at-most-two-distinct-characters/
+ * https://leetcode.cn/problems/longest-substring-with-at-most-two-distinct-characters/
 */
 
 module.exports = lengthOfLongestSubstringTwoDistinct;

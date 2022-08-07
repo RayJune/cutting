@@ -19,7 +19,7 @@
  * 0 <= left <= right < nums.length
  * At most 10 ** 4 calls will be made to sumRange.
  *
- * https://leetcode-cn.com/problems/range-sum-query-immutable/
+ * https://leetcode.cn/problems/range-sum-query-immutable/
 */
 
 module.exports = NumArray;

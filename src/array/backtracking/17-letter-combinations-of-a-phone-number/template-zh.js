@@ -30,7 +30,7 @@
  * 0 <= digits.length <= 4
  * digits[i] is a digit in the range ['2', '9'].
  *
- * https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/
+ * https://leetcode.cn/problems/letter-combinations-of-a-phone-number/
 */
 
 module.exports = letterCombinations;

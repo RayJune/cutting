@@ -21,7 +21,7 @@
  * 0 <= Node.val <= 100
  * 1 <= n <= sz
  *
- * https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/
+ * https://leetcode.cn/problems/remove-nth-node-from-end-of-list/
 */
 
 /**

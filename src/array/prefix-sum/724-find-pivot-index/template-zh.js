@@ -25,7 +25,7 @@
  * 1 <= nums.length <= 10 ** 4
  * -1000 <= nums[i] <= 1000
  *
- * https://leetcode-cn.com/problems/find-pivot-index/
+ * https://leetcode.cn/problems/find-pivot-index/
 */
 
 module.exports = pivotIndex;

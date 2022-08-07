@@ -24,7 +24,7 @@
  * 0 <= col1 <= col2 < n
  * At most 10 ** 4 calls will be made to sumRegion.
  *
- * https://leetcode-cn.com/problems/range-sum-query-2d-immutable/
+ * https://leetcode.cn/problems/range-sum-query-2d-immutable/
 */
 
 module.exports = NumMatrix;

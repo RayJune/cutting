@@ -14,7 +14,7 @@
  * Constraints:
  * The input must be a binary string of length 32.
  *
- * https://leetcode-cn.com/problems/reverse-bits/
+ * https://leetcode.cn/problems/reverse-bits/
 */
 
 module.exports = reverseBits;

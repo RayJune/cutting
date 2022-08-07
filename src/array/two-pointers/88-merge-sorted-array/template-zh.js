@@ -27,7 +27,7 @@
  * 1 <= m + n <= 200
  * (-10) ** 9 <= nums1[i], nums2[j] <= 10 ** 9
  *
- * https://leetcode-cn.com/problems/merge-sorted-array/
+ * https://leetcode.cn/problems/merge-sorted-array/
 */
 
 module.exports = merge;

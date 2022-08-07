@@ -14,7 +14,7 @@
  * Constraints:
  * 1 <= n <= 20
  *
- * https://leetcode-cn.com/problems/spiral-matrix-ii/
+ * https://leetcode.cn/problems/spiral-matrix-ii/
 */
 
 module.exports = generateMatrix;

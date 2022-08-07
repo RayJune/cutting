@@ -23,7 +23,7 @@
  * 链表中节点的数目在范围 [0, 5 * 10 ** 4] 内
  * (-10) ** 5 <= Node.val <= (10) ** 5
  *
- * https://leetcode-cn.com/problems/sort-list/
+ * https://leetcode.cn/problems/sort-list/
 */
 
 /**

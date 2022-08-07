@@ -23,7 +23,7 @@
  * -1000 <= Node.val <= 1000
  * -1000 <= targetSum <= 1000
  *
- * https://leetcode-cn.com/problems/binary-tree-paths/
+ * https://leetcode.cn/problems/binary-tree-paths/
 */
 
 /**

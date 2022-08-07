@@ -17,7 +17,7 @@
  * 1 <= n <= 20
  * 1 <= k <= n
  *
- * https://leetcode-cn.com/problems/combinations/
+ * https://leetcode.cn/problems/combinations/
 */
 
 module.exports = combine;

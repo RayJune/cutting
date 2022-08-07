@@ -38,7 +38,7 @@
  * -10000 <= Node.val <= 10000
  * Node.random 为空（null）或指向链表中的节点。
  *
- * https://leetcode-cn.com/problems/copy-list-with-random-pointer/
+ * https://leetcode.cn/problems/copy-list-with-random-pointer/
 */
 
 /**

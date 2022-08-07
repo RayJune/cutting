@@ -40,7 +40,7 @@
  * 0 <= digits[i] <= 9
  * digits does not contain any leading 0's.
  *
- * https://leetcode-cn.com/problems/plus-one/
+ * https://leetcode.cn/problems/plus-one/
 */
 
 module.exports = plusOne;

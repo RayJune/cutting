@@ -20,7 +20,7 @@
  * -10 <= nums[i] <= 10
  * All the integers of nums are unique
  *
- * https://leetcode-cn.com/problems/permutations/
+ * https://leetcode.cn/problems/permutations/
 */
 
 module.exports = permute;

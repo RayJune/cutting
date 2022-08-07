@@ -23,7 +23,7 @@
  * All the integers in each column are sorted in ascending order.
  * (-10) ** 9 <= target <= 10 ** 9
  *
- * https://leetcode-cn.com/problems/search-a-2d-matrix-ii/
+ * https://leetcode.cn/problems/search-a-2d-matrix-ii/
 */
 
 module.exports = searchMatrix;

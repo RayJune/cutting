@@ -19,7 +19,7 @@
  * All the integers in nums are unique.
  * nums is sorted in ascending order.
  *
- * https://leetcode-cn.com/problems/binary-search/
+ * https://leetcode.cn/problems/binary-search/
 */
 
 module.exports = search;

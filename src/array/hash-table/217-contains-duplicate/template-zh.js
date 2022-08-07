@@ -21,7 +21,7 @@
  * 1 <= nums.length <= 10 ** 5
  * -10 ** 9 <= nums[i] <= 10 ** 9
  *
- * https://leetcode-cn.com/problems/contains-duplicate/
+ * https://leetcode.cn/problems/contains-duplicate/
 */
 
 module.exports = containsDuplicate;

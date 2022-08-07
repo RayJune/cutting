@@ -21,7 +21,7 @@
  * 1 <= nums.length <= 10 ** 4
  * 0 <= nums[i] <= 10 ** 5
  *
- * https://leetcode-cn.com/problems/jump-game-ii/
+ * https://leetcode.cn/problems/jump-game-ii/
 */
 
 module.exports = jump;

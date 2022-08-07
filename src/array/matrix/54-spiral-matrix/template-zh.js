@@ -17,7 +17,7 @@
  * 1 <= m, n <= 10
  * -100 <= matrix[i][j] <= 100
  *
- * https://leetcode-cn.com/problems/spiral-matrix/
+ * https://leetcode.cn/problems/spiral-matrix/
 */
 
 module.exports = spiralOrder;

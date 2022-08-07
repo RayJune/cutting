@@ -21,7 +21,7 @@
  * nums is guaranteed to be rotated at some pivot.
  * (-10) ** 4 <= target <= 10 ** 4
  *
- * https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/
+ * https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/
 */
 
 module.exports = search;

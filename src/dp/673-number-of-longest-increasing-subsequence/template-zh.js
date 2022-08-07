@@ -16,7 +16,7 @@
  * 1 <= nums.length <= 2000
  * -10 ** 6 <= nums[i] <= 10 ** 6
  *
- * https://leetcode-cn.com/problems/number-of-longest-increasing-subsequence/
+ * https://leetcode.cn/problems/number-of-longest-increasing-subsequence/
 */
 
 module.exports = findNumberOfLIS;

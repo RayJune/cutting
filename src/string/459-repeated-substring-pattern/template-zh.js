@@ -21,7 +21,7 @@
  * 1 <= s.length <= 10 ** 4
  * s consists of lowercase English letters.
  *
- * https://leetcode-cn.com/problems/repeated-substring-pattern/
+ * https://leetcode.cn/problems/repeated-substring-pattern/
 */
 
 module.exports = repeatedSubstringPattern;

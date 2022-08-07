@@ -20,7 +20,7 @@
  * 1 <= candidates[i] <= 50
  * 1 <= target <= 30
  *
- * https://leetcode-cn.com/problems/combination-sum-ii/
+ * https://leetcode.cn/problems/combination-sum-ii/
 */
 
 module.exports = combinationSum2;

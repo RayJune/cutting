@@ -18,7 +18,7 @@
  * -100 <= Node.val <= 100
  * 题目数据保证链表已经按升序排列
  *
- * https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/
+ * https://leetcode.cn/problems/remove-duplicates-from-sorted-list/
 */
 
 /**

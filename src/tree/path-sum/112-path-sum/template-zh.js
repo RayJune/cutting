@@ -22,7 +22,7 @@
  * -1000 <= Node.val <= 1000
  * -1000 <= targetSum <= 1000
  *
- * https://leetcode-cn.com/problems/path-sum/
+ * https://leetcode.cn/problems/path-sum/
 */
 
 /**

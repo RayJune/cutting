@@ -31,7 +31,7 @@
  * 1 <= nums.length <= 100
  * 0 <= nums[i] <= 100
  *
- * https://leetcode-cn.com/problems/next-permutation/
+ * https://leetcode.cn/problems/next-permutation/
 */
 
 module.exports = nextPermutation;

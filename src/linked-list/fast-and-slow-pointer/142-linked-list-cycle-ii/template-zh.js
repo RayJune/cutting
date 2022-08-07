@@ -24,7 +24,7 @@
  * (-10) ** 5 <= Node.val <= 10 ** 5
  * pos 的值为 -1 或者链表中的一个有效索引
  *
- * https://leetcode-cn.com/problems/linked-list-cycle-ii/
+ * https://leetcode.cn/problems/linked-list-cycle-ii/
 */
 
 module.exports = detectCycle;

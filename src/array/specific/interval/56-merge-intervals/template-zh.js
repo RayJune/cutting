@@ -18,7 +18,7 @@
  * intervals[i].length == 2
  * 0 <= starti <= endi <= 10 ** 4
  *
- * https://leetcode-cn.com/problems/merge-intervals/
+ * https://leetcode.cn/problems/merge-intervals/
 */
 
 module.exports = merge;

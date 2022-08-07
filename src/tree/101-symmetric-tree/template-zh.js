@@ -16,7 +16,7 @@
  * The number of nodes in the tree is in the range [1, 1000].
  * -100 <= Node.val <= 100
  *
- * https://leetcode-cn.com/problems/symmetric-tree/
+ * https://leetcode.cn/problems/symmetric-tree/
 */
 
 /**

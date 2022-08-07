@@ -32,7 +32,7 @@
  * 1 <= n <= 2 ** 31 - 1
  * 1 <= pick <= n
  *
- * https://leetcode-cn.com/problems/guess-number-higher-or-lower/
+ * https://leetcode.cn/problems/guess-number-higher-or-lower/
 */
 
 const guess = require('./guess');

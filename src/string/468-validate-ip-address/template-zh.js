@@ -46,7 +46,7 @@
  * Constraints:
  * IP consists only of English letters, digits and the characters '.' and ':'.
  *
- * https://leetcode-cn.com/problems/validate-ip-address/
+ * https://leetcode.cn/problems/validate-ip-address/
 */
 
 module.exports = validIPAddress;

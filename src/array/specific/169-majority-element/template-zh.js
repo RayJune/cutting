@@ -18,7 +18,7 @@
  * 1 <= n <= 5 * 10 ** 4
  * (-2) ** 31 <= nums[i] <= 2 ** 31 - 1
  *
- * https://leetcode-cn.com/problems/majority-element/
+ * https://leetcode.cn/problems/majority-element/
 */
 
 module.exports = majorityElement;

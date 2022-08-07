@@ -18,7 +18,7 @@
  * a and b consist only of '0' or '1' characters.
  * Each string does not contain leading zeros except for the zero itself.
  *
- * https://leetcode-cn.com/problems/add-binary/
+ * https://leetcode.cn/problems/add-binary/
 */
 
 module.exports = addBinary;

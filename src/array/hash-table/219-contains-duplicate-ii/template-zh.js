@@ -20,7 +20,7 @@
  * (-10) ** 9 <= nums[i] <= 10 ** 9
  * 0 <= k <= 10 ** 5
  *
- * https://leetcode-cn.com/problems/contains-duplicate-ii/
+ * https://leetcode.cn/problems/contains-duplicate-ii/
 */
 
 module.exports = containsNearbyDuplicate;

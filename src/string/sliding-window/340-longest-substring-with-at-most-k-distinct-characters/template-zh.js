@@ -21,7 +21,7 @@
  * 1 <= s.length <= 10 ** 5
  * s consists of English letters.
  *
- * https://leetcode-cn.com/problems/longest-substring-with-at-most-k-distinct-characters/
+ * https://leetcode.cn/problems/longest-substring-with-at-most-k-distinct-characters/
 */
 
 module.exports = lengthOfLongestSubstringKDistinct;

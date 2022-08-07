@@ -12,7 +12,7 @@
  * (-10) ** 4 <= nums[i] <= 10 ** 4
  * 2 <= k <= 10 ** 4
  *
- * https://leetcode-cn.com/problems/subarray-sums-divisible-by-k/
+ * https://leetcode.cn/problems/subarray-sums-divisible-by-k/
 */
 
 module.exports = subarraysDivByK;

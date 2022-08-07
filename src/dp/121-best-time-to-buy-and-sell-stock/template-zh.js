@@ -22,7 +22,7 @@
  * 1 <= nums.length <= 10 ** 5
  * 0 <= nums[i] <= 10 ** 4
  *
- * https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/
+ * https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/
 */
 
 module.exports = maxProfit;

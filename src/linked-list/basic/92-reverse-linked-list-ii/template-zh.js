@@ -19,7 +19,7 @@
  * -500 <= Node.val <= 500
  * 1 <= left <= right <= n
  *
- * https://leetcode-cn.com/problems/reverse-linked-list-ii/
+ * https://leetcode.cn/problems/reverse-linked-list-ii/
 */
 
 /**

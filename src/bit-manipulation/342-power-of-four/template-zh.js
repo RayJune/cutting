@@ -22,7 +22,7 @@
  * Constraints:
  * (-2) ** 31 <= n <= 2 ** 31 - 1
  *
- * https://leetcode-cn.com/problems/power-of-four/
+ * https://leetcode.cn/problems/power-of-four/
 */
 
 module.exports = isPowerOfFour;

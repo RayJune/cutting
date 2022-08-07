@@ -24,7 +24,7 @@
  * amount = 10, coins = [10]
  * Output: 1
  *
- * https://leetcode-cn.com/problems/coin-change-2/
+ * https://leetcode.cn/problems/coin-change-2/
 */
 
 module.exports = change;

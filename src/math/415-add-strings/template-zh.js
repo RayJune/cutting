@@ -22,7 +22,7 @@
  * num1 and num2 consist of only digits.
  * num1 and num2 don't have any leading zeros except for the zero itself.
  *
- * https://leetcode-cn.com/problems/add-strings/
+ * https://leetcode.cn/problems/add-strings/
 */
 
 module.exports = addStrings;

@@ -31,7 +31,7 @@
  * 0 <= key <= 10 ** 6
  * 最多调用 10 ** 4 次 add、remove 和 contains 。
  *
- * https://leetcode-cn.com/problems/design-hashset/
+ * https://leetcode.cn/problems/design-hashset/
 */
 
 module.exports = MyHashSet;

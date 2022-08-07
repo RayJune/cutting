@@ -23,7 +23,7 @@
  * (-2) ** 31 <= nums[i] <= 2 ** 31 - 1
  * 0 <= k <= 10 ** 5
  *
- * https://leetcode-cn.com/problems/rotate-array/
+ * https://leetcode.cn/problems/rotate-array/
 */
 
 module.exports = rotate;

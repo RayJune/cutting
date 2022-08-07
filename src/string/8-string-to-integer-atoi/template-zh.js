@@ -41,7 +41,7 @@
  * 0 <= s.length <= 200
  * s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.
  *
- * https://leetcode-cn.com/problems/string-to-integer-atoi/
+ * https://leetcode.cn/problems/string-to-integer-atoi/
 */
 
 module.exports = myAtoi;

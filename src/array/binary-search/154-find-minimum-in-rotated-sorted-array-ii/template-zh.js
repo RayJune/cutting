@@ -26,7 +26,7 @@
  * 这道题是寻找旋转排序数组中的最小值的延伸题目。
  * 允许重复会影响算法的时间复杂度吗？会如何影响，为什么？
  *
- * https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/
+ * https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array-ii/
 */
 
 module.exports = findMin;

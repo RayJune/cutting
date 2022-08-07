@@ -19,7 +19,7 @@
  * 3 <= nums.length <= 10 ** 4
  * -1000 <= nums[i] <= 1000
  *
- * https://leetcode-cn.com/problems/maximum-product-of-three-numbers/
+ * https://leetcode.cn/problems/maximum-product-of-three-numbers/
 */
 
 module.exports = maximumProduct;

@@ -16,7 +16,7 @@
  * Constraints:
  * 0 <= x <= 2 ** 31 - 1
  *
- * https://leetcode-cn.com/problems/valid-perfect-square/
+ * https://leetcode.cn/problems/valid-perfect-square/
 */
 
 module.exports = isPerfectSquare;

@@ -17,7 +17,7 @@
  * 1 <= k <= nums.length <= 10 ** 4
  * (-10) ** 4 <= nums[i] <= 10 ** 4
  *
- * https://leetcode-cn.com/problems/kth-largest-element-in-an-array/
+ * https://leetcode.cn/problems/kth-largest-element-in-an-array/
 */
 
 module.exports = findKthLargest;

@@ -19,7 +19,7 @@
  * Constraints:
  * 0 <= x <= 2 ** 31 - 1
  *
- * https://leetcode-cn.com/problems/sqrtx/
+ * https://leetcode.cn/problems/sqrtx/
 */
 
 module.exports = mySqrt;

@@ -25,7 +25,7 @@
  * nums is a non-decreasing array.
  * -10 ** 9 <= target <= 10 ** 9
  *
- * https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+ * https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/
 */
 
 module.exports = searchRange;

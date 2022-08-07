@@ -27,7 +27,7 @@
  *
  * 进阶：很容易想到时间复杂度 O(n) 的解决方案，你可以设计一个 O(log(n)) 的解决方案吗？
  *
- * https://leetcode-cn.com/problems/peak-index-in-a-mountain-array/
+ * https://leetcode.cn/problems/peak-index-in-a-mountain-array/
 */
 
 module.exports = peakIndexInMountainArray;

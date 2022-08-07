@@ -29,7 +29,7 @@
  * 1 <= prices.length <= 3 * 10 ** 4
  * 0 <= prices[i] <= 10 ** 4
  *
- * https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/
+ * https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/
 */
 
 module.exports = maxProfit;

@@ -23,7 +23,7 @@
  * 0 <= Node.val <= 9
  * 题目数据保证列表表示的数字不含前导零
  *
- * https://leetcode-cn.com/problems/add-two-numbers-ii/
+ * https://leetcode.cn/problems/add-two-numbers-ii/
 */
 
 /**

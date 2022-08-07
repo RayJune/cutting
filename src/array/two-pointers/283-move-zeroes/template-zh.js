@@ -15,7 +15,7 @@
  * 1 <= nums.length <= 10 ** 4
  * (-2) ** 31 <= nums[i] <= 2 ** 31 - 1
  *
- * https://leetcode-cn.com/problems/move-zeroes/
+ * https://leetcode.cn/problems/move-zeroes/
 */
 
 module.exports = moveZeroes;

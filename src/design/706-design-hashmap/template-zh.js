@@ -32,7 +32,7 @@
  * 0 <= key, value <= 10 ** 6
  * 最多调用 10 ** 4 次 put、get 和 remove 方法
  *
- * https://leetcode-cn.com/problems/design-hashmap/
+ * https://leetcode.cn/problems/design-hashmap/
 */
 
 module.exports = MyHashMap;

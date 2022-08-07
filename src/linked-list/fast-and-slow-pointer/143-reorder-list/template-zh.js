@@ -20,7 +20,7 @@
  * 链表的长度范围为 [1, 5 * 10 ** 4]
  * 1 <= node.val <= 1000
  *
- * https://leetcode-cn.com/problems/reorder-list/
+ * https://leetcode.cn/problems/reorder-list/
 */
 
 /**

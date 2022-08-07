@@ -22,7 +22,7 @@
  * Constraints:
  * 1 <= bad <= n <= 2 ** 31 - 1
  *
- * https://leetcode-cn.com/problems/first-bad-version/
+ * https://leetcode.cn/problems/first-bad-version/
 */
 
 module.exports = solution;

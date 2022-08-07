@@ -20,7 +20,7 @@
  * 1 <= Node.val <= 50
  * 0 <= val <= 50
  *
- * https://leetcode-cn.com/problems/remove-linked-list-elements/
+ * https://leetcode.cn/problems/remove-linked-list-elements/
 */
 
 /**

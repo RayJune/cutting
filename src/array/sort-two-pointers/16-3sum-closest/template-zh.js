@@ -20,7 +20,7 @@
  * -1000 <= nums[i] <= 1000
  * (-10) ** 4 <= target <= 10 ** 4
  *
- * https://leetcode-cn.com/problems/3sum-closest/
+ * https://leetcode.cn/problems/3sum-closest/
 */
 
 module.exports = threeSumClosest;

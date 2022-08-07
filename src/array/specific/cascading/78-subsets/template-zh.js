@@ -18,7 +18,7 @@
  * -10 <= k <= 10
  * All the nums are unique
  *
- * https://leetcode-cn.com/problems/subsets/
+ * https://leetcode.cn/problems/subsets/
 */
 
 module.exports = subsets;

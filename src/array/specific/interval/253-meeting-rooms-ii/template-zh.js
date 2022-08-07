@@ -15,7 +15,7 @@
  * 1 <= intervals.length <= 10 ** 4
  * 0 <= starti <= endi <= 10 ** 6
  *
- * https://leetcode-cn.com/problems/meeting-rooms-ii/
+ * https://leetcode.cn/problems/meeting-rooms-ii/
 */
 
 module.exports = minMeetingRooms;

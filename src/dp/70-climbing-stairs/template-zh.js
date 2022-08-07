@@ -25,7 +25,7 @@
  * Constraints:
  * 1 <= n <= 45
  *
- * https://leetcode-cn.com/problems/climbing-stairs/
+ * https://leetcode.cn/problems/climbing-stairs/
 */
 
 module.exports = climbStairs;

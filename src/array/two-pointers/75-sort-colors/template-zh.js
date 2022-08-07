@@ -20,7 +20,7 @@
  *
  * Follow up: Could you come up with a one-pass algorithm using only constant extra space?
  *
- * https://leetcode-cn.com/problems/sort-colors/
+ * https://leetcode.cn/problems/sort-colors/
 */
 
 module.exports = sortColors;

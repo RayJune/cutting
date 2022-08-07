@@ -19,7 +19,7 @@
  * -100 <= nums[i] <= 100
  * -100 <= target <= 100
  *
- * https://leetcode-cn.com/problems/two-sum-less-than-k/
+ * https://leetcode.cn/problems/two-sum-less-than-k/
 */
 
 module.exports = twoSumLessThanK;

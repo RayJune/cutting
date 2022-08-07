@@ -36,7 +36,7 @@
  * cost * s.length == 3
  * 1 <= costs[i] <= 1000
  *
- * https://leetcode-cn.com/problems/minimum-cost-for-tickets/
+ * https://leetcode.cn/problems/minimum-cost-for-tickets/
 */
 
 module.exports = mincostTickets;

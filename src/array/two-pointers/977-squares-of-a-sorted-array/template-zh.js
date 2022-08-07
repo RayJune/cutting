@@ -20,7 +20,7 @@
  *
  * 进阶: 请你设计时间复杂度为 O(n) 的算法解决本问题
  *
- * https://leetcode-cn.com/problems/squares-of-a-sorted-array/
+ * https://leetcode.cn/problems/squares-of-a-sorted-array/
 */
 
 module.exports = sortedSquares;

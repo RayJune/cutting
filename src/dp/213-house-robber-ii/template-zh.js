@@ -24,7 +24,7 @@
  * 1 <= nums.length <= 100
  * 0 <= nums[i] <= 100
  *
- * https://leetcode-cn.com/problems/house-robber-ii/
+ * https://leetcode.cn/problems/house-robber-ii/
 */
 
 module.exports = rob;

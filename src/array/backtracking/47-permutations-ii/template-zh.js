@@ -15,7 +15,7 @@
  * 1 <= nums.length <= 8
  * -10 <= nums[i] <= 10
  *
- * https://leetcode-cn.com/problems/permutations-ii/
+ * https://leetcode.cn/problems/permutations-ii/
 */
 
 module.exports = permuteUnique;

@@ -17,7 +17,7 @@
  * 1 <= nums.length <= 10
  * -10 <= k <= 10
  *
- * https://leetcode-cn.com/problems/subsets-ii/
+ * https://leetcode.cn/problems/subsets-ii/
 */
 
 module.exports = subsetsWithDup;

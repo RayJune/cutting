@@ -22,7 +22,7 @@
  * newInterval.length == 2
  * 0 <= start <= end <= 10 ** 5
  *
- * https://leetcode-cn.com/problems/insert-interval/
+ * https://leetcode.cn/problems/insert-interval/
 */
 
 module.exports = insert;

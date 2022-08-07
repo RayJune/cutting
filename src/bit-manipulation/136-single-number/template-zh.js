@@ -22,7 +22,7 @@
  * -3 * 10 ** 4 <= nums[i] <= 3 * 10 ** 4
  * Each element in the array appears twice except for one element which appears only once.
  *
- * https://leetcode-cn.com/problems/single-number/
+ * https://leetcode.cn/problems/single-number/
 */
 
 module.exports = singleNumber;

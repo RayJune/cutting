@@ -19,7 +19,7 @@
  * The number of nodes in the tree is in the range [0, 2000].
  * -100 <= Node.val <= 100
  *
- * https://leetcode-cn.com/problems/binary-tree-level-order-traversal/
+ * https://leetcode.cn/problems/binary-tree-level-order-traversal/
 */
 
 /**

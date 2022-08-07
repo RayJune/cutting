@@ -23,7 +23,7 @@
  * inorder is guaranteed to be the inorder traversal of the tree.
  * postorder is guaranteed to be the postorder traversal of the tree.
  *
- * https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
+ * https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
 */
 
 /**

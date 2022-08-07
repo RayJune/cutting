@@ -27,7 +27,7 @@
  * 0 <= sum(nums[i]) <= 2 ** 31 - 1
  * 1 <= k <= 2 ** 31 - 1
  *
- * https://leetcode-cn.com/problems/continuous-subarray-sum/
+ * https://leetcode.cn/problems/continuous-subarray-sum/
 */
 
 module.exports = checkSubarraySum;

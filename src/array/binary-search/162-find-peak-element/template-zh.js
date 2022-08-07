@@ -24,7 +24,7 @@
  * (-2) ** 31 <= nums[i] <= 2 ** 31 - 1
  * nums[i] != nums[i + 1] for all valid i.
  *
- * https://leetcode-cn.com/problems/find-peak-element/
+ * https://leetcode.cn/problems/find-peak-element/
 */
 
 module.exports = findPeakElement;

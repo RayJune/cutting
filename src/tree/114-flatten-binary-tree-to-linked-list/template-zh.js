@@ -19,7 +19,7 @@
  * 树中结点数在范围 [0, 2000] 内
  * -100 <= Node.val <= 100
  *
- * https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/
+ * https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/
 */
 
 /**

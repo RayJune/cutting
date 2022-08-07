@@ -21,7 +21,7 @@
  * 1 <= s.length <= 2 * 10 ** 5
  * s consists only of printable ASCII characters.
  *
- * https://leetcode-cn.com/problems/valid-palindrome/
+ * https://leetcode.cn/problems/valid-palindrome/
 */
 
 module.exports = isPalindrome;

@@ -35,7 +35,7 @@
  * At most 100 calls will be made to push, pop, peek, and empty.
  * All the calls to pop and peek are valid.
  *
- * https://leetcode-cn.com/problems/implement-queue-using-stacks/
+ * https://leetcode.cn/problems/implement-queue-using-stacks/
 */
 
 module.exports = MyQueue;

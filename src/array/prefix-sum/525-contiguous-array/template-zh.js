@@ -15,7 +15,7 @@
  * 1 <= nums.length <= 10 ** 5
  * nums[i] is either 0 or 1.
  *
- * https://leetcode-cn.com/problems/contiguous-array/
+ * https://leetcode.cn/problems/contiguous-array/
 */
 
 module.exports = findMaxLength;

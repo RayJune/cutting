@@ -16,7 +16,7 @@
  * -1000 <= nums[i] <= 1000
  * (-10) ** 7 <= target <= 10 ** 7
  *
- * https://leetcode-cn.com/problems/subarray-sum-equals-k/
+ * https://leetcode.cn/problems/subarray-sum-equals-k/
 */
 
 module.exports = subarraySum;

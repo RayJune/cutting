@@ -26,7 +26,7 @@
  * Constraints:
  * (-2) ** 31 <= x <= 2 ** 31 - 1
  *
- * https://leetcode-cn.com/problems/reverse-integer/
+ * https://leetcode.cn/problems/reverse-integer/
 */
 
 module.exports = reverse;

@@ -30,7 +30,7 @@
  * All the integers of nums are unique.
  * nums is sorted and rotated between 1 and n times.
  *
- * https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/
+ * https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/
 */
 
 module.exports = findMin;

@@ -33,7 +33,7 @@
  * 1 <= coins[i] <= 2 ** 31 - 1
  * 0 <= amount <= 10 ** 4
  *
- * https://leetcode-cn.com/problems/coin-change/
+ * https://leetcode.cn/problems/coin-change/
 */
 
 module.exports = coinChange;

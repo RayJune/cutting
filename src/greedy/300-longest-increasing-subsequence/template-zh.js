@@ -24,7 +24,7 @@
  *
  * Follow up: Can you come up with an algorithm that runs in O(n log(n)) time complexity?
  *
- * https://leetcode-cn.com/problems/longest-increasing-subsequence/
+ * https://leetcode.cn/problems/longest-increasing-subsequence/
 */
 
 module.exports = lengthOfLIS;

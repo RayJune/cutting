@@ -15,7 +15,7 @@
  * Constraints:
  * 0 <= x <= 2 ** 31 - 1
  *
- * https://leetcode-cn.com/problems/sum-of-square-numbers/
+ * https://leetcode.cn/problems/sum-of-square-numbers/
 */
 
 module.exports = judgeSquareSum;

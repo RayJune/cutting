@@ -18,7 +18,7 @@
  * 1 <= n <= 20
  * -1000 <= matrix[i][j] <= 1000
  *
- * https://leetcode-cn.com/problems/rotate-image/
+ * https://leetcode.cn/problems/rotate-image/
 */
 
 module.exports = rotate;

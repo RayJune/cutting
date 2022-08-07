@@ -21,7 +21,7 @@
  * 0 <= nums.length <= 3000
  * (-10) ** 5 <= nums[i] <= 10 ** 5
  *
- * https://leetcode-cn.com/problems/3sum/
+ * https://leetcode.cn/problems/3sum/
 */
 
 module.exports = threeSum;

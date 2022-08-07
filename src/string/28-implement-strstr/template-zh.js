@@ -27,7 +27,7 @@
  * 0 <= haystack.length, needle.length <= 5 * 10 ** 4
  * haystack and needle consist of only lower-case English characters.
  *
- * https://leetcode-cn.com/problems/implement-strstr/
+ * https://leetcode.cn/problems/implement-strstr/
 */
 
 module.exports = strStr;

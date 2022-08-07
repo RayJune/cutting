@@ -34,7 +34,7 @@
  * 0 <= value <= 10 ** 5
  * At most 2 * 10 ** 5 calls will be made to get and put.
  *
- * https://leetcode-cn.com/problems/lru-cache/
+ * https://leetcode.cn/problems/lru-cache/
 */
 
 module.exports = LRUCache;

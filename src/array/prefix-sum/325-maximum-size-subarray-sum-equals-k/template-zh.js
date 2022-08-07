@@ -16,7 +16,7 @@
  * (-10) ** 4 <= nums[i] <= 10 ** 4
  * (-10) ** 9 <= k <= 10 ** 9
  *
- * https://leetcode-cn.com/problems/maximum-size-subarray-sum-equals-k/
+ * https://leetcode.cn/problems/maximum-size-subarray-sum-equals-k/
 */
 
 module.exports = maxSubArrayLen;

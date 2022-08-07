@@ -31,7 +31,7 @@
  * 1 <= s.length <= 3000
  * s consists of digits only.
  *
- * https://leetcode-cn.com/problems/restore-ip-addresses/
+ * https://leetcode.cn/problems/restore-ip-addresses/
 */
 
 module.exports = restoreIpAddresses;
