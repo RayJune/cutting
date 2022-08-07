@@ -5,12 +5,11 @@ module.exports = {
             {
                 targets: {
                     node: true,
-                },
-            },
-        ],
+                }
+            }
+        ]
     ],
     plugins: [
-        '@babel/plugin-proposal-class-properties',
         ['module-resolver', {
             "root": ["./src"],
             "alias": {
