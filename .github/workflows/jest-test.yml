@@ -3,22 +3,25 @@
 
 name: Jest Test CI
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+on: [push, pull_request]
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
     - name: Use Node.js 16
       uses: actions/setup-node@v3
       with:
         node-version: 16
         cache: 'npm'
-    - run: npm ci
-    - run: npm test
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run the tests
+      run: npm test
