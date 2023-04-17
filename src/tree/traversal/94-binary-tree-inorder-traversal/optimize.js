@@ -40,15 +40,16 @@
  */
 
 /**
- * Morris 遍历
+ * 输入二叉树的根节点，返回其中序遍历的节点值数组
+ * 中序遍历：left subtree -> root -> right subtree
+ * 思路：Morris 遍历
  *
- * Time Complexity: O(n) = 遍历次数
- * Space Complexity: O(n) = result 数组长度（最坏情况下树呈链状）
+ * Time Complexity: O(n) = while 循环次数
+ * Space Complexity: O(n) = result 数组长度
  * Auxiliary Complexity: O(1)
  * 其中 n 为以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
- * @param {number[]} result
  * @return {number[]}
  */
 function inorderTraversal(root) {

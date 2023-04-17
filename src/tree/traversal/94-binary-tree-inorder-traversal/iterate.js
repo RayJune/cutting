@@ -40,32 +40,33 @@
  */
 
 /**
- * Iteration
+ * 输入二叉树的根节点，返回其中序遍历的节点值数组
+ * 中序遍历：left subtree -> root -> right subtree
+ * 思路：用 Stack 的概念来遍历，按前序遍历顺序入栈出栈。其中重点在遍历完当前节点的 left -> root -> right 后需要返回到上一个父亲节点。
  *
- * Time Complexity: O(n) = 遍历次数
- * Space Complexity: O(n) = result 数组长度 / stack 数组长度（最坏情况下树呈链状）
- * Auxiliary Complexity: O(n) = stack 数组长度（最坏情况下树呈链状）
- * 其中 n 为以 root 为根节点的二叉树的节点数
+ * Time Complexity: O(n) = 入栈次数和出栈次数之和
+ * Space complexity: O(n) = result 数组长度 / stack 长度（最坏情况下树成链状）
+ * Auxiliary complexity: O(n) = stack 长度（最坏情况下树成链状）
+ * 其中 n 是以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
  * @return {number[]}
  */
 function inorderTraversal(root) {
-    if (root === null) {
-        return [];
-    }
-
-    const result = [];
     const stack = [];
+    const result = [];
+    let node = root;
 
-    while (root || stack.length) {
-        while (root) {
-            stack.push(root);
-            root = root.left;
+    while (node || stack.length) {
+        while (node) {
+            stack.push(node);
+            node = node.left;
         }
-        root = stack.pop();
-        result.push(root.val);
-        root = root.right;
+
+        const {val, right} = stack.pop();
+
+        result.push(val);
+        node = right;
     }
 
     return result;

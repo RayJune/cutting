@@ -44,3 +44,9 @@ test('root = [1, 2, 3, 4, 5]', () => {
 
     expect(inorderTraversal(root)).toEqual([4, 2, 5, 1, 3]);
 });
+
+test('root = [7, 2, null, 1, 4, null, null, 3, 5, null, null, null, 6]', () => {
+    const root = buildBinaryTree([7, 2, null, 1, 4, null, null, 3, 5, null, null, null, 6]);
+
+    expect(inorderTraversal(root)).toEqual([1, 2, 3, 4, 5, 6, 7]);
+});

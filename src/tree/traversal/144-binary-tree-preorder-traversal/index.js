@@ -40,10 +40,12 @@
  */
 
 /**
- * 递归
+ * 输入二叉树的根节点，返回其前序遍历的节点值数组
+ * 前序遍历：root -> left subtree -> right subtree
+ * 思路：迭代 Recursion
  *
- * Time Complexity: O(n) = 递归函数执行次数
- * Space Complexity: O(n) = result 数组长度 + 函数调用栈深度（最坏情况下树呈现链状）
+ * Time Complexity: O(n) = 函数执行次数
+ * Space Complexity: O(n) = result 数组长度 / 函数调用栈深度（最坏情况下树呈现链状）
  * Auxiliary Complexity: O(n) = 函数调用栈深度（最坏情况下树呈现链状）
  * 其中 n 为以 root 为根节点的二叉树的节点数
  *
@@ -53,9 +55,11 @@
  */
 function preorderTraversal(root, result = []) {
     if (root) {
-        result.push(root.val);
-        preorderTraversal(root.left, result);
-        preorderTraversal(root.right, result);
+        const {val, left, right} = root;
+
+        result.push(val);
+        preorderTraversal(left, result);
+        preorderTraversal(right, result);
     }
 
     return result;

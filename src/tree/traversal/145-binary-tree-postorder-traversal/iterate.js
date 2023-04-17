@@ -40,9 +40,11 @@
  */
 
 /**
- * 迭代
+ * 输入二叉树的根节点，返回其后序遍历的节点值数组
+ * 后序遍历：left subtree -> right subtree -> root
+ * 思路：用 Stack 的概念来遍历，按照后序遍历顺序来入栈出栈。其中重点在用 prevNode 来判断 right 是否被已经被遍历过。
  *
- * Time Complexity: O(n) = 遍历次数
+ * Time Complexity: O(n) = while 循环次数
  * Space Complexity: O(n) = result 数组长度 / stack 数组长度（最坏情况下树呈现链状）
  * Auxiliary Complexity: O(n) = stack 数组长度（最坏情况下树呈现链状）
  * 其中 n 为以 root 为根节点的二叉树的节点数
@@ -55,8 +57,8 @@ function postorderTraversal(root) {
         return [];
     }
 
-    const result = [];
     const stack = [];
+    const result = [];
     let node = root;
     let prevNode = null;
 
@@ -66,17 +68,21 @@ function postorderTraversal(root) {
             node = node.left;
         }
         node = stack.pop();
-        if (node.right === null || node.right === prevNode) {
-            result.push(node.val);
+
+        const {val, right} = node;
+
+        if (right === null || right === prevNode) {
+            result.push(val);
             prevNode = node;
             node = null;
         } else {
             stack.push(node);
-            node = node.right;
+            node = right;
         }
     }
 
     return result;
 }
+
 
 module.exports = postorderTraversal;

@@ -40,7 +40,9 @@
  */
 
 /**
- * 遍历
+ * 输入二叉树的根节点，返回其前序遍历的节点值数组
+ * 前序遍历：root -> left subtree -> right subtree
+ * 思路：用 Stack 的概念来遍历，按照前序遍历顺序入栈出栈
  *
  * Time Complexity: O(n) = while 循环次数
  * Space Complexity: O(n) = result 数组长度 / stack 数组长度（最坏情况下树呈现链状）
@@ -55,8 +57,8 @@ function preorderTraversal(root) {
         return [];
     }
 
-    const result = [];
     const stack = [root];
+    const result = [];
 
     while (stack.length) {
         const {val, left, right} = stack.pop();
