@@ -22,7 +22,7 @@
  *
  * @param {ListNode} head
  * @param {number} k
- * @return {ListNode}
+ * @returns {ListNode}
  */
 function getKthFromEnd(head, k) {
     let first = head;

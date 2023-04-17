@@ -31,7 +31,7 @@
  * 其中 n 为 nums 的长度
  *
  * @param {number[]} nums
- * @return {boolean}
+ * @returns {boolean}
  */
 function containsDuplicate(nums) {
     const set = new Set();

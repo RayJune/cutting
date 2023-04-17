@@ -30,7 +30,7 @@
  * Auxiliary complexity: O(n) = filteredS 长度
  *
  * @param {string} s
- * @return {boolean}
+ * @returns {boolean}
  */
 function isPalindrome(s) {
     const filteredS = s.toLowerCase().replace(/[^a-z0-9]/g, '');

@@ -40,7 +40,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number} n
- * @return {boolean}
+ * @returns {boolean}
  */
 function isPowerOfTwo(n) {
     return n > 0 && 2 ** 30 % n === 0;

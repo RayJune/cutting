@@ -29,7 +29,7 @@
  * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
- * @return {number[][]}
+ * @returns {number[][]}
  */
 function subsetsWithDup(nums) {
     let isPrevSelected = false;

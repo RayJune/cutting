@@ -29,7 +29,7 @@
  * Auxiliary complexity: O(n) = dp 长度 O(n) + arr 长度 O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 function findNumberOfLIS(nums) {
     const len = nums.length;

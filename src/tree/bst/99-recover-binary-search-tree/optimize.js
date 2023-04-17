@@ -52,7 +52,7 @@ function recoverTree(root) {
 
 /**
  * @param {TreeNode} node
- * @return {{x: TreeNode, y: TreeNode}}
+ * @returns {{x: TreeNode, y: TreeNode}}
  */
 function findTwoSwapped(node) {
     const stack = [];

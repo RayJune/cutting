@@ -46,7 +46,7 @@ class TreeNode {
  * Auxiliary complexity: O(log(n)) = convertListToBST 函数调用栈深度
  *
  * @param {ListNode} head
- * @return {TreeNode}
+ * @returns {TreeNode}
  */
 function sortedListToBST(head) {
     if (head === null) {

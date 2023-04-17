@@ -49,7 +49,7 @@
  * @param {TreeNode} root
  * @param {TreeNode} p
  * @param {TreeNode} q
- * @return {TreeNode}
+ * @returns {TreeNode}
  */
 function lowestCommonAncestor(root, p, q) {
     if (root === null || root.val === p.val || root.val === q.val) {

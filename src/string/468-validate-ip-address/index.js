@@ -52,7 +52,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {string} ip
- * @return {string}
+ * @returns {string}
  */
 function validIPAddress(ip) {
     if (ip.length < 7 || ip.length > 39) {
@@ -70,7 +70,7 @@ function validIPAddress(ip) {
 
 /**
  * @param {string[]} arr
- * @return {boolean}
+ * @returns {boolean}
  */
 function validateIPv4(arr) {
     if (arr.length !== 4) {
@@ -82,7 +82,7 @@ function validateIPv4(arr) {
 
 /**
  * @param {string[]} arr
- * @return {boolean}
+ * @returns {boolean}
  */
 function validateIPv6(arr) {
     if (arr.length !== 8) {

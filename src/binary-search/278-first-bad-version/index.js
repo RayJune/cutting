@@ -33,12 +33,12 @@
  * Auxiliary complexity: O(1)
  *
  * @param {Function} isBadVersion
- * @return {Function}
+ * @returns {Function}
  */
 function solution(isBadVersion) {
     /**
      * @param {number} n
-     * @return {number}
+     * @returns {number}
      */
     return n => {
         let left = 1;

@@ -30,7 +30,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 function findKthLargest(nums, k) {
     return quickSelect(nums, 0, nums.length - 1, k);
@@ -41,7 +41,7 @@ function findKthLargest(nums, k) {
  * @param {number} left
  * @param {number} right
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 function quickSelect(arr, left, right, k) {
     const pivotIndex = partition(arr, left, right);
@@ -62,7 +62,7 @@ function quickSelect(arr, left, right, k) {
  * @param {number[]} arr
  * @param {number} left
  * @param {number} right
- * @return {number}
+ * @returns {number}
  */
 function partition(arr, left, right) {
     const {pivot, pivotIndex} = getMedian(arr, left, right);
@@ -84,7 +84,7 @@ function partition(arr, left, right) {
  * @param {number[]} arr
  * @param {number} left
  * @param {number} right
- * @return {{pivot: number, pivotIndex: number}}
+ * @returns {{pivot: number, pivotIndex: number}}
  */
 function getMedian(arr, left, right) {
     let pivot = arr[left];

@@ -46,7 +46,7 @@ class ListNode {
  * @param {ListNode} head
  * @param {number} left
  * @param {number} right
- * @return {ListNode}
+ * @returns {ListNode}
  */
 function reverseBetween(head, left, right) {
     const preHead = new ListNode(-1, head);

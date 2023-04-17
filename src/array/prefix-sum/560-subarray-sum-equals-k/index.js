@@ -30,7 +30,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 function subarraySum(nums, k) {
     const prefixSum = new Map([[0, 1]]);

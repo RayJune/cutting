@@ -49,7 +49,7 @@ class MyHashSet {
 
     /**
      * @param {number} key
-     * @return {number}
+     * @returns {number}
      */
     #hash(key) {
         return key % this.#keyRange;
@@ -72,7 +72,7 @@ class MyHashSet {
 
     /**
      * @param {number} key
-     * @return {boolean}
+     * @returns {boolean}
      */
     contains(key) {
         const bucket = this.#getBucket(key);

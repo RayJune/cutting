@@ -35,7 +35,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 function rob(nums) {
     switch (nums.length) {
@@ -51,7 +51,7 @@ function rob(nums) {
 /**
  * @param {number[]} nums
  * @param {number} start
- * @return {number}
+ * @returns {number}
  */
 function robHelper(nums, start) {
     let sum = 0;

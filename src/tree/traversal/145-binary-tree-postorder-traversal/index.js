@@ -51,7 +51,7 @@
  *
  * @param {TreeNode} root
  * @param {number[]} [result=[]]
- * @return {number[]}
+ * @returns {number[]}
  */
 function postorderTraversal(root, result = []) {
     if (root) {

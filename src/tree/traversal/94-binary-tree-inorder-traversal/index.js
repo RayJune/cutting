@@ -51,7 +51,7 @@
  *
  * @param {TreeNode} root
  * @param {number[]} [result=[]]
- * @return {number[]}
+ * @returns {number[]}
  */
 function inorderTraversal(root, result = []) {
     if (root) {

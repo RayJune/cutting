@@ -57,7 +57,7 @@ class MyHashMap {
 
     /**
      * @param {number} key
-     * @return {number}
+     * @returns {number}
      */
     #hash(key) {
         return key % this.#keyRange;
@@ -92,7 +92,7 @@ class MyHashMap {
 
     /**
      * @param {number} key
-     * @return {number}
+     * @returns {number}
      */
     get(key) {
         const hash = this.#hash(key);

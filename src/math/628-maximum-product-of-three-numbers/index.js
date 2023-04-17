@@ -30,7 +30,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 function maximumProduct(nums) {
     let min1 = Infinity;

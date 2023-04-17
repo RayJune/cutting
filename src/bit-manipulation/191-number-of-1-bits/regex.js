@@ -29,7 +29,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 function hammingWeight(n) {
     return n === 0 ? 0 : n.toString(2).match(/1/g).length;

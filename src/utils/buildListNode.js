@@ -7,7 +7,7 @@ class ListNode {
 
 /**
  * @param {number[]} arr
- * @return {ListNode}
+ * @returns {ListNode}
  */
 function buildListNode(arr) {
     let preHead = new ListNode(-1);

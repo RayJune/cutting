@@ -36,7 +36,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {boolean}
+ * @returns {boolean}
  */
 function checkSubarraySum(nums, k) {
     if (nums.length < 2) {

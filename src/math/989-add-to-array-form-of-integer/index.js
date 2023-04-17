@@ -45,7 +45,7 @@
  *
  * @param {number[]} num
  * @param {number} k
- * @return {number[]}
+ * @returns {number[]}
  */
 function addToArrayForm(num, k) {
     let carry = k;

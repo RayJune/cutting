@@ -46,7 +46,7 @@ class TreeNode {
  * Auxiliary complexity: O(n) = sortedArrayToBST auxiliary complexity
  *
  * @param {ListNode} head
- * @return {TreeNode}
+ * @returns {TreeNode}
  */
 function sortedListToBST(head) {
     const nums = [];
@@ -65,7 +65,7 @@ function sortedListToBST(head) {
  * Auxiliary complexity: O(n) = 函数调用栈深度 / 生成的 BST 中节点个数
  *
  * @param {number[]} nums
- * @return {TreeNode}
+ * @returns {TreeNode}
  */
 function sortedArrayToBST(nums) {
     if (nums.length === 0) {

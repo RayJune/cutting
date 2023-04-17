@@ -41,7 +41,7 @@
  * Auxiliary complexity: O(n) = dp 数组长度
  *
  * @param {number[]} cost
- * @return {number}
+ * @returns {number}
  */
 function minCostClimbingStairs(cost) {
     const dp = [0, 0];

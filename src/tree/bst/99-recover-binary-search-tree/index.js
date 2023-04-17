@@ -55,7 +55,7 @@ function recoverTree(root) {
 /**
  * @param {TreeNode} node
  * @param {number[]} [result=[]]
- * @return {TreeNode[]}
+ * @returns {TreeNode[]}
  */
 function inorderTraversal(node, result = []) {
     if (node) {
@@ -71,7 +71,7 @@ function inorderTraversal(node, result = []) {
 
 /**
  * @param {TreeNode[]} nums
- * @return {{x: TreeNode, y: TreeNode}}
+ * @returns {{x: TreeNode, y: TreeNode}}
  */
 function findTwoSwapped(nums) {
     const len = nums.length;

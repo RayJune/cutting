@@ -44,7 +44,7 @@
  *
  * @param {TreeNode} p
  * @param {TreeNode} q
- * @return {boolean}
+ * @returns {boolean}
  */
 function isSameTree(p, q) {
     if (p === null && q === null) {

@@ -35,7 +35,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number} x
- * @return {number}
+ * @returns {number}
  */
 function reverse(x) {
     let reversedX = 0;

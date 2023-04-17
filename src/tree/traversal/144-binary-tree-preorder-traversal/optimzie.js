@@ -48,7 +48,7 @@
  * 其中 n 为以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
- * @return {number[]}
+ * @returns {number[]}
  */
 function preorderTraversal(root) {
     const result = [];

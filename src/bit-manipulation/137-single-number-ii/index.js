@@ -30,7 +30,7 @@
  * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 function singleNumber(nums) {
     const uniqueSum = [...new Set(nums)].reduce((a, b) => a + b, 0);

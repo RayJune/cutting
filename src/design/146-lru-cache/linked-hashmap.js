@@ -58,7 +58,7 @@ class LRUCache {
      * Auxiliary complexity: O(1)
      *
      * @param {number} key
-     * @return {number}
+     * @returns {number}
      */
     get(key) {
         if (this.#map.has(key)) {

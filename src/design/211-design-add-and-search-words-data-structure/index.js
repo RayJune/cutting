@@ -84,7 +84,7 @@ class WordDictionary {
      * Auxiliary complexity: O(1)
      *
      * @param {string} word
-     * @return {boolean}
+     * @returns {boolean}
      */
     search(word) {
         const dfs = (i, node) => {

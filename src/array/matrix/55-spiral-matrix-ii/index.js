@@ -23,7 +23,7 @@
  * Auxiliary complexity: O(n ** 2) = matrix 占用空间
  *
  * @param {number} n
- * @return {number[][]}
+ * @returns {number[][]}
  */
 function generateMatrix(n) {
     const matrix = new Array(n).fill(0).map(() => new Array(n).fill(0));

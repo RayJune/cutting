@@ -34,7 +34,7 @@
  * Auxiliary complexity: O(n) = arr 长度
  *
  * @param {ListNode} head
- * @return {boolean}
+ * @returns {boolean}
  */
 function isPalindrome(head) {
     const arr = [];

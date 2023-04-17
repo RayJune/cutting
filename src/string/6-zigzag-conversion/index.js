@@ -48,7 +48,7 @@
  *
  * @param {string} s
  * @param {number} numRows
- * @return {string}
+ * @returns {string}
  */
 function convert(s, numRows) {
     if (numRows === 1 || s.length <= numRows) {

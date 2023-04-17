@@ -38,7 +38,7 @@
  * Auxiliary complexity: O(n) = helper 函数调用栈深度 O(n) * path 长度 O(n)
  *
  * @param {TreeNode} root
- * @return {string[]}
+ * @returns {string[]}
  */
 function binaryTreePaths(root) {
     const result = [];

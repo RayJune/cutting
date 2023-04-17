@@ -40,7 +40,7 @@
  *
  * @param {number[]} nums
  * @param {number} target
- * @return {number}
+ * @returns {number}
  */
 function search(nums, target) {
     let left = 0;

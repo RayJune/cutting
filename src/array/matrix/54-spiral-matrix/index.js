@@ -29,7 +29,7 @@
  * 其中 m 和 n 分别是 matrix 的行数和列数
  *
  * @param {number[][]} matrix
- * @return {number[]}
+ * @returns {number[]}
  */
 function spiralOrder(matrix) {
     const result = [];

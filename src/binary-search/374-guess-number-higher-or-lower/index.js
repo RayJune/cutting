@@ -47,7 +47,7 @@ const guess = require('./guess');
  * Auxiliary complexity: O(1)
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 function guessNumber(n) {
     let left = 1;

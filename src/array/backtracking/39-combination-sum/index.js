@@ -53,7 +53,7 @@
  *
  * @param {number[]} candidates
  * @param {number} target
- * @return {number[][]}
+ * @returns {number[][]}
  */
 function combinationSum(candidates, target) {
     const combinations = [];

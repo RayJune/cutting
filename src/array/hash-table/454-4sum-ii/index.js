@@ -38,7 +38,7 @@
  * @param {number[]} nums2
  * @param {number[]} nums3
  * @param {number[]} nums4
- * @return {number}
+ * @returns {number}
  */
 function fourSumCount(nums1, nums2, nums3, nums4) {
     const map = new Map();

@@ -36,7 +36,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 function missingNumber(nums) {
     let targetNum = 0;

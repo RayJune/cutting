@@ -33,7 +33,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 function singleNumber(nums) {
     const bitMask = nums.reduce((prev, curr) => prev ^ curr);

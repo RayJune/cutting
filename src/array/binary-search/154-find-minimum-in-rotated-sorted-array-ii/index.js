@@ -38,7 +38,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 function findMin(nums) {
     let left = 0;

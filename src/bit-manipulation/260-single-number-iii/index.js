@@ -33,7 +33,7 @@
  * Auxiliary complexity: O(n) = map 的长度
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 function singleNumber(nums) {
     const map = new Map();

@@ -48,7 +48,7 @@ class ListNode {
  *
  * @param {ListNode} head
  * @param {number} n
- * @return {ListNode}
+ * @returns {ListNode}
  */
 function removeNthFromEnd(head, n) {
     const preHead = new ListNode(-1, head);

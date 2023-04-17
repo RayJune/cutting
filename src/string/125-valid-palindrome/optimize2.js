@@ -32,7 +32,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {string} s
- * @return {boolean}
+ * @returns {boolean}
  */
 function isPalindrome(s) {
     const skip = char => /[^a-zA-Z0-9]/.test(char);

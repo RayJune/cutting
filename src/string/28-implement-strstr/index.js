@@ -40,7 +40,7 @@
  *
  * @param {string} haystack
  * @param {string} needle
- * @return {number}
+ * @returns {number}
  */
 function strStr(haystack, needle) {
     if (needle.length === 0) {

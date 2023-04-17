@@ -36,7 +36,7 @@
  *
  * @param {number[][]} intervals
  * @param {number[]} newInterval
- * @return {number[][]}
+ * @returns {number[][]}
  */
 function insert(intervals, newInterval) {
     const result = [];

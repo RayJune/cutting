@@ -30,7 +30,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number[]} nums
- * @return {boolean}
+ * @returns {boolean}
  */
 function canJump(nums) {
     let position = 0;

@@ -33,7 +33,7 @@
  * 其中 n 是 s 字符串的长度
  *
  * @param {string} s
- * @return {boolean}
+ * @returns {boolean}
  */
 function repeatedSubstringPattern(s) {
     if (s.length === 0) {

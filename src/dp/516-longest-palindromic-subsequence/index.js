@@ -30,7 +30,7 @@
  * Auxiliary complexity: O(n ** 2) = dp 数组所占空间
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 function longestPalindromeSubseq(s) {
     const len = s.length;

@@ -36,7 +36,7 @@
  *
  * @param {ListNode} head
  * @param {number} k
- * @return {ListNode}
+ * @returns {ListNode}
  */
 function rotateRight(head, k) {
     if (k === 0 || head === null || head.next === null) {

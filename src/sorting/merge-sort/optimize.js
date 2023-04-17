@@ -7,7 +7,7 @@
  * 其中 n 是 arr 数组的长度
  *
  * @param {number[]} arr
- * @return {number[]}
+ * @returns {number[]}
  */
 function mergeSort(arr) {
     if (arr.length < 2) {

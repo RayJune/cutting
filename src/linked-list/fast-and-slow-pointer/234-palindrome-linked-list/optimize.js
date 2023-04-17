@@ -34,7 +34,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {ListNode} head
- * @return {boolean}
+ * @returns {boolean}
  */
 function isPalindrome(head) {
     const mid = getMid(head);
@@ -60,7 +60,7 @@ function isPalindrome(head) {
  * 返回链表的中间节点，如果有两个中间节点，返回第二个中间节点
  *
  * @param {ListNode} head
- * @return {ListNode}
+ * @returns {ListNode}
  */
 function getMid(head) {
     let slow = head;
@@ -76,7 +76,7 @@ function getMid(head) {
 
 /**
  * @param {ListNode} head
- * @return {ListNode}
+ * @returns {ListNode}
  */
 function reverseList(head) {
     let prevNode = null;

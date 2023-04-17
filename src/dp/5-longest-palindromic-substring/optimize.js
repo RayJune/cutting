@@ -35,7 +35,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 function longestPalindrome(s) {
     let start = 0;

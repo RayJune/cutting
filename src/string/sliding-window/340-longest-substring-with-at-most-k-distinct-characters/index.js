@@ -30,7 +30,7 @@
  *
  * @param {string} s
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 function lengthOfLongestSubstringKDistinct(s, k) {
     const map = new Map();

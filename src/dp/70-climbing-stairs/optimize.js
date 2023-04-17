@@ -34,7 +34,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 function climbStairs(n) {
     let prev = 1;

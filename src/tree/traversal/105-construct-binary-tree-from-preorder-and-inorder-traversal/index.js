@@ -52,7 +52,7 @@ class TreeNode {
  *
  * @param {number[]} preorder
  * @param {number[]} inorder
- * @return {TreeNode}
+ * @returns {TreeNode}
  */
 function buildTree(preorder, inorder) {
     if (inorder.length === 0) {

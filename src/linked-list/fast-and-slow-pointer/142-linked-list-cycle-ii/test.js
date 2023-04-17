@@ -13,7 +13,7 @@ class ListNode {
 /**
  * @param {number[]} arr
  * @param {number} position
- * @return {{head: ListNode, arr: ListNode[]}}
+ * @returns {{head: ListNode, arr: ListNode[]}}
  */
 function buildListNode(arr, position) {
     let preHead = new ListNode(-1);

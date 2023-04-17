@@ -39,7 +39,7 @@
  *
  * @param {number[]} numbers
  * @param {number} target
- * @return {number[]}
+ * @returns {number[]}
  */
 function twoSum(numbers, target) {
     const len = numbers.length;

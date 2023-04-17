@@ -26,7 +26,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number} c
- * @return {boolean}
+ * @returns {boolean}
  */
 function judgeSquareSum(c) {
     let left = 0;

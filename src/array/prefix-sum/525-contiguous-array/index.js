@@ -27,7 +27,7 @@
  * 其中 n 是数组的长度
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 function findMaxLength(nums) {
     const prefixSum = new Map([[0, -1]]);

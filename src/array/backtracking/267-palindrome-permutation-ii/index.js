@@ -28,7 +28,7 @@
  * Auxiliary complexity: O(s) = backtrack 函数调用栈深度 O(s / 2) + signs 长度 O(s / 2) + 排序 O(log(s))
  *
  * @param {string} s
- * @return {string[]}
+ * @returns {string[]}
  */
 function generatePalindromes(s) {
     const set = new Set();

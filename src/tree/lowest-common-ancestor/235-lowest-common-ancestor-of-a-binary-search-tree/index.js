@@ -50,7 +50,7 @@
  * @param {TreeNode} root
  * @param {TreeNode} p
  * @param {TreeNode} q
- * @return {TreeNode}
+ * @returns {TreeNode}
  */
 function lowestCommonAncestor(root, p, q) {
     while (root) {

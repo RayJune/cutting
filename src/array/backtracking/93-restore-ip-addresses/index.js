@@ -42,7 +42,7 @@
  * Auxiliary complexity: O(1) = backtrack 函数调用栈深度 O(4)
  *
  * @param {string} s
- * @return {string[]}
+ * @returns {string[]}
  */
 function restoreIpAddresses(s) {
     if (s.length < 4 || s.length > 12) {

@@ -40,7 +40,7 @@
  * 其中 n 为 arr 数组的长度
  *
  * @param {number[]} arr
- * @return {number}
+ * @returns {number}
  */
 function peakIndexInMountainArray(arr) {
     let left = 0;

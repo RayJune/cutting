@@ -31,7 +31,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number} n
- * @return {boolean}
+ * @returns {boolean}
  */
 function isPowerOfFour(n) {
     return /^10*$/.test(n.toString(4));

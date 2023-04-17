@@ -46,7 +46,7 @@ class ListNode {
  *
  * @param {ListNode} head
  * @param {number} val
- * @return {ListNode}
+ * @returns {ListNode}
  */
 function removeElements(head, val) {
     const preHead = new ListNode(-1, head);

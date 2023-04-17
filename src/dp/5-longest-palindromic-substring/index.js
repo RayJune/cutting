@@ -35,7 +35,7 @@
  * Auxiliary complexity: O(n ** 2) = dp 数组所占空间
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 function longestPalindrome(s) {
     const len = s.length;

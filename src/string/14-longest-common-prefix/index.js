@@ -30,7 +30,7 @@
  * 其中 m 是 strs 字符串数组中字符串的平均长度，n 是字符串的数量
  *
  * @param {string[]} strs
- * @return {string}
+ * @returns {string}
  */
 function longestCommonPrefix(strs) {
     return strs.reduce((prev, curr) => {

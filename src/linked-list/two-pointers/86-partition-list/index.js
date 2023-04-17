@@ -45,7 +45,7 @@ class ListNode {
  *
  * @param {ListNode} head
  * @param {number} x
- * @return {ListNode}
+ * @returns {ListNode}
  */
 function partition(head, x) {
     const preHead1 = new ListNode(-1);

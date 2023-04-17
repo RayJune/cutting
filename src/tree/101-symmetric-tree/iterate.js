@@ -37,7 +37,7 @@
  * 其中 n 为二叉树的节点数
  *
  * @param {TreeNode} root
- * @return {boolean}
+ * @returns {boolean}
  */
 function isSymmetric(root) {
     if (root === null) {

@@ -36,7 +36,7 @@
  * 其中 n 是数组 nums 的长度
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 function lengthOfLIS(nums) {
     const arr = [nums[0]];

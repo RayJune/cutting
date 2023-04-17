@@ -29,7 +29,7 @@
  * 其中 n 是字符串 s 的长度
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 function lengthOfLongestSubstringTwoDistinct(s) {
     const map = new Map();

@@ -31,7 +31,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number[]} prices
- * @return {number}
+ * @returns {number}
  */
 function maxProfit(prices) {
     let minPrice = Infinity;

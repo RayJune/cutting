@@ -25,7 +25,7 @@
  * Auxiliary complexity: O(n) = backtrack 函数调用栈深度
  *
  * @param {number} n
- * @return {string[]}
+ * @returns {string[]}
  */
 function generateParenthesis(n) {
     const result = [];

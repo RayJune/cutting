@@ -64,7 +64,7 @@ class NumMatrix {
      * @param {number} col1
      * @param {number} row2
      * @param {number} col2
-     * @return {number}
+     * @returns {number}
      */
     sumRegion(row1, col1, row2, col2) {
         return this.#prefixSum[row2 + 1][col2 + 1]

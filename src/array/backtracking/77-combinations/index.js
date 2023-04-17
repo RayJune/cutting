@@ -29,7 +29,7 @@
  *
  * @param {number} n
  * @param {number} k
- * @return {number[]}
+ * @returns {number[]}
  */
 function combine(n, k) {
     const combinations = [];

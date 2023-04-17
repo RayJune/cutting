@@ -68,7 +68,7 @@ class MyStack {
      * Auxiliary complexity: O(1)
      * 其中 n 是栈内元素的个数
      *
-     * @return {number}
+     * @returns {number}
      */
     pop() {
         return this.#queue.shift();
@@ -79,7 +79,7 @@ class MyStack {
      * Space complexity: O(1)
      * Auxiliary complexity: O(1)
      *
-     * @return {number}
+     * @returns {number}
      */
     top() {
         return this.#queue.peek();
@@ -90,7 +90,7 @@ class MyStack {
      * Space complexity: O(1)
      * Auxiliary complexity: O(1)
      *
-     * @return {boolean}
+     * @returns {boolean}
      */
     empty() {
         return this.#queue.length === 0;

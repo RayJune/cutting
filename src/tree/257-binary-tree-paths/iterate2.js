@@ -38,7 +38,7 @@
  * Auxiliary complexity: O(n ** 2) = stack 长度 O(n) * path 长度 O(n)
  *
  * @param {TreeNode} root
- * @return {string[]}
+ * @returns {string[]}
  */
 function binaryTreePaths(root) {
     const result = [];

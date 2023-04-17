@@ -52,7 +52,7 @@ class TreeNode {
  *
  * @param {number[]} inorder
  * @param {number[]} postorder
- * @return {TreeNode}
+ * @returns {TreeNode}
  */
 function buildTree(inorder, postorder) {
     let i = postorder.length;
@@ -79,7 +79,7 @@ function buildTree(inorder, postorder) {
  * 构建数组元素到索引值的映射表
  *
  * @param {number[]} arr
- * @return {Map<number, number}
+ * @returns {Map<number, number}
  */
 function buildMap(arr) {
     const map = new Map();

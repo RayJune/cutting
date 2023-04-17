@@ -32,7 +32,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 function rob(nums) {
     if (nums.length === 1) {

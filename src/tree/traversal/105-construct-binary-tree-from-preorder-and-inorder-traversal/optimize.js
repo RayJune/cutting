@@ -51,7 +51,7 @@ class TreeNode {
  *
  * @param {number[]} preorder
  * @param {number[]} inorder
- * @return {TreeNode}
+ * @returns {TreeNode}
  */
 function buildTree(preorder, inorder) {
     let i = -1;
@@ -78,7 +78,7 @@ function buildTree(preorder, inorder) {
  * 构建数组元素到索引值的映射表
  *
  * @param {number[]} arr
- * @return {Map<number, number>}
+ * @returns {Map<number, number>}
  */
 function buildMap(arr) {
     const map = new Map();

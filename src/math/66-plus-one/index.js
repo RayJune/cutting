@@ -50,7 +50,7 @@
  * 其中 n 是 digits 数组的长度
  *
  * @param {number[]} digits
- * @return {number[]}
+ * @returns {number[]}
  */
 function plusOne(digits) {
     let carry = 1;

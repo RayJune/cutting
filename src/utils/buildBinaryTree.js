@@ -10,7 +10,7 @@ class TreeNode {
  * Build binary tree with level order array input.
  *
  * @param {number[]} levelOrderArr
- * @return {TreeNode}
+ * @returns {TreeNode}
  */
 function buildBinaryTree(levelOrderArr) {
     if (levelOrderArr.length === 0) {

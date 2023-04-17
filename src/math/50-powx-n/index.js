@@ -33,7 +33,7 @@
  *
  * @param {number} x
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 function myPow(x, n) {
     if (n === 0) {

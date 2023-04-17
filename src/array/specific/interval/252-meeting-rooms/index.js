@@ -27,7 +27,7 @@
  * Auxiliary complexity: O(log(n)) = 排序
  *
  * @param {number[][]} intervals
- * @return {boolean}
+ * @returns {boolean}
  */
 function canAttendMeetings(intervals) {
     if (intervals.length < 2) {

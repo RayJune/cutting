@@ -35,7 +35,7 @@
  *
  * @param {number[][]} matrix
  * @param {number} target
- * @return {number}
+ * @returns {number}
  */
 function searchMatrix(matrix, target) {
     const m = matrix.length;

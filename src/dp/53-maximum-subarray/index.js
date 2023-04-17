@@ -35,7 +35,7 @@
  * Auxiliary complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 function maxSubArray(nums) {
     let curr = 0;
