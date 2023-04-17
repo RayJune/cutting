@@ -16,12 +16,11 @@
  * Output: 5
  *
  * Constraints:
- *
  * The number of nodes in the tree is in the range [0, 10 ** 5].
  * -1000 <= Node.val <= 1000
  *
  * https://leetcode.com/problems/minimum-depth-of-binary-tree/
-*/
+ */
 
 /**
  * Definition for a binary tree node.
@@ -31,5 +30,34 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+
+/**
+ * 输入二叉树的根节点，返回其最小深度
+ * 思路：用递归来实现 DFS 深度优先遍历
+ *
+ * Time Complexity: O(n) = 函数执行次数
+ * Space Complexity: O(n) = 函数调用栈深度（最坏情况下树成链状）
+ * Auxiliary Complexity: O(n) = 函数调用栈深度（最坏情况下树成链状）
+ * 其中 n 是以 root 为根节点的二叉树的节点数
+ *
+ * @param {TreeNode} root
+ * @returns {number}
+ */
+function minDepth(root) {
+    if (root === null) {
+        return 0;
+    }
+
+    const {left, right} = root;
+
+    if (left === null) {
+        return minDepth(right) + 1;
+    }
+    if (right === null) {
+        return minDepth(left) + 1;
+    }
+
+    return Math.min(minDepth(left), minDepth(right)) + 1;
+}
 
 module.exports = minDepth;

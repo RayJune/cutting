@@ -22,7 +22,6 @@
  * Output: 1
  *
  * Constraints:
- *
  * The number of nodes in the tree is in the range [0, 10 ** 4].
  * -100 <= Node.val <= 100
  *
@@ -39,12 +38,13 @@
  */
 
 /**
- * 迭代，BFS
+ * 输入二叉树的根节点，返回其最大深度
+ * 思路：用数组逐层存储节点来实现 BFS 广度优先遍历
  *
- * Time Complexity: O(n) = maxDepth 函数执行次数 O(n)
- * Space complexity: O(n) = stack 长度 O(n)
- * Auxiliary complexity: O(n) = stack 长度 O(n)
- * n 为二叉树的节点数
+ * Time Complexity: O(n) = 遍历次数
+ * Space Complexity: O(n) = arr 数组长度
+ * Auxiliary Complexity: O(n) = arr 数组长度
+ * 其中 n 是以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
  * @returns {number}
@@ -54,13 +54,13 @@ function maxDepth(root) {
         return 0;
     }
 
+    let arr = [root];
     let depth = 0;
-    let stack = [root];
 
-    while (stack.length) {
+    while (arr.length) {
         const temp = [];
 
-        for (const {left, right} of stack) {
+        for (const {left, right} of arr) {
             if (left) {
                 temp.push(left);
             }

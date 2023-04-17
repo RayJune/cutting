@@ -1,5 +1,5 @@
 /*
- * 111. Minimum Depth of Binary Tree
+ * 104. Maximum Depth of Binary Tree
  *
  * Given the root of a binary tree, return its maximum depth.
  *
@@ -22,11 +22,10 @@
  * Output: 1
  *
  * Constraints:
- *
  * The number of nodes in the tree is in the range [0, 10 ** 4].
  * -100 <= Node.val <= 100
  *
- * https://leetcode.com/problems/minimum-depth-of-binary-tree/
+ * https://leetcode.com/problems/maximum-depth-of-binary-tree/
 */
 
 /**
@@ -39,38 +38,23 @@
  */
 
 /**
- * 迭代，DFS
+ * 输入二叉树的根节点，返回其最大深度
+ * 思路：用递归来实现 DFS 深度优先遍历
  *
- * Time Complexity: O(n) = maxDepth 函数执行次数
- * Space complexity: O(n) = stack 长度 O(n)
- * Auxiliary complexity: O(n) = stack 长度 O(n)
- * n 为二叉树的节点数
+ * Time Complexity: O(n) = 函数执行次数
+ * Space Complexity: O(n) = 函数调用栈深度（最坏情况下树成链状）
+ * Auxiliary Complexity: O(n) = 函数调用栈深度（最坏情况下树成链状）
+ * 其中 n 是以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
  * @returns {number}
  */
-function minDepth(root) {
+function maxDepth(root) {
     if (root === null) {
         return 0;
     }
 
-    let depth = 0;
-    const stack = [root];
-
-    while (stack.length) {
-        const {left, right} = stack.pop();
-
-        if (left === null && right === null) {
-            return depth + 1;
-        }
-        if (right) {
-            stack.push(right);
-        }
-        if (left) {
-            stack.push(left);
-        }
-        depth += 1;
-    }
+    return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
 }
 
-module.exports = minDepth;
+module.exports = maxDepth;
