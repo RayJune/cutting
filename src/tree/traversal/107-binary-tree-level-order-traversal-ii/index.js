@@ -32,29 +32,30 @@
  */
 
 /**
- * 广度优先搜索，用 stack 来做
- * 这里遵循题目要求的顺序来遍历，未使用 array.reverse 方法
+ * 输入二叉树根节点，返回其自底向上层序遍历的节点值数组（number[][]）
+ * 思路：用数组来记录层序遍历的位置和顺序
  *
- * Time Complexity: O(n) = while 和 for 循环的总遍历次数 O(n + n)
- * Space Complexity: O(n) = result 数组长度 O(n) + levels 占用空间 O(n) + stack 长度 O(n)
- * Auxiliary Complexity: O(m) = levels 占用空间 O(n) + stack 长度 O(n)
+ * Time Complexity: O(n) = 遍历次数
+ * Space Complexity: O(n) = result/arr 数组占用空间
+ * Auxiliary Complexity: O(n) = arr 数组占用空间
+ * 其中 n 是以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
- * @return {number[]}
+ * @return {number[][]}
  */
 function levelOrderBottom(root) {
     if (root === null) {
         return [];
     }
 
-    let stack = [root];
+    const arr = [[root]];
     const result = [];
-    const levels = [stack];
+    let subArr = [root];
 
-    while (stack.length) {
-        const temp = [];
+    while (subArr.length) {
+        let temp = [];
 
-        for (const {left, right} of stack) {
+        for (const {left, right} of subArr) {
             if (left) {
                 temp.push(left);
             }
@@ -62,20 +63,22 @@ function levelOrderBottom(root) {
                 temp.push(right);
             }
         }
-        stack = temp;
-        if (temp.length) {
-            levels.push(stack);
+
+        subArr = temp;
+
+        if (subArr.length) {
+            arr.push(subArr);
         }
     }
-    for (let i = levels.length - 1; i >= 0; i--) {
-        const level = levels[i];
-        const temp = [];
 
-        level.forEach(item => {
-            temp.push(item.val);
-        });
+    for (let i = arr.length - 1; i >= 0; i--) {
+        const level = [];
 
-        result.push(temp);
+        for (const {val} of arr[i]) {
+            level.push(val);
+        }
+
+        result.push(level);
     }
 
     return result;

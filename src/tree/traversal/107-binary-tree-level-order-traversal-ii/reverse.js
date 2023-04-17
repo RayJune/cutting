@@ -32,28 +32,30 @@
  */
 
 /**
- * 广度优先搜索，用 stack 来做，使用 reverse 方法
+ * 输入二叉树的根节点，返回其自底向上的层序遍历节点值数组（number[][]）
+ * 思路：用数组来记录层序遍历的位置和顺序
  *
- * Time Complexity: O(n) = while 和 for 循环的总遍历次数 O(n) + reverse 操作 O(n)
- * Space Complexity: O(n) = result 数组长度 O(n) + stack 长度 O(n)
- * Auxiliary Complexity: O(m) = stack 长度 O(n)
+ * Time Complexity: O(n) = 遍历次数 / reverse 操作
+ * Space Complexity: O(n) = result 数组占用空间 / arr 数组长度
+ * Auxiliary Complexity: O(n) = arr 数组长度
+ * 其中 n 为以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
- * @return {number[]}
+ * @return {number[][]}
  */
 function levelOrderBottom(root) {
     if (root === null) {
         return [];
     }
 
+    let arr = [root];
     const result = [];
-    let stack = [root];
 
-    while (stack.length) {
+    while (arr.length) {
         const level = [];
         const temp = [];
 
-        for (const {left, right, val} of stack) {
+        for (const {val, left, right} of arr) {
             level.push(val);
             if (left) {
                 temp.push(left);
@@ -62,10 +64,10 @@ function levelOrderBottom(root) {
                 temp.push(right);
             }
         }
-        result.push(level);
-        stack = temp;
-    }
 
+        result.push(level);
+        arr = temp;
+    }
     return result.reverse();
 }
 
