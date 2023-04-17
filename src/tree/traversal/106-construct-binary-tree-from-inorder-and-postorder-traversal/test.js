@@ -1,5 +1,5 @@
-const buildTree = require('./index');
-// const buildTree = require('./optimize');
+// const buildTree = require('./index');
+const buildTree = require('./optimize');
 // const buildTree = require('./template');
 // const buildTree = require('./template-zh');
 const buildBinaryTree = require('utils/buildBinaryTree');

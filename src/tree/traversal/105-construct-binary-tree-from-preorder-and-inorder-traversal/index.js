@@ -41,12 +41,14 @@ class TreeNode {
 }
 
 /**
- * 用 preorder[0] 找出 root，然后再用 root 在 inorder 中所处的位置区分出左右子树
+ * 输入二叉树的前序、中序遍历的节点值数组，构造二叉树并返回其根节点
+ * 思路：前序遍历 root -> left subtree -> right subtree, 中序遍历 left subtree -> root -> right sub tree。
+ * 由 preorder[i]（i 从 0 开始递增）可以得到 root 节点值，进而由 root 节点值在 inorder 中的位置可以区分左右字树。用递归来实现代码。
  *
- * Time Complexity: O(n ** 2) = buildTree 函数执行次数 O(n) * array.shift/indexOf/array.slice 操作 O(n)
- * Space Complexity: O(n * m) = 创建树所需要的空间 O(n) + 函数调用栈深度 O(m) + array.slice 创建新数组占用空间 O(n * m)
- * Auxiliary Complexity: O(n) = array.slice 创建新数组占用的空间 O(n) + 函数调用栈深度 O(m)
- * 其中 n 是树中的节点个数，m 是树的高度
+ * Time Complexity: O(n ** 2) = 函数执行次数 O(n) * .shift/.indexOf/.slice 操作 O(n)
+ * Space Complexity: O(n ** 2) = 函数调用栈深度（最坏情况下树呈现链状）O(n) * .slice 操作 O(n)
+ * Auxiliary Complexity: O(n ** 2) = 函数调用栈深度（最坏情况下树呈现链状）O(n) * .slice 操作 O(n)
+ * 其中 n 是 preorder 和 inorder 的数组长度，即二叉树的节点数
  *
  * @param {number[]} preorder
  * @param {number[]} inorder
@@ -57,13 +59,14 @@ function buildTree(preorder, inorder) {
         return null;
     }
 
-    const root = new TreeNode(preorder[0]);
-    const pivot = inorder.indexOf(preorder.shift());
+    const rootVal = preorder.shift();
+    const pivot = inorder.indexOf(rootVal);
 
-    root.left = buildTree(preorder, inorder.slice(0, pivot));
-    root.right = buildTree(preorder, inorder.slice(pivot + 1));
-
-    return root;
+    return new TreeNode(
+        rootVal,
+        buildTree(preorder, inorder.slice(0, pivot)),
+        buildTree(preorder, inorder.slice(pivot + 1))
+    );
 }
 
 module.exports = buildTree;

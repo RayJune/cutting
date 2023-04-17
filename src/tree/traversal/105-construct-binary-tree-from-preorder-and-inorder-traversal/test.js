@@ -9,7 +9,6 @@ test('define buildTree function', () => {
 });
 
 test('preorder = [], inorder = []', () => {
-
     expect(buildTree([], [])).toBe(buildBinaryTree([]));
 });
 

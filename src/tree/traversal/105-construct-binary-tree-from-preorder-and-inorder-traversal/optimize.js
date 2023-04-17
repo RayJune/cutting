@@ -41,50 +41,49 @@ class TreeNode {
 }
 
 /**
- * 用 hashmap 优化时间、空间复杂度
+ * 输入二叉树的前序、中序遍历的节点值数组，构造该二叉树并返回其根节点
+ * 思路：使用 Map 来和指针来代替数组操作方法优化时空复杂度
  *
  * Time Complexity: O(n) = helper 函数执行次数 / buildMap 内遍历次数
- * Space Complexity: O(n) = 创建树所需要的空间 / hashmap 占用的空间 O(n) + helper 函数调用栈深度 O(m)
- * Auxiliary Complexity: O(n) = hashmap 占用的空间 O(n) + helper 函数调用栈深度 O(m)
- * 其中 n 是树中的节点个数，m 是树的高度
+ * Space Complexity: O(n) = 创建树所需要的空间 / hashmap 占用的空间 / helper 函数调用栈深度
+ * Auxiliary Complexity: O(n) = hashmap 占用的空间 / helper 函数调用栈深度
+ * 其中 n 是 preorder 和 inorder 的数组长度，即二叉树的节点数
  *
  * @param {number[]} preorder
  * @param {number[]} inorder
  * @return {TreeNode}
  */
 function buildTree(preorder, inorder) {
-    if (inorder.length === 0) {
-        return null;
-    }
-
-    let i = 0;
+    let i = -1;
     const map = buildMap(inorder);
     const helper = (start, end) => {
-        if (start > end) {
+        if (end - start < 0) {
             return null;
         }
 
-        const root = new TreeNode(preorder[i]);
-        const pivot = map.get(preorder[i]);
+        const rootVal = preorder[i += 1];
+        const pivot = map.get(rootVal);
 
-        i += 1;
-        root.left = helper(start, pivot - 1);
-        root.right = helper(pivot + 1, end);
-
-        return root;
+        return new TreeNode(
+            rootVal,
+            helper(start, pivot - 1),
+            helper(pivot + 1, end)
+        );
     };
 
     return helper(0, inorder.length - 1);
 }
 
 /**
- * @param {number[]} inorder
+ * 构建数组元素到索引值的映射表
+ *
+ * @param {number[]} arr
  * @return {Map<number, number>}
  */
-function buildMap(inorder) {
+function buildMap(arr) {
     const map = new Map();
 
-    inorder.forEach((num, i) => {
+    arr.forEach((num, i) => {
         map.set(num, i);
     });
 

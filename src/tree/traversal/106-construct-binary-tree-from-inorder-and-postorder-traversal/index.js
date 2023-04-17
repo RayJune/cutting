@@ -41,15 +41,18 @@ class TreeNode {
 }
 
 /**
- * 用 postorder.pop() 找出 root，然后再用 root 在 inorder 中所处的位置区分出左右子树
+ * 输入二叉树的中序、后续遍历的节点值数组，构造二叉树并返回其根节点
+ * 思路：中序遍历 left subtree -> root -> right subtree，后续遍历 left subtree -> right subtree -> root。
+ * 通过 postorder[i]（i 值从 postorder.length - 1 递减）可以得到 root，再由 root 在 inorder 中的位置区分左右字树。用递归实现代码。
+ * 需要注意在构造树的时候是按照 root -> right -> left 的顺序
  *
- * Time Complexity: O(n ** 2) = buildTree 函数执行次数 O(n) * array.pop/indexOf/slice 操作 O(n)
- * Space Complexity: O(n * m) = 创建树所需要的空间 O(n) + 函数调用栈深度 O(m) + array.slice 创建新数组占用的空间 O(n * m)
- * Auxiliary Complexity: O(n * m) = array.slice 创建新数组占用的空间 O(n * m) + 函数调用栈深度 O(m)
- * 其中 n 是树中的节点个数，m 是树的高度
+ * Time Complexity: O(n ** 2) = 函数执行次数 O(n) * .indexOf/.slice 操作
+ * Space Complexity: O(n ** 2) = 函数调用栈深度（最坏情况下树成链状）O(n) * .slice 操作
+ * Auxiliary Complexity: O(n ** 2) = 函数调用栈深度（最坏情况下树成链状）O(n) * .slice 操作
+ * 其中 n 是 inorder 和 postorder 的数组长度，即二叉树的节点数
  *
- * @param {number[]} postorder
- * @param {number[]} inorder
+ * @param {number} inorder
+ * @param {number} postorder
  * @return {TreeNode}
  */
 function buildTree(inorder, postorder) {
@@ -57,9 +60,9 @@ function buildTree(inorder, postorder) {
         return null;
     }
 
-    const value = postorder.pop();
-    const root = new TreeNode(value);
-    const pivot = inorder.indexOf(value);
+    const rootVal = postorder.pop();
+    const pivot = inorder.indexOf(rootVal);
+    const root = new TreeNode(rootVal);
 
     root.right = buildTree(inorder.slice(pivot + 1), postorder);
     root.left = buildTree(inorder.slice(0, pivot), postorder);
