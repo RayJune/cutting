@@ -12,7 +12,6 @@
  * Output: false
  *
  * Constraints:
- *
  * The number of nodes in the tree is in the range [1, 1000].
  * -100 <= Node.val <= 100
  *

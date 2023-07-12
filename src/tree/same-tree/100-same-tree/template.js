@@ -18,7 +18,6 @@
  * Output: false
  *
  * Constraints:
- *
  * The number of nodes in both trees is in the range [0, 100].
  * -10 ** 4 <= Node.val <= 10 ** 4
  *
@@ -33,31 +32,5 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
-
-/**
- * 递归，深度优先遍历
- *
- * Time Complexity: O(min(m, n)) = 函数执行次数 O(min(m, n))
- * Space complexity: O(min(m, n)) = 函数调用栈深度 O(min(m, n))
- * Auxiliary complexity: O(min(m, n)) = 函数调用栈深度 O(min(m, n))
- * m 和 n 分别是两个二叉树的节点数
- *
- * @param {TreeNode} p
- * @param {TreeNode} q
- * @returns {boolean}
- */
-function isSameTree(p, q) {
-    if (p === null && q === null) {
-        return true;
-    }
-    if (p === null || q === null) {
-        return false;
-    }
-    if (p.val !== q.val) {
-        return false;
-    }
-
-    return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
-}
 
 module.exports = isSameTree;

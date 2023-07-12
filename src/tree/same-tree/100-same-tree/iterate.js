@@ -18,7 +18,6 @@
  * Output: false
  *
  * Constraints:
- *
  * The number of nodes in both trees is in the range [0, 100].
  * -10 ** 4 <= Node.val <= 10 ** 4
  *
@@ -35,52 +34,32 @@
  */
 
 /**
- * 迭代，广度优先遍历
+ * 输入两颗二叉树的根节点，判断他们是否相同
+ * 思路：用迭代来实现广度优先遍历 BFS
  *
- * Time Complexity: O(min(m, n)) = while 循环次数 O(min(m, n))
- * Space complexity: O(min(m, n)) = stack 占用空间 O(min(m, n))
- * Auxiliary complexity: O(min(m, n)) = stack 占用空间 O(min(m, n))
- * m 和 n 分别是两个二叉树的节点数
+ * Time Complexity: O(min(m, n)) = 遍历次数
+ * Space Complexity: O(min(m, n)) = stack 数组长度
+ * Auxiliary Complexity: O(min(m, n)) = stack 数组长度
+ * 其中 m 和 n 分别是以 p, q 为根节点的二叉树的节点数
  *
  * @param {TreeNode} p
  * @param {TreeNode} q
  * @returns {boolean}
  */
 function isSameTree(p, q) {
-    if (p === null) {
-        return q === null;
-    }
-
-    let stack = [{
-        nodeP: p,
-        nodeQ: q
-    }];
+    const stack = [p, q];
 
     while (stack.length) {
-        const temp = [];
+        const p = stack.pop();
+        const q = stack.pop();
 
-        for (const {nodeP, nodeQ} of stack) {
-            if (nodeQ === null || nodeP.val !== nodeQ.val) {
-                return false;
-            }
-            if (nodeP.left) {
-                temp.push({
-                    nodeP: nodeP.left,
-                    nodeQ: nodeQ.left
-                });
-            } else if (nodeQ.left) {
-                return false;
-            }
-            if (nodeP.right) {
-                temp.push({
-                    nodeP: nodeP.right,
-                    nodeQ: nodeQ.right
-                });
-            } else if (nodeQ.right) {
-                return false;
-            }
+        if (p === null && q === null) {
+            continue;
         }
-        stack = temp;
+        if (p === null || q === null || p.val !== q.val) {
+            return false;
+        }
+        stack.push(p.left, q.left, p.right, q.right);
     }
 
     return true;

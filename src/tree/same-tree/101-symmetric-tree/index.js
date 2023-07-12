@@ -12,7 +12,6 @@
  * Output: false
  *
  * Constraints:
- *
  * The number of nodes in the tree is in the range [1, 1000].
  * -100 <= Node.val <= 100
  *
@@ -29,37 +28,29 @@
  */
 
 /**
- * 迭代
+ * 输入二叉树的根节点，判断它是否是对称二叉树
+ * 思路：用递归来实现 DFS，注意 p.left.val === q.right.val, p.right.val === q.left.val
  *
- * Time Complexity: O(n) = while 循环次数 O(n)
- * Space complexity: O(n) = stack 长度 O(n)
- * Auxiliary complexity: O(n) = stack 长度 O(n)
- * 其中 n 为二叉树的节点数
+ * Time Complexity: O(n) = 函数执行次数
+ * Space Complexity: O(n) = 函数调用栈深度
+ * Auxiliary Complexity: O(n) = 函数调用栈深度
+ * 其中 n 是以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
  * @returns {boolean}
  */
 function isSymmetric(root) {
-    if (root === null) {
-        return true;
-    }
-
-    const stack = [root.left, root.right];
-
-    while (stack.length) {
-        const root1 = stack.pop();
-        const root2 = stack.pop();
-
-        if (root1 === null && root2 === null) {
-            continue;
+    const helper = (p, q) => {
+        if (p && q) {
+            return p.val === q.val
+                && helper(p.left, q.right)
+                && helper(p.right, q.left);
         }
-        if ((root1 === null || root2 === null) || root1.val !== root2.val) {
-            return false;
-        }
-        stack.push(root1.left, root2.right, root1.right, root2.left);
-    }
 
-    return true;
+        return p === q;
+    };
+
+    return helper(root.left, root.right);
 }
 
 module.exports = isSymmetric;

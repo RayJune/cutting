@@ -18,7 +18,6 @@
  * Output: false
  *
  * Constraints:
- *
  * The number of nodes in both trees is in the range [0, 100].
  * -10 ** 4 <= Node.val <= 10 ** 4
  *
@@ -33,5 +32,24 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+
+/**
+ * 输入两颗二叉树的根节点，判断他们是否相同
+ * 思路：用递归来实现 DFS
+ *
+ * Time Complexity: O(min(m, n)) = 函数执行次数
+ * Space Complexity: O(min(m, n)) = 函数调用栈深度
+ * Auxiliary Complexity: O(m, n) = 函数调用栈深度
+ * 其中 m 和 n 分别是以 p, q 为根节点的二叉树的节点数
+ */
+function isSameTree(p, q) {
+    if (p && q) {
+        return p.val === q.val
+            && isSameTree(p.left, q.left)
+            && isSameTree(p.right, q.right);
+    }
+
+    return p === q;
+}
 
 module.exports = isSameTree;
