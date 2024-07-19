@@ -54,7 +54,9 @@ function maxDepth(root) {
         return 0;
     }
 
-    return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+    const {left, right} = root;
+
+    return Math.max(maxDepth(left), maxDepth(right)) + 1;
 }
 
 module.exports = maxDepth;

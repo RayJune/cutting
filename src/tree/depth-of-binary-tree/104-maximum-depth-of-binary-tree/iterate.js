@@ -42,8 +42,8 @@
  * 思路：用数组逐层存储节点来实现 BFS 广度优先遍历
  *
  * Time Complexity: O(n) = 遍历次数
- * Space Complexity: O(n) = arr 数组长度
- * Auxiliary Complexity: O(n) = arr 数组长度
+ * Space Complexity: O(n) = arr 数组占用空间
+ * Auxiliary Complexity: O(n) = arr 数组占用空间
  * 其中 n 是以 root 为根节点的二叉树的节点数
  *
  * @param {TreeNode} root
@@ -68,7 +68,7 @@ function maxDepth(root) {
                 temp.push(right);
             }
         }
-        stack = temp;
+        arr = temp;
         depth += 1;
     }
 
