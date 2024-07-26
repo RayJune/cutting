@@ -22,19 +22,19 @@
  * s consists only of printable ASCII characters.
  *
  * https://leetcode.com/problems/valid-palindrome/
+ *
+ * @related 680-valid-palindrome-ii
 */
 
 /**
  * 输入一个字符串，判断它是否是回文字符串
  * 注意：
- * 1. 只考虑字幕和数字
- * 2. 忽略字母的大小写
- * 3. 指定空字符串为回文字符串
+ * 1. 只考虑数字和字母，忽略字母的大小写
+ * 2. 定义空字符串为回文字符串
  *
  * 思路：
- * 1. 统一大小写，.toLowerCase
- * 2. 正则匹配筛选出字母和数字组成的字符串
- * 3. 遍历筛选后的字符串，利用 s[i] === s[len - i - 1] 来判断是否是回文字符串
+ * 1. 统一大小写，正则匹配出字符串中的字母和数字，得到目标字符串
+ * 2. 遍历目标字符串，判断 s[i] === s[s.length - i - 1] 来得出是否是回文字符串
  *
  * Time Complexity: O(n) = 遍历次数
  * Space Complexity: O(n) = 创建的字符串长度

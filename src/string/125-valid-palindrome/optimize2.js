@@ -22,6 +22,8 @@
  * s consists only of printable ASCII characters.
  *
  * https://leetcode.com/problems/valid-palindrome/
+ *
+ * @related 680-valid-palindrome-ii
 */
 
 /**
@@ -34,8 +36,8 @@
  * 思路：
  * Two Pointers 双指针，原地做比较，不创建新的字符串、数组
  * 1. 创建 left right 两个下标，分别代表要比较的前后对称两个值的下标
- * 2. 遍历字符串 s，以此判断两个下标对应的值是否是字母或数字，如果不是则把对应下标向前/向后移动，直到为字母或数字值为止
- * 3. 依次判断 left right 对应的值
+ * 2. 遍历字符串 s，依次判断两个下标对应的值是否是字母或数字，如果不是则把对应下标向前/向后移动，直到值为字母或数字为止
+ * 3. 依次判断 s[left].toLowerCase === s[right].toLowerCase()
  *
  * Time Complexity: O(n) = 遍历次数
  * Space Complexity: O(1)

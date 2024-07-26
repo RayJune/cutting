@@ -22,6 +22,8 @@
  * s consists only of printable ASCII characters.
  *
  * https://leetcode.com/problems/valid-palindrome/
+ *
+ * @related 680-valid-palindrome-ii
 */
 
 /**
@@ -32,10 +34,8 @@
  * 3. 指定空字符串为回文字符串
  *
  * 思路：
- * 1. 大小写统一，用 .toLowerCase 处理
- * 2. 正则匹配，筛选出由字母和数字所组成的字符串
- * 3. 字符串反转，.split + .reverse + .join 方法
- * 4. 将反转字符串与原字符串作比较得出结果
+ * 1. 统一大小写，正则匹配出字符串中的字母和数字，得到目标字符串
+ * 2. 将目标字符串反转，拿反转后的字符串与目标字符串作比较得出是否是回文字符串
  *
  * Time Complexity: O(n) = 遍历次数
  * Space Complexity: O(n) = 创建的数组长度 / 创建的字符串长度
