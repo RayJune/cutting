@@ -22,6 +22,8 @@
  * s consists only of printable ASCII characters.
  *
  * https://leetcode.com/problems/valid-palindrome/
+ *
+ * @related 680-valid-palindrome-ii
 */
 
 module.exports = isPalindrome;
