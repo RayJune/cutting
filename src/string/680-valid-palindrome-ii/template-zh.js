@@ -21,6 +21,8 @@
  * s consists of lowercase English letters.
  *
  * https://leetcode.cn/problems/valid-palindrome-ii/
+ *
+ * @related 125-valid-palindrome
 */
 
 module.exports = validPalindrome;
