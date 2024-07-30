@@ -18,12 +18,23 @@
  * 0 <= k <= 50
  *
  * https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/
+ *
+ * @related 3-longest-substring-without-repeating-characters
+ * @related 159-longest-substring-with-at-most-two-distinct-characters
 */
 
 /**
- * Sliding Window + Hash Map
+ * 输入一个字符串 s 和数字 k，返回该至多包含 k 个不同字符的最长子串的长度
  *
- * Time Complexity: O(n * k) = 遍历次数
+ * 思路：
+ * Sliding Window + Hash Map
+ * 1. 创建一个 Hash Map 储存字符在滑动窗口中出现的次数，创建左右指针 left right 代表当前窗口的头尾
+ * 2. 更新 s[right] 在滑动窗口中出现的次数到 map 中
+ * 3. 如果当前 map 出现了第 k 个不重复的字符，边把 left 节点右移边更新 map 中 s[left] -= 1，直到 map[s[left]] === 0 删除节点，从而达到 map.size === k 的要求
+ * 4. 更新最大长度值，right 节点右移一位
+ * 5. 重复步骤 2 3 4 直到遍历完毕
+ *
+ * Time Complexity: O(n) = 左右指针遍历次数
  * Space complexity: O(k) = map 长度
  * Auxiliary complexity: O(k) = map
  * 其中 n 为字符串 s 的长度

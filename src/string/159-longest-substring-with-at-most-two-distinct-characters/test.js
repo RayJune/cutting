@@ -18,3 +18,7 @@ test('s = "ccaabbb"', () => {
 test('s = "cdaba"', () => {
     expect(lengthOfLongestSubstringTwoDistinct('cdaba')).toBe(3);
 });
+
+test('s = "abbbaccccc"', () => {
+    expect(lengthOfLongestSubstringTwoDistinct('abbbaccccc')).toBe(6);
+});
