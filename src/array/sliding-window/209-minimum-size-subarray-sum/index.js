@@ -22,14 +22,26 @@
  * 1 <= nums[i] <= 10 ** 5
  *
  * https://leetcode.com/problems/minimum-size-subarray-sum/
+ *
+ * @related 3-longest-substring-without-repeating-characters
+ * @related 159-longest-substring-with-at-most-two-distinct-characters
+ * @related 340-longest-substring-with-at-most-k-distinct-characters
 */
 
 /**
- * Sliding Window
+ * 输入一个含有 n 个正整数的数组和一个正整数 target。返回其满足和 >= target 的长度最小的连续子数组的长度
  *
- * Time Complexity: O(n) = left, right 各最多移动 n 次
- * Space complexity: O(1)
- * Auxiliary complexity: O(1)
+ * 思路：
+ * Sliding Window 滑动窗口
+ * 1. 创建左右指针 left right 代表当前窗口的头尾，sum 为当前窗口内的和
+ * 2. 将 nums[right] 加入到 sum 中
+ * 3. 如果 sum >= target，更新最小长度，并不断从 sum 中删除 nums[left] 的值以及 left 节点右移，直到 sum < target
+ * 4. right 节点右移
+ * 5. 重复步骤 2 3 4 直至遍历结束
+ *
+ * Time Complexity: O(n) = 左右指针遍历次数
+ * Space Complexity: O(1)
+ * Auxiliary Complexity: O(1)
  * 其中 n 是 nums 数组的长度
  *
  * @param {number} target
@@ -40,19 +52,19 @@ function minSubArrayLen(target, nums) {
     let left = 0;
     let right = 0;
     let sum = 0;
-    let minLen = Infinity;
+    let minLen = 0;
 
     while (right < nums.length) {
         sum += nums[right];
         while (sum >= target) {
-            minLen = Math.min(minLen, right - left + 1);
+            minLen = minLen === 0 ? right - left + 1 : Math.min(minLen, right - left + 1);
             sum -= nums[left];
             left += 1;
         }
         right += 1;
     }
 
-    return minLen === Infinity ? 0 : minLen;
+    return minLen;
 }
 
 module.exports = minSubArrayLen;
