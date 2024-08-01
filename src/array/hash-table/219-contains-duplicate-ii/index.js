@@ -24,6 +24,9 @@
 */
 
 /**
+ * 输入一个整数数组和一个整数 k，判断是否存在 nums[i] === nums[j] && Math.abs(i - j) <= k
+ *
+ * 思路：
  * Hash Map
  *
  * Time Complexity: O(n) = for 循环次数
@@ -37,9 +40,8 @@
  */
 function containsNearbyDuplicate(nums, k) {
     const map = new Map();
-    const len = nums.length;
 
-    for (let i = 0; i < len; i++) {
+    for (let i = 0; i < nums.length; i++) {
         if (map.has(nums[i]) && i - map.get(nums[i]) <= k) {
             return true;
         }

@@ -24,12 +24,17 @@
 */
 
 /**
- * Hash Set + Sliding Window
+ * 输入一个整数数组和一个整数 k，判断是否存在 nums[i] === nums[j] && Math.abs(i - j) <= k
  *
- * Time Complexity: O(n) = for 循环次数
- * Space complexity: O(min(n, k)) = set 长度
- * Auxiliary complexity: O(min(n, k)) = set 长度
- * 其中 n 为 nums 的长度
+ * 思路：
+ * Sliding Window 滑动窗口
+ * 1. 创建 set 储存窗口内的元素，从左到右遍历数组 nums：
+ * 2. 如果 i > k，则将 i - k - 1 的元素移出滑动窗口；
+ * 3. 如果 nums[i] 在 set 中，则返回 true，不然就把当前元素加入到 set 中
+ *
+ * Time Complexity: O(n) = 遍历次数
+ * Space Complexity: O(k) = set 长度
+ * Auxiliary Complexity: O(k) = set 长度
  *
  * @param {number[]} nums
  * @param {number} k
@@ -39,16 +44,17 @@ function containsNearbyDuplicate(nums, k) {
     const set = new Set();
 
     for (let i = 0; i < nums.length; i++) {
+        if (i > k) {
+            set.delete(nums[i - k - 1]);
+        }
         if (set.has(nums[i])) {
             return true;
         }
         set.add(nums[i]);
-        if (set.size > k) {
-            set.delete(nums[i - k]);
-        }
     }
 
     return false;
 }
+
 
 module.exports = containsNearbyDuplicate;
