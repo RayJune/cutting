@@ -22,25 +22,30 @@
 */
 
 /**
- * Horizontal scanning, reduce
+ * 输入一个字符串数组，返回其最长公共前缀
  *
- * Time Complexity: O(m * n) = 最坏情况下，strs 中每个字符串的字符都会被比较一次
- * Space complexity: O(1)
- * Auxiliary complexity: O(1)
+ * 思路：
+ * 横向扫描
+ * 1. 利用 .reduce 不传 initialValue 就默认 accumulator 初始值为第一个元素，currentValue 初始值为第二个元素的方式来依次两两比较数组前缀
+ * 2. 比较得出共同前缀的 index 值，将前缀值赋值给 accumulator 继续下一轮比较直到遍历完毕
+ *
+ * Time Complexity: O(m * n) = 遍历次数
+ * Space Complexity: O(m * n) = 函数调用栈深度 O(n) * .slice 操作产生新数组长度 O(m)
+ * Auxiliary Complexity: O((m * n) = 函数调用栈深度 O(n) * .slice 操作产生新数组长度 O(m)
  * 其中 m 是 strs 字符串数组中字符串的平均长度，n 是字符串的数量
  *
  * @param {string[]} strs
  * @returns {string}
  */
 function longestCommonPrefix(strs) {
-    return strs.reduce((prev, curr) => {
+    return strs.reduce((prefix, curr) => {
         let i = 0;
 
-        while (prev[i] && curr[i] && prev[i] === curr[i]) {
+        while (prefix[i] && curr[i] && prefix[i] === curr[i]) {
             i += 1;
         }
 
-        return prev.slice(0, i);
+        return prefix.slice(0, i);
     });
 }
 
