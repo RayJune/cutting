@@ -25,30 +25,42 @@
 */
 
 /**
- * Sort + Two Pointers, 注意跳过重复的数字
+ * 输入一个整数数组 nums 和一个目标值 target，返回其最接近 target 的三个整数的和
+ *
+ * 思路：
+ * 排序 + Two Pointers 双指针
+ * 用排序来比较大小并方便跳过重复元素，用双指针来优化查找的效率。注意跳过重复元素
  *
  * Time Complexity: O(n ** 2) = 遍历次数 O(n ** 2) + 排序 O(n * log(n))
  * Space complexity: O(log(n)) = 排序
  * Auxiliary complexity: O(log(n)) = 排序
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
  * @param {number} target
  * @returns {number}
  */
 function threeSumClosest(nums, target) {
-    let closet = Infinity;
     const len = nums.length;
+    let closest = Infinity;
 
     nums.sort((a, b) => a - b);
-    for (let i = 0; i < len; i++) {
+    for (let i = 0; i < len - 2; i++) {
+        if (nums[i] === nums[i - 1]) {
+            continue;
+        }
+
         let left = i + 1;
         let right = len - 1;
 
         while (left < right) {
             const sum = nums[i] + nums[left] + nums[right];
 
-            if (Math.abs(sum - target) < Math.abs(closet - target)) {
-                closet = sum;
+            if (Math.abs(sum - target) < Math.abs(closest - target)) {
+                closest = sum;
+            }
+            if (sum === target) {
+                return sum;
             }
             if (sum > target) {
                 right -= 1;
@@ -60,13 +72,11 @@ function threeSumClosest(nums, target) {
                 while (nums[left] === nums[left - 1]) {
                     left += 1;
                 }
-            } else {
-                return target;
             }
         }
     }
 
-    return closet;
+    return closest;
 }
 
 module.exports = threeSumClosest;

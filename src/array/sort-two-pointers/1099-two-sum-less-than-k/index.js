@@ -23,11 +23,15 @@
 */
 
 /**
- * Sort + Two Pointers
+ * 输入一个整数数组 nums 和整数 k，返回满足两个元素之和小于 k 的最大 sum 值，如果没有则返回 -1
+ *
+ * 思路：排序 + Two Pointers 双指针
+ * 用排序来方便比较大小和跳过重复值，用双指针优化查找效率
  *
  * Time Complexity: O(n ** 2) = 遍历次数 O(n ** 2) + 排序 O(n * log(n))
  * Space complexity: O(log(n)) = 排序
  * Auxiliary complexity: O(log(n)) = 排序
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
  * @param {number} k
@@ -38,7 +42,7 @@ function twoSumLessThanK(nums, k) {
         return -1;
     }
 
-    let max = -1;
+    let max = -Infinity;
     let left = 0;
     let right = nums.length - 1;
 
@@ -47,14 +51,20 @@ function twoSumLessThanK(nums, k) {
         const sum = nums[left] + nums[right];
 
         if (sum < k) {
-            max = Math.max(sum, max);
+            max = Math.max(max, sum);
             left += 1;
+            while (nums[left] === nums[left - 1]) {
+                left += 1;
+            }
         } else {
             right -= 1;
+            while (nums[right] === nums[right + 1]) {
+                right -= 1;
+            }
         }
     }
 
-    return max;
+    return max === -Infinity ? -1 : max;
 }
 
 module.exports = twoSumLessThanK;

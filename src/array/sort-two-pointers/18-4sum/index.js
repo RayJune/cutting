@@ -25,11 +25,16 @@
 */
 
 /**
- * Sort + Two Pointers
+ * 输入一个整数数组 nums 和目标值 target，返回满足四个不同的元素之和等于 target 的不重复的四元组
  *
- * Time Complexity: O(n ** 2) = 遍历次数 O(n ** 2) + 排序 O(n * log(n))
+ * 思路：
+ * 排序 + Two Pointers 双指针
+ * 用排序来比较大小并方便跳过重复元素，用双指针来优化查找的效率。注意跳过重复元素
+ *
+ * Time Complexity: O(n ** 3) = 遍历次数 O(n ** 3) + 排序 O(n * log(n))
  * Space complexity: O(n) = quadruplets 长度 O(n) + 排序 O(log(n))
  * Auxiliary complexity: O(log(n)) = 排序
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
  * @param {number} target
@@ -45,17 +50,23 @@ function fourSum(nums, target) {
 
     nums.sort((a, b) => a - b);
     for (let i = 0; i < len - 3; i++) {
-        if (i > 0 && nums[i] === nums[i - 1]) {
+        if (nums[i] + nums[i + 1] + nums[i + 2] + nums[i + 3] > target) {
+            break;
+        }
+        if (nums[i] === nums[i - 1]) {
+            continue;
+        }
+        if (nums[i] + nums[len - 3] + nums[len - 2] + nums[len - 1] < target) {
             continue;
         }
         for (let j = i + 1; j < len - 2; j++) {
-            if (j !== i + 1 && nums[j] === nums[j - 1]) {
-                continue;
-            }
-            if (nums[i] + nums[i + 1] + nums[i + 2] + nums[i + 3] > target) {
+            if (nums[i] + nums[j] + nums[j + 1] + nums[j + 2] > target) {
                 break;
             }
-            if (nums[i] + nums[len - 3] + nums[len - 2] + nums[len - 1] < target) {
+            if (j > i + 1 && nums[j] === nums[j - 1]) {
+                continue;
+            }
+            if (nums[i] + nums[j] + nums[len - 2] + nums[len - 1] < target) {
                 continue;
             }
 
@@ -65,7 +76,11 @@ function fourSum(nums, target) {
             while (left < right) {
                 const sum = nums[i] + nums[j] + nums[left] + nums[right];
 
-                if (sum === target) {
+                if (sum > target) {
+                    right -= 1;
+                } else if (sum < target) {
+                    left += 1;
+                } else {
                     quadruplets.push([nums[i], nums[j], nums[left], nums[right]]);
                     left += 1;
                     right -= 1;
@@ -75,10 +90,6 @@ function fourSum(nums, target) {
                     while (nums[right] === nums[right + 1]) {
                         right -= 1;
                     }
-                } else if (sum > target) {
-                    right -= 1;
-                } else {
-                    left += 1;
                 }
             }
         }

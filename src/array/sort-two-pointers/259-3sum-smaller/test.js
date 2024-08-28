@@ -7,11 +7,11 @@ test('define threeSumSmaller function', () => {
 });
 
 test('nums = [], target = 0', () => {
-    expect(threeSumSmaller([], 0)).toEqual([]);
+    expect(threeSumSmaller([], 0)).toBe(0);
 });
 
 test('nums = [0], target = 0', () => {
-    expect(threeSumSmaller([0], 0)).toEqual([]);
+    expect(threeSumSmaller([0], 0)).toBe(0);
 });
 
 test('nums = [-2, 0, 1, 3], target = 2', () => {

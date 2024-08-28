@@ -31,20 +31,24 @@
 */
 
 /**
- * Two Pointers
+ * 输入一个按照非递减顺序排列的整数数组 numbers，找出数组中两个数相加之和等于目标数 target，并以长度为 2 的整数数组的形式返回这两个数的下标值
  *
- * Time Complexity: O(n) = while 循环次数
+ * 思路：
+ * Two Pointer 双指针
+ * 创建 left right 分别指向头尾，利用数组是非递减顺序的性质，判断左右指针指向的值之和和 target 比大小来移动左右指针，直到得到目标值
+ *
+ * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
+ * 其中 n 是 numbers 数组的长度
  *
  * @param {number[]} numbers
  * @param {number} target
  * @returns {number[]}
  */
 function twoSum(numbers, target) {
-    const len = numbers.length;
     let left = 0;
-    let right = len - 1;
+    let right = numbers.length - 1;
 
     while (left < right) {
         const sum = numbers[left] + numbers[right];

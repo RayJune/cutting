@@ -25,11 +25,16 @@
 */
 
 /**
- * Sort + Two Pointers, 注意跳过重复的数字
+ * 输入整数数组 nums，返回数组中所有和为 0 且不重复的三元组。注意不得包含重复的三元组
+ *
+ * 思路：
+ * 排序 + Two Pointers 双指针
+ * 用排序来比较大小并方便跳过重复元素，用双指针来优化查找的效率。注意跳过重复元素
  *
  * Time Complexity: O(n ** 2) = 遍历次数 O(n ** 2) + 排序 O(n * log(n))
  * Space complexity: O(n) = triplets 长度 O(n) + 排序 O(log(n))
  * Auxiliary complexity: O(log(n)) = 排序
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
  * @returns {number[][]}
@@ -43,16 +48,17 @@ function threeSum(nums) {
     const len = nums.length;
 
     nums.sort((a, b) => a - b);
-    for (let i = 0; i < len; i++) {
-        let left = i + 1;
-        let right = len - 1;
-
+    for (let i = 0; i < len - 2; i++) {
         if (nums[i] > 0) {
             break;
         }
-        if (i > 0 && nums[i] === nums[i - 1]) {
+        if (nums[i] === nums[i - 1]) {
             continue;
         }
+
+        let left = i + 1;
+        let right = len - 1;
+
         while (left < right) {
             const sum = nums[i] + nums[left] + nums[right];
 
