@@ -23,12 +23,15 @@
 */
 
 /**
+ * 输入一个整数数组，如果存在重复元素则返回 true，否则返回 false
+ *
+ * 思路：
  * Hash Set
  *
- * Time Complexity: O(n) = for 循环次数
+ * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(n) = set 长度
  * Auxiliary complexity: O(n) = set 长度
- * 其中 n 为 nums 的长度
+ * 其中 n 是 nums 的长度
  *
  * @param {number[]} nums
  * @returns {boolean}
@@ -36,11 +39,11 @@
 function containsDuplicate(nums) {
     const set = new Set();
 
-    for (const num of nums) {
-        if (set.has(num)) {
+    for (let i = 0; i < nums.length; i++) {
+        if (set.has(nums[i])) {
             return true;
         }
-        set.add(num);
+        set.add(nums[i]);
     }
 
     return false;

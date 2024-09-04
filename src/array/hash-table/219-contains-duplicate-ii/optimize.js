@@ -24,17 +24,18 @@
 */
 
 /**
- * 输入一个整数数组和一个整数 k，判断是否存在 nums[i] === nums[j] && Math.abs(i - j) <= k
+ * 输入一个整数数组和一个整数 k，如果存在 nums[i] = nums[j] 并且 abs(i - j) <= k，则返回 true，否则返回 false
  *
  * 思路：
  * Sliding Window 滑动窗口
  * 1. 创建 set 储存窗口内的元素，从左到右遍历数组 nums：
- * 2. 如果 i > k，则将 i - k - 1 的元素移出滑动窗口；
- * 3. 如果 nums[i] 在 set 中，则返回 true，不然就把当前元素加入到 set 中
+ * 2. 如果 nums[i] 在 set 中，则返回 true，不然就把当前元素加入到 set 中
+ * 3. 如果 set 的长度大于 k，则将滑动窗口最左侧的元素 i - k 移出滑动窗口；
  *
  * Time Complexity: O(n) = 遍历次数
  * Space Complexity: O(k) = set 长度
  * Auxiliary Complexity: O(k) = set 长度
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
  * @param {number} k
@@ -44,17 +45,16 @@ function containsNearbyDuplicate(nums, k) {
     const set = new Set();
 
     for (let i = 0; i < nums.length; i++) {
-        if (i > k) {
-            set.delete(nums[i - k - 1]);
-        }
         if (set.has(nums[i])) {
             return true;
         }
         set.add(nums[i]);
+        if (set.size > k) {
+            set.delete(nums[i - k]);
+        }
     }
 
     return false;
 }
-
 
 module.exports = containsNearbyDuplicate;

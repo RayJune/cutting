@@ -30,11 +30,15 @@
 */
 
 /**
+ * 输入一个整数数组 nums 和目标值 target，返回和为目标值 target 的两个整数的下标。数组中不包含重复元素
+ *
+ * 思路：
  * Hash Map
  *
- * Time Complexity: O(n) = for 循环次数
+ * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(n) = map 长度
  * Auxiliary complexity: O(n) = map 长度
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
  * @param {number} target
@@ -44,12 +48,10 @@ function twoSum(nums, target) {
     const map = new Map();
 
     for (let i = 0; i < nums.length; i++) {
-        const num = nums[i];
-
-        if (map.has(target - num)) {
-            return [map.get(target - num), i];
+        if (map.has(target - nums[i])) {
+            return [map.get(target - nums[i]), i];
         }
-        map.set(num, i);
+        map.set(nums[i], i);
     }
 
     return [];

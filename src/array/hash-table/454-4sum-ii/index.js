@@ -28,6 +28,9 @@
 */
 
 /**
+ * 输入长度均为 4 的四个整数数组 nums1 nums2 nums3 nums4，返回满足 nums1[i] + nums2[j] + nums3[k] + nums4[l] = 0 的个数
+ *
+ * 思路：
  * Hash Map
  *
  * Time Complexity: O(n ** 2) = 遍历次数
@@ -51,8 +54,8 @@ function fourSumCount(nums1, nums2, nums3, nums4) {
     }
     for (const c of nums3) {
         for (const d of nums4) {
-            if (map.has(-c - d)) {
-                count += map.get(-c - d);
+            if (map.has(-(c + d))) {
+                count += map.get(-(c + d));
             }
         }
     }

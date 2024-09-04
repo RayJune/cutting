@@ -25,9 +25,12 @@
 */
 
 /**
- * Sliding Window
+ * 输入一个整数数组 nums 和两个整数 k 和 t，如果存在 abs(nums[i] - nums[j]) <= t 并且 abs(i - j) <= k 则返回 true，否则返回 false
  *
- * Time Complexity: O(n * min(k, n)) = 外层 for 循环次数 O(n) * 内层 for 循环次数 O(min(k, n))
+ * 思路：
+ * Sliding Window 滑动窗口
+ *
+ * Time Complexity: O(n * k) = 遍历次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
  * 其中 n 为 nums 的长度

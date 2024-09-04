@@ -24,15 +24,15 @@
 */
 
 /**
- * 输入一个整数数组和一个整数 k，判断是否存在 nums[i] === nums[j] && Math.abs(i - j) <= k
+ * 输入一个整数数组和一个整数 k，如果存在 nums[i] = nums[j] 并且 abs(i - j) <= k，则返回 true，否则返回 false
  *
  * 思路：
  * Hash Map
  *
- * Time Complexity: O(n) = for 循环次数
+ * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(n) = map 长度
  * Auxiliary complexity: O(n) = map 长度
- * 其中 n 为 nums 的长度
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
  * @param {number} k
