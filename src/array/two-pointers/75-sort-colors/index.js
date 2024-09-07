@@ -26,11 +26,16 @@
 */
 
 /**
- * Two Pointers
+ * 荷兰国旗问题，输入一个 nums 数组，其中 0、1、2 分别表示红色白色蓝色。将只包含这三种数值的数组进行排序，使得数组里的元素按照红色、白色、蓝色的顺序排列
  *
- * Time Complexity: O(n) = while 循环次数
+ * 思路：
+ * Two Pointers 双指针
+ * 从左向右遍历数组，left 表示红色部分的末尾元素下标，right 表示蓝色部分的开头元素下标，i 表示当前遍历的元素下标
+ *
+ * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
  */
@@ -40,15 +45,15 @@ function sortColors(nums) {
     let i = 0;
 
     while (i <= right) {
-        if (nums[i] === 2) {
-            [nums[i], nums[right]] = [nums[right], nums[i]];
-            right -= 1;
-        } else if (nums[i] === 0) {
+        if (nums[i] === 0) {
             [nums[i], nums[left]] = [nums[left], nums[i]];
             left += 1;
             i += 1;
-        } else {
+        } else if (nums[i] === 1) {
             i += 1;
+        } else {
+            [nums[i], nums[right]] = [nums[right], nums[i]];
+            right -= 1;
         }
     }
 }

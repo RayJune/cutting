@@ -26,11 +26,16 @@
 */
 
 /**
- * Two Pointers
+ * 输入一个有序数组 nums，原地删除重复出现的元素并返回删除后数组的新长度
  *
- * Time Complexity: O(n) = while 循环次数
+ * 思路：
+ * Two Pointers 双指针
+ * 利用有序数组的特性，从左向右遍历数组，left 表示下一个要赋值的非重复元素下标，right 表示当前遍历的元素下标。遍历从 i = 1 开始
+ *
+ * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
  * @returns {number}
@@ -40,19 +45,18 @@ function removeDuplicates(nums) {
         return nums.length;
     }
 
-    let fast = 1;
-    let slow = 1;
-    const len = nums.length;
+    let left = 1;
+    let right = 1;
 
-    while (fast < len) {
-        if (nums[slow - 1] !== nums[fast]) {
-            nums[slow] = nums[fast];
-            slow += 1;
+    while (right < nums.length) {
+        if (nums[right] !== nums[left - 1]) {
+            nums[left] = nums[right];
+            left += 1;
         }
-        fast += 1;
+        right += 1;
     }
 
-    return slow;
+    return left;
 }
 
 module.exports = removeDuplicates;

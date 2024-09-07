@@ -31,11 +31,11 @@
 */
 
 /**
- * 输入一个按照非递减顺序排列的整数数组 numbers，找出数组中两个数相加之和等于目标数 target，并以长度为 2 的整数数组的形式返回这两个数的下标值
+ * 输入一个按非递减顺序排列的整数数组 numbers，找出数组中两个数相加之和等于目标数 target，并以长度为 2 的整数数组的形式返回这两个数的下标值
  *
  * 思路：
- * Two Pointer 双指针
- * 创建 left right 分别指向头尾，利用数组是非递减顺序的性质，判断左右指针指向的值之和和 target 比大小来移动左右指针，直到得到目标值
+ * Two Pointers 双指针
+ * 利用有序数组的性质，从左向右遍历数组，left right 表示指向头尾的下标。将 nums[left] 和 nums[right] 之和与 target 比大小来移动左右指针，直到得到目标值
  *
  * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(1)

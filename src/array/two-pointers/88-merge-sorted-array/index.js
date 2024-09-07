@@ -31,6 +31,8 @@
 */
 
 /**
+ * 输入两个按非递减顺序排列的整数数组 nums1 和 nums2 以及他们的长度 m 和 n，合并 nums2 到 nums1 中并使合并后的数组同样按照非递减顺序排列
+ *
  * splice + sort
  *
  * Time Complexity: O((m + n) * log(m + n)) = 快速排序时间复杂度

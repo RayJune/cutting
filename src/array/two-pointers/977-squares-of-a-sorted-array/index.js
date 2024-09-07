@@ -24,7 +24,11 @@
 */
 
 /**
- * Two Pointers
+ * 输入一个按非递减顺序排序的整数数组 nums，返回由每个数字的平方组成的新数组，新数组也按非递减顺序排序
+ *
+ * 思路：
+ * Two Pointers 双指针
+ * 利用数组是有序的特性，left right 分别表示指向头尾的下标，判断两者的绝对值大小来把绝对值更大的 push 进新数组，最后对新数组进行反转
  *
  * Time Complexity: O(n) = while 循环次数
  * Space complexity: O(n) = squares 数组长度
@@ -40,12 +44,12 @@ function sortedSquares(nums) {
     let right = nums.length - 1;
 
     while (left <= right) {
-        if (Math.abs(nums[right]) > Math.abs(nums[left])) {
-            squares.push(nums[right] ** 2);
-            right -= 1;
-        } else {
+        if (Math.abs(nums[left]) > Math.abs(nums[right])) {
             squares.push(nums[left] ** 2);
             left += 1;
+        } else {
+            squares.push(nums[right] ** 2);
+            right -= 1;
         }
     }
 

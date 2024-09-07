@@ -21,25 +21,29 @@
 */
 
 /**
- * Two Pointers
+ * 输入一个数组 nums，将所有 0 原地移动到数组的末尾，同时保持非 0 元素的相对顺序
  *
- * Time Complexity: O(n) = while 循环次数
+ * 思路：
+ * Two Pointers 双指针
+ * 从左向右遍历数组，left 表示下一个要赋值的非 0 元素的下标，right 表示当前遍历的元素下标
+ *
+ * Time Complexity: O(n) = 遍历次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number} nums
  */
 function moveZeroes(nums) {
-    let slow = 0;
-    let fast = 0;
-    const len = nums.length;
+    let left = 0;
+    let right = 0;
 
-    while (fast < len) {
-        if (nums[fast]) {
-            [nums[slow], nums[fast]] = [nums[fast], nums[slow]];
-            slow += 1;
+    while (right < nums.length) {
+        if (nums[right] !== 0) {
+            [nums[left], nums[right]] = [nums[right], nums[left]];
+            left += 1;
         }
-        fast += 1;
+        right += 1;
     }
 }
 

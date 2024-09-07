@@ -26,11 +26,17 @@
 */
 
 /**
- * Two Pointers - when elements to remove are rare
+ * 输入一个数组 nums 和一个值 val，原地移除所有数值等于 val 的元素，并返回移除后数组的新长度
  *
- * Time Complexity: O(n) = while 循环次数
+ * 思路：
+ * Two Pointers 双指针
+ * 从左向右遍历数组，left 表示当前遍历的元素下标，right 表示下一个要被替换值的尾部元素下标
+ * 优化点在于避免了需要保留的元素的重复赋值操作
+ *
+ * Time Complexity: O(n) = 左右指针遍历次数
  * Space complexity: O(1)
  * Auxiliary complexity: O(1)
+ * 其中 n 是 nums 数组的长度
  *
  * @param {number[]} nums
  * @param {number} val
@@ -42,8 +48,8 @@ function removeElement(nums, val) {
 
     while (left < right) {
         if (nums[left] === val) {
-            nums[left] = nums[right - 1];
             right -= 1;
+            nums[left] = nums[right];
         } else {
             left += 1;
         }

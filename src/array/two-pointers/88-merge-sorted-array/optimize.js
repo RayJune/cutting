@@ -31,9 +31,13 @@
 */
 
 /**
- * Two Pointers (Start From the End)
+ * 输入两个按非递减顺序排列的整数数组 nums1 和 nums2 以及他们的长度 m 和 n，合并 nums2 到 nums1 中并使合并后的数组同样按照非递减顺序排列
  *
- * Time Complexity: O(m + n) = for 循环次数
+ * 思路：
+ * Two Pointers 双指针
+ * 利用两个数组是非递减顺序的特性，p1 和 p2 分别表示当前遍历的 nums1 和 nums2 的下标值，在 nums1 数组中从后往前添加 nums1[i] 和 nums2[i] 的较大值
+ *
+ * Time Complexity: O(m + n) = 遍历次数
  * Space complexity: O(n) = nums1 增加的长度
  * Auxiliary complexity: O(1)
  * 其中 m 和 n 分别是 num1 和 nums2 的长度
@@ -51,12 +55,12 @@ function merge(nums1, m, nums2, n) {
         if (p2 < 0) {
             break;
         }
-        if (nums1[p1] > nums2[p2]) {
-            nums1[i] = nums1[p1];
-            p1 -= 1;
-        } else {
+        if (p1 < 0 || nums1[p1] < nums2[p2]) {
             nums1[i] = nums2[p2];
             p2 -= 1;
+        } else {
+            nums1[i] = nums1[p1];
+            p1 -= 1;
         }
     }
 }
