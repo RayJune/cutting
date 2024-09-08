@@ -46,4 +46,4 @@ function isPowerOfTwo(n) {
     return /^10*$/.test(n.toString(2));
 }
 
-module.exports = isPowerOfTwo;
+export default isPowerOfTwo;

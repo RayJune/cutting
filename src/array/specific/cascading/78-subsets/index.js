@@ -49,4 +49,4 @@ function subsets(nums) {
     return subsets;
 }
 
-module.exports = subsets;
+export default subsets;

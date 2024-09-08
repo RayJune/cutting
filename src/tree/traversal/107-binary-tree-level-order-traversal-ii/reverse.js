@@ -71,4 +71,4 @@ function levelOrderBottom(root) {
     return result.reverse();
 }
 
-module.exports = levelOrderBottom;
+export default levelOrderBottom;

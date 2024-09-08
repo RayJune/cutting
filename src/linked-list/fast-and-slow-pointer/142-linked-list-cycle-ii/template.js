@@ -38,4 +38,4 @@
  * }
  */
 
-module.exports = detectCycle;
+export default detectCycle;

@@ -55,4 +55,4 @@ function reverseList(head) {
     return prevNode;
 }
 
-module.exports = reverseList;
+export default reverseList;

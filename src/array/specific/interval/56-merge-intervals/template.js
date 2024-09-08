@@ -21,4 +21,4 @@
  * https://leetcode.com/problems/merge-intervals/
 */
 
-module.exports = merge;
+export default merge;

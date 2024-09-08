@@ -68,4 +68,4 @@ function myAtoi(s) {
     return Math.sign(num) === 1 ? Math.min(num, max) : Math.max(num, min);
 }
 
-module.exports = myAtoi;
+export default myAtoi;

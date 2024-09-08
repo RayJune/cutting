@@ -34,4 +34,4 @@
  * https://leetcode.cn/problems/add-to-array-form-of-integer/
 */
 
-module.exports = addToArrayForm;
+export default addToArrayForm;

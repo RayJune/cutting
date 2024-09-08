@@ -22,4 +22,4 @@ function insertionSort(arr) {
     return arr;
 }
 
-module.exports = insertionSort;
+export default insertionSort;

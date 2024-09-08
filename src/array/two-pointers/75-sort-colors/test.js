@@ -1,6 +1,6 @@
-const sortColors = require('./index');
-// const sortColors = require('./template');
-// const sortColors = require('./template-zh');
+import sortColors from './index';
+// import sortColors from './template';
+// import sortColors from './template-zh';
 
 test('define sortColors function', () => {
     expect(typeof sortColors).toBe('function');

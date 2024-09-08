@@ -19,4 +19,4 @@
  * https://leetcode.com/problems/meeting-rooms/
 */
 
-module.exports = canAttendMeetings;
+export default canAttendMeetings;

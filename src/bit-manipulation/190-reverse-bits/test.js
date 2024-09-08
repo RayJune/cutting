@@ -1,7 +1,7 @@
-const reverseBits = require('./index');
-// const reverseBits = require('./reverse');
-// const reverseBits = require('./template');
-// const reverseBits = require('./template-zh');
+import reverseBits from './index';
+// import reverseBits = require('./reverse');
+// import reverseBits from './template';
+// import reverseBits from './template-zh';
 
 test('define reverseBits function', () => {
     expect(typeof reverseBits).toBe('function');

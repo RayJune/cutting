@@ -47,4 +47,4 @@ function moveZeroes(nums) {
     }
 }
 
-module.exports = moveZeroes;
+export default moveZeroes;

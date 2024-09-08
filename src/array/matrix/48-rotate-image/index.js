@@ -45,4 +45,4 @@ function rotate(matrix) {
     }
 }
 
-module.exports = rotate;
+export default rotate;

@@ -52,4 +52,4 @@ function rotate(nums, k) {
     }
 }
 
-module.exports = rotate;
+export default rotate;

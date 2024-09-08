@@ -72,4 +72,4 @@ function levelOrder(root) {
     return result;
 }
 
-module.exports = levelOrder;
+export default levelOrder;

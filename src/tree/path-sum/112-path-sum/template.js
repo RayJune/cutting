@@ -34,4 +34,4 @@
  * }
  */
 
-module.exports = hasPathSum;
+export default hasPathSum;

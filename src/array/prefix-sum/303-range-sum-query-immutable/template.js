@@ -23,4 +23,4 @@
  * https://leetcode.com/problems/range-sum-query-immutable/
  */
 
-module.exports = NumArray;
+export default NumArray;

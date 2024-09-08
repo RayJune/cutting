@@ -49,4 +49,4 @@ function isPerfectSquare(num) {
     return false;
 }
 
-module.exports = isPerfectSquare;
+export default isPerfectSquare;

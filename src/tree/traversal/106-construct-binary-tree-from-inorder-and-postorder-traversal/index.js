@@ -70,4 +70,4 @@ function buildTree(inorder, postorder) {
     return root;
 }
 
-module.exports = buildTree;
+export default buildTree;

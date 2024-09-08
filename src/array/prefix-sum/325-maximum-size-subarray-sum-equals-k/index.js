@@ -49,4 +49,4 @@ function maxSubArrayLen(nums, k) {
     return maxLen;
 }
 
-module.exports = maxSubArrayLen;
+export default maxSubArrayLen;

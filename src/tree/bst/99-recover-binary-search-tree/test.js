@@ -1,9 +1,9 @@
-// const recoverTree = require('./index');
-// const recoverTree = require('./optimize');
-const recoverTree = require('./optimize2');
-// const recoverTree = require('./template');
-// const recoverTree = require('./template-zh');
-const buildBinaryTree = require('utils/buildBinaryTree');
+// import recoverTree from './index';
+// import recoverTree from './optimize';
+import recoverTree from './optimize2';
+// import recoverTree from './template';
+// import recoverTree from './template-zh';
+import buildBinaryTree from 'utils/buildBinaryTree';
 
 test('define recoverTree function', () => {
     expect(typeof recoverTree).toBe('function');

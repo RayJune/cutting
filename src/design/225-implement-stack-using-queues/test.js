@@ -1,6 +1,6 @@
-const MyStack = require('./index');
-// const MyStack = require('./template');
-// const MyStack = require('./template-zh');
+import MyStack from './index';
+// import MyStack from './template';
+// import MyStack from './template-zh';
 
 test('define MyStack class', () => {
     expect(typeof MyStack).toBe('function');

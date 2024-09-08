@@ -53,4 +53,4 @@ function minMeetingRooms(intervals) {
     return usedRooms;
 }
 
-module.exports = minMeetingRooms;
+export default minMeetingRooms;

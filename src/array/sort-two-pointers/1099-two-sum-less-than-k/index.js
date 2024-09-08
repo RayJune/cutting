@@ -67,4 +67,4 @@ function twoSumLessThanK(nums, k) {
     return max === -Infinity ? -1 : max;
 }
 
-module.exports = twoSumLessThanK;
+export default twoSumLessThanK;

@@ -31,4 +31,4 @@
  * https://leetcode.com/problems/palindrome-number/
 */
 
-module.exports = isPalindrome;
+export default isPalindrome;

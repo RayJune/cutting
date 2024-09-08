@@ -35,4 +35,4 @@
  * https://leetcode.cn/problems/design-hashmap/
 */
 
-module.exports = MyHashMap;
+export default MyHashMap;

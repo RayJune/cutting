@@ -1,6 +1,6 @@
-const convert = require('./index');
-// const convert = require('./template');
-// const convert = require('./template-zh');
+import convert from './index';
+// import convert from './template';
+// import convert from './template-zh';
 
 test('define convert function', () => {
     expect(typeof convert).toBe('function');

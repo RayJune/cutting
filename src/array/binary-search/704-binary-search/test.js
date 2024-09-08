@@ -1,6 +1,6 @@
-const search = require('./index');
-// const search = require('./template');
-// const search = require('./template-zh');
+import search from './index';
+// import search from './template';
+// import search from './template-zh';
 
 test('define search function', () => {
     expect(typeof search).toBe('function');

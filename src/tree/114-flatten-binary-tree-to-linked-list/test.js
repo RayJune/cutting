@@ -1,9 +1,9 @@
-// const flatten = require('./index');
-// const flatten = require('./optimize');
-const flatten = require('./optimize2');
-// const flatten = require('./template');
-// const flatten = require('./template-zh');
-const buildBinaryTree = require('utils/buildBinaryTree');
+// import flatten from './index';
+// import flatten from './optimize';
+import flatten from './optimize2';
+// import flatten from './template';
+// import flatten from './template-zh';
+import buildBinaryTree from 'utils/buildBinaryTree';
 
 test('define flatten function', () => {
     expect(typeof flatten).toBe('function');

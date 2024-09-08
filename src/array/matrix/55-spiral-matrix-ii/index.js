@@ -61,4 +61,4 @@ function generateMatrix(n) {
     return matrix;
 }
 
-module.exports = generateMatrix;
+export default generateMatrix;

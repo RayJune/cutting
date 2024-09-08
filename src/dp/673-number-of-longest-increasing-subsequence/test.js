@@ -1,6 +1,6 @@
-const findNumberOfLIS = require('./index');
-// const findNumberOfLIS = require('./template');
-// const findNumberOfLIS = require('./template-zh');
+import findNumberOfLIS from './index';
+// import findNumberOfLIS from './template';
+// import findNumberOfLIS from './template-zh';
 
 test('define findNumberOfLIS function', () => {
     expect(typeof findNumberOfLIS).toBe('function');

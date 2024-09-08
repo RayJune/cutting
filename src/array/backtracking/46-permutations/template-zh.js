@@ -23,4 +23,4 @@
  * https://leetcode.cn/problems/permutations/
 */
 
-module.exports = permute;
+export default permute;

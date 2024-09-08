@@ -67,4 +67,4 @@ function minSubArrayLen(target, nums) {
     return minLen;
 }
 
-module.exports = minSubArrayLen;
+export default minSubArrayLen;

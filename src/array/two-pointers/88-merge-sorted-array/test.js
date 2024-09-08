@@ -1,7 +1,7 @@
-// const merge = require('./index');
-const merge = require('./optimize');
-// // const merge = require('./template');
-// // const merge = require('./template-zh');
+// import merge from './index';
+import merge from './optimize';
+// import merge from './template';
+// import merge from './template-zh';
 
 test('define merge function', () => {
     expect(typeof merge).toEqual('function');

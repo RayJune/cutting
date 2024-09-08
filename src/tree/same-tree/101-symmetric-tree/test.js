@@ -1,8 +1,8 @@
-const isSymmetric = require('./index');
-// const isSymmetric = require('./iterate');
-// const isSymmetric = require('./template');
-// const isSymmetric = require('./template-zh');
-const buildBinaryTree = require('utils/buildBinaryTree');
+import isSymmetric from './index';
+// import isSymmetric from './iterate';
+// import isSymmetric from './template';
+// import isSymmetric from './template-zh';
+import buildBinaryTree from 'utils/buildBinaryTree';
 
 test('define isSymmetric function', () => {
     expect(typeof isSymmetric).toBe('function');

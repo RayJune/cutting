@@ -45,4 +45,4 @@ function singleNumber(nums) {
     return targetNum;
 }
 
-module.exports = singleNumber;
+export default singleNumber;

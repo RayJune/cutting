@@ -1,6 +1,6 @@
-const addStrings = require('./index');
-// const addStrings = require('./template');
-// const addStrings = require('./template-zh');
+import addStrings from './index';
+// import addStrings from './template';
+// import addStrings from './template-zh';
 
 test('define addStrings function', () => {
     expect(typeof addStrings).toBe('function');

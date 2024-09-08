@@ -49,4 +49,4 @@ function maxSubArray(nums) {
     return max;
 }
 
-module.exports = maxSubArray;
+export default maxSubArray;

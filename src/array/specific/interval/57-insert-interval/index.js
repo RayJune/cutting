@@ -56,4 +56,4 @@ function insert(intervals, newInterval) {
     return result.concat([newInterval], intervals.slice(i));
 }
 
-module.exports = insert;
+export default insert;

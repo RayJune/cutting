@@ -69,4 +69,4 @@ function buildTree(preorder, inorder) {
     );
 }
 
-module.exports = buildTree;
+export default buildTree;

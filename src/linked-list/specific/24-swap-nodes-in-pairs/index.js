@@ -66,4 +66,4 @@ function swapPairs(head) {
     return preHead.next;
 }
 
-module.exports = swapPairs;
+export default swapPairs;

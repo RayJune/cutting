@@ -99,4 +99,4 @@ class MyQueue {
     }
 }
 
-module.exports = MyQueue;
+export default MyQueue;

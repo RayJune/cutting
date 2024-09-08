@@ -23,4 +23,4 @@
  * https://leetcode.cn/problems/sort-colors/
 */
 
-module.exports = sortColors;
+export default sortColors;

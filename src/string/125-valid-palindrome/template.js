@@ -26,4 +26,4 @@
  * @related 680-valid-palindrome-ii
 */
 
-module.exports = isPalindrome;
+export default isPalindrome;

@@ -22,4 +22,4 @@
  * https://leetcode.cn/problems/longest-palindromic-subsequence/
 */
 
-module.exports = longestPalindromeSubseq;
+export default longestPalindromeSubseq;

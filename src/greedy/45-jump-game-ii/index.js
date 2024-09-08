@@ -51,4 +51,4 @@ function jump(nums) {
     return jumps;
 }
 
-module.exports = jump;
+export default jump;

@@ -25,4 +25,4 @@
  * https://leetcode.cn/problems/insert-interval/
 */
 
-module.exports = insert;
+export default insert;

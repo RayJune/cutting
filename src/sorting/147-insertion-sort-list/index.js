@@ -78,4 +78,4 @@ function insertionSortList(head) {
     return preHead.next;
 }
 
-module.exports = insertionSortList;
+export default insertionSortList;

@@ -44,4 +44,4 @@
  * https://leetcode.com/problems/string-to-integer-atoi/
 */
 
-module.exports = myAtoi;
+export default myAtoi;

@@ -20,4 +20,4 @@
  * https://leetcode.com/problems/spiral-matrix/
 */
 
-module.exports = spiralOrder;
+export default spiralOrder;

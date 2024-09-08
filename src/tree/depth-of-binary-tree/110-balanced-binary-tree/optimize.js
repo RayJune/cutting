@@ -70,4 +70,4 @@ function isBalanced(root) {
     return helper(root) !== -1;;
 }
 
-module.exports = isBalanced;
+export default isBalanced;

@@ -1,8 +1,8 @@
-// const hammingWeight = require('./index');
-const hammingWeight = require('./optimize');
-// const hammingWeight = require('./regex');
-// const hammingWeight = require('./template');
-// const hammingWeight = require('./template-zh');
+// import hammingWeight from './index';
+import hammingWeight from './optimize';
+// import hammingWeight = require('./regex');
+// import hammingWeight from './template';
+// import hammingWeight from './template-zh';
 
 test('define hammingWeight function', () => {
     expect(typeof hammingWeight).toBe('function');

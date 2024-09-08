@@ -83,4 +83,4 @@ function threeSum(nums) {
     return triplets;
 }
 
-module.exports = threeSum;
+export default threeSum;

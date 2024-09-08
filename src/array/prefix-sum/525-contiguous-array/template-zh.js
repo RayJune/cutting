@@ -18,4 +18,4 @@
  * https://leetcode.cn/problems/contiguous-array/
 */
 
-module.exports = findMaxLength;
+export default findMaxLength;

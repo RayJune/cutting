@@ -113,4 +113,4 @@ function myAtoi(s) {
     return dfa.getInteger();
 }
 
-module.exports = myAtoi;
+export default myAtoi;

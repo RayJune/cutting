@@ -24,4 +24,4 @@
  * https://leetcode.cn/problems/repeated-substring-pattern/
 */
 
-module.exports = repeatedSubstringPattern;
+export default repeatedSubstringPattern;

@@ -58,4 +58,4 @@ function isSymmetric(root) {
     return true;
 }
 
-module.exports = isSymmetric;
+export default isSymmetric;

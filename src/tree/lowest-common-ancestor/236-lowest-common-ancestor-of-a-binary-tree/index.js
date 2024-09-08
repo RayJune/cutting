@@ -62,4 +62,4 @@ function lowestCommonAncestor(root, p, q) {
     return left && right ? root : left || right;
 }
 
-module.exports = lowestCommonAncestor;
+export default lowestCommonAncestor;

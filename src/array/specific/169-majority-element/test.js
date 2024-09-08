@@ -1,6 +1,6 @@
-const majorityElement = require('./index');
-// const majorityElement = require('./template');
-// const majorityElement = require('./template-zh');
+import majorityElement from './index';
+// import majorityElement from './template';
+// import majorityElement from './template-zh';
 
 test('define permute function', () => {
     expect(typeof majorityElement).toBe('function');

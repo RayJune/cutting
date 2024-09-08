@@ -34,4 +34,4 @@
  * https://leetcode.cn/problems/next-permutation/
 */
 
-module.exports = nextPermutation;
+export default nextPermutation;

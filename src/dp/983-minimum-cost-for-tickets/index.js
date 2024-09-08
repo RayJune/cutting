@@ -72,4 +72,4 @@ function mincostTickets(days, costs) {
     return dp[dp.length - 1];
 }
 
-module.exports = mincostTickets;
+export default mincostTickets;

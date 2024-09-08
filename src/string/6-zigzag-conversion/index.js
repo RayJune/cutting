@@ -77,4 +77,4 @@ function convert(s, numRows) {
     return matrix.map(row => row.join('')).join('');
 }
 
-module.exports = convert;
+export default convert;

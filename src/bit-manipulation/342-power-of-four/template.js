@@ -23,4 +23,4 @@
  * https://leetcode.com/problems/power-of-four/
 */
 
-module.exports = isPowerOfFour;
+export default isPowerOfFour;

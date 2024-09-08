@@ -69,4 +69,4 @@ function addToArrayForm(num, k) {
     return num;
 }
 
-module.exports = addToArrayForm;
+export default addToArrayForm;

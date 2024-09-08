@@ -55,4 +55,4 @@ function lengthOfLIS(nums) {
     return maxLen;
 }
 
-module.exports = lengthOfLIS;
+export default lengthOfLIS;

@@ -29,4 +29,4 @@
  * https://leetcode.cn/problems/reverse-integer/
 */
 
-module.exports = reverse;
+export default reverse;

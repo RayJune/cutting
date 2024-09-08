@@ -81,4 +81,4 @@ function sortedArrayToBST(nums) {
     );
 }
 
-module.exports = sortedListToBST;
+export default sortedListToBST;

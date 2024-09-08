@@ -59,4 +59,4 @@ function maxDepth(root) {
     return Math.max(maxDepth(left), maxDepth(right)) + 1;
 }
 
-module.exports = maxDepth;
+export default maxDepth;

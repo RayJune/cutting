@@ -37,4 +37,4 @@
  * https://leetcode.cn/problems/lru-cache/
 */
 
-module.exports = LRUCache;
+export default LRUCache;

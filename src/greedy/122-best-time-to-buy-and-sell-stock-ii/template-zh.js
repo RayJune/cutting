@@ -32,4 +32,4 @@
  * https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/
 */
 
-module.exports = maxProfit;
+export default maxProfit;

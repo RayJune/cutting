@@ -43,4 +43,4 @@
  * https://leetcode.com/problems/combination-sum/
 */
 
-module.exports = combinationSum;
+export default combinationSum;

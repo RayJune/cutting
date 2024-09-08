@@ -14,4 +14,4 @@ function guess(n) {
     }
 }
 
-module.exports = guess;
+export default guess;

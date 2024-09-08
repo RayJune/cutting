@@ -92,4 +92,4 @@ class LRUCache {
     }
 }
 
-module.exports = LRUCache;
+export default LRUCache;

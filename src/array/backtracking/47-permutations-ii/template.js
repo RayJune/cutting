@@ -18,4 +18,4 @@
  * https://leetcode.com/problems/permutations-ii/
 */
 
-module.exports = permuteUnique;
+export default permuteUnique;

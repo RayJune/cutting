@@ -1,7 +1,7 @@
-// const longestPalindromeSubseq = require('./index');
-const longestPalindromeSubseq = require('./optimize');
-// const longestPalindromeSubseq = require('./template');
-// const longestPalindromeSubseq = require('./template-zh');
+// import longestPalindromeSubseq from './index';
+import longestPalindromeSubseq from './optimize';
+// import longestPalindromeSubseq from './template';
+// import longestPalindromeSubseq from './template-zh';
 
 test('define longestPalindromeSubseq function', () => {
     expect(typeof longestPalindromeSubseq).toBe('function');

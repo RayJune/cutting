@@ -1,6 +1,6 @@
-const judgeSquareSum = require('./index');
-// const judgeSquareSum = require('./template');
-// const judgeSquareSum = require('./template-zh');
+import judgeSquareSum from './index';
+// import judgeSquareSum from './template';
+// import judgeSquareSum from './template-zh';
 
 test('define judgeSquareSum function', () => {
     expect(typeof judgeSquareSum).toBe('function');

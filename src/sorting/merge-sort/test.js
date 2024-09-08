@@ -1,5 +1,5 @@
-// const mergeSort = require('./index');
-const mergeSort = require('./optimize');
+// import mergeSort from './index';
+import mergeSort from './optimize';
 
 test('define mergeSort function', () => {
     expect(typeof mergeSort).toBe('function');

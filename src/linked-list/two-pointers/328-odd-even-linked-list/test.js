@@ -1,7 +1,7 @@
-const oddEvenList = require('./index');
-// const oddEvenList = require('./template');
-// const oddEvenList = require('./template-zh');
-const buildListNode = require('utils/buildListNode');
+import oddEvenList from './index';
+// import oddEvenList from './template';
+// import oddEvenList from './template-zh';
+import buildListNode from 'utils/buildListNode';
 
 test('define oddEvenList function', () => {
     expect(typeof oddEvenList).toBe('function');

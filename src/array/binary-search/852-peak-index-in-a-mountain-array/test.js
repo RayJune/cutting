@@ -1,6 +1,6 @@
-const peakIndexInMountainArray = require('./index');
-// const peakIndexInMountainArray = require('./template');
-// const peakIndexInMountainArray = require('./template-zh');
+import peakIndexInMountainArray from './index';
+// import peakIndexInMountainArray from './template';
+// import peakIndexInMountainArray from './template-zh';
 
 test('define peakIndexInMountainArray function', () => {
     expect(typeof peakIndexInMountainArray).toBe('function');

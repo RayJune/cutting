@@ -27,4 +27,4 @@
  * }
  */
 
-module.exports = rotateRight;
+export default rotateRight;

@@ -39,4 +39,4 @@
  * }
  */
 
-module.exports = postorderTraversal;
+export default postorderTraversal;

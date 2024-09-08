@@ -30,4 +30,4 @@
  * https://leetcode.cn/problems/merge-sorted-array/
 */
 
-module.exports = merge;
+export default merge;

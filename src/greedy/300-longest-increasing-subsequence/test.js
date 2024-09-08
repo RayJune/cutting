@@ -1,7 +1,7 @@
-// const lengthOfLIS = require('./index');
-const lengthOfLIS = require('./optimize');
-// const lengthOfLIS = require('./template');
-// const lengthOfLIS = require('./template-zh');
+// import lengthOfLIS from './index';
+import lengthOfLIS from './optimize';
+// import lengthOfLIS from './template';
+// import lengthOfLIS from './template-zh';
 
 test('define lengthOfLIS function', () => {
     expect(typeof lengthOfLIS).toBe('function');

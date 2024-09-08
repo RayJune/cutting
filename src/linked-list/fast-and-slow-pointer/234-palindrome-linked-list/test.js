@@ -1,8 +1,8 @@
-// const isPalindrome = require('./index');
-const isPalindrome = require('./optimize');
-// const isPalindrome = require('./template');
-// const isPalindrome = require('./template-zh');
-const buildListNode = require('utils/buildListNode');
+// import isPalindrome from './index';
+import isPalindrome from './optimize';
+// import isPalindrome from './template';
+// import isPalindrome from './template-zh';
+import buildListNode from 'utils/buildListNode';
 
 test('define isPalindrome function', () => {
     expect(typeof isPalindrome).toBe('function');

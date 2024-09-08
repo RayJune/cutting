@@ -53,4 +53,4 @@ function minCostClimbingStairs(cost) {
     return dp[cost.length];
 }
 
-module.exports = minCostClimbingStairs;
+export default minCostClimbingStairs;

@@ -1,6 +1,6 @@
-const sortedSquares = require('./index');
-// const sortedSquares = require('./template');
-// const sortedSquares = require('./template-zh');
+import sortedSquares from './index';
+// import sortedSquares from './template';
+// import sortedSquares from './template-zh';
 
 test('define sortedSquares function', () => {
     expect(typeof sortedSquares).toBe('function');

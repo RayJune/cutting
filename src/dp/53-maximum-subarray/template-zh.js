@@ -27,4 +27,4 @@
  * https://leetcode.cn/problems/maximum-subarray/
 */
 
-module.exports = maxSubArray;
+export default maxSubArray;

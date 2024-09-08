@@ -1,6 +1,6 @@
-const rotate = require('./index');
-// // const rotate = require('./template');
-// // const rotate = require('./template-zh');
+import rotate from './index';
+// import rotate from './template';
+// import rotate from './template-zh';
 
 test('define rotate function', () => {
     expect(typeof rotate).toBe('function');

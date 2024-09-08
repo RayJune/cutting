@@ -107,4 +107,4 @@ class Trie {
     }
 }
 
-module.exports = Trie;
+export default Trie;

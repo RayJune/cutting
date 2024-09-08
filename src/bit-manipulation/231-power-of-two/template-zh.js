@@ -32,4 +32,4 @@
  * https://leetcode.cn/problems/power-of-two/
 */
 
-module.exports = isPowerOfTwo;
+export default isPowerOfTwo;

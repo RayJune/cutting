@@ -39,4 +39,4 @@
  * }
  */
 
-module.exports = maxDepth;
+export default maxDepth;

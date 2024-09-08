@@ -33,4 +33,4 @@
  * }
  */
 
-module.exports = isSameTree;
+export default isSameTree;

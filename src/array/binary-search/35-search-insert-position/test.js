@@ -1,6 +1,6 @@
-const searchInsert = require('./index');
-// const searchInsert = require('./template');
-// const searchInsert = require('./template-zh');
+import searchInsert from './index';
+// import searchInsert from './template';
+// import searchInsert from './template-zh';
 
 test('define searchInsert function', () => {
     expect(typeof searchInsert).toBe('function');

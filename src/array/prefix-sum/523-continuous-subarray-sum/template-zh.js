@@ -30,4 +30,4 @@
  * https://leetcode.cn/problems/continuous-subarray-sum/
 */
 
-module.exports = checkSubarraySum;
+export default checkSubarraySum;

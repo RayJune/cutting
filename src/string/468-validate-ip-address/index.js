@@ -92,4 +92,4 @@ function validateIPv6(arr) {
     return arr.every(part => (/^[0-9a-fA-F]{1,4}$/).test(part));
 }
 
-module.exports = validIPAddress;
+export default validIPAddress;

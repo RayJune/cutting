@@ -39,4 +39,4 @@ function singleNumber(nums) {
     return nums.reduce((prev, curr) => prev ^ curr);
 }
 
-module.exports = singleNumber;
+export default singleNumber;

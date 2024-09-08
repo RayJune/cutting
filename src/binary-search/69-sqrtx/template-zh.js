@@ -22,4 +22,4 @@
  * https://leetcode.cn/problems/sqrtx/
 */
 
-module.exports = mySqrt;
+export default mySqrt;

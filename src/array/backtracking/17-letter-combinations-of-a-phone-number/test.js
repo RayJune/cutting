@@ -1,6 +1,6 @@
-const letterCombinations = require('./index');
-// const letterCombinations = require('./template');
-// const letterCombinations = require('./template-zh');
+import letterCombinations from './index';
+// import letterCombinations from'./template';
+// import letterCombinations from'./template-zh';
 
 test('define letterCombinations function', () => {
     expect(typeof letterCombinations).toBe('function');

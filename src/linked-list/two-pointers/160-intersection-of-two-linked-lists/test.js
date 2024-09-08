@@ -1,7 +1,7 @@
-// const getIntersectionNode = require('./index');
-const getIntersectionNode = require('./optimize');
-// const getIntersectionNode = require('./template');
-// const getIntersectionNode = require('./template-zh');
+// import getIntersectionNode from './index';
+import getIntersectionNode from './optimize';
+// import getIntersectionNode from './template';
+// import getIntersectionNode from './template-zh';
 
 class ListNode {
     constructor(val = undefined, next = null) {

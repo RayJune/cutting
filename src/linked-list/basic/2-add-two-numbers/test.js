@@ -1,7 +1,7 @@
-const addTwoNumbers = require('./index');
-// const addTwoNumbers = require('./template');
-// const addTwoNumbers = require('./template-zh');
-const buildListNode = require('utils/buildListNode');
+import addTwoNumbers from './index';
+// import addTwoNumbers from './template';
+// import addTwoNumbers from './template-zh';
+import buildListNode from 'utils/buildListNode';
 
 test('define addTwoNumbers function', () => {
     expect(typeof addTwoNumbers).toBe('function');

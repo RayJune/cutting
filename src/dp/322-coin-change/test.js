@@ -1,6 +1,6 @@
-const coinChange = require('./index');
-// const coinChange = require('./template');
-// const coinChange = require('./template-zh');
+import coinChange from './index';
+// import coinChange from './template';
+// import coinChange from './template-zh';
 
 test('define coinChange function', () => {
     expect(typeof coinChange).toBe('function');

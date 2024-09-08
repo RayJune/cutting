@@ -52,4 +52,4 @@ function pivotIndex(nums) {
     return -1;
 }
 
-module.exports = pivotIndex;
+export default pivotIndex;

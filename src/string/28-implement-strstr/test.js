@@ -1,7 +1,7 @@
-// const strStr = require('./index');
-const strStr = require('./optimize');
-// const strStr = require('./template');
-// const strStr = require('./template-zh');
+// import strStr from './index';
+import strStr from './optimize';
+// import strStr from './template';
+// import strStr from './template-zh';
 
 test('define strStr function', () => {
     expect(typeof strStr).toBe('function');

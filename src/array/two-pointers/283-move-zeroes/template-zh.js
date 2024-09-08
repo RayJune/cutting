@@ -18,4 +18,4 @@
  * https://leetcode.cn/problems/move-zeroes/
 */
 
-module.exports = moveZeroes;
+export default moveZeroes;

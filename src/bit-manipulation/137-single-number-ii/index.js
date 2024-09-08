@@ -39,4 +39,4 @@ function singleNumber(nums) {
     return (uniqueSum * 3 - sum) / 2;
 }
 
-module.exports = singleNumber;
+export default singleNumber;

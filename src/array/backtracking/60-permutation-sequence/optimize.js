@@ -94,4 +94,4 @@ function reverse(arr, start) {
     }
 }
 
-module.exports = getPermutation;
+export default getPermutation;

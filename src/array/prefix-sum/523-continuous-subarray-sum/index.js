@@ -56,4 +56,4 @@ function checkSubarraySum(nums, k) {
     });
 }
 
-module.exports = checkSubarraySum;
+export default checkSubarraySum;

@@ -30,4 +30,4 @@
  * https://leetcode.cn/problems/reverse-words-in-a-string/
 */
 
-module.exports = isPalindrome;
+export default isPalindrome;

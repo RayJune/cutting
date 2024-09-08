@@ -37,4 +37,4 @@ function repeatedSubstringPattern(s) {
     return (s + s).slice(1, -1).includes(s);
 }
 
-module.exports = repeatedSubstringPattern;
+export default repeatedSubstringPattern;

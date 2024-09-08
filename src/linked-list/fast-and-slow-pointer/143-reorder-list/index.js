@@ -102,4 +102,4 @@ function reverseList(head) {
     return prevNode;
 }
 
-module.exports = reorderList;
+export default reorderList;

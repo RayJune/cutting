@@ -56,4 +56,4 @@ function removeElement(nums, val) {
     return left;
 }
 
-module.exports = removeElement;
+export default removeElement;

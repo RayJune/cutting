@@ -1,7 +1,7 @@
-const removeNthFromEnd = require('./index');
-// const removeNthFromEnd = require('./template');
-// const removeNthFromEnd = require('./template-zh');
-const buildListNode = require('utils/buildListNode');
+import removeNthFromEnd from './index';
+// import removeNthFromEnd from './template';
+// import removeNthFromEnd from './template-zh';
+import buildListNode from 'utils/buildListNode';
 
 test('define removeNthFromEnd function', () => {
     expect(typeof removeNthFromEnd).toBe('function');

@@ -15,4 +15,4 @@
  * https://leetcode.cn/problems/subarray-sums-divisible-by-k/
 */
 
-module.exports = subarraysDivByK;
+export default subarraysDivByK;

@@ -1,6 +1,6 @@
-const lengthOfLongestSubstring = require('./index');
-// const lengthOfLongestSubstring = require('./template');
-// const lengthOfLongestSubstring = require('./template-zh');
+import lengthOfLongestSubstring from './index';
+// import lengthOfLongestSubstring from './template';
+// import lengthOfLongestSubstring from './template-zh';
 
 test('define lengthOfLongestSubstring function', () => {
     expect(typeof lengthOfLongestSubstring).toBe('function');

@@ -60,4 +60,4 @@ function removeDuplicates(nums) {
     return left;
 }
 
-module.exports = removeDuplicates;
+export default removeDuplicates;

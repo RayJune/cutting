@@ -25,4 +25,4 @@
  * https://leetcode.com/problems/single-number/
 */
 
-module.exports = singleNumber;
+export default singleNumber;

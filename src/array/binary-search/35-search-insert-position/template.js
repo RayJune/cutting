@@ -26,4 +26,4 @@
  * https://leetcode.com/problems/search-insert-position/
 */
 
-module.exports = searchInsert;
+export default searchInsert;

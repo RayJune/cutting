@@ -49,4 +49,4 @@ function singleNumber(nums) {
     return [x, bitMask ^ x];
 }
 
-module.exports = singleNumber;
+export default singleNumber;

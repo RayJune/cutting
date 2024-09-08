@@ -49,4 +49,4 @@ function subarraysDivByK(nums, k) {
     return count;
 }
 
-module.exports = subarraysDivByK;
+export default subarraysDivByK;

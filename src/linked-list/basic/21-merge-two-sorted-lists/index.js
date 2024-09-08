@@ -70,4 +70,4 @@ function mergeTwoLists(l1, l2) {
     return preHead.next;
 }
 
-module.exports = mergeTwoLists;
+export default mergeTwoLists;

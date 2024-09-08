@@ -1,6 +1,6 @@
-const MyQueue = require('./index');
-// const MyQueue = require('./template');
-// const MyQueue = require('./template-zh');
+import MyQueue from './index';
+// import MyQueue from './template';
+// import MyQueue from './template-zh';
 
 test('define MyQueue class', () => {
     expect(typeof MyQueue).toBe('function');

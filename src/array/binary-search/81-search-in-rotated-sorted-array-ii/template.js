@@ -28,4 +28,4 @@
  * https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
 */
 
-module.exports = search;
+export default search;

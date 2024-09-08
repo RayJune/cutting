@@ -1,7 +1,7 @@
-// const lengthOfLongestSubstringTwoDistinct = require('./index');
-const lengthOfLongestSubstringTwoDistinct = require('./optimize');
-// const lengthOfLongestSubstringTwoDistinct = require('./template');
-// const lengthOfLongestSubstringTwoDistinct = require('./template-zh');
+// import lengthOfLongestSubstringTwoDistinct from './index';
+import lengthOfLongestSubstringTwoDistinct from './optimize';
+// import lengthOfLongestSubstringTwoDistinct from './template';
+// import lengthOfLongestSubstringTwoDistinct from './template-zh';
 
 test('define lengthOfLongestSubstringTwoDistinct function', () => {
     expect(typeof lengthOfLongestSubstringTwoDistinct).toBe('function');

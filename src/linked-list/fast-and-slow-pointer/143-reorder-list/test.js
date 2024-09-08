@@ -1,7 +1,7 @@
-const reorderList = require('./index');
-// const reorderList = require('./template');
-// const reorderList = require('./template-zh');
-const buildListNode = require('utils/buildListNode');
+import reorderList from './index';
+// import reorderList from './template';
+// import reorderList from './template-zh';
+import buildListNode from 'utils/buildListNode';
 
 test('define reorderList function', () => {
     expect(typeof reorderList).toBe('function');

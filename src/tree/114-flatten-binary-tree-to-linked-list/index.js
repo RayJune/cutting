@@ -69,4 +69,4 @@ function preorderTraversal(root, result = []) {
     return result;
 }
 
-module.exports = flatten;
+export default flatten;

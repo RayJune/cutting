@@ -1,6 +1,6 @@
-const findPeakElement = require('./index');
-// const findPeakElement = require('./template');
-// const findPeakElement = require('./template-zh');
+import findPeakElement from './index';
+// import findPeakElement from './template';
+// import findPeakElement from './template-zh';
 
 test('define findPeakElement function', () => {
     expect(typeof findPeakElement).toBe('function');

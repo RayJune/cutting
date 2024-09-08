@@ -34,4 +34,4 @@
  * https://leetcode.com/problems/implement-trie-prefix-tree/
 */
 
-module.exports = Trie;
+export default Trie;

@@ -1,6 +1,6 @@
-const threeSumSmaller = require('./index');
-// const threeSumSmaller = require('./template');
-// const threeSumSmaller = require('./template-zh');
+import threeSumSmaller from './index';
+// import threeSumSmaller from './template';
+// import threeSumSmaller from './template-zh';
 
 test('define threeSumSmaller function', () => {
     expect(typeof threeSumSmaller).toBe('function');

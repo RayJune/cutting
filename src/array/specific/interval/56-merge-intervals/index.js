@@ -55,4 +55,4 @@ function merge(intervals) {
     return merged;
 }
 
-module.exports = merge;
+export default merge;

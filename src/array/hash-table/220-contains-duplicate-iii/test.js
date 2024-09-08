@@ -1,8 +1,8 @@
-// const containsNearbyAlmostDuplicate = require('./index');
-// const containsNearbyAlmostDuplicate = require('./optimize');
-const containsNearbyAlmostDuplicate = require('./optimize2');
-// const containsNearbyAlmostDuplicate = require('./template');
-// const containsNearbyAlmostDuplicate = require('./template-zh');
+// import containsNearbyAlmostDuplicate from './index';
+// import containsNearbyAlmostDuplicate from './optimize';
+import containsNearbyAlmostDuplicate from './optimize2';
+// import containsNearbyAlmostDuplicate from './template';
+// import containsNearbyAlmostDuplicate from './template-zh';
 
 test('define containsNearbyAlmostDuplicate function', () => {
     expect(typeof containsNearbyAlmostDuplicate).toBe('function');

@@ -45,4 +45,4 @@ function findLengthOfLCIS(nums) {
     return maxLen;
 }
 
-module.exports = findLengthOfLCIS;
+export default findLengthOfLCIS;

@@ -68,4 +68,4 @@ function removeNthFromEnd(head, n) {
     return preHead.next;
 }
 
-module.exports = removeNthFromEnd;
+export default removeNthFromEnd;

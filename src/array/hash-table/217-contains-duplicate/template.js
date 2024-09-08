@@ -22,5 +22,5 @@
  * https://leetcode.com/problems/contains-duplicate/
 */
 
-module.exports = containsDuplicate;
+export default containsDuplicate;
 

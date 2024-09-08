@@ -1,6 +1,6 @@
-const minSubArrayLen = require('./index');
-// const minSubArrayLen = require('./template');
-// const minSubArrayLen = require('./template-zh');
+import minSubArrayLen from './index';
+// import minSubArrayLen from './template';
+// import minSubArrayLen from './template-zh';
 
 test('define minSubArrayLen function', () => {
     expect(typeof minSubArrayLen).toBe('function');

@@ -69,4 +69,4 @@ function plusOne(digits) {
     return digits;
 }
 
-module.exports = plusOne;
+export default plusOne;

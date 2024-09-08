@@ -21,4 +21,4 @@
  * https://leetcode.com/problems/multiply-strings/
 */
 
-module.exports = multiply;
+export default multiply;

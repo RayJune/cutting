@@ -81,4 +81,4 @@ function isPalindrome(left, right, s) {
     return true;
 }
 
-module.exports = validPalindrome;
+export default validPalindrome;

@@ -61,4 +61,4 @@ function hasPathSum(root, targetSum) {
     return hasPathSum(left, targetSum) || hasPathSum(right, targetSum);
 }
 
-module.exports = hasPathSum;
+export default hasPathSum;

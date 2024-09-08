@@ -31,4 +31,4 @@
  * }
  */
 
-module.exports = flatten;
+export default flatten;

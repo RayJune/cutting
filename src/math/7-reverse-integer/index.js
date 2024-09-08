@@ -53,4 +53,4 @@ function reverse(x) {
     return reversedX;
 }
 
-module.exports = reverse;
+export default reverse;

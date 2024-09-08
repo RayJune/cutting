@@ -1,6 +1,6 @@
-const findLengthOfLCIS = require('./index');
-// const findLengthOfLCIS = require('./template');
-// const findLengthOfLCIS = require('./template-zh');
+import findLengthOfLCIS from './index';
+// import findLengthOfLCIS from './template';
+// import findLengthOfLCIS from './template-zh';
 
 test('define findLengthOfLCIS function', () => {
     expect(typeof findLengthOfLCIS).toBe('function');

@@ -21,4 +21,4 @@ function buildListNode(arr) {
     return preHead.next;
 }
 
-module.exports = buildListNode;
+export default buildListNode;

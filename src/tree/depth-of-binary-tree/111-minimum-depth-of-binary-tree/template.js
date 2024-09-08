@@ -31,4 +31,4 @@
  * }
  */
 
-module.exports = minDepth;
+export default minDepth;

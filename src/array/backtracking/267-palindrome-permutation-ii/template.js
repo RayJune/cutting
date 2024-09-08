@@ -20,4 +20,4 @@
  * https://leetcode.com/problems/palindrome-permutation-ii/
 */
 
-module.exports = generatePalindromes;
+export default generatePalindromes;

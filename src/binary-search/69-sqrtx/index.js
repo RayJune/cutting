@@ -52,4 +52,4 @@ function mySqrt(x) {
     return right;
 }
 
-module.exports = mySqrt;
+export default mySqrt;

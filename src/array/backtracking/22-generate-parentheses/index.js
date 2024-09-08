@@ -47,4 +47,4 @@ function generateParenthesis(n) {
     return result;
 }
 
-module.exports = generateParenthesis;
+export default generateParenthesis;

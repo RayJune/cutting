@@ -1,8 +1,8 @@
-// const postorderTraversal = require('./index');
-const postorderTraversal = require('./iterate');
-// const postorderTraversal = require('./template');
-// const postorderTraversal = require('./template-zh');
-const buildBinaryTree = require('utils/buildBinaryTree');
+// import postorderTraversal from './index';
+import postorderTraversal from './iterate';
+// import postorderTraversal from './template';
+// import postorderTraversal from './template-zh';
+import buildBinaryTree from 'utils/buildBinaryTree';
 
 test('define postorderTraversal function', () => {
     expect(typeof postorderTraversal).toBe('function');

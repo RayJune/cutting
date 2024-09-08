@@ -21,4 +21,4 @@
  * https://leetcode.com/problems/longest-common-prefix/
 */
 
-module.exports = longestCommonPrefix;
+export default longestCommonPrefix;

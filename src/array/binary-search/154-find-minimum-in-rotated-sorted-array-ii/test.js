@@ -1,6 +1,6 @@
-const findMin = require('./index');
-// const findMin = require('./template');
-// const findMin = require('./template-zh');
+import findMin from './index';
+// import findMin from './template';
+// import findMin from './template-zh';
 
 test('define findMin function', () => {
     expect(typeof findMin).toBe('function');

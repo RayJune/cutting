@@ -65,4 +65,4 @@ function inorderTraversal(root, result = []) {
     return result;
 }
 
-module.exports = inorderTraversal;
+export default inorderTraversal;

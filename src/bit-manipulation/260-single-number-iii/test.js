@@ -1,7 +1,7 @@
-// const singleNumber = require('./index');
-const singleNumber = require('./optimize');
-// const singleNumber = require('./template');
-// const singleNumber = require('./template-zh');
+// import singleNumber from './index';
+import singleNumber from './optimize';
+// import singleNumber from './template';
+// import singleNumber from './template-zh';
 
 test('define singleNumber function', () => {
     expect(typeof singleNumber).toBe('function');

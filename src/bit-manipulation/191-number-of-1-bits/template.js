@@ -21,4 +21,4 @@
  * https://leetcode.com/problems/number-of-1-bits/
 */
 
-module.exports = hammingWeight;
+export default hammingWeight;

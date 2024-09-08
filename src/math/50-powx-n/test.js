@@ -1,7 +1,7 @@
-// const myPow = require('./index');
-const myPow = require('./optimize');
-// const myPow = require('./template');
-// const myPow = require('./template-zh');
+// import myPow from './index';
+import myPow from './optimize';
+// import myPow from './template';
+// import myPow from './template-zh';
 
 test('define myPow function', () => {
     expect(typeof myPow).toBe('function');

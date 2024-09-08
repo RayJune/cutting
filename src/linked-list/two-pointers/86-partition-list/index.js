@@ -69,4 +69,4 @@ function partition(head, x) {
     return preHead1.next;
 }
 
-module.exports = partition;
+export default partition;

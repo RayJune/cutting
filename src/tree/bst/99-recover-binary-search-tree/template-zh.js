@@ -31,4 +31,4 @@
  * }
  */
 
-module.exports = recoverTree;
+export default recoverTree;

@@ -1,7 +1,7 @@
-const insertionSortList = require('./index');
-// // const insertionSortList = require('./template');
-// // const insertionSortList = require('./template-zh');
-const buildListNode = require('utils/buildListNode');
+import insertionSortList from './index';
+// import insertionSortList from './template';
+// import insertionSortList from './template-zh';
+import buildListNode from 'utils/buildListNode';
 
 test('define insertionSortList function', () => {
     expect(typeof insertionSortList).toBe('function');

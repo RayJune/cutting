@@ -101,4 +101,4 @@ function copyRandomList(head) {
     return newHead;
 }
 
-module.exports = copyRandomList;
+export default copyRandomList;

@@ -1,6 +1,6 @@
-const missingNumber = require('./index');
-// const missingNumber = require('./template');
-// const missingNumber = require('./template-zh');
+import missingNumber from './index';
+// import missingNumber from './template';
+// import missingNumber from './template-zh';
 
 test('define missingNumber function', () => {
     expect(typeof missingNumber).toBe('function');

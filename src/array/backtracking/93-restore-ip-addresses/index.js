@@ -74,4 +74,4 @@ function restoreIpAddresses(s) {
     return addresses;
 }
 
-module.exports = restoreIpAddresses;
+export default restoreIpAddresses;

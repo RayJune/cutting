@@ -20,4 +20,4 @@
  * https://leetcode.cn/problems/kth-largest-element-in-an-array/
 */
 
-module.exports = findKthLargest;
+export default findKthLargest;

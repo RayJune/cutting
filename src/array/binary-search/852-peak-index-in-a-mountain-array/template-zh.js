@@ -30,4 +30,4 @@
  * https://leetcode.cn/problems/peak-index-in-a-mountain-array/
 */
 
-module.exports = peakIndexInMountainArray;
+export default peakIndexInMountainArray;

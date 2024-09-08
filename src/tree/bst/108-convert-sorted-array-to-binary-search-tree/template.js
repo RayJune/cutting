@@ -32,4 +32,4 @@
  * }
  */
 
-module.exports = sortedArrayToBST;
+export default sortedArrayToBST;

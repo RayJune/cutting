@@ -63,4 +63,4 @@ function invertTree(root) {
     return root;
 }
 
-module.exports = invertTree;
+export default invertTree;

@@ -52,4 +52,4 @@ function combine(n, k) {
     return combinations;
 }
 
-module.exports = combine;
+export default combine;

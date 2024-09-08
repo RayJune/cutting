@@ -39,4 +39,4 @@
  * }
  */
 
-module.exports = preorderTraversal;
+export default preorderTraversal;

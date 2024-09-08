@@ -1,6 +1,6 @@
-const generatePalindromes = require('./index');
-// const generatePalindromes = require('./template');
-// const generatePalindromes = require('./template-zh');
+import generatePalindromes from './index';
+// import generatePalindromes from './template';
+// import generatePalindromes from './template-zh';
 
 test('define generatePalindromes function', () => {
     expect(typeof generatePalindromes).toBe('function');

@@ -56,4 +56,4 @@ function longestPalindrome(s) {
     return s.substring(start, start + maxLen);
 }
 
-module.exports = longestPalindrome;
+export default longestPalindrome;

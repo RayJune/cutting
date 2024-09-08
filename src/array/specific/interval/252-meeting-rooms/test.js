@@ -1,6 +1,6 @@
-const canAttendMeetings = require('./index');
-// // const canAttendMeetings = require('./template');
-// // const canAttendMeetings = require('./template-zh');
+import canAttendMeetings from './index';
+// import canAttendMeetings from './template';
+// import canAttendMeetings from './template-zh';
 
 test('define canAttendMeetings function', () => {
     expect(typeof canAttendMeetings).toBe('function');

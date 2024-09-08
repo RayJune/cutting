@@ -98,4 +98,4 @@ class MyHashMap {
     }
 }
 
-module.exports = MyHashMap;
+export default MyHashMap;

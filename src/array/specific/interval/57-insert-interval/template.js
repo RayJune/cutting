@@ -27,4 +27,4 @@
  * https://leetcode.com/problems/insert-interval/
 */
 
-module.exports = insert;
+export default insert;

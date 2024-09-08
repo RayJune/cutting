@@ -1,6 +1,6 @@
-const multiply = require('./index');
-// const multiply = require('./template');
-// const multiply = require('./template-zh');
+import multiply from './index';
+// import multiply from './template';
+// import multiply from './template-zh';
 
 test('define multiply function', () => {
     expect(typeof multiply).toBe('function');

@@ -1,6 +1,6 @@
-const reverse = require('./index');
-// const reverse = require('./template');
-// const reverse = require('./template-zh');
+import reverse from './index';
+// import reverse from './template';
+// import reverse from './template-zh';
 
 test('define reverse function', () => {
     expect(typeof reverse).toBe('function');

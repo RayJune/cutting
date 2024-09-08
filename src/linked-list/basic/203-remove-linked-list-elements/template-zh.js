@@ -31,4 +31,4 @@
  * }
  */
 
-module.exports = removeElements;
+export default removeElements;

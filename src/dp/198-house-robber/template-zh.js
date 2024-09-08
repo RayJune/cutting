@@ -24,4 +24,4 @@
  * https://leetcode.cn/problems/house-robber/
 */
 
-module.exports = rob;
+export default rob;

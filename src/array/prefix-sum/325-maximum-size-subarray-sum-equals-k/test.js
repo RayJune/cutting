@@ -1,6 +1,6 @@
-const maxSubArrayLen = require('./index');
-// const maxSubArrayLen = require('./template');
-// const maxSubArrayLen = require('./template-zh');
+import maxSubArrayLen from './index';
+// import maxSubArrayLen from './template';
+// import maxSubArrayLen from './template-zh';
 
 test('define maxSubArrayLen function', () => {
     expect(typeof maxSubArrayLen).toBe('function');

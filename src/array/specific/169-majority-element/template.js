@@ -21,4 +21,4 @@
  * https://leetcode.com/problems/majority-element/
 */
 
-module.exports = majorityElement;
+export default majorityElement;

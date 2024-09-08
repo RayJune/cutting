@@ -27,4 +27,4 @@
  * }
  */
 
-module.exports = isSymmetric;
+export default isSymmetric;

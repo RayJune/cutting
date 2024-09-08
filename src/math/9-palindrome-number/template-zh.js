@@ -29,4 +29,4 @@
  * https://leetcode.cn/problems/palindrome-number/
 */
 
-module.exports = isPalindrome;
+export default isPalindrome;

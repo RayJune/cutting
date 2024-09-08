@@ -41,4 +41,4 @@
  * https://leetcode.com/problems/plus-one/
 */
 
-module.exports = plusOne;
+export default plusOne;

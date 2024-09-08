@@ -1,7 +1,7 @@
-const partition = require('./index');
-// const partition = require('./template');
-// const partition = require('./template-zh');
-const buildListNode = require('utils/buildListNode');
+import partition from './index';
+// import partition from './template';
+// import partition from './template-zh';
+import buildListNode from 'utils/buildListNode';
 
 test('define partition function', () => {
     expect(typeof partition).toBe('function');

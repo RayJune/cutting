@@ -23,4 +23,4 @@
  * https://leetcode.cn/problems/product-of-array-except-self/
 */
 
-module.exports = productExceptSelf;
+export default productExceptSelf;

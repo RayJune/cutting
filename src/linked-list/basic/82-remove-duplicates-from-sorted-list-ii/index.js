@@ -66,4 +66,4 @@ function deleteDuplicates(head) {
     return preHead.next;
 }
 
-module.exports = deleteDuplicates;
+export default deleteDuplicates;

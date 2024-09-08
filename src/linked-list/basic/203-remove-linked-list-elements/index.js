@@ -63,4 +63,4 @@ function removeElements(head, val) {
     return preHead.next;
 }
 
-module.exports = removeElements;
+export default removeElements;

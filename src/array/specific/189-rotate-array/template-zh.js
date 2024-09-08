@@ -26,4 +26,4 @@
  * https://leetcode.cn/problems/rotate-array/
 */
 
-module.exports = rotate;
+export default rotate;

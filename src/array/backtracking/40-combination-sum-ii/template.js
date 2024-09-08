@@ -24,4 +24,4 @@
  * https://leetcode.com/problems/combination-sum-ii/
 */
 
-module.exports = combinationSum2;
+export default combinationSum2;

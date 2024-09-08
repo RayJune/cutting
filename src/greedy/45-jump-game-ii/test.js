@@ -1,6 +1,6 @@
-const jump = require('./index');
-// const jump = require('./template');
-// const jump = require('./template-zh');
+import jump from './index';
+// import jump from './template';
+// import jump from './template-zh';
 
 test('define jump function', () => {
     expect(typeof jump).toBe('function');

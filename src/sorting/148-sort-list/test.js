@@ -1,8 +1,8 @@
-// const sortList = require('./index');
-const sortList = require('./optimize');
-// // const sortList = require('./template');
-// // const sortList = require('./template-zh');
-const buildListNode = require('utils/buildListNode');
+// const sortList from './index';
+import sortList from './optimize';
+// import sortList from './template';
+// import sortList from './template-zh';
+import buildListNode from 'utils/buildListNode';
 
 test('define sortList function', () => {
     expect(typeof sortList).toBe('function');

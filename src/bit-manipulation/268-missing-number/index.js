@@ -48,4 +48,4 @@ function missingNumber(nums) {
     return targetNum;
 }
 
-module.exports = missingNumber;
+export default missingNumber;

@@ -55,4 +55,4 @@ function findPeakElement(nums) {
     return left;
 }
 
-module.exports = findPeakElement;
+export default findPeakElement;

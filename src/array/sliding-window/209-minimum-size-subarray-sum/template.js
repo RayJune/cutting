@@ -24,4 +24,4 @@
  * https://leetcode.com/problems/minimum-size-subarray-sum/
 */
 
-module.exports = minSubArrayLen;
+export default minSubArrayLen;

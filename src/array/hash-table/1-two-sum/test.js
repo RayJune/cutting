@@ -1,6 +1,6 @@
-const twoSum = require('./index');
-// const twoSum = require('./template');
-// const twoSum = require('./template-zh');
+import twoSum from './index';
+// import twoSum from './template';
+// import twoSum from './template-zh';
 
 test('define twoSum function', () => {
     expect(typeof twoSum).toBe('function');

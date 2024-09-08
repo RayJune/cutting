@@ -1,6 +1,6 @@
-const maxProfit = require('./index');
-// const maxProfit = require('./template');
-// const maxProfit = require('./template-zh');
+import maxProfit from './index';
+// import maxProfit from './template';
+// import maxProfit from './template-zh';
 
 test('define maxProfit function', () => {
     expect(typeof maxProfit).toBe('function');

@@ -65,4 +65,4 @@ function combinationSum2(candidates, target) {
     return combinations;
 }
 
-module.exports = combinationSum2;
+export default combinationSum2;

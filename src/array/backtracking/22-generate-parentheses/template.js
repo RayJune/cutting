@@ -17,4 +17,4 @@
  * https://leetcode.com/problems/generate-parentheses/
 */
 
-module.exports = generateParenthesis;
+export default generateParenthesis;

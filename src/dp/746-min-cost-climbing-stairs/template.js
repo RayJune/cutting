@@ -33,4 +33,4 @@
  * https://leetcode.com/problems/min-cost-climbing-stairs/
 */
 
-module.exports = minCostClimbingStairs;
+export default minCostClimbingStairs;

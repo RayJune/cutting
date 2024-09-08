@@ -29,4 +29,4 @@
  * }
  */
 
-module.exports = deleteDuplicates;
+export default deleteDuplicates;

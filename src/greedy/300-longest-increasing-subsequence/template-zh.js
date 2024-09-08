@@ -27,4 +27,4 @@
  * https://leetcode.cn/problems/longest-increasing-subsequence/
 */
 
-module.exports = lengthOfLIS;
+export default lengthOfLIS;

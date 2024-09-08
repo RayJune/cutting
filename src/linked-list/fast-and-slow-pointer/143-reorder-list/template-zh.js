@@ -31,4 +31,4 @@
  * }
  */
 
-module.exports = reorderList;
+export default reorderList;

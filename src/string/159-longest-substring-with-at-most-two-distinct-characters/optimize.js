@@ -67,4 +67,4 @@ function lengthOfLongestSubstringTwoDistinct(s) {
     return maxLen;
 }
 
-module.exports = lengthOfLongestSubstringTwoDistinct;
+export default lengthOfLongestSubstringTwoDistinct;

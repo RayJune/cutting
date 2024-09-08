@@ -30,4 +30,4 @@ function merge(left, right) {
     return sorted.concat(left, right);
 }
 
-module.exports = mergeSort;
+export default mergeSort;

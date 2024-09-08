@@ -1,6 +1,6 @@
-const isPalindrome = require('./index');
-// const isPalindrome = require('./template');
-// const isPalindrome = require('./template-zh');
+import isPalindrome from './index';
+// import isPalindrome from './template';
+// import isPalindrome from './template-zh';
 
 test('define isPalindrome function', () => {
     expect(typeof isPalindrome).toBe('function');

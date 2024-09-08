@@ -80,4 +80,4 @@ function addTwoNumbers(l1, l2) {
     return preHead.next;
 }
 
-module.exports = addTwoNumbers;
+export default addTwoNumbers;

@@ -1,7 +1,7 @@
-// const lengthOfLongestSubstringKDistinct = require('./index');
-const lengthOfLongestSubstringKDistinct = require('./optimize');
-// const lengthOfLongestSubstringKDistinct = require('./template');
-// const lengthOfLongestSubstringKDistinct = require('./template-zh');
+// import lengthOfLongestSubstringKDistinct from './index';
+import lengthOfLongestSubstringKDistinct from './optimize';
+// import lengthOfLongestSubstringKDistinct from './template';
+// import lengthOfLongestSubstringKDistinct from './template-zh';
 
 test('define lengthOfLongestSubstringKDistinct function', () => {
     expect(typeof lengthOfLongestSubstringKDistinct).toBe('function');

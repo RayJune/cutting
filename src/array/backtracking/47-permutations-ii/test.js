@@ -1,6 +1,6 @@
-const permuteUnique = require('./index');
-// const permuteUnique = require('./template');
-// const permuteUnique = require('./template-zh');
+import permuteUnique from './index';
+// import permuteUnique from './template';
+// import permuteUnique from './template-zh';
 
 test('define permuteUnique function', () => {
     expect(typeof permuteUnique).toBe('function');

@@ -73,4 +73,4 @@ function threeSumSmaller(nums, target) {
     return count;
 }
 
-module.exports = threeSumSmaller;
+export default threeSumSmaller;

@@ -51,4 +51,4 @@ function singleNumber(nums) {
     return result;
 }
 
-module.exports = singleNumber;
+export default singleNumber;

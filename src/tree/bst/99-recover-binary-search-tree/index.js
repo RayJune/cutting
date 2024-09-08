@@ -103,4 +103,4 @@ function swap(x, y) {
     y.val = temp;
 }
 
-module.exports = recoverTree;
+export default recoverTree;

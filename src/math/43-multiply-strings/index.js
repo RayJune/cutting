@@ -56,4 +56,4 @@ function multiply(num1, num2) {
     return result.length ? result.join('') : '0';
 }
 
-module.exports = multiply;
+export default multiply;

@@ -38,4 +38,4 @@
  * https://leetcode.com/problems/implement-queue-using-stacks/
 */
 
-module.exports = MyQueue;
+export default MyQueue;

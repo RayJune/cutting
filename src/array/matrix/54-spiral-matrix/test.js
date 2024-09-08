@@ -1,6 +1,6 @@
-const spiralOrder = require('./index');
-// // const spiralOrder = require('./template');
-// // const spiralOrder = require('./template-zh');
+import spiralOrder from './index';
+// import spiralOrder from './template';
+// import spiralOrder from './template-zh';
 
 test('define spiralOrder function', () => {
     expect(typeof spiralOrder).toBe('function');

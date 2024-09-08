@@ -31,4 +31,4 @@
  * }
  */
 
-module.exports = pathSum;
+export default pathSum;

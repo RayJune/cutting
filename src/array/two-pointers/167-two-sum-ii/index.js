@@ -65,4 +65,4 @@ function twoSum(numbers, target) {
     return [];
 }
 
-module.exports = twoSum;
+export default twoSum;

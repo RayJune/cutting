@@ -1,8 +1,8 @@
-// const isPowerOfFour = require('./index');
-// const isPowerOfFour = require('./optimize');
-const isPowerOfFour = require('./regex');
-// const isPowerOfFour = require('./template');
-// const isPowerOfFour = require('./template-zh');
+// import isPowerOfFour from './index';
+// import isPowerOfFour from './optimize';
+import isPowerOfFour from './regex';
+// import isPowerOfFour from './template';
+// import isPowerOfFour from './template-zh';
 
 test('define isPowerOfFour function', () => {
     expect(typeof isPowerOfFour).toBe('function');

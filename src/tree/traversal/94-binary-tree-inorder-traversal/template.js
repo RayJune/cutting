@@ -39,4 +39,4 @@
  * }
  */
 
-module.exports = inorderTraversal;
+export default inorderTraversal;

@@ -75,4 +75,4 @@ function maxDepth(root) {
     return depth;
 }
 
-module.exports = maxDepth;
+export default maxDepth;

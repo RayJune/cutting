@@ -1,6 +1,6 @@
-const NumArray = require('./index');
-// const NumArray = require('./template');
-// const NumArray = require('./template-zh');
+import NumArray from './index';
+// import NumArray from './template';
+// import NumArray from './template-zh';
 
 test('define NumArray class', () => {
     expect(typeof NumArray).toBe('function');

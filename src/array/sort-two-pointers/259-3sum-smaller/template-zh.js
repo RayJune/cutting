@@ -33,4 +33,4 @@
  * https://leetcode.cn/problems/3sum-smaller/
 */
 
-module.exports = threeSumSmaller;
+export default threeSumSmaller;

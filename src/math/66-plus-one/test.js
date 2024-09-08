@@ -1,6 +1,6 @@
-const plusOne = require('./index');
-// const plusOne = require('./template');
-// const plusOne = require('./template-zh');
+import plusOne from './index';
+// import plusOne from './template';
+// import plusOne from './template-zh';
 
 test('define plusOne function', () => {
     expect(typeof plusOne).toBe('function');

@@ -28,4 +28,4 @@
  * https://leetcode.cn/problems/find-pivot-index/
 */
 
-module.exports = pivotIndex;
+export default pivotIndex;

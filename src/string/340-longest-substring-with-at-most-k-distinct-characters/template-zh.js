@@ -24,4 +24,4 @@
  * https://leetcode.cn/problems/longest-substring-with-at-most-k-distinct-characters/
 */
 
-module.exports = lengthOfLongestSubstringKDistinct;
+export default lengthOfLongestSubstringKDistinct;

@@ -52,4 +52,4 @@ function rob(nums) {
     return max;
 }
 
-module.exports = rob;
+export default rob;

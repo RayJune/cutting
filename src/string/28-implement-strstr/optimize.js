@@ -77,4 +77,4 @@ function strStr(haystack, needle) {
     return -1;
 }
 
-module.exports = strStr;
+export default strStr;

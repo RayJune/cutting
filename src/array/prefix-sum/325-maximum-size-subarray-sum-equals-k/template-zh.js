@@ -19,4 +19,4 @@
  * https://leetcode.cn/problems/maximum-size-subarray-sum-equals-k/
 */
 
-module.exports = maxSubArrayLen;
+export default maxSubArrayLen;

@@ -39,4 +39,4 @@
  * https://leetcode.cn/problems/minimum-cost-for-tickets/
 */
 
-module.exports = mincostTickets;
+export default mincostTickets;

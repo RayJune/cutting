@@ -37,7 +37,7 @@
  * https://leetcode.com/problems/guess-number-higher-or-lower/
 */
 
-const guess = require('./guess');
+import guess from './guess';
 
 /**
  * Binary Search
@@ -67,4 +67,4 @@ function guessNumber(n) {
     }
 }
 
-module.exports = guessNumber;
+export default guessNumber;

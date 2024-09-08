@@ -1,7 +1,7 @@
-// const subsets = require('./index');
-const subsets = require('./optimize');
-// const subsets = require('./template');
-// const subsets = require('./template-zh');
+// import subsets from './index';
+import subsets from './optimize';
+// import subsets from './template';
+// import subsets from './template-zh';
 
 test('define subsets function', () => {
     expect(typeof subsets).toBe('function');

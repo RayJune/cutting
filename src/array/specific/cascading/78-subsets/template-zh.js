@@ -21,4 +21,4 @@
  * https://leetcode.cn/problems/subsets/
 */
 
-module.exports = subsets;
+export default subsets;

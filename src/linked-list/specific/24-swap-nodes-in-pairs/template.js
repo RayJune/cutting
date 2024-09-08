@@ -31,4 +31,4 @@
  * }
  */
 
-module.exports = swapPairs;
+export default swapPairs;

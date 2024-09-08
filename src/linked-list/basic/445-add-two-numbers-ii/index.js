@@ -98,4 +98,4 @@ function reverseList(head) {
     return prevNode;
 }
 
-module.exports = addTwoNumbers;
+export default addTwoNumbers;

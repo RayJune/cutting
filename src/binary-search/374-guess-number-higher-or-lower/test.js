@@ -1,7 +1,7 @@
-const guessNumber = require('./index');
-// const guessNumber = require('./template');
-// const guessNumber = require('./template-zh');
-const guess = require('./guess');
+import guessNumber from './index';
+// import guessNumber from './template';
+// import guessNumber from './template-zh';
+import guess from './guess';
 
 test('define guessNumber function', () => {
     expect(typeof guessNumber).toBe('function');

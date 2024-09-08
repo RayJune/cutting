@@ -98,4 +98,4 @@ function fourSum(nums, target) {
     return quadruplets;
 }
 
-module.exports = fourSum;
+export default fourSum;

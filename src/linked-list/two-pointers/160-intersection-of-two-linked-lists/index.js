@@ -66,4 +66,4 @@ function getIntersectionNode(headA, headB) {
     return null;
 }
 
-module.exports = getIntersectionNode;
+export default getIntersectionNode;

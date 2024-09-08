@@ -23,4 +23,4 @@
  * https://leetcode.com/problems/contains-duplicate-ii/
 */
 
-module.exports = containsNearbyDuplicate;
+export default containsNearbyDuplicate;

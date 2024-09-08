@@ -1,6 +1,6 @@
-const containsDuplicate = require('./index');
-// const containsDuplicate = require('./template');
-// const containsDuplicate = require('./template-zh');
+import containsDuplicate from './index';
+// import containsDuplicate from './template';
+// import containsDuplicate from './template-zh';
 
 test('define containsDuplicate function', () => {
     expect(typeof containsDuplicate).toBe('function');

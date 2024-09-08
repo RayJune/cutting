@@ -65,4 +65,4 @@ function isSameTree(p, q) {
     return true;
 }
 
-module.exports = isSameTree;
+export default isSameTree;

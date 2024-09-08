@@ -79,4 +79,4 @@ function sortedListToBST(head) {
     return convertListToBST(0, size - 1);
 }
 
-module.exports = sortedListToBST;
+export default sortedListToBST;

@@ -60,4 +60,4 @@ function isValidBST(root, low = -Infinity, high = Infinity) {
     return isValidBST(left, low, val) && isValidBST(right, val, high);
 }
 
-module.exports = isValidBST;
+export default isValidBST;

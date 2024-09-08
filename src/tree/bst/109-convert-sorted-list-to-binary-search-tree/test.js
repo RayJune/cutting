@@ -1,9 +1,9 @@
-// const sortedListToBST = require('./index');
-const sortedListToBST = require('./optimize');
-// const sortedListToBST = require('./template');
-// const sortedListToBST = require('./template-zh');
-const buildListNode = require('utils/buildListNode');
-const buildBinaryTree = require('utils/buildBinaryTree');
+// import sortedListToBST from './index';
+import sortedListToBST from './optimize';
+// import sortedListToBST from './template';
+// import sortedListToBST from './template-zh';
+import buildListNode from 'utils/buildListNode';
+import buildBinaryTree from 'utils/buildBinaryTree';
 
 test('define sortedListToBST function', () => {
     expect(typeof sortedListToBST).toBe('function');

@@ -1,6 +1,6 @@
-const WordDictionary = require('./index');
-// const WordDictionary = require('./template');
-// const WordDictionary = require('./template-zh');
+import WordDictionary from './index';
+// import WordDictionary from './template';
+// import WordDictionary from './template-zh';
 
 test('define WordDictionary class', () => {
     expect(typeof WordDictionary).toBe('function');

@@ -1,6 +1,6 @@
-const subarraysDivByK = require('./index');
-// const subarraysDivByK = require('./template');
-// const subarraysDivByK = require('./template-zh');
+import subarraysDivByK from './index';
+// import subarraysDivByK from './template';
+// import subarraysDivByK from './template-zh';
 
 test('define subarraysDivByK function', () => {
     expect(typeof subarraysDivByK).toBe('function');

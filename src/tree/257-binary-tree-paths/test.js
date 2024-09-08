@@ -1,9 +1,9 @@
-const binaryTreePaths = require('./index');
-// const binaryTreePaths = require('./iterate');
-// const binaryTreePaths = require('./iterate2');
-// const binaryTreePaths = require('./template');
-// const binaryTreePaths = require('./template-zh');
-const buildBinaryTree = require('utils/buildBinaryTree');
+import binaryTreePaths from './index';
+// import binaryTreePaths from './iterate';
+// import binaryTreePaths from './iterate2';
+// import binaryTreePaths from './template';
+// import binaryTreePaths from './template-zh';
+import buildBinaryTree from 'utils/buildBinaryTree';
 
 test('define binaryTreePaths function', () => {
     expect(typeof binaryTreePaths).toBe('function');

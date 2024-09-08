@@ -61,4 +61,4 @@ function detectCycle(head) {
     return null;
 }
 
-module.exports = detectCycle;
+export default detectCycle;

@@ -44,4 +44,4 @@ function singleNumber(nums) {
     return seenOnce;
 }
 
-module.exports = singleNumber;
+export default singleNumber;

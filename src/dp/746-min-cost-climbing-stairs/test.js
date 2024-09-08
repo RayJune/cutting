@@ -1,7 +1,7 @@
-// const minCostClimbingStairs = require('./index');
-const minCostClimbingStairs = require('./optimize');
-// const minCostClimbingStairs = require('./template');
-// const minCostClimbingStairs = require('./template-zh');
+// import minCostClimbingStairs from './index';
+import minCostClimbingStairs from './optimize';
+// import minCostClimbingStairs from './template';
+// import minCostClimbingStairs from './template-zh';
 
 test('define minCostClimbingStairs function', () => {
     expect(typeof minCostClimbingStairs).toBe('function');

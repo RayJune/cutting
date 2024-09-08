@@ -47,4 +47,4 @@ function judgeSquareSum(c) {
     return false;
 }
 
-module.exports = judgeSquareSum;
+export default judgeSquareSum;

@@ -1,6 +1,6 @@
-const mincostTickets = require('./index');
-// const mincostTickets = require('./template');
-// const mincostTickets = require('./template-zh');
+import mincostTickets from './index';
+// import mincostTickets from './template';
+// import mincostTickets from './template-zh';
 
 test('define mincostTickets function', () => {
     expect(typeof mincostTickets).toBe('function');

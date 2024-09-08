@@ -27,4 +27,4 @@
  * https://leetcode.cn/problems/longest-palindromic-substring/
 */
 
-module.exports = longestPalindrome;
+export default longestPalindrome;

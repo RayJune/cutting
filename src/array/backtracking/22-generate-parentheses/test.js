@@ -1,6 +1,6 @@
-const generateParenthesis = require('./index');
-// const generateParenthesis = require('./template');
-// const generateParenthesis = require('./template-zh');
+import generateParenthesis from './index';
+// import generateParenthesis from './template';
+// import generateParenthesis from './template-zh';
 
 test('define generateParenthesis function', () => {
     expect(typeof generateParenthesis).toBe('function');

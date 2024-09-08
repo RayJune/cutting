@@ -1,6 +1,6 @@
-const copyRandomList = require('./index');
-// const copyRandomList = require('./template');
-// const copyRandomList = require('./template-zh');
+import copyRandomList from './index';
+// import copyRandomList from './template';
+// import copyRandomList from './template-zh';
 
 class Node {
     constructor(val = undefined, next = null, random = null) {

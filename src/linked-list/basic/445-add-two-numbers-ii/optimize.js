@@ -87,4 +87,4 @@ function addTwoNumbers(l1, l2) {
     return head;
 }
 
-module.exports = addTwoNumbers;
+export default addTwoNumbers;

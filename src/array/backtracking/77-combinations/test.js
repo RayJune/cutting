@@ -1,7 +1,6 @@
-const combine = require('./index');
-// const combine = require('./template');
-// const combine = require('./template-zh');
-
+import combine from './index';
+// import combine from './template';
+// import combine from './template-zh';
 
 test('define combinationSum function', () => {
     expect(typeof combine).toBe('function');

@@ -1,6 +1,6 @@
-const generateMatrix = require('./index');
-// // const generateMatrix = require('./template');
-// // const generateMatrix = require('./template-zh');
+import generateMatrix from './index';
+// import generateMatrix from './template';
+// import generateMatrix from './template-zh';
 
 test('define generateMatrix function', () => {
     expect(typeof generateMatrix).toBe('function');

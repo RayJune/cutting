@@ -1,7 +1,7 @@
-// const climbStairs = require('./index');
-const climbStairs = require('./optimize');
-// const climbStairs = require('./template');
-// const climbStairs = require('./template-zh');
+// import climbStairs from './index';
+import climbStairs from './optimize';
+// import climbStairs from './template';
+// import climbStairs from './template-zh';
 
 test('define climbStairs function', () => {
     expect(typeof climbStairs).toBe('function');

@@ -65,4 +65,4 @@ function postorderTraversal(root, result = []) {
     return result;
 }
 
-module.exports = postorderTraversal;
+export default postorderTraversal;

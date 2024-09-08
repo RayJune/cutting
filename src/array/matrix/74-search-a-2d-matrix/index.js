@@ -56,4 +56,4 @@ function searchMatrix(matrix, target) {
     return false;
 }
 
-module.exports = searchMatrix;
+export default searchMatrix;

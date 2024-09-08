@@ -1,6 +1,6 @@
-const canJump = require('./index');
-// const canJump = require('./template');
-// const canJump = require('./template-zh');
+import canJump from './index';
+// import canJump from './template';
+// import canJump from './template-zh';
 
 test('define canJump function', () => {
     expect(typeof canJump).toBe('function');

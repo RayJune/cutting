@@ -64,4 +64,4 @@ function findMin(nums) {
     return nums[left];
 }
 
-module.exports = findMin;
+export default findMin;

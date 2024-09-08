@@ -74,4 +74,4 @@ function lengthOfLongestSubstring(s) {
     return maxLen;
 }
 
-module.exports = lengthOfLongestSubstring;
+export default lengthOfLongestSubstring;

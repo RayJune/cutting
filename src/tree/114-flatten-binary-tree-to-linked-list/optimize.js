@@ -67,4 +67,4 @@ function flatten(root) {
     }
 }
 
-module.exports = flatten;
+export default flatten;

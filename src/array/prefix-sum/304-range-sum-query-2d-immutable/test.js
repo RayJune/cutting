@@ -1,7 +1,7 @@
-// const NumMatrix = require('./index');
-const NumMatrix = require('./optimize');
-// const NumMatrix = require('./template');
-// const NumMatrix = require('./template-zh');
+// import NumMatrix from './index';
+import NumMatrix from './optimize';
+// import NumMatrix from './template';
+// import NumMatrix from './template-zh';
 
 test('define NumMatrix class', () => {
     expect(typeof NumMatrix).toBe('function');

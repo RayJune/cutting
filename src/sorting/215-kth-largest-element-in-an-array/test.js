@@ -1,7 +1,7 @@
-// const findKthLargest = require('./index');
-const findKthLargest = require('./optimize');
-// // const findKthLargest = require('./template');
-// // const findKthLargest = require('./template-zh');
+// import findKthLargest from './index';
+import findKthLargest from './optimize';
+// import findKthLargest from './template';
+// import findKthLargest from './template-zh';
 
 test('define findKthLargest function', () => {
     expect(typeof findKthLargest).toBe('function');

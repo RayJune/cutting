@@ -33,4 +33,4 @@
  * https://leetcode.com/problems/permutation-sequence/
 */
 
-module.exports = getPermutation;
+export default getPermutation;

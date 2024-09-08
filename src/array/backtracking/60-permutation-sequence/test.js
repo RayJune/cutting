@@ -1,8 +1,8 @@
-// const getPermutation = require('./index');
-// const getPermutation = require('./optimize');
-const getPermutation = require('./optimize2');
-// const getPermutation = require('./template');
-// const getPermutation = require('./template-zh');
+// import getPermutation from './index';
+// import getPermutation from './optimize';
+import getPermutation from './optimize2';
+// import getPermutation from './template';
+// import getPermutation from './template-zh';
 
 test('define permute function', () => {
     expect(typeof getPermutation).toBe('function');

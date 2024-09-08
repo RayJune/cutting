@@ -56,4 +56,4 @@ function permute(nums) {
     return permutations;
 }
 
-module.exports = permute;
+export default permute;

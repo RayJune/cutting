@@ -1,6 +1,6 @@
-const findClosestElements = require('./index');
-// const findClosestElements = require('./template');
-// const findClosestElements = require('./template-zh');
+import findClosestElements from './index';
+// import findClosestElements from './template';
+// import findClosestElements from './template-zh';
 
 test('define findClosestElements function', () => {
     expect(typeof findClosestElements).toBe('function');

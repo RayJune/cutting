@@ -26,4 +26,4 @@
  * https://leetcode.cn/problems/missing-number/
 */
 
-module.exports = missingNumber;
+export default missingNumber;

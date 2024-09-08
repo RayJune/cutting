@@ -56,4 +56,4 @@ function sortedSquares(nums) {
     return squares.reverse();
 }
 
-module.exports = sortedSquares;
+export default sortedSquares;

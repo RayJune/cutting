@@ -1,6 +1,6 @@
-const restoreIpAddresses = require('./index');
-// const restoreIpAddresses = require('./template');
-// const restoreIpAddresses = require('./template-zh');
+import restoreIpAddresses from './index';
+// import restoreIpAddresses from './template';
+// import restoreIpAddresses from './template-zh';
 
 test('define restoreIpAddresses function', () => {
     expect(typeof restoreIpAddresses).toBe('function');

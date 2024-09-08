@@ -62,4 +62,4 @@ function reverse(nums, start, end) {
     }
 }
 
-module.exports = rotate;
+export default rotate;

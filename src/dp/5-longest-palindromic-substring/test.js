@@ -1,7 +1,7 @@
-// const longestPalindrome = require('./index');
-const longestPalindrome = require('./optimize');
-// const longestPalindrome = require('./template');
-// const longestPalindrome = require('./template-zh');
+// import longestPalindrome from './index';
+import longestPalindrome from './optimize';
+// import longestPalindrome from './template';
+// import longestPalindrome from './template-zh';
 
 test('define longestPalindrome function', () => {
     expect(typeof longestPalindrome).toBe('function');

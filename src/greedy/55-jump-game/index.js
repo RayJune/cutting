@@ -45,4 +45,4 @@ function canJump(nums) {
     return false;
 }
 
-module.exports = canJump;
+export default canJump;

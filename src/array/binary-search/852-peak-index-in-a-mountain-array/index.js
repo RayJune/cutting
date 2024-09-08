@@ -61,4 +61,4 @@ function peakIndexInMountainArray(arr) {
     return i;
 }
 
-module.exports = peakIndexInMountainArray;
+export default peakIndexInMountainArray;

@@ -36,4 +36,4 @@
  * }
  */
 
-module.exports = hasCycle;
+export default hasCycle;

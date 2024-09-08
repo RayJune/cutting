@@ -28,4 +28,4 @@
  * }
  */
 
-module.exports = middleNode;
+export default middleNode;

@@ -76,4 +76,4 @@ function binarySearch(nums, target, lower) {
     return i;
 }
 
-module.exports = searchRange;
+export default searchRange;

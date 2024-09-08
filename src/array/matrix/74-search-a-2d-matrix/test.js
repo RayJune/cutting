@@ -1,6 +1,6 @@
-const searchMatrix = require('./index');
-// const searchMatrix = require('./template');
-// const searchMatrix = require('./template-zh');
+import searchMatrix from './index';
+// import searchMatrix from './template';
+// import searchMatrix from './template-zh';
 
 test('define searchMatrix function', () => {
     expect(typeof searchMatrix).toBe('function');

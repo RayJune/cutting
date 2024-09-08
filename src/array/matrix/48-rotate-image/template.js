@@ -21,4 +21,4 @@
  * https://leetcode.com/problems/rotate-image/
 */
 
-module.exports = rotate;
+export default rotate;

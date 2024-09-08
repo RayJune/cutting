@@ -30,4 +30,4 @@
  * }
  */
 
-module.exports = sortedListToBST;
+export default sortedListToBST;

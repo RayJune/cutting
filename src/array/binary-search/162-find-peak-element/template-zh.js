@@ -27,4 +27,4 @@
  * https://leetcode.cn/problems/find-peak-element/
 */
 
-module.exports = findPeakElement;
+export default findPeakElement;

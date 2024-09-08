@@ -34,4 +34,4 @@
  * https://leetcode.com/problems/restore-ip-addresses/
 */
 
-module.exports = restoreIpAddresses;
+export default restoreIpAddresses;

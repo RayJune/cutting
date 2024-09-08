@@ -25,4 +25,4 @@
  * https://leetcode.com/problems/remove-element/
 */
 
-module.exports = removeElement;
+export default removeElement;

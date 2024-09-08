@@ -1,6 +1,6 @@
-const reverseWords = require('./index');
-// const reverseWords = require('./template');
-// const reverseWords = require('./template-zh');
+import reverseWords from './index';
+// import reverseWords from './template';
+// import reverseWords from './template-zh';
 
 test('define reverseWords function', () => {
     expect(typeof reverseWords).toBe('function');

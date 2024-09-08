@@ -1,6 +1,6 @@
-const change = require('./index');
-// const change = require('./template');
-// const change = require('./template-zh');
+import change from './index';
+// import change from './template';
+// import change from './template-zh';
 
 test('define change function', () => {
     expect(typeof change).toBe('function');

@@ -1,6 +1,6 @@
-const isPerfectSquare = require('./index');
-// const isPerfectSquare = require('./template');
-// const isPerfectSquare = require('./template-zh');
+import isPerfectSquare from './index';
+// import isPerfectSquare from './template';
+// import isPerfectSquare from './template-zh';
 
 test('define isPerfectSquare function', () => {
     expect(typeof isPerfectSquare).toBe('function');

@@ -1,6 +1,6 @@
-const twoSumLessThanK = require('./index');
-// const twoSumLessThanK = require('./template');
-// const twoSumLessThanK = require('./template-zh');
+import twoSumLessThanK from './index';
+// import twoSumLessThanK from './template';
+// import twoSumLessThanK from './template-zh';
 
 test('define twoSumLessThanK function', () => {
     expect(typeof twoSumLessThanK).toBe('function');

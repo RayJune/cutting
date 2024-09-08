@@ -1,9 +1,9 @@
-// const preorderTraversal = require('./index');
-const preorderTraversal = require('./iterate');
-// const preorderTraversal = require('./optimize');
-// const preorderTraversal = require('./template');
-// const preorderTraversal = require('./template-zh');
-const buildBinaryTree = require('utils/buildBinaryTree');
+// import preorderTraversal from './index';
+import preorderTraversal from './iterate';
+// import preorderTraversal from './optimize';
+// import preorderTraversal from './template';
+// import preorderTraversal from './template-zh';
+import buildBinaryTree from 'utils/buildBinaryTree';
 
 test('define preorderTraversal function', () => {
     expect(typeof preorderTraversal).toBe('function');

@@ -63,4 +63,4 @@ function change(amount, coins) {
     return dp[amount];
 }
 
-module.exports = change;
+export default change;

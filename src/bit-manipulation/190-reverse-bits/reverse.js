@@ -36,4 +36,4 @@ function reverseBits(n) {
         .join(''), 2);
 }
 
-module.exports = reverseBits;
+export default reverseBits;

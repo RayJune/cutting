@@ -1,9 +1,9 @@
-const inorderTraversal = require('./index');
-// const inorderTraversal = require('./iterate');
-// const inorderTraversal = require('./optimize');
-// const inorderTraversal = require('./template');
-// const inorderTraversal = require('./template-zh');
-const buildBinaryTree = require('utils/buildBinaryTree');
+import inorderTraversal from './index';
+// import inorderTraversal from './iterate';
+// import inorderTraversal from './optimize';
+// import inorderTraversal from './template';
+// import inorderTraversal from './template-zh';
+import buildBinaryTree from 'utils/buildBinaryTree';
 
 test('define inorderTraversal function', () => {
     expect(typeof inorderTraversal).toBe('function');

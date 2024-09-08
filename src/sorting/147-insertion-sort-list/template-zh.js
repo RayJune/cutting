@@ -37,4 +37,4 @@
  * }
  */
 
-module.exports = insertionSortList;
+export default insertionSortList;

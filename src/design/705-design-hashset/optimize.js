@@ -130,4 +130,4 @@ class MyHashSet {
     }
 }
 
-module.exports = MyHashSet;
+export default MyHashSet;

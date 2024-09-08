@@ -76,4 +76,4 @@ function reverse(arr, start) {
     }
 }
 
-module.exports = nextPermutation;
+export default nextPermutation;

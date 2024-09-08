@@ -1,6 +1,6 @@
-const minMeetingRooms = require('./index');
-// // const minMeetingRooms = require('./template');
-// // const minMeetingRooms = require('./template-zh');
+import minMeetingRooms from './index';
+// import minMeetingRooms from './template';
+// import minMeetingRooms from './template-zh';
 
 test('define minMeetingRooms function', () => {
     expect(typeof minMeetingRooms).toBe('function');

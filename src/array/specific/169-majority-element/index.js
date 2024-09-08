@@ -45,4 +45,4 @@ function majorityElement(nums) {
     return majority;
 }
 
-module.exports = majorityElement;
+export default majorityElement;

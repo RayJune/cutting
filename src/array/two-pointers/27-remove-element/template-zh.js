@@ -23,4 +23,4 @@
  * https://leetcode.cn/problems/remove-element/
 */
 
-module.exports = removeElement;
+export default removeElement;

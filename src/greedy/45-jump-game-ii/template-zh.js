@@ -24,4 +24,4 @@
  * https://leetcode.cn/problems/jump-game-ii/
 */
 
-module.exports = jump;
+export default jump;

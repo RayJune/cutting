@@ -1,7 +1,7 @@
-// const repeatedSubstringPattern = require('./index');
-const repeatedSubstringPattern = require('./optimize');
-// const repeatedSubstringPattern = require('./template');
-// const repeatedSubstringPattern = require('./template-zh');
+// import repeatedSubstringPattern from './index';
+import repeatedSubstringPattern from './optimize';
+// import repeatedSubstringPattern from './template';
+// import repeatedSubstringPattern from './template-zh';
 
 test('define repeatedSubstringPattern function', () => {
     expect(typeof repeatedSubstringPattern).toBe('function');

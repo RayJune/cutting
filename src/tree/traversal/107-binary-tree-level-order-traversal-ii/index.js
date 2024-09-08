@@ -84,4 +84,4 @@ function levelOrderBottom(root) {
     return result;
 }
 
-module.exports = levelOrderBottom;
+export default levelOrderBottom;

@@ -69,4 +69,4 @@ function reverseBetween(head, left, right) {
     return preHead.next;
 }
 
-module.exports = reverseBetween;
+export default reverseBetween;

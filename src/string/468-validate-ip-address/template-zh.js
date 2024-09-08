@@ -49,4 +49,4 @@
  * https://leetcode.cn/problems/validate-ip-address/
 */
 
-module.exports = validIPAddress;
+export default validIPAddress;

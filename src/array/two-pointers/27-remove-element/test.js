@@ -1,7 +1,7 @@
-// const removeElement = require('./index');
-const removeElement = require('./optimize');
-// const removeElement = require('./template');
-// const removeElement = require('./template-zh');
+// import removeElement from './index';
+import removeElement from './optimize';
+// import removeElement from './template';
+// import removeElement from './template-zh';
 
 test('define removeElement function', () => {
     expect(typeof removeElement).toBe('function');

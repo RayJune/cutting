@@ -35,4 +35,4 @@
  * https://leetcode.cn/problems/design-add-and-search-words-data-structure/
 */
 
-module.exports = WordDictionary;
+export default WordDictionary;

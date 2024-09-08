@@ -32,4 +32,4 @@
  * }
  */
 
-module.exports = levelOrderBottom;
+export default levelOrderBottom;

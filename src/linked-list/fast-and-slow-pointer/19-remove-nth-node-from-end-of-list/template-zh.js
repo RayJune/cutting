@@ -32,4 +32,4 @@
  * }
  */
 
-module.exports = removeNthFromEnd;
+export default removeNthFromEnd;

@@ -27,4 +27,4 @@
  * https://leetcode.cn/problems/coin-change-2/
 */
 
-module.exports = change;
+export default change;

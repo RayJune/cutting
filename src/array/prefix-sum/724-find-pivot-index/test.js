@@ -1,6 +1,6 @@
-const pivotIndex = require('./index');
-// const pivotIndex = require('./template');
-// const pivotIndex = require('./template-zh');
+import pivotIndex from './index';
+// import pivotIndex from './template';
+// import pivotIndex from './template-zh';
 
 test('define pivotIndex function', () => {
     expect(typeof pivotIndex).toBe('function');

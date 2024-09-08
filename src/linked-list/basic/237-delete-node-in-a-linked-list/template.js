@@ -44,4 +44,4 @@
  * }
  */
 
-module.exports = deleteNode;
+export default deleteNode;

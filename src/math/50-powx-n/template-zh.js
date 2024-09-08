@@ -24,4 +24,4 @@
  * https://leetcode.cn/problems/powx-n/
 */
 
-module.exports = myPow;
+export default myPow;

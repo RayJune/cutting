@@ -36,4 +36,4 @@
  * }
  */
 
-module.exports = getIntersectionNode;
+export default getIntersectionNode;

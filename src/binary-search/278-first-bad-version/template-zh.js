@@ -25,4 +25,4 @@
  * https://leetcode.cn/problems/first-bad-version/
 */
 
-module.exports = solution;
+export default solution;

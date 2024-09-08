@@ -1,6 +1,6 @@
-const deleteNode = require('./index');
-// const deleteNode = require('./template');
-// const deleteNode = require('./template-zh');
+import deleteNode from './index';
+// import deleteNode from './template';
+// import deleteNode from './template-zh';
 
 class ListNode {
     constructor(val = undefined, next = null) {

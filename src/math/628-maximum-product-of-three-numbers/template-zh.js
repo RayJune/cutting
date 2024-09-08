@@ -22,4 +22,4 @@
  * https://leetcode.cn/problems/maximum-product-of-three-numbers/
 */
 
-module.exports = maximumProduct;
+export default maximumProduct;

@@ -57,4 +57,4 @@ function searchInsert(nums, target) {
     return left;
 }
 
-module.exports = searchInsert;
+export default searchInsert;

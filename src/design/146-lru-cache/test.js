@@ -1,7 +1,7 @@
-const LRUCache = require('./index');
-// const LRUCache = require('./linked-hashmap');
-// const LRUCache = require('./template');
-// const LRUCache = require('./template-zh');
+import LRUCache from './index';
+// import LRUCache = require('./linked-hashmap');
+// import LRUCache from './template';
+// import LRUCache from './template-zh';
 
 test('define LRUCache function', () => {
     expect(typeof LRUCache).toBe('function');

@@ -20,4 +20,4 @@
  * https://leetcode.cn/problems/longest-continuous-increasing-subsequence/
 */
 
-module.exports = findLengthOfLCIS;
+export default findLengthOfLCIS;

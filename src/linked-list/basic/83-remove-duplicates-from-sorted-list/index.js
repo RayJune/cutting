@@ -53,4 +53,4 @@ function deleteDuplicates(head) {
     return head;
 }
 
-module.exports = deleteDuplicates;
+export default deleteDuplicates;

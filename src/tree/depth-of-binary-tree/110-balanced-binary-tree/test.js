@@ -1,8 +1,8 @@
-// const isBalanced = require('./index');
-const isBalanced = require('./optimize');
-// const isBalanced = require('./template');
-// const isBalanced = require('./template-zh');
-const buildBinaryTree = require('utils/buildBinaryTree');
+// import isBalanced from './index';
+import isBalanced from './optimize';
+// import isBalanced from './template';
+// import isBalanced from './template-zh';
+import buildBinaryTree from 'utils/buildBinaryTree';
 
 test('define isBalanced function', () => {
     expect(typeof isBalanced).toBe('function');

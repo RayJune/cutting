@@ -1,4 +1,4 @@
-const quickSort = require('./index');
+import quickSort from './index';
 
 test('define quickSort function', () => {
     expect(typeof quickSort).toBe('function');

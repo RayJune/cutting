@@ -54,4 +54,4 @@ function findClosestElements(arr, k, x) {
     return arr.slice(left, left + k);
 }
 
-module.exports = findClosestElements;
+export default findClosestElements;

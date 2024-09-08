@@ -62,4 +62,4 @@ function rob(root) {
     return Math.max(rootSum[0], rootSum[1]);
 }
 
-module.exports = rob;
+export default rob;

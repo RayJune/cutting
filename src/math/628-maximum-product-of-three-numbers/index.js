@@ -61,4 +61,4 @@ function maximumProduct(nums) {
     return Math.max(min1 * min2 * max1, max1 * max2 * max3);
 }
 
-module.exports = maximumProduct;
+export default maximumProduct;

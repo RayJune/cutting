@@ -65,4 +65,4 @@ function coinChange(coins, amount) {
     return dp[amount] === Infinity ? -1 : dp[amount];
 }
 
-module.exports = coinChange;
+export default coinChange;

@@ -69,4 +69,4 @@ function isPalindrome(s) {
     return true;
 }
 
-module.exports = isPalindrome;
+export default isPalindrome;

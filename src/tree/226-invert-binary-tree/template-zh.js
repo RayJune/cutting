@@ -36,4 +36,4 @@
  * }
  */
 
-module.exports = invertTree;
+export default invertTree;

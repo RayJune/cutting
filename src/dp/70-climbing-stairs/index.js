@@ -46,4 +46,4 @@ function climbStairs(n) {
     return dp[n];
 }
 
-module.exports = climbStairs;
+export default climbStairs;

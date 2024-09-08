@@ -32,4 +32,4 @@
  * https://leetcode.com/problems/next-permutation/
 */
 
-module.exports = nextPermutation;
+export default nextPermutation;

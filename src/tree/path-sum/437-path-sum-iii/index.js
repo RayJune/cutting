@@ -71,4 +71,4 @@ function pathSum(root, targetSum) {
     return helper(root, 0);
 }
 
-module.exports = pathSum;
+export default pathSum;

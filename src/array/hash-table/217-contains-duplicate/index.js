@@ -49,5 +49,5 @@ function containsDuplicate(nums) {
     return false;
 }
 
-module.exports = containsDuplicate;
+export default containsDuplicate;
 

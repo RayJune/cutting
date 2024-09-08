@@ -79,4 +79,4 @@ function threeSumClosest(nums, target) {
     return closest;
 }
 
-module.exports = threeSumClosest;
+export default threeSumClosest;

@@ -1,8 +1,8 @@
-// const buildTree = require('./index');
-const buildTree = require('./optimize');
-// const buildTree = require('./template');
-// const buildTree = require('./template-zh');
-const buildBinaryTree = require('utils/buildBinaryTree');
+// import buildTree from './index';
+import buildTree from './optimize';
+// import buildTree from './template';
+// import buildTree from './template-zh';
+import buildBinaryTree from 'utils/buildBinaryTree';
 
 test('define buildTree function', () => {
     expect(typeof buildTree).toBe('function');

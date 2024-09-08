@@ -43,4 +43,4 @@ function hammingWeight(n) {
     return count;
 }
 
-module.exports = hammingWeight;
+export default hammingWeight;

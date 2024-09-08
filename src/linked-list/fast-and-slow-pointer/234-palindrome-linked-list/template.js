@@ -26,4 +26,4 @@
  * }
  */
 
-module.exports = isPalindrome;
+export default isPalindrome;

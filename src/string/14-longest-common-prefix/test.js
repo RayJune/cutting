@@ -1,7 +1,7 @@
-// const longestCommonPrefix = require('./index');
-const longestCommonPrefix = require('./optimize');
-// const longestCommonPrefix = require('./template');
-// const longestCommonPrefix = require('./template-zh');
+// import longestCommonPrefix from './index';
+import longestCommonPrefix from './optimize';
+// import longestCommonPrefix from './template';
+// import longestCommonPrefix from './template-zh';
 
 test('define longestCommonPrefix function', () => {
     expect(typeof longestCommonPrefix).toBe('function');

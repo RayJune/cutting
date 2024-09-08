@@ -1,6 +1,6 @@
-const maxSubArray = require('./index');
-// const maxSubArray = require('./template');
-// const maxSubArray = require('./template-zh');
+import maxSubArray from './index';
+// import maxSubArray from './template';
+// import maxSubArray from './template-zh';
 
 test('define maxSubArray function', () => {
     expect(typeof maxSubArray).toBe('function');

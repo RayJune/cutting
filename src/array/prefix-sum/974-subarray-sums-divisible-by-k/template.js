@@ -17,4 +17,4 @@
  * https://leetcode.com/problems/subarray-sums-divisible-by-k/
  */
 
-module.exports = subarraysDivByK;
+export default subarraysDivByK;

@@ -26,4 +26,4 @@
  * https://leetcode.com/problems/climbing-stairs/
 */
 
-module.exports = climbStairs;
+export default climbStairs;

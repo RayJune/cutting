@@ -1,8 +1,8 @@
-// const addBinary = require('./index');
-const addBinary = require('./optimize');
-// const addBinary = require('./bit');
-// const addBinary = require('./template');
-// const addBinary = require('./template-zh');
+// import addBinary from './index';
+import addBinary from './optimize';
+// import addBinary = require('./bit');
+// import addBinary from './template';
+// import addBinary from './template-zh';
 
 test('define addBinary function', () => {
     expect(typeof addBinary).toBe('function');

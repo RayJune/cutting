@@ -53,4 +53,4 @@ function isSymmetric(root) {
     return helper(root.left, root.right);
 }
 
-module.exports = isSymmetric;
+export default isSymmetric;

@@ -19,4 +19,4 @@
  * https://leetcode.cn/problems/number-of-longest-increasing-subsequence/
 */
 
-module.exports = findNumberOfLIS;
+export default findNumberOfLIS;

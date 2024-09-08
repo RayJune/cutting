@@ -28,4 +28,4 @@
  * https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 */
 
-module.exports = searchRange;
+export default searchRange;

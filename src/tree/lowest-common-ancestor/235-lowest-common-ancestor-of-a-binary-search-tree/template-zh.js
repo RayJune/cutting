@@ -39,4 +39,4 @@
  * }
  */
 
-module.exports = lowestCommonAncestor;
+export default lowestCommonAncestor;

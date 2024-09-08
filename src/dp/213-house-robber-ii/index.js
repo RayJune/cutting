@@ -68,4 +68,4 @@ function robHelper(nums, start) {
     return max;
 }
 
-module.exports = rob;
+export default rob;

@@ -29,4 +29,4 @@
  * }
  */
 
-module.exports = partition;
+export default partition;

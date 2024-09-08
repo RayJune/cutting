@@ -60,4 +60,4 @@ function findNumberOfLIS(nums) {
     return count;
 }
 
-module.exports = findNumberOfLIS;
+export default findNumberOfLIS;

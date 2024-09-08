@@ -54,4 +54,4 @@ function permuteUnique(nums) {
     return permutations;
 }
 
-module.exports = permuteUnique;
+export default permuteUnique;

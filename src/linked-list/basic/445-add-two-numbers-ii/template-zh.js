@@ -34,4 +34,4 @@
  * }
  */
 
-module.exports = addTwoNumbers;
+export default addTwoNumbers;

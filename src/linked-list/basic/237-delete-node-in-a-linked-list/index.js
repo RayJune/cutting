@@ -57,4 +57,4 @@ function deleteNode(node) {
     node.next = node.next.next;
 }
 
-module.exports = deleteNode;
+export default deleteNode;

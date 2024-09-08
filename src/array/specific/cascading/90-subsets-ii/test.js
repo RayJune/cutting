@@ -1,7 +1,7 @@
-// const subsetsWithDup = require('./index');
-const subsetsWithDup = require('./optimize');
-// const subsetsWithDup = require('./template');
-// const subsetsWithDup = require('./template-zh');
+// import subsetsWithDup from './index';
+import subsetsWithDup from './optimize';
+// import subsetsWithDup from './template';
+// import subsetsWithDup from './template-zh';
 
 test('define subsetsWithDup function', () => {
     expect(typeof subsetsWithDup).toBe('function');

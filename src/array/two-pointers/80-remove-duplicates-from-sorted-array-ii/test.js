@@ -1,6 +1,6 @@
-const removeDuplicates = require('./index');
-// const removeDuplicates = require('./template');
-// const removeDuplicates = require('./template-zh');
+import removeDuplicates from './index';
+// import removeDuplicates from './template';
+// import removeDuplicates from './template-zh';
 
 test('define removeDuplicates function', () => {
     expect(typeof removeDuplicates).toBe('function');

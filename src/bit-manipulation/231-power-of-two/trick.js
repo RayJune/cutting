@@ -46,4 +46,4 @@ function isPowerOfTwo(n) {
     return n > 0 && 2 ** 30 % n === 0;
 }
 
-module.exports = isPowerOfTwo;
+export default isPowerOfTwo;

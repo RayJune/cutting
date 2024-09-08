@@ -51,4 +51,4 @@ function middleNode(head) {
     return slow;
 }
 
-module.exports = middleNode;
+export default middleNode;

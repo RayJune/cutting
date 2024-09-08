@@ -18,4 +18,4 @@
  * https://leetcode.com/problems/meeting-rooms-ii/
 */
 
-module.exports = minMeetingRooms;
+export default minMeetingRooms;

@@ -58,4 +58,4 @@ function solution(isBadVersion) {
     };
 }
 
-module.exports = solution;
+export default solution;

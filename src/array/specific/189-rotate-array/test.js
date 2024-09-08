@@ -1,8 +1,8 @@
-// const rotate = require('./index');
-// const rotate = require('./optimize');
-const rotate = require('./optimize2');
-// const rotate = require('./template');
-// const rotate = require('./template-zh');
+// import rotate from './index';
+// import rotate from './optimize';
+import rotate from './optimize2';
+// import rotate from './template';
+// import rotate from './template-zh';
 
 test('define permute function', () => {
     expect(typeof rotate).toBe('function');

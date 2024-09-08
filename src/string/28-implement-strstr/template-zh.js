@@ -30,4 +30,4 @@
  * https://leetcode.cn/problems/implement-strstr/
 */
 
-module.exports = strStr;
+export default strStr;

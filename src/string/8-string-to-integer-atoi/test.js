@@ -1,8 +1,8 @@
-const myAtoi = require('./index');
-// const myAtoi = require('./parse-int');
-// const myAtoi = require('./regex');
-// const myAtoi = require('./template');
-// const myAtoi = require('./template-zh');
+import myAtoi from './index';
+// import myAtoi = require('./parse-int');
+// import myAtoi = require('./regex');
+// import myAtoi from './template';
+// import myAtoi from './template-zh';
 
 test('define myAtoi function', () => {
     expect(typeof myAtoi).toBe('function');

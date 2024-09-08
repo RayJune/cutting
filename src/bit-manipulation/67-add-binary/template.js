@@ -19,4 +19,4 @@
  * https://leetcode.com/problems/add-binary/
 */
 
-module.exports = addBinary;
+export default addBinary;

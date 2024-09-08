@@ -74,4 +74,4 @@ function generatePalindromes(s) {
     return permutations;
 }
 
-module.exports = generatePalindromes;
+export default generatePalindromes;

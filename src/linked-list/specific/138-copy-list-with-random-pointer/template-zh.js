@@ -50,4 +50,4 @@
  * };
  */
 
-module.exports = copyRandomList;
+export default copyRandomList;

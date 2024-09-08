@@ -27,4 +27,4 @@
  * https://leetcode.com/problems/reverse-integer/
 */
 
-module.exports = reverse;
+export default reverse;

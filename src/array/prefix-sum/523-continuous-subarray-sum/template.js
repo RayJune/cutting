@@ -26,4 +26,4 @@
  * https://leetcode.com/problems/continuous-subarray-sum/
  */
 
-module.exports = checkSubarraySum;
+export default checkSubarraySum;

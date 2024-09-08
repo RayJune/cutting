@@ -36,4 +36,4 @@
  * https://leetcode.com/problems/coin-change/
 */
 
-module.exports = coinChange;
+export default coinChange;

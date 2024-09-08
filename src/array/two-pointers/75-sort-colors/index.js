@@ -58,4 +58,4 @@ function sortColors(nums) {
     }
 }
 
-module.exports = sortColors;
+export default sortColors;

@@ -1,6 +1,6 @@
-const moveZeroes = require('./index');
-// const moveZeroes = require('./template');
-// const moveZeroes = require('./template-zh');
+import moveZeroes from './index';
+// import moveZeroes from './template';
+// import moveZeroes from './template-zh';
 
 test('define moveZeroes function', () => {
     expect(typeof moveZeroes).toBe('function');

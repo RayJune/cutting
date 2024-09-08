@@ -32,4 +32,4 @@
  * }
  */
 
-module.exports = mergeTwoLists;
+export default mergeTwoLists;

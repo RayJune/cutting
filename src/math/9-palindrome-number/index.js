@@ -56,4 +56,4 @@ function isPalindrome(x) {
     return reversedX === x || Math.floor(reversedX / 10) === x;
 }
 
-module.exports = isPalindrome;
+export default isPalindrome;

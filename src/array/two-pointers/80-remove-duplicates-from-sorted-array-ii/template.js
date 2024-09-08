@@ -25,4 +25,4 @@
  * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/
 */
 
-module.exports = removeDuplicates;
+export default removeDuplicates;

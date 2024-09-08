@@ -1,6 +1,6 @@
-const solution = require('./index');
-// const solution = require('./template');
-// const solution = require('./template-zh');
+import solution from './index';
+// import solution from './template';
+// import solution from './template-zh';
 
 test('define solution function', () => {
     expect(typeof solution).toBe('function');

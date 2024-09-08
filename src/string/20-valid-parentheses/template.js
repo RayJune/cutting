@@ -35,4 +35,4 @@
  * https://leetcode.com/problems/valid-parentheses/
 */
 
-module.exports = isValid;
+export default isValid;

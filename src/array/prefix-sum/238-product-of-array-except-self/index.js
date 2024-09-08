@@ -50,4 +50,4 @@ function productExceptSelf(nums) {
     return answer;
 }
 
-module.exports = productExceptSelf;
+export default productExceptSelf;

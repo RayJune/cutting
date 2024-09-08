@@ -27,4 +27,4 @@
  * https://leetcode.cn/problems/linked-list-cycle-ii/
 */
 
-module.exports = detectCycle;
+export default detectCycle;

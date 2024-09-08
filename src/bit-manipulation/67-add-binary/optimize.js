@@ -52,4 +52,4 @@ function addBinary(a, b) {
     return sum.reverse().join('');
 }
 
-module.exports = addBinary;
+export default addBinary;

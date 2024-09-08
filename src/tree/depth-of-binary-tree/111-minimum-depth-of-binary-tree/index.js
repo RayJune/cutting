@@ -60,4 +60,4 @@ function minDepth(root) {
     return Math.min(minDepth(left), minDepth(right)) + 1;
 }
 
-module.exports = minDepth;
+export default minDepth;

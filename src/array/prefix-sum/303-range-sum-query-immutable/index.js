@@ -57,4 +57,4 @@ class NumArray {
     }
 }
 
-module.exports = NumArray;
+export default NumArray;

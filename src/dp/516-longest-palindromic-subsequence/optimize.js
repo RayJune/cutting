@@ -49,4 +49,4 @@ function longestPalindromeSubseq(s) {
     return dp[len - 1];
 }
 
-module.exports = longestPalindromeSubseq;
+export default longestPalindromeSubseq;

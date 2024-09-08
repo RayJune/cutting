@@ -1,7 +1,7 @@
-// const MyHashMap = require('./index');
-const MyHashMap = require('./optimize');
-// const MyHashMap = require('./template');
-// const MyHashMap = require('./template-zh');
+// import MyHashMap from './index';
+import MyHashMap from './optimize';
+// import MyHashMap from './template';
+// import MyHashMap from './template-zh';
 
 test('define MyHashMap function', () => {
     expect(typeof MyHashMap).toBe('function');

@@ -33,4 +33,4 @@
  * https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/
 */
 
-module.exports = findMin;
+export default findMin;

@@ -1,7 +1,7 @@
-// const hasCycle = require('./index');
-const hasCycle = require('./optimize');
-// const hasCycle = require('./template');
-// const hasCycle = require('./template-zh');
+// import hasCycle from './index';
+import hasCycle from './optimize';
+// import hasCycle from './template';
+// import hasCycle from './template-zh';
 
 class ListNode {
     constructor(val = undefined, next = null) {

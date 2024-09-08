@@ -1,6 +1,6 @@
-const validPalindrome = require('./index');
-// const validPalindrome = require('./template');
-// const validPalindrome = require('./template-zh');
+import validPalindrome from './index';
+// import validPalindrome from './template';
+// import validPalindrome from './template-zh';
 
 test('define validPalindrome function', () => {
     expect(typeof validPalindrome).toBe('function');

@@ -1,7 +1,7 @@
-const swapPairs = require('./index');
-// const swapPairs = require('./template');
-// const swapPairs = require('./template-zh');
-const buildListNode = require('utils/buildListNode');
+import swapPairs from './index';
+// import swapPairs from './template';
+// import swapPairs from './template-zh';
+import buildListNode from 'utils/buildListNode';
 
 test('define swapPairs function', () => {
     expect(typeof swapPairs).toBe('function');

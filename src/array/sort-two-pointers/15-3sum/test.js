@@ -1,6 +1,6 @@
-const threeSum = require('./index');
-// const threeSum = require('./template');
-// const threeSum = require('./template-zh');
+import threeSum from './index';
+// import threeSum from './template';
+// import threeSum from './template-zh';
 
 test('define threeSum function', () => {
     expect(typeof threeSum).toBe('function');

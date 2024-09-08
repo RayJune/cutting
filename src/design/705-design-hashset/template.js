@@ -34,4 +34,4 @@
  * https://leetcode.com/problems/design-hashset/
 */
 
-module.exports = MyHashSet;
+export default MyHashSet;

@@ -46,4 +46,4 @@ function findMaxLength(nums) {
     return maxLength;
 }
 
-module.exports = findMaxLength;
+export default findMaxLength;

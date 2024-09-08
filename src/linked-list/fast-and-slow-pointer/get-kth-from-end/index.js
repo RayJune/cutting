@@ -40,4 +40,4 @@ function getKthFromEnd(head, k) {
     return second;
 }
 
-module.exports = getKthFromEnd;
+export default getKthFromEnd;

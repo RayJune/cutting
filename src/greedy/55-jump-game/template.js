@@ -22,4 +22,4 @@
  * https://leetcode.com/problems/jump-game/
 */
 
-module.exports = canJump;
+export default canJump;

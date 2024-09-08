@@ -76,4 +76,4 @@ function binaryTreePaths(root) {
     return result;
 }
 
-module.exports = binaryTreePaths;
+export default binaryTreePaths;

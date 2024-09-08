@@ -29,4 +29,4 @@
  * https://leetcode.com/problems/two-sum/
 */
 
-module.exports = twoSum;
+export default twoSum;

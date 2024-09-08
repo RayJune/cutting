@@ -37,4 +37,4 @@
  * https://leetcode.cn/problems/implement-stack-using-queues/
 */
 
-module.exports = MyStack;
+export default MyStack;

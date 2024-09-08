@@ -1,4 +1,4 @@
-const insertionSort = require('./index');
+import insertionSort from './index';
 
 test('define insertionSort function', () => {
     expect(typeof insertionSort).toBe('function');

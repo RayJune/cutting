@@ -1,6 +1,6 @@
-const searchRange = require('./index');
-// const searchRange = require('./template');
-// const searchRange = require('./template-zh');
+import searchRange from './index';
+// import searchRange from './template';
+// import searchRange from './template-zh';
 
 test('define searchRange function', () => {
     expect(typeof searchRange).toBe('function');

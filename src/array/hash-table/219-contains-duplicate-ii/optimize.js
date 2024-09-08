@@ -57,4 +57,4 @@ function containsNearbyDuplicate(nums, k) {
     return false;
 }
 
-module.exports = containsNearbyDuplicate;
+export default containsNearbyDuplicate;

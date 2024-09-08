@@ -1,6 +1,6 @@
-const mySqrt = require('./index');
-// const mySqrt = require('./template');
-// const mySqrt = require('./template-zh');
+import mySqrt from './index';
+// import mySqrt from './template';
+// import mySqrt from './template-zh';
 
 test('define mySqrt function', () => {
     expect(typeof mySqrt).toBe('function');

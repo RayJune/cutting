@@ -71,4 +71,4 @@ function search(nums, target) {
     return false;
 }
 
-module.exports = search;
+export default search;

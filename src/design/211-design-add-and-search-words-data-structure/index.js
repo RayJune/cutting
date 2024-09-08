@@ -112,4 +112,4 @@ class WordDictionary {
     }
 }
 
-module.exports = WordDictionary;
+export default WordDictionary;

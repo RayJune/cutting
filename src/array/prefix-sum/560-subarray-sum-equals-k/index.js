@@ -48,4 +48,4 @@ function subarraySum(nums, k) {
     return count;
 }
 
-module.exports = subarraySum;
+export default subarraySum;

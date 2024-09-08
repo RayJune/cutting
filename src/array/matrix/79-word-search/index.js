@@ -76,4 +76,4 @@ function exist(board, word) {
     return false;
 }
 
-module.exports = exist;
+export default exist;

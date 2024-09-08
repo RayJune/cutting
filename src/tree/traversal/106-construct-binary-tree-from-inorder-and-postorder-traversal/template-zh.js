@@ -35,4 +35,4 @@
  * }
  */
 
-module.exports = buildTree;
+export default buildTree;

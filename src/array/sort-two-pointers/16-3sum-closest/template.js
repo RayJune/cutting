@@ -24,4 +24,4 @@
  * https://leetcode.com/problems/3sum-closest/
 */
 
-module.exports = threeSumClosest;
+export default threeSumClosest;

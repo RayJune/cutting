@@ -66,4 +66,4 @@ function lengthOfLongestSubstringKDistinct(s, k) {
     return maxLen;
 }
 
-module.exports = lengthOfLongestSubstringKDistinct;
+export default lengthOfLongestSubstringKDistinct;

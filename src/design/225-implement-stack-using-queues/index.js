@@ -97,4 +97,4 @@ class MyStack {
     }
 }
 
-module.exports = MyStack;
+export default MyStack;

@@ -40,4 +40,4 @@ function reverseBits(n) {
     return reverse >>> 0;
 }
 
-module.exports = reverseBits;
+export default reverseBits;

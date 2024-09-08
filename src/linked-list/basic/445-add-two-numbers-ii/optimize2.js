@@ -125,4 +125,4 @@ function getListsNum(l1, l2) {
     };
 }
 
-module.exports = addTwoNumbers;
+export default addTwoNumbers;

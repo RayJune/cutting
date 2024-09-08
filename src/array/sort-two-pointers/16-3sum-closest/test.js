@@ -1,6 +1,6 @@
-const threeSumClosest = require('./index');
-// const threeSumClosest = require('./template');
-// const threeSumClosest = require('./template-zh');
+import threeSumClosest from './index';
+// import threeSumClosest from './template';
+// import threeSumClosest from './template-zh';
 
 test('define threeSumClosest function', () => {
     expect(typeof threeSumClosest).toBe('function');

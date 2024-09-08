@@ -36,4 +36,4 @@
  * }
  */
 
-module.exports = isBalanced;
+export default isBalanced;

@@ -50,4 +50,4 @@ function climbStairs(n) {
     return curr;
 }
 
-module.exports = climbStairs;
+export default climbStairs;

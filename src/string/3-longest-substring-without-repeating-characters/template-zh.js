@@ -30,4 +30,4 @@
  * https://leetcode.cn/problems/longest-substring-without-repeating-characters/
 */
 
-module.exports = lengthOfLongestSubstring;
+export default lengthOfLongestSubstring;

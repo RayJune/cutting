@@ -64,4 +64,4 @@ function lengthOfLIS(nums) {
     return arr.length;
 }
 
-module.exports = lengthOfLIS;
+export default lengthOfLIS;

@@ -1,6 +1,6 @@
-const rob = require('./index');
-// const rob = require('./template');
-// const rob = require('./template-zh');
+import rob from './index';
+// import rob from './template';
+// import rob from './template-zh';
 
 test('define rob function', () => {
     expect(typeof rob).toBe('function');

@@ -1,6 +1,6 @@
-const combinationSum2 = require('./index');
-// const combinationSum2 = require('./template');
-// const combinationSum2 = require('./template-zh');
+import combinationSum2 from './index';
+// import combinationSum2 from './template';
+// import combinationSum2 from './template-zh';
 
 test('define combinationSum2 function', () => {
     expect(typeof combinationSum2).toBe('function');

@@ -29,4 +29,4 @@
  * https://leetcode.cn/problems/word-search/
 */
 
-module.exports = exist;
+export default exist;

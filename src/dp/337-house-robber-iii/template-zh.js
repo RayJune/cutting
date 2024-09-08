@@ -22,4 +22,4 @@
  * https://leetcode.cn/problems/house-robber-iii/
 */
 
-module.exports = rob;
+export default rob;

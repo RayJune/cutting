@@ -1,6 +1,6 @@
-const fourSumCount = require('./index');
-// const fourSumCount = require('./template');
-// const fourSumCount = require('./template-zh');
+import fourSumCount from './index';
+// import fourSumCount from './template';
+// import fourSumCount from './template-zh';
 
 test('define fourSumCount function', () => {
     expect(typeof fourSumCount).toBe('function');

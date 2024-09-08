@@ -49,4 +49,4 @@ function longestCommonPrefix(strs) {
     });
 }
 
-module.exports = longestCommonPrefix;
+export default longestCommonPrefix;

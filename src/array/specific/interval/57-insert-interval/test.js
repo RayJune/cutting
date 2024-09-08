@@ -1,6 +1,6 @@
-const insert = require('./index');
-// // const insert = require('./template');
-// // const insert = require('./template-zh');
+import insert from './index';
+// import insert from './template';
+// import insert from './template-zh';
 
 test('define insert function', () => {
     expect(typeof insert).toBe('function');

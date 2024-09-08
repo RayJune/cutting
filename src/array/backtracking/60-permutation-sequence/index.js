@@ -78,4 +78,4 @@ function getPermutation(n, k) {
     return permutation;
 }
 
-module.exports = getPermutation;
+export default getPermutation;

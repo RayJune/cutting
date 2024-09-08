@@ -78,4 +78,4 @@ function preorderTraversal(root) {
     return result;
 }
 
-module.exports = preorderTraversal;
+export default preorderTraversal;

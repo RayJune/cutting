@@ -37,4 +37,4 @@ function isPowerOfFour(n) {
     return /^10*$/.test(n.toString(4));
 }
 
-module.exports = isPowerOfFour;
+export default isPowerOfFour;

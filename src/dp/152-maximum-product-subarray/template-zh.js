@@ -21,4 +21,4 @@
  * https://leetcode.cn/problems/maximum-product-subarray/
 */
 
-module.exports = maxProduct;
+export default maxProduct;

@@ -60,4 +60,4 @@ function addStrings(num1, num2) {
     return sum.reverse().join('');
 }
 
-module.exports = addStrings;
+export default addStrings;

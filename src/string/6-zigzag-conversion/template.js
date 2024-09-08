@@ -38,4 +38,4 @@
  * https://leetcode.com/problems/zigzag-conversion/
 */
 
-module.exports = convert;
+export default convert;

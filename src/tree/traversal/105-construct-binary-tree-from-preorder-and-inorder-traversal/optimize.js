@@ -90,4 +90,4 @@ function buildMap(arr) {
     return map;
 }
 
-module.exports = buildTree;
+export default buildTree;

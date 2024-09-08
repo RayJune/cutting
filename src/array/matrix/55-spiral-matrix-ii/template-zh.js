@@ -17,4 +17,4 @@
  * https://leetcode.cn/problems/spiral-matrix-ii/
 */
 
-module.exports = generateMatrix;
+export default generateMatrix;

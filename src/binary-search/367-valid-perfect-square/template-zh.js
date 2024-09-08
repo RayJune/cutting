@@ -19,4 +19,4 @@
  * https://leetcode.cn/problems/valid-perfect-square/
 */
 
-module.exports = isPerfectSquare;
+export default isPerfectSquare;

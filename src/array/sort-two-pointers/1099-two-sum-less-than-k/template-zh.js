@@ -22,4 +22,4 @@
  * https://leetcode.cn/problems/two-sum-less-than-k/
 */
 
-module.exports = twoSumLessThanK;
+export default twoSumLessThanK;

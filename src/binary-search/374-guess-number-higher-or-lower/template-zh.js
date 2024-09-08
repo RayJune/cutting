@@ -37,4 +37,4 @@
 
 const guess = require('./guess');
 
-module.exports = guessNumber;
+export default guessNumber;

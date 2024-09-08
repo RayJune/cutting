@@ -20,4 +20,4 @@
  * https://leetcode.cn/problems/subsets-ii/
 */
 
-module.exports = subsetsWithDup;
+export default subsetsWithDup;

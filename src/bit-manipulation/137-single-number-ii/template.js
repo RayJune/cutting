@@ -21,4 +21,4 @@
  * https://leetcode.com/problems/single-number-ii/
 */
 
-module.exports = singleNumber;
+export default singleNumber;

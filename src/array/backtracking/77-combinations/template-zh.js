@@ -20,4 +20,4 @@
  * https://leetcode.cn/problems/combinations/
 */
 
-module.exports = combine;
+export default combine;

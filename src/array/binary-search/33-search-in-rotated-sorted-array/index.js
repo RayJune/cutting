@@ -70,4 +70,4 @@ function search(nums, target) {
     return -1;
 }
 
-module.exports = search;
+export default search;

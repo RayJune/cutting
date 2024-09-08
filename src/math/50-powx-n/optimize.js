@@ -57,4 +57,4 @@ function myPow(x, n) {
     return power;
 }
 
-module.exports = myPow;
+export default myPow;

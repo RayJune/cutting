@@ -25,4 +25,4 @@
  * https://leetcode.com/problems/add-strings/
 */
 
-module.exports = addStrings;
+export default addStrings;

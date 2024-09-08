@@ -17,4 +17,4 @@
  * https://leetcode.cn/problems/reverse-bits/
 */
 
-module.exports = reverseBits;
+export default reverseBits;

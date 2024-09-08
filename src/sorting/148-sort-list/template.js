@@ -31,4 +31,4 @@
  * }
  */
 
-module.exports = sortList;
+export default sortList;

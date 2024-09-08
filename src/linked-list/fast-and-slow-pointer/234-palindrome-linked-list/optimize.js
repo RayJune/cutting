@@ -92,4 +92,4 @@ function reverseList(head) {
     return prevNode;
 }
 
-module.exports = isPalindrome;
+export default isPalindrome;

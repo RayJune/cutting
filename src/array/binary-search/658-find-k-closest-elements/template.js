@@ -25,4 +25,4 @@
  * https://leetcode.com/problems/find-k-closest-elements/
 */
 
-module.exports = findClosestElements;
+export default findClosestElements;

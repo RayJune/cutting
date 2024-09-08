@@ -1,6 +1,6 @@
-const maxProduct = require('./index');
-// const maxProduct = require('./template');
-// const maxProduct = require('./template-zh');
+import maxProduct from './index';
+// import maxProduct from './template';
+// import maxProduct from './template-zh';
 
 test('define maxProduct function', () => {
     expect(typeof maxProduct).toBe('function');

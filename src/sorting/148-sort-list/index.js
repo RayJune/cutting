@@ -108,4 +108,4 @@ function mergeTwoLists(l1, l2) {
     return preHead.next;
 }
 
-module.exports = sortList;
+export default sortList;

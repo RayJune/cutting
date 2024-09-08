@@ -30,4 +30,4 @@
  * https://leetcode.com/problems/reverse-words-in-a-string/
 */
 
-module.exports = reverseWords;
+export default reverseWords;

@@ -1,7 +1,7 @@
-const middleNode = require('./index');
-// const middleNode = require('./template');
-// const middleNode = require('./template-zh');
-const buildListNode = require('utils/buildListNode');
+import middleNode from './index';
+// import middleNode from './template';
+// import middleNode from './template-zh';
+import buildListNode from 'utils/buildListNode';
 
 test('define middleNode function', () => {
     expect(typeof middleNode).toBe('function');

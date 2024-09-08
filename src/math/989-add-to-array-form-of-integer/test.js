@@ -1,6 +1,6 @@
-const addToArrayForm = require('./index');
-// const addToArrayForm = require('./template');
-// const addToArrayForm = require('./template-zh');
+import addToArrayForm from './index';
+// import addToArrayForm from './template';
+// import addToArrayForm from './template-zh';
 
 test('define addToArrayForm function', () => {
     expect(typeof addToArrayForm).toBe('function');

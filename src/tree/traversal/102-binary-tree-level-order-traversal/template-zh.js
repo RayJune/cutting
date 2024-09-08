@@ -31,4 +31,4 @@
  * }
  */
 
-module.exports = levelOrder;
+export default levelOrder;

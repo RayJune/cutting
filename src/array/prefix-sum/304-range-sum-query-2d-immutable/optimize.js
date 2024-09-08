@@ -74,4 +74,4 @@ class NumMatrix {
     }
 }
 
-module.exports = NumMatrix;
+export default NumMatrix;

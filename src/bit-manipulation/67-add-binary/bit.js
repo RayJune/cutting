@@ -47,4 +47,4 @@ function addBinary(a, b) {
     return sum.toString(2);
 }
 
-module.exports = addBinary;
+export default addBinary;

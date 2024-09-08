@@ -44,4 +44,4 @@ function canAttendMeetings(intervals) {
     return true;
 }
 
-module.exports = canAttendMeetings;
+export default canAttendMeetings;

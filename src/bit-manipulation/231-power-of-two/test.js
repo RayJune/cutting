@@ -1,9 +1,9 @@
-// const isPowerOfTwo = require('./index');
-const isPowerOfTwo = require('./optimize');
-// const isPowerOfTwo = require('./trick');
-// const isPowerOfTwo = require('./regex');
-// const isPowerOfTwo = require('./template');
-// const isPowerOfTwo = require('./template-zh');
+// import isPowerOfTwo from './index';
+import isPowerOfTwo from './optimize';
+// import isPowerOfTwo = require('./trick');
+// import isPowerOfTwo = require('./regex');
+// import isPowerOfTwo from './template';
+// import isPowerOfTwo from './template-zh';
 
 test('define isPowerOfTwo function', () => {
     expect(typeof isPowerOfTwo).toBe('function');

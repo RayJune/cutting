@@ -75,4 +75,4 @@ function letterCombinations(digits) {
     return combinations;
 }
 
-module.exports = letterCombinations;
+export default letterCombinations;

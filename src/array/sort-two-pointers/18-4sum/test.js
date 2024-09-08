@@ -1,6 +1,6 @@
-const fourSum = require('./index');
-// const fourSum = require('./template');
-// const fourSum = require('./template-zh');
+import fourSum from './index';
+// import fourSum from './template';
+// import fourSum from './template-zh';
 
 test('define fourSum function', () => {
     expect(typeof fourSum).toBe('function');

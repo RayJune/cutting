@@ -64,4 +64,4 @@ function oddEvenList(head) {
     return head;
 }
 
-module.exports = oddEvenList;
+export default oddEvenList;

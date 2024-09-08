@@ -24,4 +24,4 @@
  * https://leetcode.cn/problems/3sum/
 */
 
-module.exports = threeSum;
+export default threeSum;

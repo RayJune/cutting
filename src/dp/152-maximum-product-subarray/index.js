@@ -51,4 +51,4 @@ function maxProduct(nums) {
     return max;
 }
 
-module.exports = maxProduct;
+export default maxProduct;

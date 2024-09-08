@@ -18,4 +18,4 @@
  * https://leetcode.cn/problems/sum-of-square-numbers/
 */
 
-module.exports = judgeSquareSum;
+export default judgeSquareSum;

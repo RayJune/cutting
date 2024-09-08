@@ -1,6 +1,6 @@
-const findMaxLength = require('./index');
-// const findMaxLength = require('./template');
-// const findMaxLength = require('./template-zh');
+import findMaxLength from './index';
+// import findMaxLength from './template';
+// import findMaxLength from './template-zh';
 
 test('define findMaxLength function', () => {
     expect(typeof findMaxLength).toBe('function');

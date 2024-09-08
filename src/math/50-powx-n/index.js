@@ -49,4 +49,4 @@ function myPow(x, n) {
     return n % 2 === 1 ? half * half * x : half * half;
 }
 
-module.exports = myPow;
+export default myPow;

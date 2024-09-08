@@ -31,4 +31,4 @@
  * https://leetcode.com/problems/search-in-rotated-sorted-array/
 */
 
-module.exports = search;
+export default search;

@@ -28,4 +28,4 @@
  * https://leetcode.com/problems/missing-number/
 */
 
-module.exports = missingNumber;
+export default missingNumber;

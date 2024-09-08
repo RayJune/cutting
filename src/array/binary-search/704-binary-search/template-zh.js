@@ -22,4 +22,4 @@
  * https://leetcode.cn/problems/binary-search/
 */
 
-module.exports = search;
+export default search;

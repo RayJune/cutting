@@ -33,4 +33,4 @@
  * https://leetcode.cn/problems/letter-combinations-of-a-phone-number/
 */
 
-module.exports = letterCombinations;
+export default letterCombinations;

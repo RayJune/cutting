@@ -24,4 +24,4 @@
  * https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/
 */
 
-module.exports = search;
+export default search;

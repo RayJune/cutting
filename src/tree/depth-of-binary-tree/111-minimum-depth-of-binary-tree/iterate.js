@@ -77,4 +77,4 @@ function minDepth(root) {
     }
 }
 
-module.exports = minDepth;
+export default minDepth;

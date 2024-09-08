@@ -57,4 +57,4 @@ function isPalindrome(s) {
     return filteredS === reversedS;
 }
 
-module.exports = isPalindrome;
+export default isPalindrome;

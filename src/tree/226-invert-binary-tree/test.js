@@ -1,8 +1,8 @@
-const invertTree = require('./index');
-// const invertTree = require('./iterate');
-// const invertTree = require('./template');
-// const invertTree = require('./template-zh');
-const buildBinaryTree = require('utils/buildBinaryTree');
+import invertTree from './index';
+// import invertTree from './iterate';
+// import invertTree from './template';
+// import invertTree from './template-zh';
+import buildBinaryTree from 'utils/buildBinaryTree';
 
 test('define invertTree function', () => {
     expect(typeof invertTree).toBe('function');

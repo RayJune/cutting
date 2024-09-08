@@ -23,4 +23,4 @@
  * https://leetcode.cn/problems/squares-of-a-sorted-array/
 */
 
-module.exports = sortedSquares;
+export default sortedSquares;

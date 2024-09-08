@@ -51,4 +51,4 @@ function reverseWords(s) {
         .join(' ')
 }
 
-module.exports = reverseWords;
+export default reverseWords;

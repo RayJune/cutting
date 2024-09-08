@@ -1,6 +1,6 @@
-const exist = require('./index');
-// const exist = require('./template');
-// const exist = require('./template-zh');
+import exist from './index';
+// import exist from './template';
+// import exist from './template-zh';
 
 test('define exist function', () => {
     expect(typeof exist).toBe('function');

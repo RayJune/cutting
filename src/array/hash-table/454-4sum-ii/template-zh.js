@@ -27,4 +27,4 @@
  * https://leetcode.cn/problems/4sum-ii/
 */
 
-module.exports = fourSumCount;
+export default fourSumCount;

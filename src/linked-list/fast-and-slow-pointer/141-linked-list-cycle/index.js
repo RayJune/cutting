@@ -61,4 +61,4 @@ function hasCycle(head) {
     return false;
 }
 
-module.exports = hasCycle;
+export default hasCycle;

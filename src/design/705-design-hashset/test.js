@@ -1,7 +1,7 @@
-// const MyHashSet = require('./index');
-const MyHashSet = require('./optimize');
-// const MyHashSet = require('./template');
-// const MyHashSet = require('./template-zh');
+// import MyHashSet from './index';
+import MyHashSet from './optimize';
+// import MyHashSet from './template';
+// import MyHashSet from './template-zh';
 
 test('define MyHashSet function', () => {
     expect(typeof MyHashSet).toBe('function');

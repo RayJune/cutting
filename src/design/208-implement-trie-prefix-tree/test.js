@@ -1,6 +1,6 @@
-const Trie = require('./index');
-// const Trie = require('./template');
-// const Trie = require('./template-zh');
+import Trie from './index';
+// import Trie from './template';
+// import Trie from './template-zh';
 
 test('define Trie class', () => {
     expect(typeof Trie).toBe('function');

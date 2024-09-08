@@ -57,4 +57,4 @@ function repeatedSubstringPattern(s) {
     return next[next.length - 1] !== 0 && len % (len - next[next.length - 1]) === 0;
 }
 
-module.exports = repeatedSubstringPattern;
+export default repeatedSubstringPattern;

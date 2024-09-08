@@ -25,4 +25,4 @@
  * @related 125-valid-palindrome
 */
 
-module.exports = validPalindrome;
+export default validPalindrome;

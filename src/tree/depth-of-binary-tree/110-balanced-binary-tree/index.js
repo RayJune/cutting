@@ -69,4 +69,4 @@ function maxDepth(root) {
     return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
 }
 
-module.exports = isBalanced;
+export default isBalanced;

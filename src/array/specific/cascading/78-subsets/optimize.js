@@ -46,4 +46,4 @@ function subsets(nums) {
 
 // the reason why use forEach -> https://stackoverflow.com/questions/25243586/javascript-add-value-to-array-while-looping-that-will-then-also-be-included-in#answer-25243688
 
-module.exports = subsets;
+export default subsets;

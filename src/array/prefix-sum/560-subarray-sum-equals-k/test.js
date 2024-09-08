@@ -1,6 +1,6 @@
-const subarraySum = require('./index');
-// const subarraySum = require('./template');
-// const subarraySum = require('./template-zh');
+import subarraySum from './index';
+// import subarraySum from './template';
+// import subarraySum from './template-zh';
 
 test('define subarraySum function', () => {
     expect(typeof subarraySum).toBe('function');

@@ -54,4 +54,4 @@ function subsetsWithDup(nums) {
     return subsets;
 }
 
-module.exports = subsetsWithDup;
+export default subsetsWithDup;

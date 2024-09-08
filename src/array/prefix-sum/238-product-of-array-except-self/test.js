@@ -1,6 +1,6 @@
-const productExceptSelf = require('./index');
-// const productExceptSelf = require('./template');
-// const productExceptSelf = require('./template-zh');
+import productExceptSelf from './index';
+// import productExceptSelf from './template';
+// import productExceptSelf from './template-zh';
 
 test('define productExceptSelf function', () => {
     expect(typeof productExceptSelf).toBe('function');

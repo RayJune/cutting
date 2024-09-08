@@ -1,7 +1,7 @@
-const rob = require('./index');
-// const rob = require('./template');
-// const rob = require('./template-zh');
-const buildBinaryTree = require('utils/buildBinaryTree');
+import rob from './index';
+// import rob from './template';
+// import rob from './template-zh';
+import buildBinaryTree from 'utils/buildBinaryTree';
 
 test('define rob function', () => {
     expect(typeof rob).toBe('function');

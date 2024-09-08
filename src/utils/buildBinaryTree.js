@@ -38,4 +38,4 @@ function buildBinaryTree(levelOrderArr) {
     return root;
 }
 
-module.exports = buildBinaryTree;
+export default buildBinaryTree;
