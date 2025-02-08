@@ -1,10 +1,10 @@
 {
-  "name": "eloquent-leetcode-by-javascript",
+  "name": "cutting",
   "version": "1.0.0",
-  "description": "",
+  "description": "An eloquent javascript solution for LeetCode problems",
   "main": "index.js",
   "scripts": {
-    "test": "jest src/"
+    "test": "jest src --coverage"
   },
   "jest": {
     "transform": {
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RayJune/eloquent-leetcode-by-javascript.git"
+    "url": "git+https://github.com/RayJune/cutting.git"
   },
-  "author": "rayjune",
+  "author": "Caspian Xue",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RayJune/eloquent-leetcode-by-javascript/issues"
+    "url": "https://github.com/RayJune/cutting/issues"
   },
-  "homepage": "https://github.com/RayJune/eloquent-leetcode-by-javascript#readme",
+  "homepage": "https://github.com/RayJune/cutting#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.18.10",
     "babel-jest": "^28.1.3",
